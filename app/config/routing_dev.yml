@@ -29,3 +29,7 @@ _configurator:
 
 _main:
     resource: routing.yml
+
+_catalog:
+    resource: "@AcmeDemoBundle/Controller/CatalogController.php"
+    type:     annotation
