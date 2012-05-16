@@ -50,3 +50,11 @@ AnnotationRegistry::registerFile(__DIR__.'/../vendor/doctrine/lib/Doctrine/ORM/M
 require_once __DIR__.'/../vendor/swiftmailer/lib/classes/Swift.php';
 Swift::registerAutoload(__DIR__.'/../vendor/swiftmailer/lib/swift_init.php');
 
+$loader->registerNamespaces(array(
+    // ...
+    'Sonata'     => __DIR__.'/../vendor/bundles',
+    'Exporter'   => __DIR__.'/../vendor/exporter/lib',
+    'Knp\Bundle' => __DIR__.'/../vendor/bundles',
+    'Knp\Menu'   => __DIR__.'/../vendor/knp/menu/src',
+    // ...
+));
