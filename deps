@@ -112,3 +112,8 @@
 [Exporter]
     git=http://github.com/sonata-project/exporter.git
     target=/exporter
+
+[FOSUserBundle]
+    git=git://github.com/FriendsOfSymfony/FOSUserBundle.git
+    target=bundles/FOS/UserBundle
+    version=1.2.0
