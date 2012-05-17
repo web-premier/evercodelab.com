@@ -1,0 +1,3 @@
+PagesBundle_homepage:
+    pattern:  /Pages/{Alias}
+    defaults: { _controller: PagesBundle:Default:index }
