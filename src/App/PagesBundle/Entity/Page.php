@@ -22,11 +22,11 @@ class Page
     private $id;
 
     /**
-     * @var string $Alias
+     * @var string $alias
      *
-     * @ORM\Column(name="Alias", type="string", length=255, unique=true)
+     * @ORM\Column(name="alias", type="string", length=255, unique=true)
      */
-    private $Alias;
+    private $alias;
 
     /**
      * @var string $name
@@ -50,18 +50,18 @@ class Page
     private $user;
 
     /**
-     * @var datetime $createdate
+     * @var datetime $created_at
      *
-     * @ORM\Column(name="createdate", type="datetime")
+     * @ORM\Column(name="created_at", type="datetime")
      */
-    private $createdate;
+    private $created_at;
 
     /**
-     * @var datetime $editdate
+     * @var datetime $updated_at
      *
-     * @ORM\Column(name="editdate", type="datetime")
+     * @ORM\Column(name="updated_at", type="datetime")
      */
-    private $editdate;
+    private $updated_at;
 
 
     /**
@@ -81,7 +81,7 @@ class Page
      */
     public function setAlias($alias)
     {
-        $this->Alias = $alias;
+        $this->alias = $alias;
     }
 
     /**
@@ -91,7 +91,7 @@ class Page
      */
     public function getAlias()
     {
-        return $this->Alias;
+        return $this->alias;
     }
 
     /**
@@ -155,42 +155,42 @@ class Page
     }
 
     /**
-     * Set createdate
+     * Set created_at
      *
-     * @param datetime $createdate
+     * @param datetime $createdAt
      */
-    public function setCreatedate($createdate)
+    public function setCreatedAt($createdAt)
     {
-        $this->createdate = $createdate;
+        $this->created_at = $createdAt;
     }
 
     /**
-     * Get createdate
+     * Get created_at
      *
      * @return datetime 
      */
-    public function getCreatedate()
+    public function getCreatedAt()
     {
-        return $this->createdate;
+        return $this->created_at;
     }
 
     /**
-     * Set editdate
+     * Set updated_at
      *
-     * @param datetime $editdate
+     * @param datetime $updatedAt
      */
-    public function setEditdate($editdate)
+    public function setUpdatedAt($updatedAt)
     {
-        $this->editdate = $editdate;
+        $this->updated_at = $updatedAt;
     }
 
     /**
-     * Get editdate
+     * Get updated_at
      *
      * @return datetime 
      */
-    public function getEditdate()
+    public function getUpdatedAt()
     {
-        return $this->editdate;
+        return $this->updated_at;
     }
 }

@@ -12,18 +12,5 @@ use Doctrine\ORM\EntityRepository;
  */
 class PageRepository extends EntityRepository
 {
-    public function findAlias($Alias)
-    {
-        $query = $this->getEntityManager()
-            ->createQuery('
-                SELECT p
-                FROM PagesBundle:Page p
-                WHERE p.Alias = :Alias
-            ')->setParameter('Alias', $Alias);
-        try {
-            return $query->getSingleResult();
-        } catch (\Doctrine\ORM\NoResultException $e) {
-            return null;
-        }
-    }
+
 }

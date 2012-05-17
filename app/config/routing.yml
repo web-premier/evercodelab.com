@@ -1,5 +1,6 @@
 PagesBundle:
-    resource: "@PagesBundle/Resources/config/routing.yml"
+    resource: "@PagesBundle/Controller/"
+    type: annotation
     prefix:   /
 
 # Internal routing configuration to handle ESI

@@ -3,21 +3,24 @@
 namespace App\PagesBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 class DefaultController extends Controller
 {
-    
-    public function indexAction($Alias)
+    /**
+     * @Route("/pages/{alias}", name="pages_index")
+     */
+    public function indexAction($alias)
     {
-        $page = $this->getDoctrine()
-            ->getRepository('PagesBundle:Page')
-            ->findAlias($Alias);
+        $em = $this->getDoctrine()->getEntityManager();
+        $page = $em->getRepository('PagesBundle:Page')->findOneByAlias($alias);
         if (empty($page))
+        {
             throw $this->createNotFoundException('The Page does not exist');
+        }
         else {
             $name = $page->getName();
-            $date = $page->getCreatedate();
+            $date = $page->getCreatedAt();
         }
         return $this->render('PagesBundle:Default:index.html.twig', array('name' => $name, 'date' => $date));
     }
