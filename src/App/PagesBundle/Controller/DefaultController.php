@@ -22,6 +22,7 @@ class DefaultController extends Controller
             $name = $page->getName();
             $date = $page->getCreatedAt();
         }
+
         return $this->render('PagesBundle:Default:index.html.twig', array('name' => $name, 'date' => $date));
     }
 }

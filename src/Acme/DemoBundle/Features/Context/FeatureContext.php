@@ -124,5 +124,5 @@ class FeatureContext extends MinkContext //MinkContext if you want to test web
     {
         return $this->getEntityManager()->getRepository($entityName);
     }
-    
+
 }

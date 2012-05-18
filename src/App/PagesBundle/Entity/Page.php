@@ -67,7 +67,7 @@ class Page
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -87,7 +87,7 @@ class Page
     /**
      * Get Alias
      *
-     * @return string 
+     * @return string
      */
     public function getAlias()
     {
@@ -107,7 +107,7 @@ class Page
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -127,7 +127,7 @@ class Page
     /**
      * Get text
      *
-     * @return text 
+     * @return text
      */
     public function getText()
     {
@@ -147,7 +147,7 @@ class Page
     /**
      * Get user
      *
-     * @return string 
+     * @return string
      */
     public function getUser()
     {
@@ -167,7 +167,7 @@ class Page
     /**
      * Get created_at
      *
-     * @return datetime 
+     * @return datetime
      */
     public function getCreatedAt()
     {
@@ -187,7 +187,7 @@ class Page
     /**
      * Get updated_at
      *
-     * @return datetime 
+     * @return datetime
      */
     public function getUpdatedAt()
     {

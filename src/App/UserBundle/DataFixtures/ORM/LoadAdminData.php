@@ -1,4 +1,4 @@
-<?php 
+<?php
 // src/App/UserBundle/DataFixtures/ORM/LoadAdminData.php
 namespace App\UserBundle\DataFixtures\ORM;
 
