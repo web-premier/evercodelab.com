@@ -87,6 +87,10 @@
     target=/bundles/Sonata/AdminBundle
     version=origin/2.0
 
+[SonataDoctrineORMAdminBundle]
+    git=http://github.com/sonata-project/SonataDoctrineORMAdminBundle.git
+    target=/bundles/Sonata/DoctrineORMAdminBundle
+
 [SonataBlockBundle]
     git=git://github.com/sonata-project/SonataBlockBundle.git
     target=/bundles/Sonata/BlockBundle

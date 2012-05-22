@@ -83,3 +83,10 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: App\UserBundle\Entity\User
+
+services:
+    app.user.admin.user:
+        class: App\UserBundle\Admin\UserAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Пользователи, label: Пользователи}
+        arguments: [null, App\UserBundle\Entity\User, AppUserBundle:UserAdmin]
