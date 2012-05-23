@@ -6,6 +6,7 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
+use App\UserBundle\Form\Extension\ChoiceList\UserRoles as UserRoles;
 
 class UserAdmin extends Admin
 {
@@ -23,9 +24,11 @@ class UserAdmin extends Admin
             ->add('username')
             ->add('email')
             ->add('plainPassword', 'text')
-            ->add('roles', 'choice', array('choices' 
-                    => array('ROLE_USER' => 'user', 'ROLE_ADMIN' => 'admin'), 
-                'multiple' => true))
+            ->add('roles', 'choice', array(
+                'choice_list' => new UserRoles(),
+                'multiple' => true,
+                'expanded' => true,
+            ))
             ->add('enabled', null, array('required' => false))
         ;
     }
