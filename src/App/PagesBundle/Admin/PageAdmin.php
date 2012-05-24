@@ -61,4 +61,9 @@ class PageAdmin extends Admin
     {
         $page->setUser($this->securityContext->getToken()->getUser());
     }
+
+    public function preUpdate($page)
+    {
+        $page->setUser($this->securityContext->getToken()->getUser());
+    }
 }

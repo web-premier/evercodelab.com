@@ -3,6 +3,7 @@
 namespace App\PagesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * App\PagesBundle\Entity\Page
@@ -44,22 +45,22 @@ class Page
 
     /**
      *
-     * @ORM\ManyToOne(targetEntity="App\UserBundle\Entity\User", inversedBy="user")
+     * @ORM\ManyToOne(targetEntity="App\UserBundle\Entity\User")
      * @ORM\JoinColumn(name="user", referencedColumnName="id")
      */
     private $user;
 
     /**
      * @var datetime $created_at
-     *
+     * @Gedmo\Timestampable(on="create")
      * @ORM\Column(name="created_at", type="datetime")
      */
     private $created_at;
 
     /**
      * @var datetime $updated_at
-     *
-     * @ORM\Column(name="updated_at", type="datetime")
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(name="updated_at", type="datetime", nullable=true)
      */
     private $updated_at;
 
