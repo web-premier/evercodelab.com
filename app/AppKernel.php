@@ -27,6 +27,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\DoctrineFixturesBundle\DoctrineFixturesBundle(),
             new App\PagesBundle\AppPagesBundle(),
             new App\UserBundle\AppUserBundle(),
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
