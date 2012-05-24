@@ -9,6 +9,14 @@ use Sonata\AdminBundle\Show\ShowMapper;
 
 class PageAdmin extends Admin
 {
+    protected  $securityContext;
+
+    function __construct($code, $class, $baseControllerName, $securityContext)
+    {
+        parent::__construct($code, $class, $baseControllerName);
+        $this->securityContext = $securityContext;
+    }
+
     public function configureShowFields(ShowMapper $showMapper)
     {
         $showMapper
@@ -47,5 +55,10 @@ class PageAdmin extends Admin
             ->add('name')
             ->add('user')
         ;
+    }
+
+    public function prePersist($page)
+    {
+        $page->setUser($this->securityContext->getToken()->getUser());
     }
 }
