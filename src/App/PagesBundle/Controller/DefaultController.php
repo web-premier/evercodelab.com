@@ -13,7 +13,7 @@ class DefaultController extends Controller
     public function indexAction($alias)
     {
         $em = $this->getDoctrine()->getEntityManager();
-        $page = $em->getRepository('PagesBundle:Page')->findOneByAlias($alias);
+        $page = $em->getRepository('AppPagesBundle:Page')->findOneByAlias($alias);
         if (empty($page))
         {
             throw $this->createNotFoundException('The Page does not exist');
@@ -23,6 +23,6 @@ class DefaultController extends Controller
             $date = $page->getCreatedAt();
         }
 
-        return $this->render('PagesBundle:Default:index.html.twig', array('name' => $name, 'date' => $date));
+        return $this->render('AppPagesBundle:Default:index.html.twig', array('name' => $name, 'date' => $date));
     }
 }

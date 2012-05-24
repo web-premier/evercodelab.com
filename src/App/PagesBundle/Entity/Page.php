@@ -43,9 +43,9 @@ class Page
     private $text;
 
     /**
-     * @var string $user
      *
-     * @ORM\Column(name="user", type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="App\UserBundle\Entity\User", inversedBy="user")
+     * @ORM\JoinColumn(name="user", referencedColumnName="id")
      */
     private $user;
 
@@ -67,7 +67,7 @@ class Page
     /**
      * Get id
      *
-     * @return integer
+     * @return integer 
      */
     public function getId()
     {
@@ -75,7 +75,7 @@ class Page
     }
 
     /**
-     * Set Alias
+     * Set alias
      *
      * @param string $alias
      */
@@ -85,9 +85,9 @@ class Page
     }
 
     /**
-     * Get Alias
+     * Get alias
      *
-     * @return string
+     * @return string 
      */
     public function getAlias()
     {
@@ -107,7 +107,7 @@ class Page
     /**
      * Get name
      *
-     * @return string
+     * @return string 
      */
     public function getName()
     {
@@ -127,31 +127,11 @@ class Page
     /**
      * Get text
      *
-     * @return text
+     * @return text 
      */
     public function getText()
     {
         return $this->text;
-    }
-
-    /**
-     * Set user
-     *
-     * @param string $user
-     */
-    public function setUser($user)
-    {
-        $this->user = $user;
-    }
-
-    /**
-     * Get user
-     *
-     * @return string
-     */
-    public function getUser()
-    {
-        return $this->user;
     }
 
     /**
@@ -167,7 +147,7 @@ class Page
     /**
      * Get created_at
      *
-     * @return datetime
+     * @return datetime 
      */
     public function getCreatedAt()
     {
@@ -187,10 +167,30 @@ class Page
     /**
      * Get updated_at
      *
-     * @return datetime
+     * @return datetime 
      */
     public function getUpdatedAt()
     {
         return $this->updated_at;
+    }
+
+    /**
+     * Set user
+     *
+     * @param App\UserBundle\Entity\User $user
+     */
+    public function setUser(\App\UserBundle\Entity\User $user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * Get user
+     *
+     * @return App\UserBundle\Entity\User 
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }

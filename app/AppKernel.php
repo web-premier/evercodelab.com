@@ -25,7 +25,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Symfony\Bundle\DoctrineFixturesBundle\DoctrineFixturesBundle(),
-            new App\PagesBundle\PagesBundle(),
+            new App\PagesBundle\AppPagesBundle(),
             new App\UserBundle\AppUserBundle(),
         );
 

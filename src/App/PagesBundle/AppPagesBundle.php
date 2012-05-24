@@ -4,6 +4,6 @@ namespace App\PagesBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class PagesBundle extends Bundle
+class AppPagesBundle extends Bundle
 {
 }

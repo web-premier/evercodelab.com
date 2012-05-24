@@ -3,7 +3,7 @@ AppUserBundle:
     prefix:   /
 
 PagesBundle:
-    resource: "@PagesBundle/Controller/"
+    resource: "@AppPagesBundle/Controller/"
     type: annotation
     prefix:   /
 

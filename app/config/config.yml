@@ -90,3 +90,10 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: Пользователи, label: Пользователи}
         arguments: [null, App\UserBundle\Entity\User, SonataAdminBundle:CRUD]
+
+    app.page.admin.page:
+        class: App\PagesBundle\Admin\PageAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Страницы, label: Статические страницы}
+        arguments: [null, App\PagesBundle\Entity\Page, SonataAdminBundle:CRUD]
+
