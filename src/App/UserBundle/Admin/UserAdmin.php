@@ -15,6 +15,8 @@ class UserAdmin extends Admin
         $showMapper
             ->add('email')
             ->add('username')
+            ->add('roles')
+            ->add('enabled')
         ;
     }
 
@@ -49,6 +51,7 @@ class UserAdmin extends Admin
         $datagridMapper
             ->add('email')
             ->add('username')
+            ->add('enabled')
         ;
     }
 
