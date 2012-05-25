@@ -1,5 +1,6 @@
 AppClientsBundle:
-    resource: "@AppClientsBundle/Resources/config/routing.yml"
+    resource: "@AppClientsBundle/Controller/"
+    type: annotation
     prefix:   /
 
 AppUserBundle:

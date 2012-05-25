@@ -15,6 +15,8 @@ class ClientsAdmin extends Admin
             ->add('name')
             ->add('logo')
             ->add('description')
+            ->add('created_at')
+            ->add('updated_at')
         ;
     }
 
@@ -22,7 +24,7 @@ class ClientsAdmin extends Admin
     {
         $formMapper
             ->add('name')
-            ->add('logo')
+            ->add('logo', 'file', array('required' => true, 'label' => 'Image'))
             ->add('description')
         ;
     }
@@ -34,7 +36,7 @@ class ClientsAdmin extends Admin
             ->addIdentifier('logo')
             ->addIdentifier('name')
             ->addIdentifier('description')
-            ->addIdentifier('dateCreate')
+            ->addIdentifier('created_at')
         ;
     }
 
@@ -42,8 +44,8 @@ class ClientsAdmin extends Admin
     {
         $datagridMapper
             ->add('name')
-            ->add('logo')
             ->add('description')
+            ->add('created_at')
         ;
     }
     

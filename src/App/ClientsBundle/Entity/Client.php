@@ -2,6 +2,8 @@
 
 namespace App\ClientsBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -10,9 +12,15 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="clients")
  * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks
  */
 class Client
 {
+    public function __toString()
+    {
+        return $this->getName();
+    }
+
     /**
      * @var integer $id
      *
@@ -37,6 +45,11 @@ class Client
     private $logo;
 
     /**
+     * @Assert\Image(maxSize = "2048k")
+     */
+    private $file;
+
+    /**
      * @var text $description
      *
      * @ORM\Column(name="description", type="text")
@@ -44,20 +57,20 @@ class Client
     private $description;
 
     /**
-     * @var datetime $dateCreate
+     * @var datetime $created_at
      *
      * @Gedmo\Timestampable(on="create")
-     * @ORM\Column(name="dateCreate", type="datetime")
+     * @ORM\Column(name="created_at", type="datetime")
      */
-    private $dateCreate;
+    private $created_at;
 
     /**
-     * @var datetime $dateUpdate
+     * @var datetime $updated_at
      *
      * @Gedmo\Timestampable(on="update")
-     * @ORM\Column(name="dateUpdate", type="datetime")
+     * @ORM\Column(name="updated_at", type="datetime")
      */
-    private $dateUpdate;
+    private $updated_at;
 
 
     /**
@@ -110,6 +123,19 @@ class Client
         return $this->logo;
     }
 
+    public function setFile($file)
+    {
+        if (! empty($file)) {
+            $this->logo = 'changed';
+        }
+        $this->file = $file;
+    }
+
+    public function getFile()
+    {
+        return $this->file;
+    }
+
     /**
      * Set description
      *
@@ -131,42 +157,108 @@ class Client
     }
 
     /**
-     * Set dateCreate
+     * Set created_at
      *
-     * @param datetime $dateCreate
+     * @param datetime $created_at
      */
-    public function setDateCreate($dateCreate)
+    public function setCreatedAt($created_at)
     {
-        $this->dateCreate = $dateCreate;
+        $this->created_at = $created_at;
     }
 
     /**
-     * Get dateCreate
+     * Get created_at
      *
      * @return datetime 
      */
-    public function getDateCreate()
+    public function getCreatedAt()
     {
-        return $this->dateCreate;
+        return $this->created_at;
     }
 
     /**
-     * Set dateUpdate
+     * Set updated_at
      *
-     * @param datetime $dateUpdate
+     * @param datetime $updated_at
      */
-    public function setDateUpdate($dateUpdate)
+    public function setUpdateAt($updated_at)
     {
-        $this->dateUpdate = $dateUpdate;
+        $this->updated_at = $updated_at;
     }
 
     /**
-     * Get dateUpdate
+     * Get updated_at
      *
      * @return datetime 
      */
-    public function getDateUpdate()
+    public function getUpdateAt()
     {
-        return $this->dateUpdate;
+        return $this->updated_at;
+    }
+
+
+    public function getAbsolutePath()
+    {
+        return null === $this->logo ? null : $this->getUploadRootDir().'/'.$this->logo;
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->logo ? null : $this->getUploadDir().'/'.$this->logo;
+    }
+
+    protected function getUploadRootDir()
+    {
+        // the absolute directory path where uploaded documents should be saved
+        return __DIR__.'/../../../../web/'.$this->getUploadDir();
+    }
+
+    protected function getUploadDir()
+    {
+        // get rid of the __DIR__ so it doesn't screw when displaying uploaded doc/image in the view.
+        return 'uploads/images/clients';
+    }
+
+    /**
+     * @ORM\PrePersist()
+     * @ORM\PreUpdate()
+     */
+    public function preUpload()
+    {
+        if (null !== $this->file) {
+            // do whatever you want to generate a unique name
+            $this->logo = uniqid().'.'.$this->file->guessExtension();
+        }
+    }
+
+    /**
+     * @ORM\PostPersist()
+     * @ORM\PostUpdate()
+     */
+    public function upload()
+    {
+        if (null === $this->file) {
+            return;
+        }
+
+        // you must throw an exception here if the file cannot be moved
+        // so that the entity is not persisted to the database
+        // which the UploadedFile move() method does automatically
+        $this->file->move($this->getUploadRootDir(), $this->logo);
+
+        unset($this->file);
+    }
+
+    /**
+     * @ORM\PostRemove()
+     */
+    public function removeUpload()
+    {
+        if (! $file = $this->getAbsolutePath()) {
+            return;
+        }
+        if (is_file($file)) {
+            unlink($file);
+        }
     }
 }

@@ -1,3 +1,0 @@
-AppClientsBundle_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: AppClientsBundle:Default:index }
