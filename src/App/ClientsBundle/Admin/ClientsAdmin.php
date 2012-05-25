@@ -24,7 +24,7 @@ class ClientsAdmin extends Admin
     {
         $formMapper
             ->add('name')
-            ->add('logo', 'file', array('required' => true, 'label' => 'Image'))
+            ->add('file', 'file', array('required' => true, 'label' => 'Image'))
             ->add('description')
         ;
     }
