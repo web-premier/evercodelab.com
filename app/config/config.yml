@@ -103,3 +103,8 @@ services:
             - { name: doctrine.event_subscriber, connection: default }
         calls:
             - [ setAnnotationReader, [ @annotation_reader ] ]
+    app.client.admin.client:
+        class: App\ClientsBundle\Admin\ClientsAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Клиенты, label: Клиенты}
+        arguments: [null, App\ClientsBundle\Entity\Client, SonataAdminBundle:CRUD]
