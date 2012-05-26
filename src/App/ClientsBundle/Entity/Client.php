@@ -16,11 +16,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Client
 {
-    public function __toString()
-    {
-        return $this->getName();
-    }
-
     /**
      * @var integer $id
      *
@@ -196,6 +191,10 @@ class Client
         return $this->updated_at;
     }
 
+    public function __toString()
+    {
+        return $this->getName();
+    }
 
     public function getAbsolutePath()
     {

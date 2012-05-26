@@ -4,7 +4,7 @@
 /app/logs/*
 /vendor/
 /app/config/parameters.ini
-/web/uploads/images/clients/*
+/web/uploads/*
 
 *.twig~
 .DS_Store
