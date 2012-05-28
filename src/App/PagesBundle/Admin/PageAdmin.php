@@ -17,11 +17,17 @@ class PageAdmin extends Admin
         $this->securityContext = $securityContext;
     }
 
+    private function getCurrentUser()
+    {
+        return $this->securityContext->getToken()->getUser();
+    }
+
     public function configureShowFields(ShowMapper $showMapper)
     {
         $showMapper
             ->add('id')
             ->add('alias')
+            ->add('name')
             ->add('text')
             ->add('user')
             ->add('created_at')
@@ -59,11 +65,11 @@ class PageAdmin extends Admin
 
     public function prePersist($page)
     {
-        $page->setUser($this->securityContext->getToken()->getUser());
+        $page->setUser($this->getCurrentUser());
     }
 
     public function preUpdate($page)
     {
-        $page->setUser($this->securityContext->getToken()->getUser());
+        $page->setUser($this->getCurrentUser());
     }
 }
