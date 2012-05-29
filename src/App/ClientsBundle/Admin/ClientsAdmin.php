@@ -47,5 +47,5 @@ class ClientsAdmin extends Admin
             ->add('created_at')
         ;
     }
-    
+
 }

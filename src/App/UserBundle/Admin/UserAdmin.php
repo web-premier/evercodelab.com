@@ -52,7 +52,9 @@ class UserAdmin extends Admin
             ->add('email')
             ->add('username')
             ->add('enabled')
-            ->add('roles', 'doctrine_orm_boolean', array(), null, array())
+            ->add('roles', null, array(), 'choice',
+                array('choice_list' => new UserRoles())
+            )
         ;
     }
 

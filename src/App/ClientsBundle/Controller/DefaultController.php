@@ -10,7 +10,7 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/clients/{name}", name="clients_index")
-     */    
+     */
     public function indexAction($name)
     {
         return $this->render('AppClientsBundle:Default:index.html.twig', array('name' => $name));
