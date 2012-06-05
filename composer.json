@@ -26,8 +26,7 @@
  
     "autoload": {
         "psr-0": {
-            "App": "src/",
-            "Acme": "src/"
+            "App": "src/"
         }
     }
 }
