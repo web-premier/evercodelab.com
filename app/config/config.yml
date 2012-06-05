@@ -108,3 +108,8 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: Клиенты, label: Клиенты}
         arguments: [null, App\ClientsBundle\Entity\Client, SonataAdminBundle:CRUD]
+    app.client.admin.portfolio:
+        class: App\ClientsBundle\Admin\PortfolioAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Клиенты, label: Портфолио}
+        arguments: [null, App\ClientsBundle\Entity\Portfolio, SonataAdminBundle:CRUD, @security.context]
