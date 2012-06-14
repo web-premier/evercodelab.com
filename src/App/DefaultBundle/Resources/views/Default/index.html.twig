@@ -1,1 +1,18 @@
-Hello {{ name }}!
+<p>Pages</p>
+{% for page in pages %}
+<a href="pages/{{ page.alias }}"><li> {{ page.name }} </li></a>
+{% else %}
+No page have been found.
+{% endfor %}
+<p>Clients</p>
+{% for client in clients %}
+<li> {{ client.name }} </li>
+{% else %}
+No client have been found.
+{% endfor %}
+<p>Portfolio</p>
+{% for portfolio in portfolios %}
+<li> {{ portfolio.name }} </li>
+{% else %}
+No client have been found.
+{% endfor %}

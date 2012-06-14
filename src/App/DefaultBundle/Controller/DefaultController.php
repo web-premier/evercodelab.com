@@ -9,12 +9,20 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/hello/{name}")
+     * @Route("/")
      * @Template()
      */
-    public function indexAction($name)
+    public function indexAction()
     {
-        return array('name' => $name);
+        $em = $this->getDoctrine()->getEntityManager();
+        $pages = $em->getRepository('AppDefaultBundle:Page')->findAll();
+        $clients = $em->getRepository('AppDefaultBundle:Client')->findAll();
+        $portfolios = $em->getRepository('AppDefaultBundle:Portfolio')->findAll();
+        return array(
+            'pages' => $pages,
+            'clients' => $clients,
+            'portfolios' => $portfolios,
+        );
     }
 
     /**
