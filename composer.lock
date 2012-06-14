@@ -1,0 +1,158 @@
+{
+    "hash": "9eb62d6e0e33e507e6f408027b779ff7",
+    "packages": [
+        {
+            "package": "doctrine/common",
+            "version": "2.1.x-dev",
+            "source-reference": "41794945e795e108060eddb3342c9e13524b9b3e"
+        },
+        {
+            "package": "doctrine/data-fixtures",
+            "version": "dev-master",
+            "source-reference": "d233d05437c1a10034867f22069b4bb0f7dc96b6"
+        },
+        {
+            "package": "doctrine/dbal",
+            "version": "2.1.x-dev",
+            "source-reference": "76799960a54af583e82bedcf246e8c9c18006e94"
+        },
+        {
+            "package": "doctrine/doctrine-fixtures-bundle",
+            "version": "2.0.x-dev",
+            "source-reference": "479f10d068bd0b01e055aa2f555946893322b79c"
+        },
+        {
+            "package": "doctrine/orm",
+            "version": "2.1.x-dev",
+            "source-reference": "417b6b0e5e81c4da90745728b3f05bd5fcb5cccd"
+        },
+        {
+            "package": "friendsofsymfony/user-bundle",
+            "version": "1.2.0"
+        },
+        {
+            "package": "gedmo/doctrine-extensions",
+            "version": "2.2.x-dev",
+            "source-reference": "v2.2.2"
+        },
+        {
+            "package": "jms/metadata",
+            "version": "1.1.1"
+        },
+        {
+            "package": "jms/security-extra-bundle",
+            "version": "1.0.x-dev",
+            "source-reference": "e752f888c51425f71382c056961f10f2be642102"
+        },
+        {
+            "package": "knplabs/knp-menu",
+            "version": "v1.1.1"
+        },
+        {
+            "package": "knplabs/knp-menu-bundle",
+            "version": "v1.1.0"
+        },
+        {
+            "package": "kriswallsmith/assetic",
+            "version": "1.0.x-dev",
+            "source-reference": "e52c8b362d388673b0c90649d07341f7839eca98"
+        },
+        {
+            "package": "monolog/monolog",
+            "version": "1.1.0"
+        },
+        {
+            "package": "sensio/distribution-bundle",
+            "version": "2.0.x-dev",
+            "source-reference": "41a6c5caed65f02bb09c95a90579f047616471fd"
+        },
+        {
+            "package": "sensio/framework-extra-bundle",
+            "version": "2.0.x-dev",
+            "source-reference": "1eda94d838aa885e154f92f426df35f2252cdb92"
+        },
+        {
+            "package": "sensio/generator-bundle",
+            "version": "2.0.x-dev",
+            "source-reference": "83b768a487a6878f2bc2ad6859bd61a3651a7885"
+        },
+        {
+            "package": "sonata-project/admin-bundle",
+            "version": "2.0.x-dev",
+            "source-reference": "a48db227d85586bb2ef68efc1550369d01701a78"
+        },
+        {
+            "package": "sonata-project/block-bundle",
+            "version": "2.0.x-dev",
+            "source-reference": "c85e73cc439d98ac6415681477dfee5be40be541"
+        },
+        {
+            "package": "sonata-project/cache-bundle",
+            "version": "dev-master",
+            "source-reference": "5b966e7350636750df7e45920acb30946415ba6d"
+        },
+        {
+            "package": "sonata-project/doctrine-orm-admin-bundle",
+            "version": "2.0.x-dev",
+            "source-reference": "0dbd38798a962b377136b3d4da24c651ad589af2"
+        },
+        {
+            "package": "sonata-project/exporter",
+            "version": "dev-master",
+            "source-reference": "bcdfd50bc3118173d914e790921701ab26fb6b14"
+        },
+        {
+            "package": "sonata-project/jquery-bundle",
+            "version": "dev-master",
+            "source-reference": "01ffb8d1a7a4bb3971aed003e4f1ef050a0701aa"
+        },
+        {
+            "package": "stof/doctrine-extensions-bundle",
+            "version": "1.0.x-dev",
+            "source-reference": "1.0.2"
+        },
+        {
+            "package": "swiftmailer/swiftmailer",
+            "version": "dev-master",
+            "alias-pretty-version": "4.1.x-dev",
+            "alias-version": "4.1.9999999.9999999-dev"
+        },
+        {
+            "package": "swiftmailer/swiftmailer",
+            "version": "dev-master",
+            "source-reference": "d33d54cc8a081b0b85734744936ede1ba230dd64"
+        },
+        {
+            "package": "symfony/assetic-bundle",
+            "version": "2.0.x-dev",
+            "source-reference": "3515e6f0ab1e628bd9208a0d4316d011511a99cb"
+        },
+        {
+            "package": "symfony/symfony",
+            "version": "2.0.x-dev",
+            "source-reference": "4e1e08eff7b8907237717b3940877cffa09ba622"
+        },
+        {
+            "package": "twig/extensions",
+            "version": "dev-master",
+            "source-reference": "feb6d3f10c411e2631997c0a905aa581c80305c1"
+        },
+        {
+            "package": "twig/twig",
+            "version": "1.6.0"
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "sonata-project/admin-bundle": 20,
+        "sonata-project/doctrine-orm-admin-bundle": 20,
+        "doctrine/data-fixtures": 20,
+        "doctrine/doctrine-fixtures-bundle": 20,
+        "gedmo/doctrine-extensions": 20,
+        "stof/doctrine-extensions-bundle": 20
+    }
+}

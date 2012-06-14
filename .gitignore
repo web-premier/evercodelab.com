@@ -11,4 +11,3 @@
 .idea
 *.php~
 composer.phar
-composer.lock
