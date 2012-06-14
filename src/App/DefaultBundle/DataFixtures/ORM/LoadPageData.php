@@ -1,10 +1,10 @@
 <?php
-namespace App\PagesBundle\DataFixtures\ORM;
+namespace App\DefaultBundle\DataFixtures\ORM;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\DataFixtures\AbstractFixture;
-use App\PagesBundle\Entity\Page;
+use App\DefaultBundle\Entity\Page;
 use App\UserBundle\Entity\User;
 
 class LoadPageData extends AbstractFixture implements OrderedFixtureInterface

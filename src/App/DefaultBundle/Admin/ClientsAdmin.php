@@ -1,5 +1,5 @@
 <?php
-namespace App\ClientsBundle\Admin;
+namespace App\DefaultBundle\Admin;
 
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Form\FormMapper;
@@ -13,7 +13,7 @@ class ClientsAdmin extends Admin
     {
         $showMapper
             ->add('name')
-            ->add('logo', null, array('template' => 'AppClientsBundle:Admin:show_image.html.twig'))
+            ->add('logo', null, array('template' => 'AppDefaultBundle:Admin:show_image.html.twig'))
             ->add('description')
             ->add('created_at')
             ->add('updated_at')
@@ -33,7 +33,7 @@ class ClientsAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('id')
-            ->add('logo', null, array('template' => 'AppClientsBundle:Admin:list_image.html.twig'))
+            ->add('logo', null, array('template' => 'AppDefaultBundle:Admin:list_image.html.twig'))
             ->addIdentifier('name')
             ->addIdentifier('created_at')
         ;

@@ -1,5 +1,5 @@
 <?php
-namespace App\PagesBundle\Admin;
+namespace App\DefaultBundle\Admin;
 
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Form\FormMapper;
@@ -7,7 +7,7 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 
-class PageAdmin extends Admin
+class PortfolioAdmin extends Admin
 {
     protected  $securityContext;
 
@@ -25,10 +25,10 @@ class PageAdmin extends Admin
     public function configureShowFields(ShowMapper $showMapper)
     {
         $showMapper
-            ->add('id')
-            ->add('alias')
             ->add('name')
-            ->add('text')
+            ->add('logo', null, array('template' => 'AppDefaultBundle:Admin:show_image.html.twig'))
+            ->add('description')
+            ->add('link')
             ->add('user')
             ->add('created_at')
             ->add('updated_at')
@@ -38,9 +38,10 @@ class PageAdmin extends Admin
     public function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('alias')
             ->add('name')
-            ->add('text')
+            ->add('file', 'file', array('required' => true, 'label' => 'Image'))
+            ->add('description')
+            ->add('link')
         ;
     }
 
@@ -48,28 +49,29 @@ class PageAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('id')
-            ->addIdentifier('alias')
+            ->add('logo', null, array('template' => 'AppDefaultBundle:Admin:list_image.html.twig'))
             ->addIdentifier('name')
-            ->addIdentifier('user')
+            ->addIdentifier('link')
         ;
     }
 
     public function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('alias')
             ->add('name')
-            ->add('user')
+            ->add('description')
+            ->add('link')
+            ->add('created_at')
         ;
     }
 
-    public function prePersist($page)
+    public function prePersist($portfolio)
     {
-        $page->setUser($this->getCurrentUser());
+        $portfolio->setUser($this->getCurrentUser());
     }
 
-    public function preUpdate($page)
+    public function preUpdate($portfolio)
     {
-        $page->setUser($this->getCurrentUser());
+        $portfolio->setUser($this->getCurrentUser());
     }
 }

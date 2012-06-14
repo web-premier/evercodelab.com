@@ -1,15 +1,10 @@
-AppClientsBundle:
-    resource: "@AppClientsBundle/Controller/"
-    type: annotation
+AppDefaultBundle:
+    resource: "@AppDefaultBundle/Controller/"
+    type:     annotation
     prefix:   /
 
 AppUserBundle:
     resource: "@AppUserBundle/Resources/config/routing.yml"
-    prefix:   /
-
-PagesBundle:
-    resource: "@AppPagesBundle/Controller/"
-    type: annotation
     prefix:   /
 
 # Internal routing configuration to handle ESI

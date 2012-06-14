@@ -1,6 +1,6 @@
 <?php
 
-namespace App\ClientsBundle\Entity;
+namespace App\DefaultBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
- * App\ClientsBundle\Entity\Portfolio
+ * App\DefaultsBundle\Entity\Portfolio
  *
  * @ORM\Table(name="portfolio")
  * @ORM\Entity

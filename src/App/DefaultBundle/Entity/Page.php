@@ -1,15 +1,15 @@
 <?php
 
-namespace App\PagesBundle\Entity;
+namespace App\DefaultBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
- * App\PagesBundle\Entity\Page
+ * App\DefaultBundle\Entity\Page
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="App\PagesBundle\Entity\PageRepository")
+ * @ORM\Entity
  */
 class Page
 {

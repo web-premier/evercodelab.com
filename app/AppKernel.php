@@ -26,10 +26,9 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Symfony\Bundle\DoctrineFixturesBundle\DoctrineFixturesBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
-            
-            new App\PagesBundle\AppPagesBundle(),
+
             new App\UserBundle\AppUserBundle(),
-            new App\ClientsBundle\AppClientsBundle(),
+            new App\DefaultBundle\AppDefaultBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
