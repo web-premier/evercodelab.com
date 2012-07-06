@@ -1,6 +1,6 @@
 <p>Pages</p>
 {% for page in pages %}
-<a href="pages/{{ page.alias }}"><li> {{ page.name }} </li></a>
+<a href="{{ path('page_show', {'slug':page.slug }) }}"><li> {{ page.title }} </li></a>
 {% else %}
 No page have been found.
 {% endfor %}

@@ -29,6 +29,7 @@ class AppKernel extends Kernel
 
             new App\UserBundle\AppUserBundle(),
             new App\DefaultBundle\AppDefaultBundle(),
+            new Evercode\Bundle\PageBundle\EvercodePageBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

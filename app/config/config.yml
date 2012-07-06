@@ -85,24 +85,21 @@ fos_user:
     user_class: App\UserBundle\Entity\User
 
 services:
-    app.user.admin.user:
-        class: App\UserBundle\Admin\UserAdmin
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: Пользователи, label: Пользователи}
-        arguments: [null, App\UserBundle\Entity\User, SonataAdminBundle:CRUD]
-
-    app.page.admin.page:
-        class: App\DefaultBundle\Admin\PageAdmin
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: Страницы, label: Статические страницы}
-        arguments: [null, App\DefaultBundle\Entity\Page, SonataAdminBundle:CRUD, @security.context]
-
     gedmo.listener.timestampable:
         class: Gedmo\Timestampable\TimestampableListener
         tags:
             - { name: doctrine.event_subscriber, connection: default }
         calls:
             - [ setAnnotationReader, [ @annotation_reader ] ]
+
+
+## Admin resources
+    app.user.admin.user:
+        class: App\UserBundle\Admin\UserAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Пользователи, label: Пользователи}
+        arguments: [null, App\UserBundle\Entity\User, SonataAdminBundle:CRUD]
+
     app.client.admin.client:
         class: App\DefaultBundle\Admin\ClientsAdmin
         tags:

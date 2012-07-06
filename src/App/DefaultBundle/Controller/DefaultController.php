@@ -15,7 +15,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getEntityManager();
-        $pages = $em->getRepository('AppDefaultBundle:Page')->findAll();
+        $pages = $em->getRepository('EvercodePageBundle:Page')->findAll();
         $clients = $em->getRepository('AppDefaultBundle:Client')->findAll();
         $portfolios = $em->getRepository('AppDefaultBundle:Portfolio')->findAll();
         return array(
@@ -25,22 +25,4 @@ class DefaultController extends Controller
         );
     }
 
-    /**
-     * @Route("/pages/{alias}", name="pages_index")
-     */
-    public function pageAction($alias)
-    {
-        $em = $this->getDoctrine()->getEntityManager();
-        $page = $em->getRepository('AppDefaultBundle:Page')->findOneByAlias($alias);
-        if (empty($page))
-        {
-            throw $this->createNotFoundException('The Page does not exist');
-        }
-        else {
-            $name = $page->getName();
-            $date = $page->getCreatedAt();
-        }
-
-        return $this->render('AppDefaultBundle:Default:page.html.twig', array('name' => $name, 'date' => $date));
-    }
 }
