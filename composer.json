@@ -6,7 +6,7 @@
     },
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.1.*",
+        "symfony/symfony": "2.1.2",
         "doctrine/orm": ">=2.2.3,<2.4-dev",
         "doctrine/doctrine-bundle": "1.0.*",
         "twig/extensions": "1.0.*",
@@ -30,9 +30,7 @@
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "gedmo/doctrine-extensions":      "2.3.x-dev",
         "doctrine/doctrine-migrations-bundle": "dev-master",
-        "stof/doctrine-extensions-bundle": "1.1.x-dev",
-
-        "evercodelab/evercode-page-bundle" : "*"
+        "stof/doctrine-extensions-bundle": "1.1.x-dev"
     },
     "scripts": {
         "post-install-cmd": [

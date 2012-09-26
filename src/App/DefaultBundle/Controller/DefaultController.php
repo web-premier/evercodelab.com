@@ -15,11 +15,9 @@ class DefaultController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getEntityManager();
-        $pages = $em->getRepository('EvercodePageBundle:Page')->findAll();
         $clients = $em->getRepository('AppDefaultBundle:Client')->findAll();
         $portfolios = $em->getRepository('AppDefaultBundle:Portfolio')->findAll();
         return array(
-            'pages' => $pages,
             'clients' => $clients,
             'portfolios' => $portfolios,
         );

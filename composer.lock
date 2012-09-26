@@ -1,5 +1,5 @@
 {
-    "hash": "857ffd215fff51a44382814bd7b43350",
+    "hash": "edf5e0a68f517ff7a3113966198c82c6",
     "packages": [
         {
             "name": "doctrine/common",
@@ -470,47 +470,6 @@
             ]
         },
         {
-            "name": "evercodelab/evercode-page-bundle",
-            "version": "dev-master",
-            "target-dir": "Evercode/Bundle/PageBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/EvercodeLab/EvercodePageBundle.git",
-                "reference": "2fa18f4e8d03769bd99b86b0b4286b4a793d83f7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/EvercodeLab/EvercodePageBundle/zipball/2fa18f4e8d03769bd99b86b0b4286b4a793d83f7",
-                "reference": "2fa18f4e8d03769bd99b86b0b4286b4a793d83f7",
-                "shasum": ""
-            },
-            "time": "1343039572",
-            "type": "symfony-bundle",
-            "installation-source": "source",
-            "autoload": {
-                "psr-0": {
-                    "Evercode\\Bundle\\PageBundle": ""
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "EvercodeLab",
-                    "homepage": "http://www.evercodelab.com/"
-                },
-                {
-                    "name": "Roman Lapin",
-                    "email": "roman.lapin@gmail.com"
-                }
-            ],
-            "description": "Simple Symfony2 Bundle to work with pages",
-            "keywords": [
-                "page"
-            ]
-        },
-        {
             "name": "friendsofsymfony/user-bundle",
             "version": "dev-master",
             "target-dir": "FOS/UserBundle",
@@ -659,7 +618,7 @@
                 "symfony/framework-bundle": "2.*",
                 "jms/cg": "1.0.0"
             },
-            "time": "2012-01-01 20:50:26",
+            "time": "2012-01-01 16:50:26",
             "type": "symfony-bundle",
             "installation-source": "dist",
             "autoload": {
@@ -701,7 +660,7 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2012-01-01 20:40:52",
+            "time": "2012-01-01 16:40:52",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -803,7 +762,7 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2012-01-01 21:32:49",
+            "time": "2012-01-01 17:32:49",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -978,7 +937,7 @@
                 "knplabs/knp-menu": "1.1.*",
                 "symfony/framework-bundle": ">=2.0,<2.2-dev"
             },
-            "time": "2012-05-16 15:56:49",
+            "time": "2012-05-16 11:56:49",
             "type": "symfony-bundle",
             "installation-source": "dist",
             "autoload": {
@@ -1931,16 +1890,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "2.1.x-dev",
+            "version": "v2.1.2",
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony/symfony.git",
-                "reference": "21d16e60fa2d4dc12a489817070896daf806b55d"
+                "reference": "v2.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/symfony/zipball/21d16e60fa2d4dc12a489817070896daf806b55d",
-                "reference": "21d16e60fa2d4dc12a489817070896daf806b55d",
+                "url": "https://github.com/symfony/symfony/zipball/v2.1.2",
+                "reference": "v2.1.2",
                 "shasum": ""
             },
             "require": {
@@ -1989,7 +1948,7 @@
                 "propel/propel1": "dev-master",
                 "monolog/monolog": "dev-master"
             },
-            "time": "1348488710",
+            "time": "2012-09-20 07:13:00",
             "type": "library",
             "extra": {
                 "branch-alias": {

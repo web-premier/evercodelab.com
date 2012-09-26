@@ -1,9 +1,3 @@
-<p>Pages</p>
-{% for page in pages %}
-<a href="{{ path('page_show', {'slug':page.slug }) }}"><li> {{ page.title }} </li></a>
-{% else %}
-No page have been found.
-{% endfor %}
 <p>Clients</p>
 {% for client in clients %}
 <li> {{ client.name }} </li>
