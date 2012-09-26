@@ -30,8 +30,11 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
 
+            new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
+
             new App\UserBundle\AppUserBundle(),
             new App\DefaultBundle\AppDefaultBundle(),
+
             new Evercode\Bundle\PageBundle\EvercodePageBundle(),
         );
 
