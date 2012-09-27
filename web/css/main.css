@@ -8,9 +8,8 @@ html {
 	font-size: 100.1%;
 }
 body {
-	font: 12px/1.333 Verdana, Arial, Helvetica, sans-serif;
-	background:#eee;
-	padding:105px 0 0;
+	font: 12px/1.333 "trebuchet MS", arial, verdana;
+	background:#fff;
 }
 a img, fieldset {
 	border: 0;
@@ -33,10 +32,67 @@ article,aside,canvas,details,embed,figcaption,figure,footer,header,hgroup,menu,n
 command,datalist,keygen,mark,meter,progress,rp,rt,ruby,time,wbr {display: inline;}
 /* html (end) */
 
+/* container (begin) */
+.container {
+	width: 100%;
+	overflow:hidden;
+}
+/* container (end) */
+
 /* header (begin) */
 header{
+	width: 100%;
+	background:#272727;
+	border-top: 7px solid #000;
+	position:relative;
+	
+	-moz-box-shadow:0 0 10px 0 #666;
+	-webkit-box-shadow:0 0 10px 0 #666;
+	box-shadow:0 0 10px 0 #666;
+	
+	z-index:5;
 }
-/* header (end) */
+header menu{
+	overflow:hidden;
+}
+header menu li{
+	font-size:16px;
+	text-transform:uppercase;
+	float:left;
+	margin:0 25px 0 0;
+}
+header menu li a{
+	color: #fff;
+	text-decoration:none;
+	text-shadow: 1px 1px 1px #000;
+}
+header .wrapper{
+	padding:15px 0;
+}
+header .wrapper .topLine{
+	margin:0;
+	left:0;
+}
+/* menu (end) */
+
+/* b-head (begin) */
+.b-head{
+	position:fixed;
+	top:0;
+	left:0;
+	width: 100%;
+}
+.b-head .eng{
+	font: bold 14px Arial, Helvetica, sans-serif;
+	text-decoration:none;
+	color: #fff;
+	position:absolute;
+	top:100%;
+	right: 0;
+	background:#a0d7f0;
+	padding:5px 10px;
+}
+/* b-head (end) */
 
 /* wrapper (begin) */
 .wrapper{
@@ -50,3 +106,30 @@ header{
 .logo{
 }
 /* logo (end) */
+
+/* topLine (begin) */
+.topLine{
+	position:absolute;
+	top:-7px;
+	left:0;
+	height:7px;
+	width: 50%;
+	background:#7ebc41;
+	margin:0 0 0 -500px;
+}
+.topLineMove{
+	width: 100px;
+}
+.topLine.topLineMove:after{
+	content: '';
+	display: block;
+	position:absolute;
+	left:100%;
+	top:-7px;
+	width:0;
+	height:0;
+	border-top:7px solid transparent;
+	border-left:7px solid #7ebc41;
+	border-bottom:7px solid transparent;
+}
+/* topLine (end) */
