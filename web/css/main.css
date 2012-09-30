@@ -3,6 +3,10 @@
 	padding: 0;
 	outline:none;
 }
+@font-face{
+	font-family: "FreeSet";
+	src: url(../f/FREESET~4.TTF);
+}
 html {
 	height: 100%;
 	font-size: 100.1%;
@@ -36,6 +40,8 @@ command,datalist,keygen,mark,meter,progress,rp,rt,ruby,time,wbr {display: inline
 .container {
 	width: 100%;
 	overflow:hidden;
+	padding: 55px 0 0;
+	background:url(../i/shattered.png) repeat 0 0;
 }
 /* container (end) */
 
@@ -45,6 +51,7 @@ header{
 	background:#272727;
 	border-top: 7px solid #000;
 	position:relative;
+	height:55px;
 	
 	-moz-box-shadow:0 0 10px 0 #666;
 	-webkit-box-shadow:0 0 10px 0 #666;
@@ -81,6 +88,7 @@ header .wrapper .topLine{
 	top:0;
 	left:0;
 	width: 100%;
+	z-index:5;
 }
 .b-head .eng{
 	font: bold 14px Arial, Helvetica, sans-serif;
@@ -133,3 +141,87 @@ header .wrapper .topLine{
 	border-bottom:7px solid transparent;
 }
 /* topLine (end) */
+
+/* social (begin) */
+.social {
+	position:absolute;
+	right:0;
+	top:50%;
+	overflow:hidden;
+	margin:-12px 0 0;
+}
+.social li{
+	float:left;
+	margin:0 0 0 10px;
+}
+.social li i{
+	display:block;
+	width: 24px;
+	height:24px;
+	background:url(../i/social.png) no-repeat 0 0;
+}
+.social li i.twitter{
+	background-position: -24px 0;
+}
+.social li i.fb{
+	background-position: -48px 0;
+}
+.social li i.rss{
+	background-position: -72px 0;
+}
+/* social (end) */
+
+/* b-about (begin) */
+.b-about{}
+.b-about .wrapper{
+	padding:40px 0 20px;
+}
+.b-about .l-col{
+	width: 285px;
+}
+.b-about .r-col{
+	width: 665px;
+}
+.b-about .cols .clear{
+	margin:0 0 20px;
+}
+/* b-about (end) */
+
+/* headers (begin) */
+h1 {
+	font-size:48px;
+	line-height:48px;
+	color: #7ebc41;
+	font-weight:bold;
+	text-shadow:-1px -1px 0 #6ea439;
+}
+p {
+	margin:15px 0;
+}
+/* headers (end) */
+
+/* cols (begin) */
+.cols{}
+.cols:after{
+	content: '';
+	display:block;
+	clear:both;
+}
+.cols .l-col{
+	float:left;
+}
+.cols .r-col{
+	float:right;
+}
+.clear {
+	clear:both;
+}
+/* cols (end) */
+
+/* phone (begin) */
+.phone {
+	font: 33px "trebuchet MS", arial, verdana;
+	text-align:center;
+	color: #bcbfc2;
+}
+/* phone (end) */
