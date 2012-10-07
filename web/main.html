@@ -22,11 +22,12 @@
 
 <body>
 	<div class="container">
+		<div class="b-shattered"></div>
 		<div class="b-head">
 			<header>
 				<div class="topLine"></div>
 				<div class="wrapper">
-					<div class="topLine topLineMove"></div>
+					<div class="topLine topLineMove" id="topLineMove"></div>
 					<ul class="social">
 						<li><a href="#"><i class=""></i></a></li>
 						<li><a href="#"><i class="twitter"></i></a></li>
@@ -35,12 +36,12 @@
 					</ul>
 					<menu>
 						<li><a href="#">Добро пожаловать</a></li>
-						<li><a href="#">О нас</a></li>
-						<li><a href="#">Услуги</a></li>
-						<li><a href="#">Клиенты</a></li>
-						<li><a href="#">Портфолио</a></li>
-						<li><a href="#">Контакты</a></li>
-						<li><a href="#">А, и еще блог</a></li>
+						<li><a href="#aboutus">О нас</a></li>
+						<li><a href="#services">Услуги</a></li>
+						<li><a href="#clients">Клиенты</a></li>
+						<li><a href="#portfolio">Портфолио</a></li>
+						<li><a href="#contacts">Контакты</a></li>
+						<li><a href="#blog">А, и еще блог</a></li>
 					</menu>
 				</div>
 			</header>
@@ -48,7 +49,7 @@
 				<a href="#" class="eng">English</a>
 			</div>
 		</div>
-		<div class="b-about">
+		<div class="b-about" id="aboutus">
 			<div class="wrapper">
 				<div class="cols">
 					<div class="l-col">
@@ -59,16 +60,264 @@
 						<p>Основное направление нашей деятельности сосредоточено на разработке и программировании. Мы этакая лаборатория кода, у нас в этом есть огромный опыт (у каждого из двух основателей более 5 лет опыта работы в сфере программирования для веб). </p>
 						<p>Но мы можем организовать вам и дизайн, и разработку логотипа или фирменного стиля. За несколько лет работы мы накопили достаточное количество связей, чтобы иметь возможность выполнить практически любое задание.</p>
 					</div>
-					<div class="clear"></div>
+				</div>
+				<div class="cols">
 					<div class="l-col">
 						<address class="phone">(+7911) 666-14-88</address>
 					</div>
 					<div class="r-col">
-						<ul class="switcher">
-							<li><a href="#">Команда</a></li>
-							<li><a href="#">Миссия</a></li>
+						<div class="b-switcher-block">
+							<ul class="b-switcher">
+								<li rel="b-about-team" class="b-switcher-team">Команда</li>
+								<li rel="b-about-mission" class="b-switcher-mission">Миссия</li>
+							</ul>
+							<div class="b-about-team b-switch">team</div>
+							<div class="b-about-mission b-switch">mission</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="b-services" id="services">
+			<div class="wrapper">
+				<div class="cols">
+					<div class="l-col">
+						<img src="i/guys.png" alt="" />
+					</div>
+					<div class="r-col">
+						<h2>Что мы умеем</h2>
+						<div class="b-service-block cols">
+							<div class="l-col">
+								<div class="b-service-list b-development">
+									<div class="b-service-head">
+										Разработка
+									</div>
+									<ul class="b-service-list">
+										<li>Сервисы</li>
+										<li>Приложения</li>
+										<li>API</li>
+										<li>Прототипы</li>
+										<li>Сопровождение и поддержка</li>
+									</ul>
+								</div>
+								<div class="b-service-list b-consulting">
+									<div class="b-service-head">
+										Консалтинг
+									</div>
+									<ul class="b-service-list">
+										<li>Проектирование</li>
+										<li>Аудит проекта</li>
+										<li>Анализ кода</li>
+										<li>Организация процесса разработки</li>
+										<li>Структурирование информации</li>
+									</ul>
+								</div>
+							</div>
+							<div class="l-col">
+								<div class="b-service-list b-technologies">
+									<div class="b-service-head">
+										Технологии
+									</div>
+									<ul class="b-service-list">
+										<li><b>Системы контроля версий:</b> Git, Mercurial</li>
+										<li><b>Языки:</b> PHP, Ruby, Python</li>
+										<li><b>Базы данных:</b> MySQL/PostgreSQL, Mongo DB</li>
+										<li>
+											<b>Фреймворки:</b>
+											PHP: Symfony2, Silex, Zend Framework, Yii
+											Ruby: Ruby on Rails
+											Python: Django, Google App Engine
+									   </li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<ul class="b-switcher">
+							<li><a href="#">Подробнее</a></li>
 						</ul>
 					</div>
+				</div>
+			</div>
+		</div>
+		<div class="b-clients" id="clients">
+			<div class="wrapper cols">
+				<div class="r-col">
+					<h2>Наши клиенты</h2>
+				</div>
+				<ul class="b-clients-list">
+					<li>
+						<img src="i/cl.ifmo.png" alt="" />
+					</li>
+					<li>
+						<img src="i/cl.euro.png" alt="" />
+					</li>
+					<li>
+						<img src="i/cl.reksoft.png" alt="" />
+					</li>
+					<li>
+						<img src="i/cl.kelnik.png" alt="" />
+					</li>
+					<li class="redfor">
+						<img src="i/cl.redfor.png" alt="" />
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="b-portfolio" id="portfolio">
+			<div class="wrapper cols">
+				<div class="r-col">
+					<h2>Наше портфолио</h2>
+				</div>
+			</div>
+			<div class="wrapper cols">
+				<div class="l-col">
+					<ul class="tag-clouds">
+						<li class="active"><a href="#">Все</a></li>
+						<li><a href="#">Собственные проекты</a></li>
+						<li><a href="#">Проекты на заказ</a></li>
+						<li><a href="#">В разработке</a></li>
+						<li><a href="#">Аудит</a></li>
+						<li><a href="#">Программирование</a></li>
+						<li><a href="#">Консалтинг</a></li>
+						<li><a href="#">Open source</a></li>
+					</ul>
+				</div>
+				<div class="r-col">
+					<div class="b-switcher-block">
+						<ul class="b-switcher">
+							<li rel="b-portfolio-pictures" class="b-switcher-pictures"><i></i>Картинками</li>
+							<li rel="b-portfolio-text" class="b-switcher-text active"><i></i>Текстом</li>
+						</ul>
+						<div class="b-portfolio-pictures b-switch">
+							<ul>
+								<li>
+									<a href="#"><img src="i/portfolio.png" alt="" /></a>
+									<div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
+								</li>
+								<li>
+									<a href="#"><img src="i/portfolio.png" alt="" /></a>
+									<div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
+								</li>
+								<li>
+									<a href="#"><img src="i/portfolio.png" alt="" /></a>
+									<div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
+								</li>
+								<li>
+									<a href="#"><img src="i/portfolio.png" alt="" /></a>
+									<div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
+								</li>
+								<li>
+									<a href="#"><img src="i/portfolio.png" alt="" /></a>
+									<div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
+								</li>
+								<li>
+									<a href="#"><img src="i/portfolio.png" alt="" /></a>
+									<div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
+								</li>
+							</ul>
+						</div>
+						<div class="b-portfolio-text b-switch">
+							<ul>
+								<li>
+									<div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
+									ITOP — это открытый ресурс, основные функции которого заключаются в сборе и систематизации информации  в области информационных и оптических технологий и предоставлении пользователям доступа к архиву собранных  материалов. Система получает на вход материалы от поставщиков информации  (вузов, научных организаций, компаний, физических лиц) и хранит их в виде автоматически пополняемой структурированной базы данных. На выходе потребителям предоставляются различные формы свободного онлайн доступа к архиву.
+								</li>
+								<li>
+									<div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
+									ITOP — это открытый ресурс, основные функции которого заключаются в сборе и систематизации информации  в области информационных и оптических технологий и предоставлении пользователям доступа к архиву собранных  материалов. Система получает на вход материалы от поставщиков информации  (вузов, научных организаций, компаний, физических лиц) и хранит их в виде автоматически пополняемой структурированной базы данных. На выходе потребителям предоставляются различные формы свободного онлайн доступа к архиву.
+								</li>
+								<li>
+									<div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
+									ITOP — это открытый ресурс, основные функции которого заключаются в сборе и систематизации информации  в области информационных и оптических технологий и предоставлении пользователям доступа к архиву собранных  материалов. Система получает на вход материалы от поставщиков информации  (вузов, научных организаций, компаний, физических лиц) и хранит их в виде автоматически пополняемой структурированной базы данных. На выходе потребителям предоставляются различные формы свободного онлайн доступа к архиву.
+								</li>
+							</ul>
+						</div>
+					</div>
+					<ul class="b-slider">
+						<li class="prev disabled"></li>
+						<li class="next"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="b-contacts" id="contacts">
+			<div class="wrapper cols">
+				<div class="l-col">
+					<img src="i/man.png" alt="" />
+					<p>Ну а пока вы все это тут читаете, мы уже помчались делать что-то новое и очень крутое! </p>
+					<p>Кстати - весь ноябрь у нас скидка усатым. Голощекие, не расстраивайтесь, вот вам купон!</p>
+					<img src="i/whisker.png" alt="" />
+				</div>
+				<div class="r-col">
+					<h2>Как с нами связаться</h2>
+					<div class="cols">
+						<div class="l-col">
+							<ul class="b-contacts-list">
+								<li><a href="#">info@evercodelab.com</a></li>
+								<li><a href="#">skype:evercodelab</a></li>
+								<li>
+									<div class="b-contacts-blog">
+										<a href="#">@evercodelab</a>
+										<p>@formazon Спасибо! Ты узнаешь об этом одним из первых ;)</p>
+										<p>Нам сегодня год, уиии! :)<br />http://blog.evercodelab.com/one-year-old/<br />Поэтому мы немного горды собой и благодарны всем остальными)</p>
+										<p>In the blog: One year old<br />http://blog.evercodelab.com/one-year-old/<br />Yep, guys, one year. Feels like everything started just yesterday :)</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="r-col">
+							<form class="b-form-callback">
+								<fieldset>
+									<label>
+										Представьтесь, пожалуйста
+										<input type="text" value="" />
+									</label>
+								</fieldset>
+								<fieldset>
+									<label>
+										Укажите почту или контактный телефон
+										<input type="text" value="" />
+									</label>
+								</fieldset>
+								<fieldset>
+									<label>
+										Ну, и напишите что-нибудь заодно
+										<textarea></textarea>
+									</label>
+								</fieldset>
+								<input type="submit" value="Отправить сообщение" />
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="b-blog" id="blog">
+			<div class="wrapper cols">
+				<div class="r-col">
+					<h2>Совсем забыли, у нас еще есть блог!</h2>
+				</div>
+			</div>
+			<div class="wrapper cols">
+				<div class="l-col">
+					<ul class="b-blogs-list">
+						<li><a href="#">One year old</a></li>
+						<li><a href="#">To whom we pay</a></li>
+						<li><a href="#">Самая скучная анкета на свете</a></li>
+						<li><a href="#">Свой велосипед на хлебных крошках</a></li>
+						<li><a href="#">PHP Guide</a></li>
+					</ul>
+				</div>
+				<div class="r-col">
+					<div class="b-blog-info">
+						<b>One Year Old</b>
+						<span class="b-blog-date">Sep 20th, 2012  </span>
+						<span class="b-blog-comments"><a href="#">0 Comments</a></span>
+					</div>
+					<p>Год назад из идеи двух людей и их скромными усилиями появилась замечательная фирма Evercode Lab. Еще один человек сделал этим двум логотип в виде зеленой годзилла-птицы. С этого они начали свою работу.</p>
+					<p>Прошел год и наша компания подросла и стала более лучше одеваться. То есть многому научилась, конечно. Мы занимались кучей интересных вещей, пробовали, экспериментировали, создавали, иногда ошибались.</p>
+					<p>Наша команда расширилась, теперь нас больше четырех и меньше шести постоянных участников. И еще есть несколько хороших людей, которые помогают нам по тем или иным вопросам.</p>
+					<div class="more"><a href="#">Читать дальше...</a></div>
 				</div>
 			</div>
 		</div>
