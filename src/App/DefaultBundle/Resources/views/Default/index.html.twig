@@ -18,6 +18,9 @@
     <script type="text/javascript" src="js/jQuery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
 </head>
 
 <body>
@@ -29,10 +32,10 @@
         <div class="wrapper">
             <div class="topLine topLineMove" id="topLineMove"></div>
             <ul class="social">
-                <li><a href="#"><i class=""></i></a></li>
-                <li><a href="#"><i class="twitter"></i></a></li>
-                <li><a href="#"><i class="fb"></i></a></li>
-                <li><a href="#"><i class="rss"></i></a></li>
+                <li><a href="https://github.com/EvercodeLab"><i class=""></i></a></li>
+                <li><a href="http://twitter.com/evercodelab"><i class="twitter"></i></a></li>
+                {#<li><a href="#"><i class="fb"></i></a></li>#}
+                <li><a href="http://feeds.feedburner.com/EvercodeBlog"><i class="rss"></i></a></li>
             </ul>
             <menu>
                 <li><a href="#">Добро пожаловать</a></li>
@@ -45,9 +48,9 @@
             </menu>
         </div>
     </header>
-    <div class="wrapper">
-        <a href="#" class="eng">English</a>
-    </div>
+    {#<div class="wrapper">#}
+        {#<a href="#" class="eng">English</a>#}
+    {#</div>#}
 </div>
 <div class="b-about" id="aboutus">
     <div class="wrapper">
@@ -63,16 +66,16 @@
         </div>
         <div class="cols">
             <div class="l-col">
-                <address class="phone">(+7911) 666-14-88</address>
+                <address class="phone">(+7921) 426-34-22</address>
             </div>
             <div class="r-col">
                 <div class="b-switcher-block">
-                    <ul class="b-switcher">
-                        <li rel="b-about-team" class="b-switcher-team">Команда</li>
-                        <li rel="b-about-mission" class="b-switcher-mission">Миссия</li>
-                    </ul>
-                    <div class="b-about-team b-switch">team</div>
-                    <div class="b-about-mission b-switch">mission</div>
+                    {#<ul class="b-switcher">#}
+                        {#<li rel="b-about-team" class="b-switcher-team">Команда</li>#}
+                        {#<li rel="b-about-mission" class="b-switcher-mission">Миссия</li>#}
+                    {#</ul>#}
+                    {#<div class="b-about-team b-switch">team</div>#}
+                    {#<div class="b-about-mission b-switch">mission</div>#}
                 </div>
             </div>
         </div>
@@ -133,7 +136,7 @@
                     </div>
                 </div>
                 <ul class="b-switcher">
-                    <li><a href="#">Подробнее</a></li>
+                    {#<li><a href="#">Подробнее</a></li>#}
                 </ul>
             </div>
         </div>
@@ -144,23 +147,15 @@
         <div class="r-col">
             <h2>Наши клиенты</h2>
         </div>
+        {% if clients %}
         <ul class="b-clients-list">
+            {% for client in clients %}
             <li>
                 <img src="i/cl.ifmo.png" alt="" />
             </li>
-            <li>
-                <img src="i/cl.euro.png" alt="" />
-            </li>
-            <li>
-                <img src="i/cl.reksoft.png" alt="" />
-            </li>
-            <li>
-                <img src="i/cl.kelnik.png" alt="" />
-            </li>
-            <li class="redfor">
-                <img src="i/cl.redfor.png" alt="" />
-            </li>
+            {% endfor %}
         </ul>
+        {% endif %}
     </div>
 </div>
 <div class="b-portfolio" id="portfolio">

@@ -16,10 +16,10 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getEntityManager();
         $clients = $em->getRepository('AppDefaultBundle:Client')->findAll();
-        $portfolios = $em->getRepository('AppDefaultBundle:Portfolio')->findAll();
+        $projects = $em->getRepository('AppDefaultBundle:Portfolio')->findAll();
         return array(
             'clients' => $clients,
-            'portfolios' => $portfolios,
+            'projects' => $projects,
         );
     }
 
