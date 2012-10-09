@@ -15,7 +15,7 @@
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script type="text/javascript" src="js/jQuery.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -166,65 +166,39 @@
     </div>
     <div class="wrapper cols">
         <div class="l-col">
-            <ul class="tag-clouds">
-                <li class="active"><a href="#">Все</a></li>
-                <li><a href="#">Собственные проекты</a></li>
-                <li><a href="#">Проекты на заказ</a></li>
-                <li><a href="#">В разработке</a></li>
-                <li><a href="#">Аудит</a></li>
-                <li><a href="#">Программирование</a></li>
-                <li><a href="#">Консалтинг</a></li>
-                <li><a href="#">Open source</a></li>
-            </ul>
+            {#<ul class="tag-clouds">#}
+                {#<li class="active"><a href="#">Все</a></li>#}
+                {#<li><a href="#">Собственные проекты</a></li>#}
+                {#<li><a href="#">Проекты на заказ</a></li>#}
+                {#<li><a href="#">В разработке</a></li>#}
+                {#<li><a href="#">Аудит</a></li>#}
+                {#<li><a href="#">Программирование</a></li>#}
+                {#<li><a href="#">Консалтинг</a></li>#}
+                {#<li><a href="#">Open source</a></li>#}
+            {#</ul>#}
         </div>
         <div class="r-col">
             <div class="b-switcher-block">
                 <ul class="b-switcher">
-                    <li rel="b-portfolio-pictures" class="b-switcher-pictures"><i></i>Картинками</li>
-                    <li rel="b-portfolio-text" class="b-switcher-text active"><i></i>Текстом</li>
+                    {#<li rel="b-portfolio-pictures" class="b-switcher-pictures"><i></i>Картинками</li>#}
+                    {#<li rel="b-portfolio-text" class="b-switcher-text active"><i></i>Текстом</li>#}
                 </ul>
-                <div class="b-portfolio-pictures b-switch">
-                    <ul>
-                        <li>
-                            <a href="#"><img src="i/portfolio.png" alt="" /></a>
-                            <div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
-                        </li>
-                        <li>
-                            <a href="#"><img src="i/portfolio.png" alt="" /></a>
-                            <div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
-                        </li>
-                        <li>
-                            <a href="#"><img src="i/portfolio.png" alt="" /></a>
-                            <div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
-                        </li>
-                        <li>
-                            <a href="#"><img src="i/portfolio.png" alt="" /></a>
-                            <div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
-                        </li>
-                        <li>
-                            <a href="#"><img src="i/portfolio.png" alt="" /></a>
-                            <div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
-                        </li>
-                        <li>
-                            <a href="#"><img src="i/portfolio.png" alt="" /></a>
-                            <div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
-                        </li>
-                    </ul>
-                </div>
+                {#<div class="b-portfolio-pictures b-switch">#}
+                    {#<ul>#}
+                        {#<li>#}
+                            {#<a href="#"><img src="i/portfolio.png" alt="" /></a>#}
+                            {#<div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>#}
+                        {#</li>#}
+                    {#</ul>#}
+                {#</div>#}
                 <div class="b-portfolio-text b-switch">
                     <ul>
+                        {% for project in projects %}
                         <li>
-                            <div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
-                            ITOP — это открытый ресурс, основные функции которого заключаются в сборе и систематизации информации  в области информационных и оптических технологий и предоставлении пользователям доступа к архиву собранных  материалов. Система получает на вход материалы от поставщиков информации  (вузов, научных организаций, компаний, физических лиц) и хранит их в виде автоматически пополняемой структурированной базы данных. На выходе потребителям предоставляются различные формы свободного онлайн доступа к архиву.
+                            <div class="b-portfolio-link"><a href="{{ project.link }}">{{ project.link }}</a></div>
+                            {{ project.description }}
                         </li>
-                        <li>
-                            <div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
-                            ITOP — это открытый ресурс, основные функции которого заключаются в сборе и систематизации информации  в области информационных и оптических технологий и предоставлении пользователям доступа к архиву собранных  материалов. Система получает на вход материалы от поставщиков информации  (вузов, научных организаций, компаний, физических лиц) и хранит их в виде автоматически пополняемой структурированной базы данных. На выходе потребителям предоставляются различные формы свободного онлайн доступа к архиву.
-                        </li>
-                        <li>
-                            <div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>
-                            ITOP — это открытый ресурс, основные функции которого заключаются в сборе и систематизации информации  в области информационных и оптических технологий и предоставлении пользователям доступа к архиву собранных  материалов. Система получает на вход материалы от поставщиков информации  (вузов, научных организаций, компаний, физических лиц) и хранит их в виде автоматически пополняемой структурированной базы данных. На выходе потребителям предоставляются различные формы свободного онлайн доступа к архиву.
-                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

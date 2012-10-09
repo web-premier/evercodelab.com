@@ -259,9 +259,9 @@ p {
 	border-bottom:1px dashed #272727;
 	color: #272727;
 }
-.b-switcher-block .b-switch{
-	display:none;
-}
+/*.b-switcher-block .b-switch{*/
+	/*display:none;*/
+/*}*/
 /* b-switcher (end) */
 
 /* b-services (begin) */

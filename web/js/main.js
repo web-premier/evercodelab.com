@@ -30,7 +30,7 @@
 	}
 		  
 	function init(){
-		switcher();
+//		switcher();
 		scrollLine();
 	}
 	
