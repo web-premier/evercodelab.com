@@ -42,7 +42,7 @@ command,datalist,keygen,mark,meter,progress,rp,rt,ruby,time,wbr {display: inline
 	overflow:hidden;
 	position:relative;
 	padding:55px 0 0 ;
-	background: url(../i/shattered.png) repeat 0 0;
+	background: url(../i/shattered.png) repeat -280px 0;
 }
 .container > div{
 	position:relative;
@@ -188,12 +188,18 @@ header .wrapper .topLine{
 /* social (end) */
 
 /* b-about (begin) */
-.b-about{}
+.b-about{
+	height:330px;
+	overflow:hidden;
+}
 .b-about .wrapper{
-	padding:40px 0 0;
+	padding:20px 0 0;
 }
 .b-about .cols {
 	margin:0 0 10px;
+}
+.b-about p{
+	margin:10px 0 0;
 }
 /* b-about (end) */
 
@@ -266,7 +272,7 @@ p {
 
 /* b-services (begin) */
 .b-services{
-	background:#7bb3d1;
+	background:#7bb3d1 url(../i/shattered-blue.png) repeat-x 0 0;
 	height:405px;
 	overflow:hidden;
 }
@@ -367,7 +373,7 @@ p {
 
 /* b-clients (begin) */
 .b-clients{
-	background:#39768a;
+	background:#39768a url(../i/shattered-dark-blue.png) repeat-x -22px 0;
 	position:relative;
 	z-index:10;
 	padding:10px 0 20px;

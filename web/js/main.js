@@ -3,11 +3,27 @@
 	function scrollLine() {
 		var $scrollLine = $('#topLineMove'),
 			$w = $(window),
-			docHeight = $(document).height() - $w.height();
+			docHeight = $(document).height() - $w.height(),
+			$topMenu = $('header menu li a'),
+			topMenuHeight = $('.b-head').height(),
+			scrollBack = false;
 			
+		$topMenu.click(function() {
+			scrollBack = true;
+		});
+		
+		if (location.hash == "#aboutus") {
+			$w.scrollTop($w.scrollTop() - topMenuHeight);
+		}
 		$scrollLine.width(($w.scrollTop() / docHeight * 100) + '%');
 		$w.scroll(function(e) {
 			$scrollLine.width(($w.scrollTop() / docHeight * 100) + '%');
+			
+			if (scrollBack) {
+				$w.scrollTop($w.scrollTop() - topMenuHeight);
+			}
+			
+			scrollBack = false;
 		});
 	}
 	
