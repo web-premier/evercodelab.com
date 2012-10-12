@@ -151,7 +151,7 @@
         <ul class="b-clients-list">
             {% for client in clients %}
             <li>
-                <img src="i/cl.ifmo.png" alt="" />
+                <img src="{{ client.webPath }}" alt="" />
             </li>
             {% endfor %}
         </ul>
@@ -214,8 +214,8 @@
         <div class="l-col">
             <img src="i/man.png" alt="" />
             <p>Ну а пока вы все это тут читаете, мы уже помчались делать что-то новое и очень крутое! </p>
-            <p>Кстати - весь ноябрь у нас скидка усатым. Голощекие, не расстраивайтесь, вот вам купон!</p>
-            <img src="i/whisker.png" alt="" />
+            {#<p>Кстати - весь ноябрь у нас скидка усатым. Голощекие, не расстраивайтесь, вот вам купон!</p>#}
+            {#<img src="i/whisker.png" alt="" />#}
         </div>
         <div class="r-col">
             <h2>Как с нами связаться</h2>

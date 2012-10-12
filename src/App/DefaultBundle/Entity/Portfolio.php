@@ -42,7 +42,7 @@ class Portfolio
     /**
      * @var string $logo
      *
-     * @ORM\Column(name="logo", type="string", length=255)
+     * @ORM\Column(name="logo", type="string", length=255, nullable=true)
      */
     private $logo;
 
