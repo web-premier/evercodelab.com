@@ -270,11 +270,9 @@
     <div class="wrapper cols">
         <div class="l-col">
             <ul class="b-blogs-list">
-                <li><a href="#">One year old</a></li>
-                <li><a href="#">To whom we pay</a></li>
-                <li><a href="#">Самая скучная анкета на свете</a></li>
-                <li><a href="#">Свой велосипед на хлебных крошках</a></li>
-                <li><a href="#">PHP Guide</a></li>
+                {% for post in posts %}
+                <li><a href="{{ post.get_permalink }}">{{ post.get_title }}</a></li>
+                {% endfor %}
             </ul>
         </div>
         <div class="r-col">

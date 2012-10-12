@@ -1,5 +1,5 @@
 {
-    "hash": "d72e853289ccbe89049e5ebb3350f073",
+    "hash": "083caa1644aa792dff51849c57f21e94",
     "packages": [
         {
             "name": "doctrine/common",
@@ -75,17 +75,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/data-fixtures.git",
-                "reference": "b29bad9738fada9486961f60542f2d2d77c7b501"
+                "reference": "v1.0.0-ALPHA3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/data-fixtures/zipball/b29bad9738fada9486961f60542f2d2d77c7b501",
-                "reference": "b29bad9738fada9486961f60542f2d2d77c7b501",
+                "url": "https://github.com/doctrine/data-fixtures/zipball/v1.0.0-ALPHA3",
+                "reference": "v1.0.0-ALPHA3",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
+            "time": "1348136794",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -107,8 +108,7 @@
             "homepage": "http://www.doctrine-project.org",
             "keywords": [
                 "database"
-            ],
-            "time": "1348136794"
+            ]
         },
         {
             "name": "doctrine/dbal",
@@ -180,12 +180,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/doctrine/DoctrineBundle.git",
-                "reference": "e69a6fd75fa3979e35b7004e6da6e9aea3765997"
+                "reference": "75e0ac4a4be04bfa39b282f8ebccd3ef4c8ebe32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/DoctrineBundle/zipball/e69a6fd75fa3979e35b7004e6da6e9aea3765997",
-                "reference": "e69a6fd75fa3979e35b7004e6da6e9aea3765997",
+                "url": "https://github.com/doctrine/DoctrineBundle/zipball/75e0ac4a4be04bfa39b282f8ebccd3ef4c8ebe32",
+                "reference": "75e0ac4a4be04bfa39b282f8ebccd3ef4c8ebe32",
                 "shasum": ""
             },
             "require": {
@@ -202,7 +202,7 @@
             "suggest": {
                 "doctrine/orm": "The Doctrine ORM integration is optional in the bundle."
             },
-            "time": "1349273376",
+            "time": "1349890948",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -248,21 +248,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineFixturesBundle.git",
-                "reference": "186d605aa6b592bd577e07e0e9a2c420b02b2492"
+                "reference": "1e2c7af26f9f7ac9110d47cee8133d700fb99ae1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/DoctrineFixturesBundle/zipball/186d605aa6b592bd577e07e0e9a2c420b02b2492",
-                "reference": "186d605aa6b592bd577e07e0e9a2c420b02b2492",
+                "url": "https://github.com/doctrine/DoctrineFixturesBundle/zipball/1e2c7af26f9f7ac9110d47cee8133d700fb99ae1",
+                "reference": "1e2c7af26f9f7ac9110d47cee8133d700fb99ae1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
                 "doctrine/data-fixtures": "*",
-                "symfony/doctrine-bridge": "2.1.*",
-                "doctrine/doctrine-bundle": "1.0.*"
+                "doctrine/doctrine-bundle": "1.0.*",
+                "symfony/doctrine-bridge": ">=2.1.0,<2.3-dev"
             },
-            "time": "1345465418",
+            "time": "1349789605",
             "type": "symfony-bundle",
             "installation-source": "source",
             "autoload": {
@@ -301,20 +301,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineMigrationsBundle.git",
-                "reference": "3792aa78445773387754c6853bbd7f4dcb31f486"
+                "reference": "b3ec793dc232fb19f025c3ffc9a0757471d78605"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/DoctrineMigrationsBundle/zipball/3792aa78445773387754c6853bbd7f4dcb31f486",
-                "reference": "3792aa78445773387754c6853bbd7f4dcb31f486",
+                "url": "https://github.com/doctrine/DoctrineMigrationsBundle/zipball/b3ec793dc232fb19f025c3ffc9a0757471d78605",
+                "reference": "b3ec793dc232fb19f025c3ffc9a0757471d78605",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "symfony/symfony": ">=2.0",
-                "doctrine/migrations": "*"
+                "doctrine/migrations": "*",
+                "symfony/framework-bundle": ">=2.1.0,<2.3-dev",
+                "doctrine/doctrine-bundle": "1.0.*"
             },
-            "time": "1341472972",
+            "time": "1349789824",
             "type": "symfony-bundle",
             "installation-source": "source",
             "autoload": {
@@ -353,12 +354,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/migrations",
-                "reference": "b38ddb190ec78d389b2c2de838b2a4d646ad1ce2"
+                "reference": "v1.0-ALPHA1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/migrations/zipball/b38ddb190ec78d389b2c2de838b2a4d646ad1ce2",
-                "reference": "b38ddb190ec78d389b2c2de838b2a4d646ad1ce2",
+                "url": "https://github.com/doctrine/migrations/zipball/v1.0-ALPHA1",
+                "reference": "v1.0-ALPHA1",
                 "shasum": ""
             },
             "require": {
@@ -472,18 +473,65 @@
             ]
         },
         {
+            "name": "fkr/simplepie-bundle",
+            "version": "dev-master",
+            "target-dir": "Fkr/SimplePieBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fkrauthan/FkrSimplePieBundle",
+                "reference": "ae61c84da184a1a7cf982e63ec4e43788d237fa1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/fkrauthan/FkrSimplePieBundle/zipball/ae61c84da184a1a7cf982e63ec4e43788d237fa1",
+                "reference": "ae61c84da184a1a7cf982e63ec4e43788d237fa1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": "2.1.*",
+                "simplepie/simplepie": "*"
+            },
+            "time": "1342035954",
+            "type": "symfony-bundle",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Fkr\\SimplePieBundle": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florian Krauthan",
+                    "email": "fkrauthan@gmx.net"
+                }
+            ],
+            "description": "Integrates SimplePie into Symfony2",
+            "homepage": "https://github.com/fkrauthan/FkrSimplePieBundle",
+            "keywords": [
+                "atom",
+                "feed",
+                "rss",
+                "Symfony Bundle",
+                "SimplePie"
+            ]
+        },
+        {
             "name": "friendsofsymfony/user-bundle",
             "version": "dev-master",
             "target-dir": "FOS/UserBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle",
-                "reference": "51b0fa8fbb637940ebc9060386d95a75fd5ac51a"
+                "reference": "30aee5a21d744c7340ae7a3c1cfb98a57e529ff1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle/zipball/51b0fa8fbb637940ebc9060386d95a75fd5ac51a",
-                "reference": "51b0fa8fbb637940ebc9060386d95a75fd5ac51a",
+                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle/zipball/30aee5a21d744c7340ae7a3c1cfb98a57e529ff1",
+                "reference": "30aee5a21d744c7340ae7a3c1cfb98a57e529ff1",
                 "shasum": ""
             },
             "require": {
@@ -504,7 +552,7 @@
                 "doctrine/doctrine-bundle": "*",
                 "doctrine/mongodb-odm-bundle": "*"
             },
-            "time": "1349476472",
+            "time": "1349988603",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -547,12 +595,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/l3pp4rd/DoctrineExtensions.git",
-                "reference": "0add69ccb0cb22e3216c30166805ae27615cb8f0"
+                "reference": "117f14e0f8fd069d679ca0f84fa05c781cca3119"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/l3pp4rd/DoctrineExtensions/zipball/0add69ccb0cb22e3216c30166805ae27615cb8f0",
-                "reference": "0add69ccb0cb22e3216c30166805ae27615cb8f0",
+                "url": "https://github.com/l3pp4rd/DoctrineExtensions/zipball/117f14e0f8fd069d679ca0f84fa05c781cca3119",
+                "reference": "117f14e0f8fd069d679ca0f84fa05c781cca3119",
                 "shasum": ""
             },
             "require": {
@@ -563,7 +611,7 @@
                 "doctrine/orm": ">=2.1",
                 "doctrine/mongodb-odm": "*"
             },
-            "time": "1349375111",
+            "time": "1349888959",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1233,6 +1281,60 @@
             "time": "1348030981"
         },
         {
+            "name": "simplepie/simplepie",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simplepie/simplepie.git",
+                "reference": "caf780331c29abc2a926631eb3a16fc09cf6a679"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/simplepie/simplepie/zipball/caf780331c29abc2a926631eb3a16fc09cf6a679",
+                "reference": "caf780331c29abc2a926631eb3a16fc09cf6a679",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "time": "1349969620",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "SimplePie": "library"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ryan Parman",
+                    "homepage": "http://ryanparman.com/",
+                    "role": "Creator, alumnus developer"
+                },
+                {
+                    "name": "Geoffrey Sneddon",
+                    "homepage": "http://gsnedders.com/",
+                    "role": "Alumnus developer"
+                },
+                {
+                    "name": "Ryan McCue",
+                    "email": "me@ryanmccue.info",
+                    "homepage": "http://ryanmccue.info/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple Atom/RSS parsing library for PHP",
+            "homepage": "http://simplepie.org/",
+            "keywords": [
+                "atom",
+                "rss",
+                "feeds"
+            ]
+        },
+        {
             "name": "sonata-project/admin-bundle",
             "version": "dev-master",
             "target-dir": "Sonata/AdminBundle",
@@ -1355,12 +1457,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataCacheBundle",
-                "reference": "398f988a49782d2c4b7fb7c2f4a487285221bdca"
+                "reference": "9d0b93e6a8a8d414117392eb6cfcd6d55b6501f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/sonata-project/SonataCacheBundle/zipball/398f988a49782d2c4b7fb7c2f4a487285221bdca",
-                "reference": "398f988a49782d2c4b7fb7c2f4a487285221bdca",
+                "url": "https://github.com/sonata-project/SonataCacheBundle/zipball/9d0b93e6a8a8d414117392eb6cfcd6d55b6501f3",
+                "reference": "9d0b93e6a8a8d414117392eb6cfcd6d55b6501f3",
                 "shasum": ""
             },
             "require": {
@@ -1374,6 +1476,7 @@
                 "ext-apc": "*",
                 "ext-memcached": "*"
             },
+            "time": "1349884910",
             "type": "symfony-bundle",
             "installation-source": "source",
             "autoload": {
@@ -1399,8 +1502,7 @@
             "homepage": "https://github.com/sonata-project/SonataCacheBundle",
             "keywords": [
                 "cache block"
-            ],
-            "time": "1347921664"
+            ]
         },
         {
             "name": "sonata-project/doctrine-orm-admin-bundle",
@@ -1723,12 +1825,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/AsseticBundle",
-                "reference": "5ebcf72d9b2d7028ca8c9b71b464ccc81d4795d2"
+                "reference": "bc7cddba9b63ca47d3e1eba725cae1a52ec32897"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/AsseticBundle/zipball/5ebcf72d9b2d7028ca8c9b71b464ccc81d4795d2",
-                "reference": "5ebcf72d9b2d7028ca8c9b71b464ccc81d4795d2",
+                "url": "https://github.com/symfony/AsseticBundle/zipball/bc7cddba9b63ca47d3e1eba725cae1a52ec32897",
+                "reference": "bc7cddba9b63ca47d3e1eba725cae1a52ec32897",
                 "shasum": ""
             },
             "require": {
@@ -1748,7 +1850,7 @@
             "suggest": {
                 "symfony/twig-bundle": ">=2.1.0,<2.3-dev"
             },
-            "time": "1348938560",
+            "time": "1349897943",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1988,17 +2090,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig-extensions",
-                "reference": "f904575642b1213db69b4a98f08397e722ba1cae"
+                "reference": "dcdff02fbac1282e6b8f4d0558cc7e9580105688"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Twig-extensions/zipball/f904575642b1213db69b4a98f08397e722ba1cae",
-                "reference": "f904575642b1213db69b4a98f08397e722ba1cae",
+                "url": "https://github.com/fabpot/Twig-extensions/zipball/dcdff02fbac1282e6b8f4d0558cc7e9580105688",
+                "reference": "dcdff02fbac1282e6b8f4d0558cc7e9580105688",
                 "shasum": ""
             },
             "require": {
                 "twig/twig": "1.*"
             },
+            "time": "1349889206",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2026,8 +2129,7 @@
                 "debug",
                 "i18n",
                 "text"
-            ],
-            "time": "1346770278"
+            ]
         },
         {
             "name": "twig/twig",

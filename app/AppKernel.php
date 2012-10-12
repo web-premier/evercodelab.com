@@ -34,6 +34,8 @@ class AppKernel extends Kernel
 
             new App\UserBundle\AppUserBundle(),
             new App\DefaultBundle\AppDefaultBundle(),
+
+            new Fkr\SimplePieBundle\FkrSimplePieBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

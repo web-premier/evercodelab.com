@@ -79,6 +79,11 @@ fos_user:
     firewall_name: main
     user_class: App\UserBundle\Entity\User
 
+fkr_simple_pie:
+    cache_enabled: true
+    cache_dir: %kernel.cache_dir%/rss
+    cache_duration: 3600
+
 services:
     gedmo.listener.timestampable:
         class: Gedmo\Timestampable\TimestampableListener
