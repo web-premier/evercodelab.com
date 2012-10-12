@@ -1,5 +1,5 @@
 {
-    "hash": "083caa1644aa792dff51849c57f21e94",
+    "hash": "33197affcb295ba15a1b76689516bcb9",
     "packages": [
         {
             "name": "doctrine/common",
@@ -526,12 +526,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle",
-                "reference": "30aee5a21d744c7340ae7a3c1cfb98a57e529ff1"
+                "reference": "127391cd83e86bcf97e5d861aac1e39c14d3999d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle/zipball/30aee5a21d744c7340ae7a3c1cfb98a57e529ff1",
-                "reference": "30aee5a21d744c7340ae7a3c1cfb98a57e529ff1",
+                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle/zipball/127391cd83e86bcf97e5d861aac1e39c14d3999d",
+                "reference": "127391cd83e86bcf97e5d861aac1e39c14d3999d",
                 "shasum": ""
             },
             "require": {
@@ -552,7 +552,7 @@
                 "doctrine/doctrine-bundle": "*",
                 "doctrine/mongodb-odm-bundle": "*"
             },
-            "time": "1349988603",
+            "time": "1350050664",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -905,6 +905,66 @@
             "time": "1346947943"
         },
         {
+            "name": "knplabs/knp-last-tweets-bundle",
+            "version": "dev-master",
+            "target-dir": "Knp/Bundle/LastTweetsBundle",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/KnpLabs/KnpLastTweetsBundle.git",
+                "reference": "5f031e98d517dd398cb6cd3b4007b41c22a74f45"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/KnpLabs/KnpLastTweetsBundle/zipball/5f031e98d517dd398cb6cd3b4007b41c22a74f45",
+                "reference": "5f031e98d517dd398cb6cd3b4007b41c22a74f45",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": ">=2.0.0",
+                "kriswallsmith/buzz": ">=v0.5",
+                "twig/twig": ">=1.6.5",
+                "symfony/yaml": "*"
+            },
+            "require-dev": {
+                "knplabs/knp-zend-cache-bundle": "*",
+                "inori/twitter-app-bundle": "*"
+            },
+            "suggest": {
+                "knplabs/knp-zend-cache-bundle": "*"
+            },
+            "time": "1343224711",
+            "type": "symfony-bundle",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Knp\\Bundle\\LastTweetsBundle": "."
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://github.com/KnpLabs/KnpLastTweetsBundle/contributors"
+                }
+            ],
+            "description": "Symfony2 bundle to easily add a widget with the latest tweets of a Twitter user to a page.",
+            "homepage": "http://github.com/KnpLabs/KnpLastTweetsBundle",
+            "keywords": [
+                "knp",
+                "knplabs",
+                "bundle",
+                "twitter",
+                "tweets"
+            ]
+        },
+        {
             "name": "knplabs/knp-menu",
             "version": "1.1.x-dev",
             "source": {
@@ -1081,6 +1141,51 @@
                 "assets",
                 "compression",
                 "minification"
+            ]
+        },
+        {
+            "name": "kriswallsmith/buzz",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "http://github.com/kriswallsmith/Buzz.git",
+                "reference": "988bf14201ffbed940f23b42f87302e6adec4c21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/kriswallsmith/Buzz/zipball/988bf14201ffbed940f23b42f87302e6adec4c21",
+                "reference": "988bf14201ffbed940f23b42f87302e6adec4c21",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "suggest": {
+                "ext-curl": "*"
+            },
+            "time": "1345206213",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Buzz": "lib/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kris Wallsmith",
+                    "email": "kris.wallsmith@gmail.com",
+                    "homepage": "http://kriswallsmith.net/"
+                }
+            ],
+            "description": "Lightweight HTTP client",
+            "homepage": "https://github.com/kriswallsmith/Buzz",
+            "keywords": [
+                "curl",
+                "http client"
             ]
         },
         {
@@ -2137,18 +2242,18 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/fabpot/Twig.git",
-                "reference": "347bc81d6ed8e2bb793236aa9917c7e83f81c2b3"
+                "reference": "a4e10c14edfb5fa2b2996c7a10ef5348ea8115c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/fabpot/Twig/zipball/347bc81d6ed8e2bb793236aa9917c7e83f81c2b3",
-                "reference": "347bc81d6ed8e2bb793236aa9917c7e83f81c2b3",
+                "url": "https://github.com/fabpot/Twig/zipball/a4e10c14edfb5fa2b2996c7a10ef5348ea8115c5",
+                "reference": "a4e10c14edfb5fa2b2996c7a10ef5348ea8115c5",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
-            "time": "1349702400",
+            "time": "1350050980",
             "type": "library",
             "extra": {
                 "branch-alias": {

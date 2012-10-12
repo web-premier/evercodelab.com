@@ -36,6 +36,7 @@ class AppKernel extends Kernel
             new App\DefaultBundle\AppDefaultBundle(),
 
             new Fkr\SimplePieBundle\FkrSimplePieBundle(),
+            new Knp\Bundle\LastTweetsBundle\KnpLastTweetsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

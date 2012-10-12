@@ -1,0 +1,5 @@
+{% if tweets %}
+    {% for tweet in tweets %}
+    <p>{{ tweet.text|knp_tweet_urlize }}</p>
+    {% endfor %}
+{% endif %}

@@ -227,9 +227,7 @@
                         <li>
                             <div class="b-contacts-blog">
                                 <a href="#">@evercodelab</a>
-                                <p>@formazon Спасибо! Ты узнаешь об этом одним из первых ;)</p>
-                                <p>Нам сегодня год, уиии! :)<br />http://blog.evercodelab.com/one-year-old/<br />Поэтому мы немного горды собой и благодарны всем остальными)</p>
-                                <p>In the blog: One year old<br />http://blog.evercodelab.com/one-year-old/<br />Yep, guys, one year. Feels like everything started just yesterday :)</p>
+                                {% render "KnpLastTweetsBundle:Twitter:lastTweets" with {'username': 'evercodelab', 'limit': 3} %}
                             </div>
                         </li>
                     </ul>
