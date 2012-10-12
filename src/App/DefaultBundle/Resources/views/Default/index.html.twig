@@ -270,21 +270,19 @@
     <div class="wrapper cols">
         <div class="l-col">
             <ul class="b-blogs-list">
-                {% for post in posts %}
-                <li><a href="{{ post.get_permalink }}">{{ post.get_title }}</a></li>
+                {% for post in latestPosts %}
+                <li><a href="{{ post.link }}">{{ post.title | raw }}</a></li>
                 {% endfor %}
             </ul>
         </div>
         <div class="r-col">
             <div class="b-blog-info">
-                <b>One Year Old</b>
-                <span class="b-blog-date">Sep 20th, 2012  </span>
-                <span class="b-blog-comments"><a href="#">0 Comments</a></span>
+                <b>{{ latestPosts.0.title | raw }}</b>
+                <span class="b-blog-date">{{ latestPosts.0.date }}  </span>
+                {#<span class="b-blog-comments"><a href="#">0 Comments</a></span>#}
             </div>
-            <p>Год назад из идеи двух людей и их скромными усилиями появилась замечательная фирма Evercode Lab. Еще один человек сделал этим двум логотип в виде зеленой годзилла-птицы. С этого они начали свою работу.</p>
-            <p>Прошел год и наша компания подросла и стала более лучше одеваться. То есть многому научилась, конечно. Мы занимались кучей интересных вещей, пробовали, экспериментировали, создавали, иногда ошибались.</p>
-            <p>Наша команда расширилась, теперь нас больше четырех и меньше шести постоянных участников. И еще есть несколько хороших людей, которые помогают нам по тем или иным вопросам.</p>
-            <div class="more"><a href="#">Читать дальше...</a></div>
+            {{ latestPosts.0.text | raw }}
+            <div class="more"><a href="{{ latestPosts.0.link }}">Читать дальше...</a></div>
         </div>
     </div>
 </div>

@@ -82,7 +82,7 @@ fos_user:
 fkr_simple_pie:
     cache_enabled: true
     cache_dir: %kernel.cache_dir%/rss
-    cache_duration: 3600
+    cache_duration: 259200
 
 services:
     gedmo.listener.timestampable:

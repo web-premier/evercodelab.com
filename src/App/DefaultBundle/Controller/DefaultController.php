@@ -19,18 +19,26 @@ class DefaultController extends Controller
         $projects = $em->getRepository('AppDefaultBundle:Portfolio')->findAll();
 
         $feed = $this->get('fkr_simple_pie.rss');
-        $feed->set_feed_url('http://feeds.feedburner.com/EvercodeBlog');
+        $feed->set_feed_url('http://blog.evercodelab.com/atom.xml');
         $feed->init();
-        $posts = $feed->get_items();
+        $posts = array_slice($feed->get_items(), 0, 5);
+        $latestPosts = array();
         foreach ($posts as $post) {
-            var_dump($post->get_title());
+            $latestPosts[] = array(
+                'title' => $post->get_title(),
+                'link' => $post->get_permalink(),
+                'text' => $post->get_description(),
+                'date' => $post->get_date('j F, Y'),
+            );
         }
-        exit;
+
+        preg_match_all('/(<p>.*?<\/p>)/im', $latestPosts[0]['text'], $matches);
+        $latestPosts[0]['text'] = implode('', array_slice($matches[1], 0, 3));
 
         return array(
             'clients' => $clients,
             'projects' => $projects,
-            'posts' => $posts,
+            'latestPosts' => $latestPosts,
         );
     }
 
