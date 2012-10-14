@@ -233,23 +233,23 @@
                     </ul>
                 </div>
                 <div class="r-col">
-                    <form class="b-form-callback">
+                    <form action="" method="post" {{ form_enctype(form) }} class="b-form-callback">
                         <fieldset>
                             <label>
                                 Представьтесь, пожалуйста
-                                <input type="text" value="" />
+                                {{ form_widget(form.name) }}
                             </label>
                         </fieldset>
                         <fieldset>
                             <label>
                                 Укажите почту или контактный телефон
-                                <input type="text" value="" />
+                                {{ form_widget(form.contact) }}
                             </label>
                         </fieldset>
                         <fieldset>
                             <label>
                                 Ну, и напишите что-нибудь заодно
-                                <textarea></textarea>
+                                {{ form_widget(form.content) }}
                             </label>
                         </fieldset>
                         <input type="submit" value="Отправить сообщение" />
