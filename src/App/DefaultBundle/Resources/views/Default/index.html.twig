@@ -196,7 +196,7 @@
                         {% for project in projects %}
                         <li>
                             <div class="b-portfolio-link"><a href="{{ project.link }}">{{ project.name }}</a></div>
-                            {{ project.description }}
+                            {{ project.description | raw }}
                         </li>
                         {% endfor %}
                     </ul>

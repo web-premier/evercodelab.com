@@ -52,8 +52,7 @@
         var options = $.extend(defaults,options);
         var current_page = 0;
 
-        var $item_container = $('.b-portfolio-text ul');
-        var $items = $item_container.children();
+        var $items = $('.b-portfolio-text > ul > li');
         var $control_container = $('.b-slider');
 
         // Get the total number of items
