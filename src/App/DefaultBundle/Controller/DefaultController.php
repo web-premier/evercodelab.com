@@ -30,6 +30,7 @@ class DefaultController extends Controller
                 ->setBody($this->renderView('AppDefaultBundle:Default:email.txt.twig', $data))
             ;
             $this->get('mailer')->send($message);
+
             return $this->redirect($this->generateUrl('index'));
         }
 

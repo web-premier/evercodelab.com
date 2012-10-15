@@ -60,7 +60,7 @@
     <div class="wrapper">
         <div class="cols">
             <div class="l-col">
-                <img src="/i/logo.png" alt="" />
+                <img src="/i/logo.png" alt="Green Coding Godzilla Bird" />
             </div>
             <div class="r-col">
                 <h1>Привет, клиент,<br /> мы - разработчики!</h1>
@@ -90,7 +90,7 @@
     <div class="wrapper">
         <div class="cols">
             <div class="l-col">
-                <img src="/i/guys.png" alt="" />
+                <img src="/i/guys.png" alt="Два непонятных тела" />
             </div>
             <div class="r-col">
                 <h2>Что мы умеем</h2>
@@ -156,7 +156,7 @@
         <ul class="b-clients-list">
             {% for client in clients %}
             <li>
-                <img src="/{{ client.webPath }}" alt="" />
+                <a href="{{ client.link }}"><img src="/{{ client.webPath }}" alt="{{ client.name }}" /></a>
             </li>
             {% endfor %}
         </ul>
@@ -217,7 +217,7 @@
 <div class="b-contacts" id="contacts">
     <div class="wrapper cols">
         <div class="l-col">
-            <img src="/i/man.png" alt="" />
+            <img src="/i/man.png" alt="Похож на одного знакомого дизайнера" />
             <p>Ну а пока вы все это тут читаете, мы уже помчались делать что-то новое и очень крутое! </p>
             {#<p>Кстати - весь ноябрь у нас скидка усатым. Голощекие, не расстраивайтесь, вот вам купон!</p>#}
             {#<img src="i/whisker.png" alt="" />#}

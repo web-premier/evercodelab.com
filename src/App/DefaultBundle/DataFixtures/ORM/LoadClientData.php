@@ -13,23 +13,28 @@ class LoadClientData extends AbstractFixture implements OrderedFixtureInterface
     protected $clients = array(
         array(
             'name' =>'ИТМО',
-            'logo' => 'cl.ifmo.png'
+            'logo' => 'cl.ifmo.png',
+            'link' => 'http://www.ifmo.ru/',
         ),
         array(
             'name' =>'ЕУСПб',
-            'logo' => 'cl.euro.png'
+            'logo' => 'cl.euro.png',
+            'link' => 'http://www.eu.spb.ru/',
         ),
         array(
             'name' =>'Reksoft',
-            'logo' => 'cl.reksoft.png'
+            'logo' => 'cl.reksoft.png',
+            'link' => 'http://blog.evercodelab.com/reksoft/',
         ),
         array(
             'name' =>'Kelnik Studios',
-            'logo' => 'cl.kelnik.png'
+            'logo' => 'cl.kelnik.png',
+            'link' => 'http://kelnik.ru/',
         ),
         array(
             'name' =>'Red Fortress',
-            'logo' => 'cl.redfor.png'
+            'logo' => 'cl.redfor.png',
+            'link' => 'http://redfor.ru/',
         ),
     );
 
@@ -38,6 +43,7 @@ class LoadClientData extends AbstractFixture implements OrderedFixtureInterface
         foreach ($this->clients as $clientData) {
             $client = new Client();
             $client->setName($clientData['name']);
+            $client->setLink($clientData['link']);
             copy(getcwd().'/web/i/' . $clientData['logo'], getcwd().'/web/uploads/images/clients/' . $clientData['logo']);
             $client->setLogo($clientData['logo']);
 

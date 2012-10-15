@@ -82,7 +82,7 @@ class Portfolio
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -102,7 +102,7 @@ class Portfolio
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -122,7 +122,7 @@ class Portfolio
     /**
      * Get description
      *
-     * @return text 
+     * @return text
      */
     public function getDescription()
     {
@@ -142,7 +142,7 @@ class Portfolio
     /**
      * Get logo
      *
-     * @return string 
+     * @return string
      */
     public function getLogo()
     {
@@ -165,7 +165,7 @@ class Portfolio
     /**
      * Get file
      *
-     * @return string 
+     * @return string
      */
     public function getFile()
     {
@@ -185,7 +185,7 @@ class Portfolio
     /**
      * Get link
      *
-     * @return string 
+     * @return string
      */
     public function getLink()
     {
@@ -205,7 +205,7 @@ class Portfolio
     /**
      * Get created_at
      *
-     * @return datetime 
+     * @return datetime
      */
     public function getCreatedAt()
     {
@@ -225,7 +225,7 @@ class Portfolio
     /**
      * Get updated_at
      *
-     * @return datetime 
+     * @return datetime
      */
     public function getUpdatedAt()
     {

@@ -45,6 +45,13 @@ class Client
     private $file;
 
     /**
+     * @var string $link
+     *
+     * @ORM\Column(name="link", type="string", length=255, nullable=true)
+     */
+    private $link;
+
+    /**
      * @var text $description
      *
      * @ORM\Column(name="description", type="text", nullable=true)
@@ -259,5 +266,51 @@ class Client
         if (is_file($file)) {
             unlink($file);
         }
+    }
+
+    /**
+     * Set link
+     *
+     * @param string $link
+     * @return Client
+     */
+    public function setLink($link)
+    {
+        $this->link = $link;
+
+        return $this;
+    }
+
+    /**
+     * Get link
+     *
+     * @return string
+     */
+    public function getLink()
+    {
+        return $this->link;
+    }
+
+    /**
+     * Set updated_at
+     *
+     * @param \DateTime $updatedAt
+     * @return Client
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updated_at = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updated_at
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updated_at;
     }
 }
