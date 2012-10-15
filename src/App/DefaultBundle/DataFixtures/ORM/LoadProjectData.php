@@ -69,6 +69,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             'name' =>'Mahamandala',
             'link' => 'http://mahamandala.com/',
             'description' => '
+                    Медиа хранилище с широким списком социальных функций.
                     Проект был разработан на Zend Framework + Doctrine первых версий. Сейчас портируется на Ruby on Rails.
                     ',
         ),
@@ -130,6 +131,15 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
                     Находится в открытом доступе.
                     Повышает уровень образованности посетителей сайтов на 146%.
                     Улучшает навыки письменной речи.
+                    ',
+        ),
+        array(
+            'name' =>'Издательство Европейского Университета',
+            'link' => 'http://eupress.ru/',
+            'description' => '
+                    В интернет-магазине Издательства Европейского Университета можно найти редкие, уникальные и интересные книги.
+                    По просьбе ЕУСПб мы уже не первый год занимаемся поддержкой и развитием сайта.
+                    Сайт работает на Zend Framework 1.
                     ',
         ),
     );
