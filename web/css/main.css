@@ -383,6 +383,7 @@ p {
 /* b-portfolio (begin) */
 .b-portfolio{
 	padding:10px 0 20px;
+	min-height:500px;
 }
 .b-portfolio h2{
 	color: #000;
@@ -616,7 +617,7 @@ p {
 .b-contacts-list li{
 	margin:0 0 15px;
 }
-.b-contacts-list li a{
+.b-contacts-list li a.item{
 	font-size: 24px;
 	font-weight:bold;
 	color: #55a750;
@@ -629,7 +630,7 @@ p {
 /* b-contacts-blog (begin) */
 .b-contacts-blog{
 	padding:10px;
-	background:#39768A;
+	background:#39768a url(../i/shattered-dark-blue1.png) repeat -22px 0;
 	color: #fff;
 }
 /* b-contacts-blog (end) */
