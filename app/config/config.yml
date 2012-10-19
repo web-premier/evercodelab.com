@@ -24,7 +24,8 @@ twig:
 
 # Assetic Configuration
 assetic:
-    bundles: []
+    bundles: 
+        - AppDefaultBundle
     debug:          %kernel.debug%
     use_controller: false
     # java: /usr/bin/java

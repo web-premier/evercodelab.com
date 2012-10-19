@@ -7,7 +7,13 @@
     <meta name="KEYWORDS" content="разработка сайтов, консалтинг, анализ кода, парсеры, проектирование, Zend Framework, Symfony, Python, Django" />
     <meta name="DESCRIPTION" content="Evercode Lab — команда квалифицированных разработчиков, которые помогут вам в воплощении ваших проектов и идей." />
     <title>Evercode Lab - разработка, консалтинг, стартапы</title>
-    <link rel="stylesheet" href="/css/main.css" type="text/css"/>
+    {% stylesheets
+        'css/main.css'
+        output='compiled/compiled.css'
+        filter='cssrewrite'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    {% endstylesheets %}
 
     <!--[if IE 8]>
     <link rel='stylesheet' type='text/css' href="/css/ie8.css"/>
@@ -19,11 +25,17 @@
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script type="text/javascript" src="/js/jquery.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
+    {% javascripts
+        'js/jquery.js'
+        'js/main.js'
+        output='compiled/compiled.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
 
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
 
 </head>
 
@@ -60,7 +72,7 @@
     <div class="wrapper">
         <div class="cols">
             <div class="l-col">
-                <img src="/i/logo.png" alt="Green Coding Godzilla Bird" />
+                <img src="{{ asset("i/logo.png") }}" alt="Green Coding Godzilla Bird" />
             </div>
             <div class="r-col">
                 <h1>Привет, клиент,<br /> мы &mdash; разработчики!</h1>
@@ -90,7 +102,7 @@
     <div class="wrapper">
         <div class="cols">
             <div class="l-col">
-                <img src="/i/guys.png" alt="Два непонятных тела" />
+                <img src="{{ asset("i/guys.png") }}" alt="Два непонятных тела" />
             </div>
             <div class="r-col">
                 <h2>Что мы умеем</h2>
@@ -217,7 +229,7 @@
 <div class="b-contacts" id="contacts">
     <div class="wrapper cols">
         <div class="l-col">
-            <img src="/i/man.png" alt="Похож на одного знакомого дизайнера" />
+            <img src="{{ asset("i/man.png") }}" alt="Похож на одного знакомого дизайнера" />
             <p>Ну а пока вы все это тут читаете, мы уже помчались делать что-то новое и очень крутое! </p>
             {#<p>Кстати - весь ноябрь у нас скидка усатым. Голощекие, не расстраивайтесь, вот вам купон!</p>#}
             {#<img src="i/whisker.png" alt="" />#}

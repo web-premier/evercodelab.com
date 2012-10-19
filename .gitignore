@@ -12,3 +12,5 @@
 *.php~
 composer.phar
 build/
+
+web/compiled/*
