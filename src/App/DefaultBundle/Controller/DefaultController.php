@@ -55,12 +55,16 @@ class DefaultController extends Controller
         preg_match_all('/(<p>.*?<\/p>)/im', $latestPosts[0]['text'], $matches);
         $latestPosts[0]['text'] = implode('', array_slice($matches[1], 0, 3));
 
-        return array(
-            'clients' => $clients,
-            'projects' => $projects,
-            'latestPosts' => $latestPosts,
-            'form' => $form->createView(),
+        $response = $this->render('AppDefaultBundle:Default:index.html.twig', 
+            array(
+                'clients' => $clients,
+                'projects' => $projects,
+                'latestPosts' => $latestPosts,
+                'form' => $form->createView(),
+            )
         );
+        $response->setSharedMaxAge(24*60*60);
+        return $response;
     }
 
 }
