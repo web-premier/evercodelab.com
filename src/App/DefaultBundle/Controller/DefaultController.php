@@ -63,7 +63,7 @@ class DefaultController extends Controller
                 'form' => $form->createView(),
             )
         );
-        $response->setSharedMaxAge(24*60*60);
+        $response->setSharedMaxAge(12*60*60);
         return $response;
     }
 
