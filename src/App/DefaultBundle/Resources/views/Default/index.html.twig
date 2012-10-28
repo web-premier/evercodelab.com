@@ -4,9 +4,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name='yandex-verification' content='609f107a156157ec' />
     <meta name="google-site-verification" content="IOomL4TBfTjjsuUqlcEkKH_YWCniNPOKNw0BpIW1WvI" />
-    <meta name="KEYWORDS" content="разработка сайтов, консалтинг, анализ кода, парсеры, проектирование, Zend Framework, Symfony, Python, Django" />
-    <meta name="DESCRIPTION" content="Evercode Lab — команда квалифицированных разработчиков, которые помогут вам в воплощении ваших проектов и идей." />
-    <title>Evercode Lab - разработка, консалтинг, стартапы</title>
+    <meta name="KEYWORDS" content="{{ 'site.keywords'|trans }}" />
+    <meta name="DESCRIPTION" content="{{ 'site.description'|trans }}" />
+    <title>{{ 'site.title'|trans }}</title>
     {% stylesheets
         'css/main.css'
         output='compiled/compiled.css'
@@ -54,19 +54,23 @@
                 <li><a href="http://feeds.feedburner.com/EvercodeBlog"><i class="rss"></i></a></li>
             </ul>
             <menu>
-                <li><a href="#">Добро пожаловать</a></li>
-                <li><a href="#aboutus">О нас</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#clients">Клиенты</a></li>
-                <li><a href="#portfolio">Портфолио</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-                <li><a href="#blog">А, и еще блог</a></li>
+                <li><a href="#">{{ 'menu.welcome'|trans }}</a></li>
+                <li><a href="#aboutus">{{ 'menu.aboutus'|trans }}</a></li>
+                <li><a href="#services">{{ 'menu.services'|trans }}</a></li>
+                <li><a href="#clients">{{ 'menu.clients'|trans }}</a></li>
+                <li><a href="#portfolio">{{ 'menu.portfolio'|trans }}</a></li>
+                <li><a href="#contacts">{{ 'menu.contacts'|trans }}</a></li>
+                <li><a href="#blog">{{ 'menu.blog'|trans }}</a></li>
             </menu>
         </div>
     </header>
-    {#<div class="wrapper">#}
-        {#<a href="#" class="eng">English</a>#}
-    {#</div>#}
+    <div class="wrapper">
+        {% if app.request.get('_locale') == 'en' %}
+        <a href="{{ path('index', {'_locale': 'ru'}) }}" class="eng">Русский</a>
+        {% else %}
+        <a href="{{ path('index', {'_locale': 'en'}) }}" class="eng">English</a>
+        {% endif %}
+    </div>
 </div>
 <div class="b-about" id="aboutus">
     <div class="wrapper">
@@ -75,10 +79,10 @@
                 <img src="{{ asset("i/logo.png") }}" alt="Green Coding Godzilla Bird" />
             </div>
             <div class="r-col">
-                <h1>Привет, клиент,<br /> мы разработчики!</h1>
-                <p>Основное направление нашей деятельности &mdash; это программирование, у нас в этом есть большой опыт. Мы этакая лаборатория кода.</p>
-                <p>Мы не занимаемся дизайном макетов для сайтов. Но мы можем сделать вам красивый дизайн API вашего сервиса или приложения.</p>
-                <p>Но если вам все-таки нужны дизайнеры, которые умеют рисовать, то мы знаем много замечательных квалифицированных людей, которые с радостью вам помогут.</p>
+                <h1>{{ 'aboutus.header'|trans|raw }}</h1>
+                <p>{{ 'aboutus.first'|trans|raw }}</p>
+                <p>{{ 'aboutus.second'|trans }}</p>
+                <p>{{ 'aboutus.third'|trans }}</p>
             </div>
         </div>
         <div class="cols">
@@ -105,45 +109,45 @@
                 <img src="{{ asset("i/guys.png") }}" alt="Два непонятных тела" />
             </div>
             <div class="r-col">
-                <h2>Что мы умеем</h2>
+                <h2>{{ 'services.header'|trans }}</h2>
                 <div class="b-service-block cols">
                     <div class="l-col">
                         <div class="b-service-list b-development">
                             <div class="b-service-head">
-                                Разработка
+                                {{ 'services.development.title'|trans }}
                             </div>
                             <ul class="b-service-list">
-                                <li>Сервисы</li>
-                                <li>Приложения</li>
-                                <li>API</li>
-                                <li>Прототипы</li>
-                                <li>Сопровождение и поддержка</li>
+                                <li>{{ 'services.development.services'|trans }}</li>
+                                <li>{{ 'services.development.apps'|trans }}</li>
+                                <li>{{ 'services.development.api'|trans }}</li>
+                                <li>{{ 'services.development.proto'|trans }}</li>
+                                <li>{{ 'services.development.support'|trans }}</li>
                             </ul>
                         </div>
                         <div class="b-service-list b-consulting">
                             <div class="b-service-head">
-                                Консалтинг
+                                {{ 'services.consulting.title'|trans }}
                             </div>
                             <ul class="b-service-list">
-                                <li>Проектирование</li>
-                                <li>Анализ кода</li>
-                                <li>Организация процесса разработки</li>
-                                <li>Управление командами разработчиков</li>
-                                <li>Структурирование информации</li>
+                                <li>{{ 'services.consulting.designing'|trans }}</li>
+                                <li>{{ 'services.consulting.analysis'|trans }}</li>
+                                <li>{{ 'services.consulting.process'|trans }}</li>
+                                <li>{{ 'services.consulting.management'|trans }}</li>
+                                <li>{{ 'services.consulting.structuring'|trans }}</li>
                             </ul>
                         </div>
                     </div>
                     <div class="l-col">
                         <div class="b-service-list b-technologies">
                             <div class="b-service-head">
-                                Технологии
+                                {{ 'services.technology.title'|trans }}
                             </div>
                             <ul class="b-service-list">
-                                <li><b>Системы контроля версий:</b> Git, Mercurial</li>
-                                <li><b>Языки:</b> PHP, Ruby, Python</li>
-                                <li><b>Базы данных:</b> MySQL/PostgreSQL, Mongo DB</li>
+                                <li><b>{{ 'services.technology.vcs'|trans }}:</b> Git, Mercurial</li>
+                                <li><b>{{ 'services.technology.langs'|trans }}:</b> PHP, Ruby, Python</li>
+                                <li><b>{{ 'services.technology.db'|trans }}:</b> MySQL/PostgreSQL, Mongo DB</li>
                                 <li>
-                                    <b>Фреймворки:</b>
+                                    <b>{{ 'services.technology.frameworks'|trans }}:</b>
                                     PHP: Symfony2, Silex, Zend Framework, Yii<br />
                                     Ruby: Ruby on Rails<br />
                                     Python: Django, Google App Engine
@@ -162,7 +166,7 @@
 <div class="b-clients" id="clients">
     <div class="wrapper cols">
         <div class="r-col">
-            <h2>Наши клиенты</h2>
+            <h2>{{ 'clients.header'|trans }}</h2>
         </div>
         {% if clients %}
         <ul class="b-clients-list">
@@ -178,7 +182,7 @@
 <div class="b-portfolio" id="portfolio">
     <div class="wrapper cols">
         <div class="r-col">
-            <h2>Наше портфолио</h2>
+            <h2>{{ 'portfolio.header'|trans }}</h2>
         </div>
     </div>
     <div class="wrapper cols">
@@ -230,12 +234,12 @@
     <div class="wrapper cols">
         <div class="l-col">
             <img src="{{ asset("i/man.png") }}" alt="Похож на одного знакомого дизайнера" />
-            <p>Ну а пока вы все это тут читаете, мы уже помчались делать что-то новое и очень крутое! </p>
+            <p>{{ 'while'|trans }}</p>
             {#<p>Кстати - весь ноябрь у нас скидка усатым. Голощекие, не расстраивайтесь, вот вам купон!</p>#}
             {#<img src="i/whisker.png" alt="" />#}
         </div>
         <div class="r-col">
-            <h2>Как с нами связаться</h2>
+            <h2>{{ 'contacts.header'|trans }}</h2>
             <div class="cols">
                 <div class="l-col">
                     <ul class="b-contacts-list">
@@ -253,23 +257,23 @@
                     <form action="" method="post" {{ form_enctype(form) }} class="b-form-callback">
                         <fieldset>
                             <label>
-                                Представьтесь, пожалуйста
+                                {{ 'contacts.form.name'|trans }}
                                 {{ form_widget(form.name) }}
                             </label>
                         </fieldset>
                         <fieldset>
                             <label>
-                                Укажите почту или контактный телефон
+                                {{ 'contacts.form.contact'|trans }}
                                 {{ form_widget(form.contact) }}
                             </label>
                         </fieldset>
                         <fieldset>
                             <label>
-                                Ну, и напишите что-нибудь заодно
+                                {{ 'contacts.form.content'|trans }}
                                 {{ form_widget(form.content) }}
                             </label>
                         </fieldset>
-                        <input type="submit" value="Отправить сообщение" />
+                        <input type="submit" value="{{ 'contacts.form.submit'|trans }}" />
                     </form>
                 </div>
             </div>
@@ -279,7 +283,7 @@
 <div class="b-blog" id="blog">
     <div class="wrapper cols">
         <div class="r-col">
-            <h2>Совсем забыли, у нас еще есть блог!</h2>
+            <h2>{{ 'blog.header'|trans }}</h2>
         </div>
     </div>
     <div class="wrapper cols">
@@ -291,13 +295,15 @@
             </ul>
         </div>
         <div class="r-col">
+            {% if latestPosts %}
             <div class="b-blog-info">
                 <b>{{ latestPosts.0.title | raw }}</b>
                 <span class="b-blog-date">{{ latestPosts.0.date }}  </span>
                 {#<span class="b-blog-comments"><a href="#">0 Comments</a></span>#}
             </div>
             {{ latestPosts.0.text | raw }}
-            <div class="more"><a href="{{ latestPosts.0.link }}">Читать дальше...</a></div>
+            <div class="more"><a href="{{ latestPosts.0.link }}">{{ 'blog.more'|trans }}</a></div>
+            {% endif %}
         </div>
     </div>
 </div>

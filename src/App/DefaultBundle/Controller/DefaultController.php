@@ -12,7 +12,7 @@ use App\DefaultBundle\Form\Type\FeedbackType;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="index")
+     * @Route("/{_locale}", name="index", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
      * @Template()
      */
     public function indexAction(Request $request)

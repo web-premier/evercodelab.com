@@ -1,0 +1,63 @@
+site:
+    keywords: developing websites, consulting, code analysis, parsers, code design, Zend Framework, Symfony, Python, Django
+    description: Evercode Lab is a team of qualified programmers who can help you to develop your projects and make your ideas come true.
+    title: Evercode Lab - development, consulting, startups
+
+menu:
+    welcome: Welcome
+    aboutus: About us
+    services: Services
+    clients: Clients
+    portfolio: Portfolio
+    contacts: Contacts
+    blog: Oh, and the blog
+
+aboutus:
+    header: Hello client,<br /> we are developers!
+    first: The main thing that we do is programming, We have quite an experience in it. We are the code laboratory.
+    second: We don't do visual design or draw templates. But we can design a beautifull API for your service or application.
+    third: But if you need some designers (you know, who can draw something) then we know a lot of cool and qualified specialists who'll help you with great pleasure.
+
+services:
+    header: What we can
+    development:
+        title: Development
+        services: Services
+        apps: Applications
+        api: API
+        proto: Prototypes
+        support: Maintenance and support
+    consulting:
+        title: Consulting
+        designing: Code design
+        analysis: Code analysis
+        process: Organizing development process
+        management: Managing developers' teams
+        structuring: Structuring project information
+    technology:
+        title: Technologies
+        vcs: Version controll systems
+        langs: Languages
+        db: Databases
+        frameworks: Frameworks
+
+clients:
+    header: Our clients
+
+portfolio:
+    header: Our portfolio
+
+contacts:
+    header: How to contact us
+    form:
+        name: Your name, please
+        contact: Email or phone
+        content: Write us something
+        submit: Send message
+
+blog:
+    header: Almost forgot, we also have a blog!
+    more: Read more...
+
+while: And while you are reading all this we are already on our way to develop something new and great!
+
