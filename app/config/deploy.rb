@@ -21,9 +21,9 @@ role :db,         domain, :primary => true       # This is where Symfony2 migrat
 
 set :shared_files,      ["app/config/parameters.yml"]
 set :shared_children,     [app_path + "/logs", web_path + "/uploads", "vendor"]
-set :dump_assetic_assets, false
+set :dump_assetic_assets, true
 set :use_composer, true
-set :update_vendors, true
+set :update_vendors, false
 set :symfony_env_prod, "prod"
 
 set  :keep_releases,  3
