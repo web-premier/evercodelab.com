@@ -27,14 +27,14 @@ class Portfolio
 
     /**
      * @var string $name
-     *
+     * @Gedmo\Translatable
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
 
     /**
      * @var text $description
-     *
+     * @Gedmo\Translatable
      * @ORM\Column(name="description", type="text")
      */
     private $description;
