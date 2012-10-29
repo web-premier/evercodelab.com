@@ -35,7 +35,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
                         Russian portal of IT, optics and photonics made for ITMO.
                         Our first project on Symfony2 + Doctrine2 stack.
                         Basic functionality was developed in very short period of time.
-                        For more details see <a href="http://blog.evercodelab.com/itop/">detailed blog entry</a>.
+                        For more information see <a href="http://blog.evercodelab.com/itop/">detailed blog entry</a>.
                         ',
             ),
         ),

@@ -14,12 +14,12 @@ menu:
 
 aboutus:
     header: Hello client,<br /> we are developers!
-    first: The main thing that we do is programming, We have quite an experience in it. We are the code laboratory.
-    second: We don't do visual design or draw templates. But we can design a beautifull API for your service or application.
-    third: But if you need some designers (you know, who can draw something) then we know a lot of cool and qualified specialists who'll help you with great pleasure.
+    first: What we do mainly is programming, which we have extensive experience in. They call us the code laboratory.
+    second: We don't do visual design or draw templates, but we can design a beautiful API for your service or application.
+    third: In case you do need some designers (you know, to draw something), we know a multitude of cool and qualified specialists who will help you with great pleasure.
 
 services:
-    header: What we can
+    header: What we can do
     development:
         title: Development
         services: Services
@@ -42,7 +42,7 @@ services:
         frameworks: Frameworks
 
 clients:
-    header: Our clients
+    header: Selected clients
 
 portfolio:
     header: Our portfolio
