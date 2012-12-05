@@ -248,7 +248,7 @@
                         <li>
                             <div class="b-contacts-blog">
                                 <a href="http://twitter.com/evercodelab" class="item">@evercodelab</a>
-                                {% render "KnpLastTweetsBundle:Twitter:lastTweets" with {'username': 'evercodelab', 'limit': 3} %}
+                                {% render "KnpLastTweetsBundle:Twitter:lastTweets" with {'username': 'evercodelab', 'limit': 3, 'age': 12*60*60}, {'standalone': true} %}
                             </div>
                         </li>
                     </ul>
@@ -280,33 +280,7 @@
         </div>
     </div>
 </div>
-<div class="b-blog" id="blog">
-    <div class="wrapper cols">
-        <div class="r-col">
-            <h2>{{ 'blog.header'|trans }}</h2>
-        </div>
-    </div>
-    <div class="wrapper cols">
-        <div class="l-col">
-            <ul class="b-blogs-list">
-                {% for post in latestPosts %}
-                <li><a href="{{ post.link }}">{{ post.title | raw }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="r-col">
-            {% if latestPosts %}
-            <div class="b-blog-info">
-                <b>{{ latestPosts.0.title | raw }}</b>
-                <span class="b-blog-date">{{ latestPosts.0.date }}  </span>
-                {#<span class="b-blog-comments"><a href="#">0 Comments</a></span>#}
-            </div>
-            {{ latestPosts.0.text | raw }}
-            <div class="more"><a href="{{ latestPosts.0.link }}">{{ 'blog.more'|trans }}</a></div>
-            {% endif %}
-        </div>
-    </div>
-</div>
+{% render "AppDefaultBundle:Default:blog" with {}, {'standalone': true} %}
 </div>
 
 <script type="text/javascript">
