@@ -46,7 +46,7 @@ class DefaultController extends Controller
                 'form' => $form->createView(),
             )
         );
-        $response->setSharedMaxAge(12*60*60);
+        $response->setSharedMaxAge(7*24*60*60);
         return $response;
     }
 
@@ -73,9 +73,13 @@ class DefaultController extends Controller
         preg_match_all('/(<p>.*?<\/p>)/im', $latestPosts[0]['text'], $matches);
         $latestPosts[0]['text'] = implode('', array_slice($matches[1], 0, 3));
 
-        return array(
-            'latestPosts' => $latestPosts,
+        $response = $this->render('AppDefaultBundle:Default:blog.html.twig', 
+            array(
+                'latestPosts' => $latestPosts,
+            )
         );
+        $response->setSharedMaxAge(3*24*60*60);
+        return $response;
     }
 
 
