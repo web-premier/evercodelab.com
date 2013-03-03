@@ -6,11 +6,6 @@
 /app/config/parameters.yml
 /web/uploads/*
 
-*.twig~
-.DS_Store
-.idea
-*.php~
 composer.phar
-build/
 
 web/compiled/*
