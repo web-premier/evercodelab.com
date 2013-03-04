@@ -70,8 +70,10 @@ class DefaultController extends Controller
             );
         }
 
-        preg_match_all('/(<p>.*?<\/p>)/im', $latestPosts[0]['text'], $matches);
-        $latestPosts[0]['text'] = implode('', array_slice($matches[1], 0, 3));
+        if (! empty($latestPosts)) {
+            preg_match_all('/(<p>.*?<\/p>)/im', $latestPosts[0]['text'], $matches);
+            $latestPosts[0]['text'] = implode('', array_slice($matches[1], 0, 3));
+        }
 
         $response = $this->render('AppDefaultBundle:Default:blog.html.twig', 
             array(
