@@ -1,5 +1,5 @@
 {
-    "hash": "1fccd326bb9deee2741955ac5beac3ce",
+    "hash": "2925b1f98de51f8e477212752efe8ec8",
     "packages": [
         {
             "name": "doctrine/common",
@@ -486,13 +486,13 @@
             "target-dir": "Fkr/SimplePieBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/EvercodeLab/FkrSimplePieBundle.git",
-                "reference": "c5f920d782ec8a8d5d44475de29ad995cb6c46dc"
+                "url": "https://github.com/fkrauthan/FkrSimplePieBundle.git",
+                "reference": "c04c72f47524a7b6c6df186be9fcf9b4e4844576"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EvercodeLab/FkrSimplePieBundle/zipball/c5f920d782ec8a8d5d44475de29ad995cb6c46dc",
-                "reference": "c5f920d782ec8a8d5d44475de29ad995cb6c46dc",
+                "url": "https://api.github.com/repos/fkrauthan/FkrSimplePieBundle/zipball/c04c72f47524a7b6c6df186be9fcf9b4e4844576",
+                "reference": "c04c72f47524a7b6c6df186be9fcf9b4e4844576",
                 "shasum": ""
             },
             "require": {
@@ -506,6 +506,7 @@
                     "Fkr\\SimplePieBundle": ""
                 }
             },
+            "notification-url": "http://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -518,16 +519,13 @@
             "description": "Integrates SimplePie into Symfony2",
             "homepage": "https://github.com/fkrauthan/FkrSimplePieBundle",
             "keywords": [
-                "ATOM",
-                "Feed",
-                "RSS",
                 "SimplePie",
-                "Symfony Bundle"
+                "Symfony Bundle",
+                "atom",
+                "feed",
+                "rss"
             ],
-            "support": {
-                "source": "https://github.com/EvercodeLab/FkrSimplePieBundle/tree/master"
-            },
-            "time": "2013-03-03 19:45:44"
+            "time": "2013-03-04 00:08:29"
         },
         {
             "name": "friendsofsymfony/user-bundle",
