@@ -40,11 +40,15 @@ class LoadClientData extends AbstractFixture implements OrderedFixtureInterface
 
     public function load(ObjectManager $manager)
     {
+        $imagesDestinationDir = getcwd().'/web/uploads/images/clients';
+        if (! file_exists($imagesDestinationDir)) {
+            mkdir($imagesDestinationDir, 0777, true);
+        }
         foreach ($this->clients as $clientData) {
             $client = new Client();
             $client->setName($clientData['name']);
             $client->setLink($clientData['link']);
-            copy(getcwd().'/web/i/' . $clientData['logo'], getcwd().'/web/uploads/images/clients/' . $clientData['logo']);
+            copy(getcwd().'/web/i/' . $clientData['logo'], $imagesDestinationDir . DIRECTORY_SEPARATOR . $clientData['logo']);
             $client->setLogo($clientData['logo']);
 
             $manager->persist($client);
