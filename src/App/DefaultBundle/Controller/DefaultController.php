@@ -36,7 +36,6 @@ class DefaultController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $clients = $em->getRepository('AppDefaultBundle:Client')->findAll();
-        $latestClient = end($clients);
         $projects = $em->getRepository('AppDefaultBundle:Portfolio')->findAll();
 
         $response = $this->render('AppDefaultBundle:Default:index.html.twig', 

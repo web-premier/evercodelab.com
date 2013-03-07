@@ -1,5 +1,5 @@
 set :application, "evercodelab"
-set :domain,      "213.239.207.106"
+set :domain,      "5.9.96.170"
 set :deploy_to,   "/var/www/php/#{application}.com"
 set :app_path,    "app"
 
@@ -16,8 +16,8 @@ set :deploy_via, :remote_cache
 set :model_manager, "doctrine"
 
 role :web,        domain                         # Your HTTP server, Apache/etc
-role :app,        domain                         # This may be the same as your `Web` server
-role :db,         domain, :primary => true       # This is where Symfony2 migrations will run
+role :app,        domain, :primary => true       # This may be the same as your `Web` server
+role :db,         domain                         # This is where Symfony2 migrations will run
 
 set :shared_files,      ["app/config/parameters.yml"]
 set :shared_children,     [app_path + "/logs", web_path + "/uploads", "vendor"]
