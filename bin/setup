@@ -25,7 +25,7 @@ if [ -d web/uploads ]; then chcache "web/uploads"; fi
 
 
 # set configuration
-cp app/config/parameters.yml.dist app/config/parameters.yml
+cp -n app/config/parameters.yml.dist app/config/parameters.yml
 echo "- default config copied"
 $EDITOR app/config/parameters.yml
 echo "- config is set"
@@ -33,7 +33,7 @@ echo "- config is set"
 
 # composer stuff
 COMPOSER_BIN=composer
-command -v COMPOSER_BIN >/dev/null 2>&1 || {
+command -v $COMPOSER_BIN >/dev/null 2>&1 || {
     echo "system wide composer not found; installing local"
     curl -s https://getcomposer.org/installer | php
     COMPOSER_BIN="php composer.phar"
