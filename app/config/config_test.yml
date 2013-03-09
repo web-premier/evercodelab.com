@@ -23,5 +23,5 @@ doctrine:
         password: %database_password%
         charset:  UTF8
 
-mink:
-    base_url:   http://evercodelab.dev/app_test.php
+#mink:
+#    base_url:   http://evercodelab.dev/app_test.php

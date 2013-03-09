@@ -18,6 +18,12 @@ bin/start --no-update # will run local server
 bin/check_cs fix # will ensure compliance with coding standards
 ```
 
+## Tests
+
+```
+phpunit -v -c app/
+```
+
 ## Deploy
 
 ```
