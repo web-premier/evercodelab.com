@@ -74,7 +74,6 @@ class Client
      */
     private $updated_at;
 
-
     /**
      * Get id
      *
@@ -271,7 +270,7 @@ class Client
     /**
      * Set link
      *
-     * @param string $link
+     * @param  string $link
      * @return Client
      */
     public function setLink($link)
@@ -294,7 +293,7 @@ class Client
     /**
      * Set updated_at
      *
-     * @param \DateTime $updatedAt
+     * @param  \DateTime $updatedAt
      * @return Client
      */
     public function setUpdatedAt($updatedAt)

@@ -78,7 +78,6 @@ class Portfolio
      */
     private $updated_at;
 
-
     /**
      * Get id
      *

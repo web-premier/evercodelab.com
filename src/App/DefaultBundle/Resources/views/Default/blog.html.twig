@@ -1,6 +1,7 @@
 <div class="b-blog" id="blog">
     <div class="wrapper cols">
         <div class="r-col">
+            {% set locale = app.request.get('_locale') %}
             <h2>{{ 'blog.header'|trans }}</h2>
         </div>
     </div>

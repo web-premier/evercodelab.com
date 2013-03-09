@@ -9,9 +9,9 @@ use Sonata\AdminBundle\Show\ShowMapper;
 
 class PortfolioAdmin extends Admin
 {
-    protected  $securityContext;
+    protected $securityContext;
 
-    function __construct($code, $class, $baseControllerName, $securityContext)
+    public function __construct($code, $class, $baseControllerName, $securityContext)
     {
         parent::__construct($code, $class, $baseControllerName);
         $this->securityContext = $securityContext;

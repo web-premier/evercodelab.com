@@ -38,7 +38,7 @@ class DefaultController extends Controller
         $clients = $em->getRepository('AppDefaultBundle:Client')->findAll();
         $projects = $em->getRepository('AppDefaultBundle:Portfolio')->findAll();
 
-        $response = $this->render('AppDefaultBundle:Default:index.html.twig', 
+        $response = $this->render('AppDefaultBundle:Default:index.html.twig',
             array(
                 'clients' => $clients,
                 'projects' => $projects,
@@ -46,6 +46,7 @@ class DefaultController extends Controller
             )
         );
         $response->setSharedMaxAge(7*24*60*60);
+
         return $response;
     }
 
@@ -74,15 +75,14 @@ class DefaultController extends Controller
             $latestPosts[0]['text'] = implode('', array_slice($matches[1], 0, 3));
         }
 
-        $response = $this->render('AppDefaultBundle:Default:blog.html.twig', 
+        $response = $this->render('AppDefaultBundle:Default:blog.html.twig',
             array(
                 'latestPosts' => $latestPosts,
             )
         );
         $response->setSharedMaxAge(3*24*60*60);
+
         return $response;
     }
-
-
 
 }
