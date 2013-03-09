@@ -280,7 +280,7 @@
         </div>
     </div>
 </div>
-{{ render_esi(controller("AppDefaultBundle:Default:blog")) }}
+{{ render_esi(controller("AppDefaultBundle:Default:blog", {'_locale': app.request.get('_locale')} )) }}
 </div>
 
 <script type="text/javascript">

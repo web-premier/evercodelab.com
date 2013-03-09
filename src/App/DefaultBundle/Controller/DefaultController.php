@@ -54,7 +54,7 @@ class DefaultController extends Controller
      * @Route(name="blog")
      * @Template()
      */
-    public function blogAction(Request $request)
+    public function blogAction()
     {
         $feed = $this->get('fkr_simple_pie.rss');
         $feed->set_feed_url('http://blog.evercodelab.com/atom.xml');
