@@ -16,3 +16,11 @@ _sonata_admin:
     type: sonata_admin
     prefix: /greenbird
 
+php_master_class:
+    pattern: /php-master-class
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: 'AppDefaultBundle:Default:phpMasterClass.html.twig'
+#        maxAge: 86400
+#        sharedMaxAge: 86400
+#        private: false
