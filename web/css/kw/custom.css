@@ -58,9 +58,9 @@ article p {
 }
 
 article:nth-child(even) {
-    -moz-box-shadow: 8px -1px 15px -2px #272727;
-    -webkit-box-shadow: 8px -1px 15px -2px #272727;
-    box-shadow: 8px -1px 15px -2px #272727;
+    -moz-box-shadow: 8px -1px 7px -2px #272727;
+    -webkit-box-shadow: 8px -1px 7px -2px #272727;
+    box-shadow: 8px -1px 7px -2px #272727;
 }
 
 #birdlogo {
