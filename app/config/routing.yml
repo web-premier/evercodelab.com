@@ -21,6 +21,6 @@ php_master_class:
     defaults:
         _controller: FrameworkBundle:Template:template
         template: 'AppDefaultBundle:Default:phpMasterClass.html.twig'
-#        maxAge: 86400
-#        sharedMaxAge: 86400
-#        private: false
+        maxAge: 86400
+        sharedMaxAge: 86400
+        private: false
