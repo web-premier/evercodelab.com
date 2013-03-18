@@ -44,8 +44,8 @@ header.st-green {
 }
 
 article {
-    margin: 18px auto;
-    padding: 4px 32px;
+    margin: 18px auto 0px;
+    padding: 4px 32px 10px;
     width: 100%;
     overflow: hidden;
     -moz-border-radius: 4px;
@@ -58,9 +58,13 @@ article p {
 }
 
 article:nth-child(even) {
-    -moz-box-shadow: 8px -1px 7px -2px #272727;
-    -webkit-box-shadow: 8px -1px 7px -2px #272727;
-    box-shadow: 8px -1px 7px -2px #272727;
+    -moz-box-shadow: 8px -1px 7px -2px rgba(39, 39, 39, 0.9);
+    -webkit-box-shadow: 8px -1px 7px -2px rgba(39, 39, 39, 0.9);
+    box-shadow: 8px -1px 7px -2px rgba(39, 39, 39, 0.9);
+}
+
+article:nth-child(odd) {
+    margin-bottom: 18px;
 }
 
 #birdlogo {
@@ -76,3 +80,35 @@ article:nth-child(even) {
     text-shadow: 1px 1px 0 black;
 }
 
+blockquote {
+    margin-top: 30px;
+    padding-left: 20px;
+    position: relative;
+}
+
+article > blockquote:first-of-type {
+    margin-top: 35px;
+}
+
+blockquote p {
+    font-style: italic;
+}
+
+blockquote p:before {
+    display: block;
+    content: "\201C";
+    font-size: 3em;
+    position: absolute;
+    left: -17px;
+    top: -20px;
+    color: #3e3e3e;
+}
+
+blockquote footer {
+    color: #797979;
+    text-align: right;
+}
+
+blockquote footer:before {
+    content: "\2014 \2009";
+}
