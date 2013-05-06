@@ -250,6 +250,44 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
                         ',
             ),
         ),
+        array(
+            'name' => 'EverpartyBird',
+            'link' => 'http://everpartybird.herokuapp.com/countdown/10',
+            'description' => '
+                    Небольшое, но очень бесполезное, при этом уникальное по своей психоделичности приложение-эксперимент.
+                    Сделано с использованием микрофреймворка Cuba и SVG графики.
+                    Стало неизменным атрибутом наших Evercode Talks.
+                    Код доступен на <a href="https://github.com/JazzJackrabbit/everpartybird">github</a>.
+                    ',
+            'en' => array(
+                'name' => 'EverpartyBird',
+                'description' => '
+                        Small but very useless and at the same time unique in it\'s psychedelia app experiment.
+                        Built with Cuba microframework and some SVG graphics at the front.
+                        Became the essential of our Evercode Talks.
+                        Code is available on <a href="https://github.com/JazzJackrabbit/everpartybird">github</a>.
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'Stashify.me',
+            'link' => 'http://stashify.me/',
+            'description' => '
+                    Наш скромный, но подающий большие надежды собственный проект.
+                    Говорят, это самый простой способ сделать бэкап вашей онлайн активности и синхронизировать данные с вашим аккаунтом в Dropbox.
+                    Обладает утонченным дизайном (спасибо <a href="http://formazon.com/">Фарид</a>!).
+                    Находится в поисках своего предназначения и растет вместе с нами.
+                    ',
+            'en' => array(
+                'name' => 'Stashify.me',
+                'description' => '
+                        Our small yet promissing project.
+                        They say it\'s the easiest way to backup your online social data and sync it with your Dropbox account.
+                        Have refined design (thanks <a href="http://formazon.com/">Farid</a>!).
+                        Searches it\'s destiny and develops with us.
+                        ',
+            ),
+        ),
     );
 
     public function load(ObjectManager $manager)
