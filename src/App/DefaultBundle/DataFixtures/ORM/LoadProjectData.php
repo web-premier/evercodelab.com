@@ -35,13 +35,17 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             'link' => 'http://manaflask.com/en/',
             'description' => '
                     Manaflask – популярный игровой портал, предоставляющий материалы от топовых мировых игроков на английском и немецком языках.
-                    Мы поддерживали старую версию сайта, написанную на PHP. В данный момент при нашем участии создается новая версия сайта на Ruby on Rails.
+                    Мы поддерживали старую версию сайта, написанную на PHP. 
+                    А весной 2013-го участвовали в разработке и 
+                    <a href="http://blog.evercodelab.com/manaflask-release/">запуске новой версии Manaflask на Ruby on Rails</a>.
                     ',
             'en' => array(
                 'name' => 'Manaflask',
                 'description' => '
                         Manaflask is an Internet Gaming Portal dedicated to bringing premium content presented in both English and German created by top teams and individuals.
-                        We were involved in support of current version of site written in PHP. At the moment we are two steps away from launching new version of portal on Ruby on Rails.
+                        We were involved in support of old version of the site written in PHP. 
+                        And in the spring of 2013 we helped to develop and 
+                        <a href="http://blog.evercodelab.com/manaflask-release/">launch the new version of portal on Ruby on Rails</a>.
                         ',
             ),
         ),
@@ -101,13 +105,15 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             'link' => 'http://mahamandala.com/',
             'description' => '
                     Медиа хранилище с широким списком социальных функций.
-                    Проект был разработан на Zend Framework + Doctrine первых версий. Сейчас портируется на Ruby on Rails.
+                    Первая версия проекта разработана на Zend Framework 1 + Doctrine 1. 
+                    Позже сайт был портирован на Ruby on Rails.
                     ',
             'en' => array(
                 'name' => 'Mahamandala',
                 'description' => '
                         Media storage with wide list of social functionality.
-                        Originally was developed on first versions Zend Framework and Doctrine and is being ported to Ruby on Rails now.
+                        Originally was developed with first versions Zend Framework and Doctrine. 
+                        Later site was ported to Ruby on Rails.
                         ',
             ),
         ),
@@ -118,6 +124,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
                     Мини-сервис, составляющий красивый дайджест из изменений в ваших файлах и папках Dropbox за день и присылающий его на email.
                     Разработан за пару дней для внутренних нужд. Работает на Google App Engine (Python).
                     Подробности <a href="http://blog.evercodelab.com/dropnotify/">в блоге</a>.
+                    Код находится в открытом доступе.
                     ',
             'en' => array(
                 'name' => 'DropNotify',
@@ -125,6 +132,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
                         Mini-service which takes the feed of changes in your Dropbox files and folders, composes beutiful digest and sends it to your email everyday.
                         Was developed in couple of days for inner needs. Works on Google App Engine (Python).
                         For more information see <a href="http://blog.evercodelab.com/dropnotify/">detailed blog entry</a>.
+                        The source code is open.
                         ',
             ),
         ),
