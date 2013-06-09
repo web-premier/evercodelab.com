@@ -1,4 +1,5 @@
 <?php
+
 namespace App\DefaultBundle\Admin;
 
 use Sonata\AdminBundle\Admin\Admin;

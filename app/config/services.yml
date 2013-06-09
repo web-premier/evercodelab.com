@@ -13,7 +13,6 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: Пользователи, label: Пользователи}
         arguments: [null, App\UserBundle\Entity\User, SonataAdminBundle:CRUD]
-
     app.client.admin.client:
         class: App\DefaultBundle\Admin\ClientsAdmin
         tags:
@@ -24,3 +23,8 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: Клиенты, label: Портфолио}
         arguments: [null, App\DefaultBundle\Entity\Portfolio, SonataAdminBundle:CRUD, @security.context]
+    app.user.admin.team:
+        class: App\DefaultBundle\Admin\TeamAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Пользователи, label: Команда}
+        arguments: [null, App\DefaultBundle\Entity\Team, SonataAdminBundle:CRUD]
