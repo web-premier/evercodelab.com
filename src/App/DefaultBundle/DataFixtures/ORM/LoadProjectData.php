@@ -12,6 +12,25 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
 
     protected $projects = array(
         array(
+            'name' => 'Stashify.me',
+            'link' => 'http://stashify.me/',
+            'description' => '
+                    Наш скромный, но подающий большие надежды собственный проект.
+                    Говорят, это самый простой способ сделать бэкап вашей онлайн активности и синхронизировать данные с вашим аккаунтом в Dropbox.
+                    Обладает утонченным дизайном (спасибо <a href="http://formazon.com/">Фарид</a>!).
+                    Находится в поисках своего предназначения и растет вместе с нами.
+                    ',
+            'en' => array(
+                'name' => 'Stashify.me',
+                'description' => '
+                        Our small yet promissing project.
+                        They say it\'s the easiest way to backup your online social data and sync it with your Dropbox account.
+                        Have refined design (thanks <a href="http://formazon.com/">Farid</a>!).
+                        Searches it\'s destiny and develops with us.
+                        ',
+            ),
+        ),
+        array(
             'name' => 'ITOP',
             'link' => 'http://itop-portal.net/',
             'description' => '
@@ -137,6 +156,42 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             ),
         ),
         array(
+            'name' => 'Издательство Европейского Университета',
+            'link' => 'http://eupress.ru/',
+            'description' => '
+                    В интернет-магазине Издательства Европейского Университета можно найти редкие, уникальные и интересные книги.
+                    По просьбе ЕУСПб мы уже не первый год занимаемся поддержкой и развитием сайта.
+                    Сайт работает на Zend Framework 1.
+                    ',
+            'en' => array(
+                'name' => 'The EUSP Press’ internet store',
+                'description' => '
+                        In the EUSP Press’ internet store you can find interesting, rare and unique books.
+                        We are supporting the site for more than a year already.
+                        Site works on PHP with Zend Framework 1.
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'EverpartyBird',
+            'link' => 'http://everpartybird.herokuapp.com/countdown/10',
+            'description' => '
+                    Небольшое, но очень бесполезное, при этом уникальное по своей психоделичности приложение-эксперимент.
+                    Сделано с использованием микрофреймворка Cuba и SVG графики.
+                    Стало неизменным атрибутом наших Evercode Talks.
+                    Код доступен на <a href="https://github.com/JazzJackrabbit/everpartybird">github</a>.
+                    ',
+            'en' => array(
+                'name' => 'EverpartyBird',
+                'description' => '
+                        Small but very useless and at the same time unique in it\'s psychedelia app experiment.
+                        Built with Cuba microframework and some SVG graphics at the front.
+                        Became the essential of our Evercode Talks.
+                        Code is available on <a href="https://github.com/JazzJackrabbit/everpartybird">github</a>.
+                        ',
+            ),
+        ),
+        array(
             'name' => 'The Book of Knowledge',
             'link' => 'http://thebookofknowledge.evercodelab.com/',
             'description' => '
@@ -234,57 +289,34 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             ),
         ),
         array(
-            'name' => 'Издательство Европейского Университета',
-            'link' => 'http://eupress.ru/',
+            'name' => 'Система принятия и обработки объявлений',
+            'link' => null,
             'description' => '
-                    В интернет-магазине Издательства Европейского Университета можно найти редкие, уникальные и интересные книги.
-                    По просьбе ЕУСПб мы уже не первый год занимаемся поддержкой и развитием сайта.
-                    Сайт работает на Zend Framework 1.
+                    Программа Webcity предназначена для принятия и обработки объявлений для публикации в газете «Наш город» и на сайте komcity.ru. В данной ревизии программа переходи от десктопной к веб версии программы. Десктопная версия программы разработчикам не предоставляется. Программа работает с единым сервером базы данных, на котором централизованно хранятся данные об объявлениях, а также настройки среды. Среда обеспечивает гибкие возможности управления объявлениями, обладает поисковой подсистемой, системой генерации отчетов, а также осуществляет подсчет стоимости платных объявлений во время обработки заказа, имеет возможность проводить оплату по безналичной внутренней системе(индивидуальные счета подателей объявлений), осуществляет возможность импорта настройкиовых объявлений с сайта komcity.ru, пред просмотр и редактирование этих объявлений, рассылку SMS сообщений на телефоны подателей.
                     ',
             'en' => array(
-                'name' => 'The EUSP Press’ internet store',
+                'name' => 'EvercodePageBundle',
                 'description' => '
-                        In the EUSP Press’ internet store you can find interesting, rare and unique books.
-                        We are supporting the site for more than a year already.
-                        Site works on PHP with Zend Framework 1.
+                        Dead simple experimental Symfony2 Bundle for easy management of your projects\' information pages.
+                        Available for everyone to see, share, comment and even contribute.
+                        Increases your visitors intellectual faculties by 146%.
+                        Significantly improves writing skills.
                         ',
             ),
         ),
         array(
-            'name' => 'EverpartyBird',
-            'link' => 'http://everpartybird.herokuapp.com/countdown/10',
+            'name' => 'Система афилиатного маркетинга',
+            'link' => null,
             'description' => '
-                    Небольшое, но очень бесполезное, при этом уникальное по своей психоделичности приложение-эксперимент.
-                    Сделано с использованием микрофреймворка Cuba и SVG графики.
-                    Стало неизменным атрибутом наших Evercode Talks.
-                    Код доступен на <a href="https://github.com/JazzJackrabbit/everpartybird">github</a>.
+                    Qprofit.ru объединят продавцав товаров и владельцев торговых площадок
                     ',
             'en' => array(
-                'name' => 'EverpartyBird',
+                'name' => 'EvercodePageBundle',
                 'description' => '
-                        Small but very useless and at the same time unique in it\'s psychedelia app experiment.
-                        Built with Cuba microframework and some SVG graphics at the front.
-                        Became the essential of our Evercode Talks.
-                        Code is available on <a href="https://github.com/JazzJackrabbit/everpartybird">github</a>.
-                        ',
-            ),
-        ),
-        array(
-            'name' => 'Stashify.me',
-            'link' => 'http://stashify.me/',
-            'description' => '
-                    Наш скромный, но подающий большие надежды собственный проект.
-                    Говорят, это самый простой способ сделать бэкап вашей онлайн активности и синхронизировать данные с вашим аккаунтом в Dropbox.
-                    Обладает утонченным дизайном (спасибо <a href="http://formazon.com/">Фарид</a>!).
-                    Находится в поисках своего предназначения и растет вместе с нами.
-                    ',
-            'en' => array(
-                'name' => 'Stashify.me',
-                'description' => '
-                        Our small yet promissing project.
-                        They say it\'s the easiest way to backup your online social data and sync it with your Dropbox account.
-                        Have refined design (thanks <a href="http://formazon.com/">Farid</a>!).
-                        Searches it\'s destiny and develops with us.
+                        Dead simple experimental Symfony2 Bundle for easy management of your projects\' information pages.
+                        Available for everyone to see, share, comment and even contribute.
+                        Increases your visitors intellectual faculties by 146%.
+                        Significantly improves writing skills.
                         ',
             ),
         ),
