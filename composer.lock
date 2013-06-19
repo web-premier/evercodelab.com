@@ -3,8 +3,25 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "27d73e0c329fb5f23e219b2e8ef0b2a8",
+    "hash": "60f7d7d6f46ee5a92dfbbef5c9865ee2",
     "packages": [
+        {
+            "name": "abraham/twitteroauth",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/abraham/twitteroauth.git",
+                "reference": "master"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/abraham/twitteroauth/zipball/master",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "library",
+            "time": "2013-06-14 16:51:51"
+        },
         {
             "name": "doctrine/common",
             "version": "2.3.0",
@@ -743,6 +760,48 @@
                 "parameters management"
             ],
             "time": "2013-04-06 17:15:44"
+        },
+        {
+            "name": "inori/twitter-app-bundle",
+            "version": "dev-master",
+            "target-dir": "Inori/TwitterAppBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Inori/InoriTwitterAppBundle.git",
+                "reference": "d9a7624dba04a33d1c721b8de4343023c43e9c19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Inori/InoriTwitterAppBundle/zipball/d9a7624dba04a33d1c721b8de4343023c43e9c19",
+                "reference": "d9a7624dba04a33d1c721b8de4343023c43e9c19",
+                "shasum": ""
+            },
+            "require": {
+                "abraham/twitteroauth": "dev-master",
+                "php": ">=5.3.2",
+                "symfony/framework-bundle": "2.*"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Inori\\TwitterAppBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Marintšenko",
+                    "email": "inoryy@gmail.com"
+                }
+            ],
+            "description": "Clientless Twitter application instance to help automate project twitter updates",
+            "keywords": [
+                "twitter"
+            ],
+            "time": "2012-07-17 17:19:14"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -2711,6 +2770,8 @@
         "sonata-project/cache-bundle": 20,
         "sonata-project/block-bundle": 20,
         "knplabs/knp-menu-bundle": 20,
+        "inori/twitter-app-bundle": 20,
+        "abraham/twitteroauth": 20,
         "doctrine/doctrine-fixtures-bundle": 20,
         "doctrine/data-fixtures": 20,
         "doctrine/doctrine-migrations-bundle": 20,

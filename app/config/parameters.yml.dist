@@ -13,3 +13,8 @@ parameters:
 
     locale:            ru
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    twitter_consumer_key: xxxxx
+    twitter_consumer_secret: xxxxx
+    twitter_oauth_token: xxxxx
+    twitter_oauth_token_secret: xxxxx

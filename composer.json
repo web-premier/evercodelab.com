@@ -31,6 +31,8 @@
 
         "knplabs/knp-menu-bundle": "1.1.x-dev",
         "knplabs/knp-last-tweets-bundle": "*",
+        "inori/twitter-app-bundle": "dev-master",
+        "abraham/twitteroauth": "dev-master",
 
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "doctrine/data-fixtures": "dev-master",
@@ -42,6 +44,24 @@
 
         "fkr/simplepie-bundle": "dev-master"
     },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "abraham/twitteroauth",
+                "version": "dev-master",
+                "dist": {
+                    "url": "https://github.com/abraham/twitteroauth/zipball/master",
+                    "type": "zip"
+                },
+                "source": {
+                    "url": "git://github.com/abraham/twitteroauth.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",

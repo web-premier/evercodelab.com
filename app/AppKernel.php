@@ -37,6 +37,7 @@ class AppKernel extends Kernel
 
             new Fkr\SimplePieBundle\FkrSimplePieBundle(),
             new Knp\Bundle\LastTweetsBundle\KnpLastTweetsBundle(),
+            new Inori\TwitterAppBundle\InoriTwitterAppBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
