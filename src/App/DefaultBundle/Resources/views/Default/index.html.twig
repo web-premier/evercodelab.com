@@ -216,7 +216,13 @@
                     <ul>
                         {% for project in projects %}
                         <li>
-                            <div class="b-portfolio-link"><a href="{{ project.link }}">{{ project.name }}</a></div>
+                            <div class="b-portfolio-link">
+                                {% if project.link %}
+                                    <a href="{{ project.link }}">{{ project.name }}</a>
+                                {% else %}
+                                    {{ project.name }}
+                                {% endif %}
+                            </div>
                             {{ project.description | raw }}
                         </li>
                         {% endfor %}
