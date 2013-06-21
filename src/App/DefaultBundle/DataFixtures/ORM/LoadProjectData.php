@@ -319,7 +319,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             'en' => array(
                 'name' => 'Affiliate marketing system Qprofit',
                 'description' => '
-                        Qporfit was intended to be a place where salespeople and trading places owners meet.
+                        Qprofit was intended to be a place where salespeople and trading places owners meet.
                         We developed a prototype of the service using Symfony2 framework.
                         Unfortunately owners decided not to continue development and elaboration of the project.
                         ',
