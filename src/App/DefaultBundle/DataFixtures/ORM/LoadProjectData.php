@@ -12,21 +12,40 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
 
     protected $projects = array(
         array(
-            'name' => 'ITOP',
-            'link' => 'http://itop-portal.net/',
+            'name' => 'Stashify.me',
+            'link' => 'http://stashify.me/',
             'description' => '
-                    Российский портал информационных технологий, оптики и фотоники разработан по заказу ИТМО.
-                    Наш первый проект на Symfony2 + Doctrine2.
-                    Основной функционал разработан за очень сжатые сроки.
-                    Подробности <a href="http://blog.evercodelab.com/itop/">в блоге</a>.
+                    Наш скромный, но подающий большие надежды собственный проект.
+                    Говорят, это самый простой способ сделать бэкап вашей онлайн активности и синхронизировать данные с вашим аккаунтом в Dropbox.
+                    Обладает утонченным дизайном (спасибо <a href="http://formazon.com/">Фарид</a>!).
+                    Находится в поисках своего предназначения и растет вместе с нами.
                     ',
             'en' => array(
-                'name' => 'ITOP',
+                'name' => 'Stashify.me',
                 'description' => '
-                        Russian portal of IT, optics and photonics made for ITMO.
-                        Our first project on Symfony2 + Doctrine2 stack.
-                        Basic functionality was developed in very short period of time.
-                        For more information see <a href="http://blog.evercodelab.com/itop/">detailed blog entry</a>.
+                        Our small yet promissing project.
+                        They say it\'s the easiest way to backup your online social data and sync it with your Dropbox account.
+                        Have refined design (thanks <a href="http://formazon.com/">Farid</a>!).
+                        Searches it\'s destiny and develops with us.
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'PostcardWithLove.ru',
+            'link' => 'http://postcardwithlove.ru/',
+            'description' => '
+                    На этом небольшом замечательном сайте можно отправить настоящую почтовую открытку в несколько кликов.
+                    Со своими фотографиями или готовыми картинками — как вам хочется.
+                    Сайт работает на Ruby on Rails.
+                    <a href="http://lalalambada.livejournal.com/357836.html">Подробности в блоге основательницы проекта Ольги Нарижной.</a>
+                    ',
+            'en' => array(
+                'name' => 'PostcardWithLove.ru',
+                'description' => '
+                        With this simple yet wonderful service you can send real postacard just withing few clicks.
+                        Using your own photos or prepared pictures, just as you wish.
+                        Site is working on Ruby on Rails.
+                        For more information check <a href="http://lalalambada.livejournal.com/357836.html">the blog post from the founder Olga Narizhnaya</a>.
                         ',
             ),
         ),
@@ -46,6 +65,25 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
                         We were involved in support of old version of the site written in PHP. 
                         And in the spring of 2013 we helped to develop and 
                         <a href="http://blog.evercodelab.com/manaflask-release/">launch the new version of portal on Ruby on Rails</a>.
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'ITOP',
+            'link' => 'http://itop-portal.net/',
+            'description' => '
+                    Российский портал информационных технологий, оптики и фотоники разработан по заказу ИТМО.
+                    Наш первый проект на Symfony2 + Doctrine2.
+                    Основной функционал разработан за очень сжатые сроки.
+                    Подробности <a href="http://blog.evercodelab.com/itop/">в блоге</a>.
+                    ',
+            'en' => array(
+                'name' => 'ITOP',
+                'description' => '
+                        Russian portal of IT, optics and photonics made for ITMO.
+                        Our first project on Symfony2 + Doctrine2 stack.
+                        Basic functionality was developed in very short period of time.
+                        For more information see <a href="http://blog.evercodelab.com/itop/">detailed blog entry</a>.
                         ',
             ),
         ),
@@ -137,6 +175,42 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             ),
         ),
         array(
+            'name' => 'Издательство Европейского Университета',
+            'link' => 'http://eupress.ru/',
+            'description' => '
+                    В интернет-магазине Издательства Европейского Университета можно найти редкие, уникальные и интересные книги.
+                    По просьбе ЕУСПб мы уже не первый год занимаемся поддержкой и развитием сайта.
+                    Сайт работает на Zend Framework 1.
+                    ',
+            'en' => array(
+                'name' => 'The EUSP Press’ internet store',
+                'description' => '
+                        In the EUSP Press’ internet store you can find interesting, rare and unique books.
+                        We are supporting the site for more than a year already.
+                        Site works on PHP with Zend Framework 1.
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'EverpartyBird',
+            'link' => 'http://everpartybird.herokuapp.com/countdown/10',
+            'description' => '
+                    Небольшое, но очень бесполезное, при этом уникальное по своей психоделичности приложение-эксперимент.
+                    Сделано с использованием микрофреймворка Cuba и SVG графики.
+                    Стало неизменным атрибутом наших Evercode Talks.
+                    Код доступен на <a href="https://github.com/JazzJackrabbit/everpartybird">github</a>.
+                    ',
+            'en' => array(
+                'name' => 'EverpartyBird',
+                'description' => '
+                        Small but very useless and at the same time unique in it\'s psychedelia app experiment.
+                        Built with Cuba microframework and some SVG graphics at the front.
+                        Became the essential of our Evercode Talks.
+                        Code is available on <a href="https://github.com/JazzJackrabbit/everpartybird">github</a>.
+                        ',
+            ),
+        ),
+        array(
             'name' => 'The Book of Knowledge',
             'link' => 'http://thebookofknowledge.evercodelab.com/',
             'description' => '
@@ -154,25 +228,6 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
                         Available for everyone to see, share, comment and even contribute.
                         Works on <a href="https://github.com/mojombo/jekyll">Jekyll</a> and <a href="http://pages.github.com/">github:pages</a>.
                         "When in doubt, consult the Book of Knowledge"
-                        ',
-            ),
-        ),
-        array(
-            'name' => 'PHP Study Guide',
-            'link' => 'http://php-guide.evercodelab.com/',
-            'description' => '
-                    Изначально — краткое руководство для подготовки к <a href="http://www.zend.com/en/services/certification/php-5-certification/">сертификации ZCE PHP5.3</a>.
-                    Немного переработано в более общее руководство для изучающих PHP.
-                    Находится в открытом доступе.
-                    Работает на <a href="https://github.com/mojombo/jekyll">Jekyll</a> и <a href="http://pages.github.com/">github:pages</a>.
-                    ',
-            'en' => array(
-                'name' => 'PHP Study Guide',
-                'description' => '
-                        Originally was a small project that provides step by step guide on information needed to pass <a href="http://www.zend.com/en/services/certification/php-5-certification/">PHP5.3 ZCE certification</a>.
-                        For now it is a good place to start your experience with PHP5.3.
-                        Available for everyone to see, share, comment and even contribute.
-                        Works on <a href="https://github.com/mojombo/jekyll">Jekyll</a> and <a href="http://pages.github.com/">github:pages</a>.
                         ',
             ),
         ),
@@ -234,57 +289,76 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             ),
         ),
         array(
-            'name' => 'Издательство Европейского Университета',
-            'link' => 'http://eupress.ru/',
+            'name' => 'Система принятия и обработки объявлений',
+            'link' => null,
             'description' => '
-                    В интернет-магазине Издательства Европейского Университета можно найти редкие, уникальные и интересные книги.
-                    По просьбе ЕУСПб мы уже не первый год занимаемся поддержкой и развитием сайта.
-                    Сайт работает на Zend Framework 1.
+                    Программа предназначена для принятия и обработки объявлений для публикации в газете и на сайте.
+                    Возможности: гибкое управления объявлениями, поиск, генерация отчетов, подсчет стоимости, 
+                    внутренняя система счетов, импорт объявлений с сайта, 
+                    предпросмотр, рассылка SMS сообщений на телефоны подателей. 
+                    Подробности не разглашаются по соглашению с заказчиком.
                     ',
             'en' => array(
-                'name' => 'The EUSP Press’ internet store',
+                'name' => 'System for receiving and processing of advertisement',
                 'description' => '
-                        In the EUSP Press’ internet store you can find interesting, rare and unique books.
-                        We are supporting the site for more than a year already.
-                        Site works on PHP with Zend Framework 1.
+                        The system is designed to accept and process ads for newspaper and site.
+                        Features: ads management, search, reports generation, price calculation,
+                        internal accounts system, import from site, preview, SMS notifications.
+                        More details are private dew to client\'s request.
                         ',
             ),
         ),
         array(
-            'name' => 'EverpartyBird',
-            'link' => 'http://everpartybird.herokuapp.com/countdown/10',
+            'name' => 'Система афилиатного маркетинга Qprofit',
+            'link' => null,
             'description' => '
-                    Небольшое, но очень бесполезное, при этом уникальное по своей психоделичности приложение-эксперимент.
-                    Сделано с использованием микрофреймворка Cuba и SVG графики.
-                    Стало неизменным атрибутом наших Evercode Talks.
-                    Код доступен на <a href="https://github.com/JazzJackrabbit/everpartybird">github</a>.
+                    Qprofit задумывался как сервис, объединяющий продавцов товаров и владельцев торговых площадок.
+                    Нами был разработан прототип проекта на Symfony2.
+                    К сожалению, заказчик принял решение не продолжать разработку и развитие проекта.
                     ',
             'en' => array(
-                'name' => 'EverpartyBird',
+                'name' => 'Affiliate marketing system Qprofit',
                 'description' => '
-                        Small but very useless and at the same time unique in it\'s psychedelia app experiment.
-                        Built with Cuba microframework and some SVG graphics at the front.
-                        Became the essential of our Evercode Talks.
-                        Code is available on <a href="https://github.com/JazzJackrabbit/everpartybird">github</a>.
+                        Qprofit was intended to be a place where salespeople and trading places owners meet.
+                        We developed a prototype of the service using Symfony2 framework.
+                        Unfortunately owners decided not to continue development and elaboration of the project.
                         ',
             ),
         ),
         array(
-            'name' => 'Stashify.me',
-            'link' => 'http://stashify.me/',
+            'name' => 'Система генерации отчетов по продвижению сайтов',
+            'link' => null,
             'description' => '
-                    Наш скромный, но подающий большие надежды собственный проект.
-                    Говорят, это самый простой способ сделать бэкап вашей онлайн активности и синхронизировать данные с вашим аккаунтом в Dropbox.
-                    Обладает утонченным дизайном (спасибо <a href="http://formazon.com/">Фарид</a>!).
-                    Находится в поисках своего предназначения и растет вместе с нами.
+                    Для крупной питерской веб-студии мы разработали внутренний инструмент автоматизации для отдела продвижения.
+                    Система собирает данные из LiveInternet, Google Analytics, Google.Webmaster, Yandex.Webmaster. 
+                    Далее генерирует необходимые графики и таблицы данных. И затем выгружает в docx с учетом фирменных стилей фирмы.
+                    Проект реализован на Symfony2.
                     ',
             'en' => array(
-                'name' => 'Stashify.me',
+                'name' => 'Report generation system for website promotion departement',
                 'description' => '
-                        Our small yet promissing project.
-                        They say it\'s the easiest way to backup your online social data and sync it with your Dropbox account.
-                        Have refined design (thanks <a href="http://formazon.com/">Farid</a>!).
-                        Searches it\'s destiny and develops with us.
+                        For big web-studio from St. Petersburg we developed the instrument to automate work of website promotion departement.
+                        System gathers information from Google Analytics, LiveInternet, Google.Webmaster, Yandex. Webmaster.
+                        Then it generates necessary data tables and graphs and generates docx file according to corporate identity.
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'PHP Study Guide',
+            'link' => 'http://php-guide.evercodelab.com/',
+            'description' => '
+                    Изначально — краткое руководство для подготовки к <a href="http://www.zend.com/en/services/certification/php-5-certification/">сертификации ZCE PHP5.3</a>.
+                    Немного переработано в более общее руководство для изучающих PHP.
+                    Находится в открытом доступе.
+                    Работает на <a href="https://github.com/mojombo/jekyll">Jekyll</a> и <a href="http://pages.github.com/">github:pages</a>.
+                    ',
+            'en' => array(
+                'name' => 'PHP Study Guide',
+                'description' => '
+                        Originally was a small project that provides step by step guide on information needed to pass <a href="http://www.zend.com/en/services/certification/php-5-certification/">PHP5.3 ZCE certification</a>.
+                        For now it is a good place to start your experience with PHP5.3.
+                        Available for everyone to see, share, comment and even contribute.
+                        Works on <a href="https://github.com/mojombo/jekyll">Jekyll</a> and <a href="http://pages.github.com/">github:pages</a>.
                         ',
             ),
         ),
@@ -298,11 +372,11 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             $project = new Portfolio();
             $project->setName($data['name']);
             $project->setLink($data['link']);
-            $project->setDescription($data['description']);
+            $project->setDescription(trim($data['description']));
 
             $repository
                 ->translate($project, 'name', 'en', $data['en']['name'])
-                ->translate($project, 'description', 'en', $data['en']['description']);
+                ->translate($project, 'description', 'en', trim($data['en']['description']));
 
             $manager->persist($project);
             $manager->flush();
