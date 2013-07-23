@@ -234,7 +234,7 @@ class Team
         return null === $this->photo ? null : $this->getUploadRootDir().'/'.$this->photo;
     }
 
-    public function getWebPath()
+    public function getPhotoWebPath()
     {
         return null === $this->photo ? null : $this->getUploadDir().'/'.$this->photo;
     }

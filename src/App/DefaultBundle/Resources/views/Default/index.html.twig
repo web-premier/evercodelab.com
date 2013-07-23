@@ -102,75 +102,21 @@
         </div>
                 <div class="b-team-block hidden" id="team-block">
             <ul class="b-team-list">
+                {% for member in team %}
                 <li class="person">
                     <div class="photo-box">
-                        <img src="/i/team/petr.png" alt="person's photo"/>
+                        <img src="{{ member.photoWebPath }}" alt="{{ member.name }}"/>
                     </div>
-                    <div class="name">Петр Сергеев</div>
+                    <div class="name">{{ member.name }}</div>
                     <div class="b-social">
                         <ul class="social-list">
-                            <li class="item"><a href="#"><img class="mail" src="/i/empty.png"/></a></li>
-                            <li class="item"><a href="#"><img class="twitter" src="/i/empty.png"/></a></li>
-                            <li class="item"><a href="#"><img class="github" src="/i/empty.png"/></a></li>
+                            <li class="item"><a href="mailto:{{ member.email }}"><img class="mail" src="{{ asset('i/empty.png') }}"/></a></li>
+                            <li class="item"><a href="https://twitter.com/{{ member.twitter }}"><img class="twitter" src="{{ asset('i/empty.png') }}"/></a></li>
+                            <li class="item"><a href="https://github.com/{{ member.github }}"><img class="github" src="{{ asset('i/empty.png') }}"/></a></li>
                         </ul>
                     </div>
                 </li>
-
-                <li class="person">
-                    <div class="photo-box">
-                        <img src="/i/team/igor.png" alt="person's photo"/>
-                    </div>
-                    <div class="name">Игорь Адров</div>
-                    <div class="b-social">
-                        <ul class="social-list">
-                            <li class="item"><a href="#"><img class="mail" src="/i/empty.png"/></a></li>
-                            <li class="item"><a href="#"><img class="twitter" src="/i/empty.png"/></a></li>
-                            <li class="item"><a href="#"><img class="github" src="/i/empty.png"/></a></li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="person">
-                    <div class="photo-box">
-                        <img src="/i/team/sergey.png" alt="person's photo"/>
-                    </div>
-                    <div class="name">Сергей Лунев</div>
-                    <div class="b-social">
-                        <ul class="social-list">
-                            <li class="item"><a href="#"><img class="mail" src="/i/empty.png"/></a></li>
-                            <li class="item"><a href="#"><img class="twitter" src="/i/empty.png"/></a></li>
-                            <li class="item"><a href="#"><img class="github" src="/i/empty.png"/></a></li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="person">
-                    <div class="photo-box">
-                        <img src="/i/team/kirill.png" alt="person's photo"/>
-                    </div>
-                    <div class="name">Кирилл Рагозин</div>
-                    <div class="b-social">
-                        <ul class="social-list">
-                            <li class="item"><a href="#"><img class="mail" src="/i/empty.png"/></a></li>
-                            <li class="item"><a href="#"><img class="twitter" src="/i/empty.png"/></a></li>
-                            <li class="item"><a href="#"><img class="github" src="/i/empty.png"/></a></li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="person">
-                    <div class="photo-box">
-                        <img src="/i/team/roma.png" alt="person's photo"/>
-                    </div>
-                    <div class="name">Роман Лапин</div>
-                    <div class="b-social">
-                        <ul class="social-list">
-                            <li class="item"><a href="#"><img class="mail" src="/i/empty.png"/></a></li>
-                            <li class="item"><a href="#"><img class="twitter" src="/i/empty.png"/></a></li>
-                            <li class="item"><a href="#"><img class="github" src="/i/empty.png"/></a></li>
-                        </ul>
-                    </div>
-                </li>
+                {% endfor %}
             </ul>
         </div>
         <div class="b-mission-block hidden" id="mission-block">
