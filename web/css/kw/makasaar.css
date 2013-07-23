@@ -208,22 +208,17 @@ textarea {
   font: 23px "Trebuchet MS";
   font-weight: normal;
   color: white;
-  border-bottom: 1px dashed white;
   padding-bottom: 2px;
 }
 
 .b-masterclass-title .title:hover {
   cursor: pointer;
   color: #006699;
-  border-bottom: 1px dashed #006699;
-  font-weight: bold;
 }
 
 .b-masterclass-title .title.active {
   cursor: pointer;
   color: #006699;
-  border-bottom: 1px dashed #006699;
-  font-weight: bold;
 }
 
 .b-masterclass-menu .item {

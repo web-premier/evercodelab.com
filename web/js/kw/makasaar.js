@@ -72,36 +72,4 @@
         }
     });
 
-    showMasterclass = function() {
-        $('#services').addClass('extended');
-        return $('#masterclass-switch').addClass('active');
-    };
-
-    hideMasterclass = function() {
-        $('#services').removeClass('extended');
-        return $('#masterclass-switch').removeClass('active');
-    };
-
-    $(document).on('click', '#masterclass-switch', function() {
-        if ($(this).hasClass('active')) {
-            return hideMasterclass();
-        } else {
-            return showMasterclass();
-        }
-    });
-
-    $(document).on('click', '.b-masterclass-menu .item', function() {
-        var current_id, current_menu, new_id;
-
-        if (!$(this).hasClass('active')) {
-            current_menu = $(".b-masterclass-menu .item.active");
-            $(current_menu).removeClass('active');
-            current_id = $(current_menu).data('content');
-            new_id = $(this).data('content');
-            $(this).addClass('active');
-            $(current_id).removeClass('active');
-            return $(new_id).addClass('active');
-        }
-    });
-
 }).call(this);
