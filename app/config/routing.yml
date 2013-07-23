@@ -16,6 +16,10 @@ _sonata_admin:
     type: sonata_admin
     prefix: /greenbird
 
+_imagine:
+    resource: .
+    type:     imagine
+
 php_master_class:
     pattern: /php-master-class
     defaults:

@@ -229,6 +229,11 @@ class Team
         return $this->github;
     }
 
+    public function __toString()
+    {
+        return $this->getName();
+    }
+
     public function getAbsolutePath()
     {
         return null === $this->photo ? null : $this->getUploadRootDir().'/'.$this->photo;

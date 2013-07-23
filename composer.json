@@ -42,7 +42,8 @@
 
         "stof/doctrine-extensions-bundle": "dev-master",
 
-        "fkr/simplepie-bundle": "dev-master"
+        "fkr/simplepie-bundle": "dev-master",
+        "avalanche123/imagine-bundle": "dev-master"
     },
     "repositories": [
         {
@@ -79,6 +80,7 @@
         ]
     },
     "minimum-stability": "stable",
+    "prefer-stable": true,
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",

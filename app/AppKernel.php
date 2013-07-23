@@ -38,6 +38,7 @@ class AppKernel extends Kernel
             new Fkr\SimplePieBundle\FkrSimplePieBundle(),
             new Knp\Bundle\LastTweetsBundle\KnpLastTweetsBundle(),
             new Inori\TwitterAppBundle\InoriTwitterAppBundle(),
+            new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

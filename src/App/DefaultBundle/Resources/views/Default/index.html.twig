@@ -105,7 +105,7 @@
                 {% for member in team %}
                 <li class="person">
                     <div class="photo-box">
-                        <img src="{{ member.photoWebPath }}" alt="{{ member.name }}"/>
+                        <img src="{{ member.photoWebPath | apply_filter('team_photo_thumb') }}" alt="{{ member.name }}"/>
                     </div>
                     <div class="name">{{ member.name }}</div>
                     <div class="b-social">
