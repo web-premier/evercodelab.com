@@ -1,0 +1,134 @@
+body {
+  background-image: url(../../i/shattered.png);
+  font: 18px/1.37 "trebuchet MS", arial, verdana;
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: .75em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: .83em 0;
+}
+
+h5 {
+  font-size: .83em;
+  margin: 1.5em 0;
+}
+
+h6 {
+  font-size: .75em;
+  margin: 1.67em 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bolder;
+}
+
+a {
+  color: #228ac4;
+}
+
+#content {
+  padding: 0 8px;
+}
+
+header:not(.st-green) {
+  letter-spacing: 3px;
+}
+
+header.st-green {
+  letter-spacing: 1px;
+}
+
+#masterclass {
+  max-width: 866px;
+  min-width: 668px;
+  margin: 35px auto;
+}
+
+#masterclass > header {
+  border-radius: 5px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 32px;
+  display: inline-block;
+}
+
+article {
+  margin: 18px auto 0px;
+  padding: 4px 32px 10px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+article p {
+  margin-right: 20px;
+}
+
+article:nth-child(even) {
+  box-shadow: 8px -1px 7px -2px rgba(39, 39, 39, 0.9);
+}
+
+article:nth-child(odd) {
+  margin-bottom: 18px;
+}
+
+#birdlogo {
+  width: 310px;
+  /* original */
+  display: block;
+  float: right;
+  margin-bottom: 18px;
+  margin-right: 24px;
+  border-radius: 100px;
+}
+
+.st-green {
+  color: #7ebc41;
+  text-shadow: 1px 1px 0 black;
+}
+
+blockquote {
+  margin-top: 30px;
+  padding-left: 20px;
+  position: relative;
+}
+
+article > blockquote:first-of-type {
+  margin-top: 35px;
+}
+
+blockquote p {
+  font-style: italic;
+}
+
+blockquote p:before {
+  display: block;
+  content: "\201C";
+  font-size: 3em;
+  position: absolute;
+  color: #3e3e3e;
+}
+
+blockquote footer {
+  color: #797979;
+  text-align: right;
+}
+
+blockquote footer:before {
+  content: "\2014 \2009";
+}

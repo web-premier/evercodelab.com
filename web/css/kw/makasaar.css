@@ -1,0 +1,304 @@
+a:hover {
+  text-decoration: none;
+}
+
+.b-about {
+  -webkit-transition: height 0.7s ease;
+  -o-transition: height 0.7s ease;
+  transition: height 0.7s ease;
+}
+
+.b-about.extended {
+  height: 620px;
+}
+
+.b-services {
+  height: 405px;
+  background: #7bb3d1 url(../../i/shattered-light-blue.png);
+  -webkit-transition: height 0.6s ease-in-out;
+  -o-transition: height 0.6s ease-in-out;
+  transition: height 0.6s ease-in-out;
+}
+
+.b-services.extended {
+  height: 750px;
+}
+
+.b-clients {
+  background: #7bb3d1 url(../../i/shattered-light-blue1.png);
+}
+
+.b-slider .prev {
+  cursor: pointer;
+}
+
+.b-slider .next {
+  cursor: pointer;
+}
+
+.b-portfolio .b-switcher-block {
+  height: 380px;
+}
+
+.b-portfolio .b-slider {
+  position: absolute;
+  bottom: 0;
+}
+
+input[type=text],
+textarea {
+  padding: 2px 0.5em;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.b-temi-list {
+  padding-top: 5px;
+  font: 23px Trebuchet MS;
+  color: #272727;
+}
+
+.b-temi-list {
+  position: relative;
+}
+
+.b-temi-list > .item {
+  font-weight: normal;
+  display: inline-block;
+  padding-bottom: 2px;
+  position: absolute;
+  border-bottom: 1px dashed #272727;
+}
+
+.b-temi-list > .item.active {
+  color: #7ebc41;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  border-bottom: 1px dashed #7ebc41;
+}
+
+.b-temi-list > .item:hover {
+  color: #7ebc41;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  border-bottom: 1px dashed #7ebc41;
+}
+
+.b-temi-list > .item.first {
+  left: 0;
+}
+
+.b-temi-list > .item.second {
+  left: 110px;
+}
+
+.b-team-block {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 290px;
+  padding-top: 18px;
+}
+
+.b-team-block .person {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.b-team-block .person:last-child {
+  padding-right: 0;
+}
+
+.person {
+  position: relative;
+  width: 180px;
+}
+
+.person .photo-box {
+  background-color: white;
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.person .name {
+  text-align: center;
+  font-size: 18px;
+  line-height: 16.8px;
+  padding-top: 19px;
+}
+
+.b-social {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+  margin-top: 14px;
+  text-align: center;
+  padding-bottom: 14px;
+}
+
+.person:hover .b-social {
+  opacity: 1;
+}
+
+.social-list > .item {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin-right: 14px;
+}
+
+.social-list > .item:last-child {
+  margin-right: 0;
+}
+
+.social-list .mail {
+  background: url(../../i/social/mail.png) no-repeat;
+  background-position: 0 0;
+  width: 24px;
+  height: 20px;
+}
+
+.social-list .mail:hover {
+  background-position: -24px 0;
+}
+
+.social-list .github {
+  background: url(../../i/social/github.png) no-repeat;
+  background-position: 0 0;
+  width: 26px;
+  height: 22px;
+}
+
+.social-list .github:hover {
+  background-position: -26px 0;
+}
+
+.social-list .twitter {
+  background: url(../../i/social/twitter.png) no-repeat;
+  background-position: 0 0;
+  width: 22px;
+  height: 22px;
+}
+
+.social-list .twitter:hover {
+  background-position: -22px 0;
+}
+
+.b-mission-block {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 290px;
+  padding-top: 6px;
+}
+
+.b-masterclass-title {
+  padding-top: 27px;
+}
+
+.b-masterclass-title .title {
+  font: 23px "Trebuchet MS";
+  font-weight: normal;
+  color: white;
+  padding-bottom: 2px;
+}
+
+.b-masterclass-title .title:hover {
+  cursor: pointer;
+  color: #006699;
+}
+
+.b-masterclass-title .title.active {
+  cursor: pointer;
+  color: #006699;
+}
+
+.b-masterclass-menu .item {
+  text-align: right;
+  color: #006699;
+  font-size: 14px;
+  line-height: 30px;
+  text-decoration: underline;
+}
+
+.b-masterclass-menu .item:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.b-masterclass-menu .item.active {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.b-masterclass-menu .item.active a {
+  color: #006699;
+  text-decoration: none;
+}
+
+.masterclass-block {
+  color: white;
+}
+
+.masterclass-block a {
+  color: white;
+}
+
+.masterclass-block > .masterclass-info {
+  display: none;
+}
+
+.masterclass-block > .masterclass-info.active {
+  display: block;
+}
+
+.masterclass-block > .masterclass-info > *:first-child {
+  margin-top: 0;
+}
+
+.masterclass-block > .masterclass-info ul li {
+  list-style-type: disc;
+  position: relative;
+  left: 18px;
+}
+
+blockquote {
+  position: relative;
+  margin-top: 15px;
+}
+
+blockquote p {
+  font-style: italic;
+}
+
+blockquote p:before {
+  display: inline-block;
+  content: "\201C";
+  font-size: 1em;
+  position: absolute;
+  color: white;
+  left: -10px;
+  top: -5px;
+}
+
+blockquote p:first-child {
+  margin-top: 0;
+}
+
+blockquote footer {
+  margin-top: -10px;
+  color: white;
+  text-align: right;
+}
+
+blockquote footer:before {
+  content: "\2014 \2009";
+}

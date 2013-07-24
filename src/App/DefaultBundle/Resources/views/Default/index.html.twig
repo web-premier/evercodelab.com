@@ -9,6 +9,7 @@
     <title>{{ 'site.title'|trans }}</title>
     {% stylesheets
         'css/main.css'
+        'css/kw/makasaar.css'
         output='compiled/compiled.css'
         filter='cssrewrite'
     %}
@@ -28,6 +29,7 @@
     {% javascripts
         'js/jquery.js'
         'js/main.js'
+        'js/kw/makasaar.js'
         output='compiled/compiled.js'
     %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
@@ -91,12 +93,49 @@
             </div>
             <div class="r-col">
                 <div class="b-switcher-block">
-                    {#<ul class="b-switcher">#}
-                        {#<li rel="b-about-team" class="b-switcher-team">Команда</li>#}
-                        {#<li rel="b-about-mission" class="b-switcher-mission">Миссия</li>#}
-                    {#</ul>#}
-                    {#<div class="b-about-team b-switch">team</div>#}
-                    {#<div class="b-about-mission b-switch">mission</div>#}
+                    <ul class="b-temi-list" id='temi-list'>
+                        <li class="item first" id="about-team-switch"><span>{{ 'team'|trans }}</span></li>
+                        <li class="item second" id="about-mission-switch"><span>{{ 'mission'|trans }}</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+                <div class="b-team-block hidden" id="team-block">
+            <ul class="b-team-list">
+                {% for member in team %}
+                <li class="person">
+                    <div class="photo-box">
+                        <img src="{{ member.photoWebPath | apply_filter('team_photo_thumb') }}" alt="{{ member.name }}"/>
+                    </div>
+                    <div class="name">{{ member.name }}</div>
+                    <div class="b-social">
+                        <ul class="social-list">
+                            <li class="item"><a href="mailto:{{ member.email }}"><img class="mail" src="{{ asset('i/empty.png') }}"/></a></li>
+                            <li class="item"><a href="https://twitter.com/{{ member.twitter }}"><img class="twitter" src="{{ asset('i/empty.png') }}"/></a></li>
+                            <li class="item"><a href="https://github.com/{{ member.github }}"><img class="github" src="{{ asset('i/empty.png') }}"/></a></li>
+                        </ul>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="b-mission-block hidden" id="mission-block">
+            <div class="cols">
+                <div class="l-col"></div>
+                <div class="r-col">
+                    <p>Мы работаем для того, чтобы воплощать идеи наших клиентов в качественные продукты и сервисы.</p>
+
+                    <p>Изучаем и используем современные технологии, чтобы наши продукты отвечали высоким
+                       требованиям качества. Стремимся узнавать новое и делиться этими знаниями. Совершенствуем
+                       процессы, чтобы делать нашу работу эффективнее.</p>
+
+                    <p>Мы вносим свой вклад в создание современной культуры разработки и формирование
+                       профессиональной среды. Нам действительно не все равно.</p>
+
+                    <p>Мы создаем свои инструменты, продукты и сервисы, которые решают реальные проблемы
+                       и делают жизнь людей проще, удобнее, понятнее, лучше и приятнее.</p>
+
+                    <p>Для нас это — творчество, выражение себя и в то же время образ жизни.</p>
                 </div>
             </div>
         </div>
@@ -159,8 +198,14 @@
                 <ul class="b-switcher">
                     {#<li><a href="#">Подробнее</a></li>#}
                 </ul>
+
+                <div class="b-masterclass-title">
+                    <a class="title" href="{{ path('php_master_class') }}">{{ 'master_class'|trans }}</a>
+                </div>
+
             </div>
         </div>
+        
     </div>
 </div>
 <div class="b-clients" id="clients">
@@ -207,7 +252,7 @@
                 {#<div class="b-portfolio-pictures b-switch">#}
                     {#<ul>#}
                         {#<li>#}
-                            {#<a href="#"><img src="i/portfolio.png" alt="" /></a>#}
+                            {#<a href="#"><img src="/i/portfolio.png" alt="" /></a>#}
                             {#<div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>#}
                         {#</li>#}
                     {#</ul>#}
@@ -242,7 +287,7 @@
             <img src="{{ asset("i/man.png") }}" alt="Похож на одного знакомого дизайнера" />
             <p>{{ 'while'|trans }}</p>
             {#<p>Кстати - весь ноябрь у нас скидка усатым. Голощекие, не расстраивайтесь, вот вам купон!</p>#}
-            {#<img src="i/whisker.png" alt="" />#}
+            {#<img src="/i/whisker.png" alt="" />#}
         </div>
         <div class="r-col">
             <h2>{{ 'contacts.header'|trans }}</h2>

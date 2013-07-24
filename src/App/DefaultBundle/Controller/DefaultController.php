@@ -37,12 +37,14 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $clients = $em->getRepository('AppDefaultBundle:Client')->findAll();
         $projects = $em->getRepository('AppDefaultBundle:Portfolio')->findAll();
+        $team = $em->getRepository('AppDefaultBundle:Team')->findAll();
 
         $response = $this->render('AppDefaultBundle:Default:index.html.twig',
             array(
                 'clients' => $clients,
                 'projects' => $projects,
                 'form' => $form->createView(),
+                'team' => $team,
             )
         );
         $response->setSharedMaxAge(7*24*60*60);

@@ -111,3 +111,13 @@ inori_twitter_app:
 knp_last_tweets:
     fetcher:
         driver: oauth
+
+avalanche_imagine:
+    source_root: %kernel.root_dir%/../web
+    web_root: %kernel.root_dir%/../web
+    driver: gd
+    cache_prefix: uploads/cache
+    filters:
+        team_photo_thumb:
+            type:    thumbnail
+            options: { size: [180, 180], mode: outbound }
