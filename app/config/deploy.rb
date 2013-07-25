@@ -32,7 +32,7 @@ after "deploy", "deploy:cleanup"
 # Be more verbose by uncommenting the following line
 logger.level = Logger::MAX_LEVEL
 
-set :writable_dirs,     ["app/cache", "app/logs"]
+set :writable_dirs,     ["app/cache", "app/logs", "web/uploads"]
 set :webserver_user,    "www-data"
 set :permission_method, :acl
 set :use_set_permissions, true
