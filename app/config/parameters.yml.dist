@@ -12,7 +12,7 @@ parameters:
     mailer_password:   ~
 
     locale:            ru
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    secret:            RAcbmzxjkvNBdhWjqPUK
 
     twitter_consumer_key: xxxxx
     twitter_consumer_secret: xxxxx
