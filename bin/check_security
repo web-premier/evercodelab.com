@@ -1,0 +1,3 @@
+#!/bin/sh
+
+curl -H "Accept: text/plain" https://security.sensiolabs.org/check_lock -F lock=@composer.lock
