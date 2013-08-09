@@ -2,6 +2,8 @@
 
 Also known as [evercodelab.com](http://evercodelab.com).
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/cc9289a9-bfe3-4380-91ae-17180b44b557/big.png)](https://insight.sensiolabs.com/projects/cc9289a9-bfe3-4380-91ae-17180b44b557)
+
 ## Setup
 
 ```
