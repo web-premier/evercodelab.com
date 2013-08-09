@@ -288,4 +288,14 @@ class Team
     {
         return $this->updated_at;
     }
+
+    public function setFile($file)
+    {
+        $this->file = $file;
+    }
+
+    public function getFile()
+    {
+        return $this->file;
+    }
 }
