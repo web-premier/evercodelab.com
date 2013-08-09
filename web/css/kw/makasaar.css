@@ -14,7 +14,7 @@ a:hover {
 
 .b-services {
   height: 405px;
-  background: #7bb3d1 url(../../i/shattered-light-blue.png);
+  background: #7bb3d1 url(../../i/shattered-light-blue-services.png);
   -webkit-transition: height 0.6s ease-in-out;
   -o-transition: height 0.6s ease-in-out;
   transition: height 0.6s ease-in-out;
@@ -25,7 +25,7 @@ a:hover {
 }
 
 .b-clients {
-  background: #7bb3d1 url(../../i/shattered-light-blue1.png);
+  background: #7bb3d1 url(../../i/shattered-light-blue-clients.png);
 }
 
 .b-slider .prev {
