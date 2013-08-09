@@ -18,3 +18,5 @@ parameters:
     twitter_consumer_secret: xxxxx
     twitter_oauth_token: xxxxx
     twitter_oauth_token_secret: xxxxx
+
+    evercode_blog_feed: http://blog.evercodelab.com/atom.xml
