@@ -6,6 +6,9 @@ services:
         calls:
             - [ setAnnotationReader, [ @annotation_reader ] ]
 
+    evercode.blog:
+        class: App\DefaultBundle\Service\BlogService
+        arguments: [ @fkr_simple_pie.rss, %evercode_blog_feed% ]
 
 ## Admin resources
     app.user.admin.user:

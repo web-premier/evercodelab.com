@@ -23,12 +23,11 @@ class DefaultController extends Controller
         $projects = $em->getRepository('AppDefaultBundle:Portfolio')->findAll();
         $team = $em->getRepository('AppDefaultBundle:Team')->findAll();
 
-        $response = $this->render('AppDefaultBundle:Default:index.html.twig',
-            array(
+        $response = $this->render('AppDefaultBundle:Default:index.html.twig', [
                 'clients' => $clients,
                 'projects' => $projects,
                 'team' => $team,
-            )
+            ]
         );
         $response->setSharedMaxAge(7*24*60*60);
 
@@ -41,29 +40,11 @@ class DefaultController extends Controller
      */
     public function blogAction()
     {
-        $feed = $this->get('fkr_simple_pie.rss');
-        $feed->set_feed_url('http://blog.evercodelab.com/atom.xml');
-        $feed->init();
-        $posts = array_slice($feed->get_items(), 0, 5);
-        $latestPosts = array();
-        foreach ($posts as $post) {
-            $latestPosts[] = array(
-                'title' => $post->get_title(),
-                'link' => $post->get_permalink(),
-                'text' => $post->get_description(),
-                'date' => $post->get_date('j F, Y'),
-            );
-        }
+        $latestPosts = $this->get('evercode.blog')->getLatestPosts(5);
 
-        if (! empty($latestPosts)) {
-            preg_match_all('/(<p>.*?<\/p>)/im', $latestPosts[0]['text'], $matches);
-            $latestPosts[0]['text'] = implode('', array_slice($matches[1], 0, 3));
-        }
-
-        $response = $this->render('AppDefaultBundle:Default:blog.html.twig',
-            array(
-                'latestPosts' => $latestPosts,
-            )
+        $response = $this->render('AppDefaultBundle:Default:blog.html.twig', [
+                'latestPosts' => $latestPosts
+            ]
         );
         $response->setSharedMaxAge(3*24*60*60);
 

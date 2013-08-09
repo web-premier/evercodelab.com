@@ -121,3 +121,6 @@ avalanche_imagine:
         team_photo_thumb:
             type:    thumbnail
             options: { size: [180, 180], mode: outbound }
+
+parameters:
+    evercode_blog_feed: http://blog.evercodelab.com/atom.xml
