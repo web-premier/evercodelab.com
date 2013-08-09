@@ -17,24 +17,8 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $form = $this->createForm(new FeedbackType());
-        if ($request->isMethod('POST')) {
-            $form->bind($request);
-
-            // data is an array with "name", "email", and "message" keys
-            $data = $form->getData();
-            $message = \Swift_Message::newInstance()
-                ->setSubject('Hello Evercode!')
-                ->setFrom('everbird@evercodelab.com')
-                ->setTo('hello@evercodelab.com')
-                ->setBody($this->renderView('AppDefaultBundle:Default:email.txt.twig', $data))
-            ;
-            $this->get('mailer')->send($message);
-
-            return $this->redirect($this->generateUrl('index'));
-        }
-
         $em = $this->getDoctrine()->getManager();
+        
         $clients = $em->getRepository('AppDefaultBundle:Client')->findAll();
         $projects = $em->getRepository('AppDefaultBundle:Portfolio')->findAll();
         $team = $em->getRepository('AppDefaultBundle:Team')->findAll();
@@ -43,7 +27,6 @@ class DefaultController extends Controller
             array(
                 'clients' => $clients,
                 'projects' => $projects,
-                'form' => $form->createView(),
                 'team' => $team,
             )
         );

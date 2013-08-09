@@ -194,9 +194,7 @@
                         </div>
                     </div>
                 </div>
-                <ul class="b-switcher">
-                    {#<li><a href="#">Подробнее</a></li>#}
-                </ul>
+                <ul class="b-switcher"></ul>
 
                 <div class="b-masterclass-title">
                     <a class="title" href="{{ path('php_master_class') }}">{{ 'master_class'|trans }}</a>
@@ -230,32 +228,10 @@
         </div>
     </div>
     <div class="wrapper cols">
-        <div class="l-col">
-            {#<ul class="tag-clouds">#}
-                {#<li class="active"><a href="#">Все</a></li>#}
-                {#<li><a href="#">Собственные проекты</a></li>#}
-                {#<li><a href="#">Проекты на заказ</a></li>#}
-                {#<li><a href="#">В разработке</a></li>#}
-                {#<li><a href="#">Аудит</a></li>#}
-                {#<li><a href="#">Программирование</a></li>#}
-                {#<li><a href="#">Консалтинг</a></li>#}
-                {#<li><a href="#">Open source</a></li>#}
-            {#</ul>#}
-        </div>
+        <div class="l-col"></div>
         <div class="r-col">
             <div class="b-switcher-block">
-                <ul class="b-switcher">
-                    {#<li rel="b-portfolio-pictures" class="b-switcher-pictures"><i></i>Картинками</li>#}
-                    {#<li rel="b-portfolio-text" class="b-switcher-text active"><i></i>Текстом</li>#}
-                </ul>
-                {#<div class="b-portfolio-pictures b-switch">#}
-                    {#<ul>#}
-                        {#<li>#}
-                            {#<a href="#"><img src="/i/portfolio.png" alt="" /></a>#}
-                            {#<div class="b-portfolio-link"><a href="#">http://itop-portal.net</a></div>#}
-                        {#</li>#}
-                    {#</ul>#}
-                {#</div>#}
+                <ul class="b-switcher"></ul>
                 <div class="b-portfolio-text b-switch">
                     <ul>
                         {% for project in projects %}
@@ -283,10 +259,8 @@
 <div class="b-contacts" id="contacts">
     <div class="wrapper cols">
         <div class="l-col">
-            <img src="{{ asset("i/man.png") }}" alt="Похож на одного знакомого дизайнера" />
+            <br><br>
             <p>{{ 'while'|trans }}</p>
-            {#<p>Кстати - весь ноябрь у нас скидка усатым. Голощекие, не расстраивайтесь, вот вам купон!</p>#}
-            {#<img src="/i/whisker.png" alt="" />#}
         </div>
         <div class="r-col">
             <h2>{{ 'contacts.header'|trans }}</h2>
@@ -303,27 +277,8 @@
                     </ul>
                 </div>
                 <div class="r-col">
-                    <form action="" method="post" {{ form_enctype(form) }} class="b-form-callback">
-                        <fieldset>
-                            <label>
-                                {{ 'contacts.form.name'|trans }}
-                                {{ form_widget(form.name) }}
-                            </label>
-                        </fieldset>
-                        <fieldset>
-                            <label>
-                                {{ 'contacts.form.contact'|trans }}
-                                {{ form_widget(form.contact) }}
-                            </label>
-                        </fieldset>
-                        <fieldset>
-                            <label>
-                                {{ 'contacts.form.content'|trans }}
-                                {{ form_widget(form.content) }}
-                            </label>
-                        </fieldset>
-                        <input type="submit" value="{{ 'contacts.form.submit'|trans }}" />
-                    </form>
+                    <br><br><br>
+                    <img src="{{ asset("i/veider.png") }}" alt="I've been wating for you" />
                 </div>
             </div>
         </div>
