@@ -122,5 +122,15 @@ avalanche_imagine:
             type:    thumbnail
             options: { size: [180, 180], mode: outbound }
 
+vich_uploader:
+    db_driver: orm
+    mappings:
+        client_logo:
+            upload_destination: %kernel.root_dir%/../web/uploads/images/clients
+        portfolio_logo:
+            upload_destination: %kernel.root_dir%/../web/uploads/images/portfolio
+        team_photo:
+            upload_destination: %kernel.root_dir%/../web/uploads/images/team
+
 parameters:
     evercode_blog_feed: http://blog.evercodelab.com/atom.xml

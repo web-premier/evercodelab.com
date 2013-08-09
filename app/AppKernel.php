@@ -39,6 +39,8 @@ class AppKernel extends Kernel
             new Knp\Bundle\LastTweetsBundle\KnpLastTweetsBundle(),
             new Inori\TwitterAppBundle\InoriTwitterAppBundle(),
             new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
+            new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

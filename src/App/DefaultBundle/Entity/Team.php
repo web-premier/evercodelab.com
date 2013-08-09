@@ -6,12 +6,15 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * Team
  *
  * @ORM\Table(name="team")
  * @ORM\Entity
+ * @Vich\Uploadable
  * @ORM\HasLifecycleCallbacks
  */
 class Team
@@ -61,7 +64,13 @@ class Team
     private $github;
 
     /**
-     * @Assert\Image(maxSize = "2048k")
+     * @Assert\File(
+     *     maxSize="2048k",
+     *     mimeTypes={"image/png", "image/jpeg", "image/pjpeg"}
+     * )
+     * @Vich\UploadableField(mapping="team_photo", fileNameProperty="photo")
+     *
+     * @var File $file
      */
     private $file;
 
@@ -232,78 +241,6 @@ class Team
     public function __toString()
     {
         return $this->getName();
-    }
-
-    public function getAbsolutePath()
-    {
-        return null === $this->photo ? null : $this->getUploadRootDir().'/'.$this->photo;
-    }
-
-    public function getPhotoWebPath()
-    {
-        return null === $this->photo ? null : $this->getUploadDir().'/'.$this->photo;
-    }
-
-    protected function getUploadRootDir()
-    {
-        return __DIR__.'/../../../../web/'.$this->getUploadDir();
-    }
-
-    protected function getUploadDir()
-    {
-        return 'uploads/images/team';
-    }
-
-    /**
-     * @ORM\PrePersist()
-     * @ORM\PreUpdate()
-     */
-    public function preUpload()
-    {
-        if (null !== $this->file) {
-            $this->photo = uniqid().'.'.$this->file->guessExtension();
-        }
-    }
-
-    /**
-     * @ORM\PostPersist()
-     * @ORM\PostUpdate()
-     */
-    public function upload()
-    {
-        if (null === $this->file) {
-            return;
-        }
-
-        $this->file->move($this->getUploadRootDir(), $this->photo);
-
-        unset($this->file);
-    }
-
-    /**
-     * @ORM\PostRemove()
-     */
-    public function removeUpload()
-    {
-        if (! $file = $this->getAbsolutePath()) {
-            return;
-        }
-        if (is_file($file)) {
-            unlink($file);
-        }
-    }
-
-    public function setFile($file)
-    {
-        if (! empty($file)) {
-            $this->photo = 'changed';
-        }
-        $this->file = $file;
-    }
-
-    public function getFile()
-    {
-        return $this->file;
     }
 
     /**

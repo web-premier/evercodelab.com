@@ -6,13 +6,15 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * App\DefaultsBundle\Entity\Portfolio
  *
  * @ORM\Table(name="portfolio")
  * @ORM\Entity
- * @ORM\HasLifecycleCallbacks
+ * @Vich\Uploadable
  */
 class Portfolio
 {
@@ -47,7 +49,13 @@ class Portfolio
     private $logo;
 
     /**
-     * @Assert\Image(maxSize = "2048k")
+     * @Assert\File(
+     *     maxSize="2048k",
+     *     mimeTypes={"image/png", "image/jpeg", "image/pjpeg"}
+     * )
+     * @Vich\UploadableField(mapping="portfolio_logo", fileNameProperty="logo")
+     *
+     * @var File $file
      */
     private $file;
 
@@ -254,70 +262,5 @@ class Portfolio
     public function __toString()
     {
         return $this->getName();
-    }
-
-    public function getAbsolutePath()
-    {
-        return null === $this->logo ? null : $this->getUploadRootDir().'/'.$this->logo;
-    }
-
-    public function getWebPath()
-    {
-        return null === $this->logo ? null : $this->getUploadDir().'/'.$this->logo;
-    }
-
-    protected function getUploadRootDir()
-    {
-        // the absolute directory path where uploaded documents should be saved
-        return __DIR__.'/../../../../web/'.$this->getUploadDir();
-    }
-
-    protected function getUploadDir()
-    {
-        // get rid of the __DIR__ so it doesn't screw when displaying uploaded doc/image in the view.
-        return 'uploads/images/portfolio';
-    }
-
-    /**
-     * @ORM\PrePersist()
-     * @ORM\PreUpdate()
-     */
-    public function preUpload()
-    {
-        if (null !== $this->file) {
-            // do whatever you want to generate a unique name
-            $this->logo = uniqid().'.'.$this->file->guessExtension();
-        }
-    }
-
-    /**
-     * @ORM\PostPersist()
-     * @ORM\PostUpdate()
-     */
-    public function upload()
-    {
-        if (null === $this->file) {
-            return;
-        }
-
-        // you must throw an exception here if the file cannot be moved
-        // so that the entity is not persisted to the database
-        // which the UploadedFile move() method does automatically
-        $this->file->move($this->getUploadRootDir(), $this->logo);
-
-        unset($this->file);
-    }
-
-    /**
-     * @ORM\PostRemove()
-     */
-    public function removeUpload()
-    {
-        if (! $file = $this->getAbsolutePath()) {
-            return;
-        }
-        if (is_file($file)) {
-            unlink($file);
-        }
     }
 }
