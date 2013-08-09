@@ -373,7 +373,7 @@ p {
 
 /* b-clients (begin) */
 .b-clients{
-    background:#39768a url(../i/shattered-dark-blue.png) repeat-x -22px 0;
+    background:#39768a url(../i/shattered-dark-blue-clients.png) repeat-x -22px 0;
     position:relative;
     z-index:10;
     padding:10px 0 20px;
@@ -630,7 +630,7 @@ p {
 /* b-contacts-blog (begin) */
 .b-contacts-blog{
     padding:10px;
-    background:#39768a url(../i/shattered-dark-blue1.png) repeat -22px 0;
+    background:#39768a url(../i/shattered-dark-blue-contacts-blog.png) repeat -22px 0;
     color: #fff;
     height: 335px;
 }
