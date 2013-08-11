@@ -7,6 +7,7 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
+use App\DefaultBundle\Entity\Portfolio;
 
 class PortfolioAdmin extends Admin
 {
@@ -66,12 +67,12 @@ class PortfolioAdmin extends Admin
         ;
     }
 
-    public function prePersist($portfolio)
+    public function prePersist(Portfolio $portfolio)
     {
         $portfolio->setUser($this->getCurrentUser());
     }
 
-    public function preUpdate($portfolio)
+    public function preUpdate(Portfolio $portfolio)
     {
         $portfolio->setUser($this->getCurrentUser());
     }

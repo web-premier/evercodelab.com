@@ -14,7 +14,6 @@ use Symfony\Component\HttpFoundation\File\File;
  * @ORM\Table(name="clients")
  * @ORM\Entity
  * @Vich\Uploadable
- * @ORM\HasLifecycleCallbacks
  */
 class Client
 {
