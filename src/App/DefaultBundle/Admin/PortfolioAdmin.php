@@ -67,12 +67,12 @@ class PortfolioAdmin extends Admin
         ;
     }
 
-    public function prePersist(Portfolio $portfolio)
+    public function prePersist($portfolio)
     {
         $portfolio->setUser($this->getCurrentUser());
     }
 
-    public function preUpdate(Portfolio $portfolio)
+    public function preUpdate($portfolio)
     {
         $portfolio->setUser($this->getCurrentUser());
     }
