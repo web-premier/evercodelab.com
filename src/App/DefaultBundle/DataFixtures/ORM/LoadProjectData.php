@@ -54,16 +54,16 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             'link' => 'http://manaflask.com/en/',
             'description' => '
                     Manaflask – популярный игровой портал, предоставляющий материалы от топовых мировых игроков на английском и немецком языках.
-                    Мы поддерживали старую версию сайта, написанную на PHP. 
-                    А весной 2013-го участвовали в разработке и 
+                    Мы поддерживали старую версию сайта, написанную на PHP.
+                    А весной 2013-го участвовали в разработке и
                     <a href="http://blog.evercodelab.com/manaflask-release/">запуске новой версии Manaflask на Ruby on Rails</a>.
                     ',
             'en' => array(
                 'name' => 'Manaflask',
                 'description' => '
                         Manaflask is an Internet Gaming Portal dedicated to bringing premium content presented in both English and German created by top teams and individuals.
-                        We were involved in support of old version of the site written in PHP. 
-                        And in the spring of 2013 we helped to develop and 
+                        We were involved in support of old version of the site written in PHP.
+                        And in the spring of 2013 we helped to develop and
                         <a href="http://blog.evercodelab.com/manaflask-release/">launch the new version of portal on Ruby on Rails</a>.
                         ',
             ),
@@ -143,14 +143,14 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             'link' => 'http://mahamandala.com/',
             'description' => '
                     Медиа хранилище с широким списком социальных функций.
-                    Первая версия проекта разработана на Zend Framework 1 + Doctrine 1. 
+                    Первая версия проекта разработана на Zend Framework 1 + Doctrine 1.
                     Позже сайт был портирован на Ruby on Rails.
                     ',
             'en' => array(
                 'name' => 'Mahamandala',
                 'description' => '
                         Media storage with wide list of social functionality.
-                        Originally was developed with first versions Zend Framework and Doctrine. 
+                        Originally was developed with first versions Zend Framework and Doctrine.
                         Later site was ported to Ruby on Rails.
                         ',
             ),
@@ -293,9 +293,9 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             'link' => null,
             'description' => '
                     Программа предназначена для принятия и обработки объявлений для публикации в газете и на сайте.
-                    Возможности: гибкое управления объявлениями, поиск, генерация отчетов, подсчет стоимости, 
-                    внутренняя система счетов, импорт объявлений с сайта, 
-                    предпросмотр, рассылка SMS сообщений на телефоны подателей. 
+                    Возможности: гибкое управления объявлениями, поиск, генерация отчетов, подсчет стоимости,
+                    внутренняя система счетов, импорт объявлений с сайта,
+                    предпросмотр, рассылка SMS сообщений на телефоны подателей.
                     Подробности не разглашаются по соглашению с заказчиком.
                     ',
             'en' => array(
@@ -330,7 +330,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             'link' => null,
             'description' => '
                     Для крупной питерской веб-студии мы разработали внутренний инструмент автоматизации для отдела продвижения.
-                    Система собирает данные из LiveInternet, Google Analytics, Google.Webmaster, Yandex.Webmaster. 
+                    Система собирает данные из LiveInternet, Google Analytics, Google.Webmaster, Yandex.Webmaster.
                     Далее генерирует необходимые графики и таблицы данных. И затем выгружает в docx с учетом фирменных стилей фирмы.
                     Проект реализован на Symfony2.
                     ',

@@ -7,8 +7,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 
-use App\DefaultBundle\Form\Type\FeedbackType;
-
 class DefaultController extends Controller
 {
     /**
@@ -18,7 +16,7 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        
+
         $clients = $em->getRepository('AppDefaultBundle:Client')->findAll();
         $projects = $em->getRepository('AppDefaultBundle:Portfolio')->findAll();
         $team = $em->getRepository('AppDefaultBundle:Team')->findAll();

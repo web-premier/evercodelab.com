@@ -14,7 +14,7 @@ class BlogService
 
     /**
      * Get latest posts from blog
-     * @param  int $numberOfPosts number of posts to take
+     * @param  int   $numberOfPosts number of posts to take
      * @return array
      */
     public function getLatestPosts($numberOfPosts)

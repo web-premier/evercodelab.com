@@ -3,7 +3,6 @@
 namespace App\DefaultBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -93,7 +92,7 @@ class Team
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -103,20 +102,20 @@ class Team
     /**
      * Set name
      *
-     * @param string $name
+     * @param  string $name
      * @return Team
      */
     public function setName($name)
     {
         $this->name = $name;
-    
+
         return $this;
     }
 
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -126,20 +125,20 @@ class Team
     /**
      * Set surename
      *
-     * @param string $surename
+     * @param  string $surename
      * @return Team
      */
     public function setSurename($surename)
     {
         $this->surename = $surename;
-    
+
         return $this;
     }
 
     /**
      * Get surename
      *
-     * @return string 
+     * @return string
      */
     public function getSurename()
     {
@@ -149,20 +148,20 @@ class Team
     /**
      * Set photo
      *
-     * @param string $photo
+     * @param  string $photo
      * @return Team
      */
     public function setPhoto($photo)
     {
         $this->photo = $photo;
-    
+
         return $this;
     }
 
     /**
      * Get photo
      *
-     * @return string 
+     * @return string
      */
     public function getPhoto()
     {
@@ -172,20 +171,20 @@ class Team
     /**
      * Set twitter
      *
-     * @param string $twitter
+     * @param  string $twitter
      * @return Team
      */
     public function setTwitter($twitter)
     {
         $this->twitter = $twitter;
-    
+
         return $this;
     }
 
     /**
      * Get twitter
      *
-     * @return string 
+     * @return string
      */
     public function getTwitter()
     {
@@ -195,20 +194,20 @@ class Team
     /**
      * Set email
      *
-     * @param string $email
+     * @param  string $email
      * @return Team
      */
     public function setEmail($email)
     {
         $this->email = $email;
-    
+
         return $this;
     }
 
     /**
      * Get email
      *
-     * @return string 
+     * @return string
      */
     public function getEmail()
     {
@@ -218,20 +217,20 @@ class Team
     /**
      * Set github
      *
-     * @param string $github
+     * @param  string $github
      * @return Team
      */
     public function setGithub($github)
     {
         $this->github = $github;
-    
+
         return $this;
     }
 
     /**
      * Get github
      *
-     * @return string 
+     * @return string
      */
     public function getGithub()
     {
@@ -246,20 +245,20 @@ class Team
     /**
      * Set created_at
      *
-     * @param \DateTime $createdAt
+     * @param  \DateTime $createdAt
      * @return Team
      */
     public function setCreatedAt($createdAt)
     {
         $this->created_at = $createdAt;
-    
+
         return $this;
     }
 
     /**
      * Get created_at
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -269,20 +268,20 @@ class Team
     /**
      * Set updated_at
      *
-     * @param \DateTime $updatedAt
+     * @param  \DateTime $updatedAt
      * @return Team
      */
     public function setUpdatedAt($updatedAt)
     {
         $this->updated_at = $updatedAt;
-    
+
         return $this;
     }
 
     /**
      * Get updated_at
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {
