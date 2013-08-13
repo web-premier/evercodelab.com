@@ -10,3 +10,5 @@ composer.phar
 php-cs-fixer.phar
 
 web/compiled/*
+
+.idea/

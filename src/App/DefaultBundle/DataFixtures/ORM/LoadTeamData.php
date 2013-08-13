@@ -39,6 +39,13 @@ class LoadTeamData extends AbstractFixture implements OrderedFixtureInterface
             'twitter' => 'memphys',
             'github' => 'memphys',
         ],
+        [
+            'name' =>'Илья Гордиенко',
+            'photo' => 'ilya.jpeg',
+            'email' => 'ilya@evercodelab.com',
+            'twitter' => 'ilya_troy',
+            'github' => 'Troytft',
+        ],
     ];
 
     public function load(ObjectManager $manager)
