@@ -189,9 +189,7 @@
                 collapseAboutBlock();
                 deselectTemiList();
                 $('#about-team-switch').addClass('active');
-                return setTimeout((function() {
-                    return showTeam();
-                }), 650);
+                return showTeam();
             } else {
                 return showTeam();
             }
@@ -207,9 +205,7 @@
                 collapseAboutBlock();
                 deselectTemiList();
                 $('#about-mission-switch').addClass('active');
-                return setTimeout((function() {
-                    return showMission();
-                }), 650);
+                return showMission();
             } else {
                 return showMission();
             }
