@@ -3,9 +3,9 @@ a:hover {
 }
 
 .b-about {
-  -webkit-transition: height 0.7s ease;
-  -o-transition: height 0.7s ease;
-  transition: height 0.7s ease;
+  -webkit-transition: height 0.5s ease;
+  -o-transition: height 0.5s ease;
+  transition: height 0.5s ease;
 }
 
 .b-about.extended {
