@@ -1,7 +1,7 @@
 site:
-    keywords: developing websites, consulting, code analysis, parsers, code design, Zend Framework, Symfony, Python, Django
+    keywords: symfony2, ruby on rails, ios, api, development, websites, consulting, code analysis, parsers, code design, Zend Framework, Python, Django
     description: Evercode Lab is a team of qualified programmers who can help you to develop your projects and make your ideas come true.
-    title: Evercode Lab - development, consulting, startups
+    title: Evercode Lab - Symfony2 and Ruby on Rails development
 
 menu:
     welcome: Welcome

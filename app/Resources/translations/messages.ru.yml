@@ -1,7 +1,7 @@
 site:
-    keywords: разработка сайтов, консалтинг, анализ кода, парсеры, проектирование, Zend Framework, Symfony, Python, Django
+    keywords: symfony2, ruby on rails, ios, api, разработка сайтов, консалтинг, анализ кода, парсеры, проектирование, Zend Framework, Python, Django
     description: Evercode Lab — команда квалифицированных разработчиков, которые помогут вам в воплощении ваших проектов и идей.
-    title: Evercode Lab - разработка, консалтинг, стартапы
+    title: Evercode Lab - разработка на Symfony2 и Ruby on Rails
 
 menu:
     welcome: Добро пожаловать
