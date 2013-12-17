@@ -12,21 +12,36 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
 
     protected $projects = array(
         array(
-            'name' => 'Stashify.me',
-            'link' => 'http://stashify.me/',
+            'name' => 'Russian Wake Awards',
+            'link' => 'http://wakeawards.ru/',
             'description' => '
-                    Наш скромный, но подающий большие надежды собственный проект.
-                    Говорят, это самый простой способ сделать бэкап вашей онлайн активности и синхронизировать данные с вашим аккаунтом в Dropbox.
-                    Обладает утонченным дизайном (спасибо <a href="http://formazon.com/">Фарид</a>!).
-                    Находится в поисках своего предназначения и растет вместе с нами.
+                    Наши экстремальные друзья в этом году провели Первую Всероссийскую Вейк Премию.
+                    Специально для этого события совместно с дизайнером Денисом Foster\'ом мы сделали им в кратчайшие сроки сайт события с голосованием и информацией по событию, райдерам, местам и фотографам.
+                    Проект разработан на Symfony2 и SonataAdminBundle в качестве админки.
                     ',
             'en' => array(
-                'name' => 'Stashify.me',
+                'name' => 'Russian Wake Awards',
                 'description' => '
-                        Our small yet promissing project.
-                        They say it\'s the easiest way to backup your online social data and sync it with your Dropbox account.
-                        Have refined design (thanks <a href="http://formazon.com/">Farid</a>!).
-                        Searches it\'s destiny and develops with us.
+                        Our extreme friends held Russian Wake Awards 2013 event this year.
+                        Specially for them we and Denis Foster as a designer developed the site with voting and information about event itself, riders, spots and photographers.
+                        Project is developed with Symfony2 and SonataAdminBundle for admin interface.
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'Best4car',
+            'link' => 'http://best4car.ru/',
+            'description' => '
+                    Проект достался нам в незаконченном виде летом 2013-го года. 
+                    Мы помогли основателям сервиса довести его до запуска и продолжаем работать вместе, развивая и улучшая функционал.
+                    Сайт разработан на Symfony2.
+                    ',
+            'en' => array(
+                'name' => 'Best4car',
+                'description' => '
+                        We got this project when it was only half ready in the summer of 2013.
+                        In a couple of months we helped founders of the service to launch it and since then are working together making it even better and more functional.
+                        Project is developed with Symfony2.
                         ',
             ),
         ),
@@ -65,6 +80,25 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
                         We were involved in support of old version of the site written in PHP.
                         And in the spring of 2013 we helped to develop and
                         <a href="http://blog.evercodelab.com/manaflask-release/">launch the new version of portal on Ruby on Rails</a>.
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'Stashify.me',
+            'link' => 'http://stashify.me/',
+            'description' => '
+                    Наш скромный, но подающий большие надежды собственный проект.
+                    Говорят, это самый простой способ сделать бэкап вашей онлайн активности и синхронизировать данные с вашим аккаунтом в Dropbox.
+                    Обладает утонченным дизайном (спасибо <a href="http://formazon.com/">Фарид</a>!).
+                    Находится в поисках своего предназначения и растет вместе с нами.
+                    ',
+            'en' => array(
+                'name' => 'Stashify.me',
+                'description' => '
+                        Our small yet promissing project.
+                        They say it\'s the easiest way to backup your online social data and sync it with your Dropbox account.
+                        Have refined design (thanks <a href="http://formazon.com/">Farid</a>!).
+                        Searches it\'s destiny and develops with us.
                         ',
             ),
         ),
