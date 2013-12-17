@@ -22,7 +22,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             'en' => array(
                 'name' => 'Russian Wake Awards',
                 'description' => '
-                        Our extreme friends held Rusian Wake Awards 2013 event this year.
+                        Our extreme friends held Russian Wake Awards 2013 event this year.
                         Specially for them we and Denis Foster as a designer developed the site with voting and information about event itself, riders, spots and photographers.
                         Project is developed with Symfony2 and SonataAdminBundle for admin interface.
                         ',
