@@ -104,6 +104,16 @@ textarea {
     max-width: 1100px;
     margin: 0 auto;
 }
+.with-bevel{
+    padding: 10px 0;
+}
+.with-bevel:before{
+    content: " ";
+    height: 120%;
+}
+.gray-bg{
+    background-color: #e6e6e6;
+}
 
 /* HEADER */
 .header {
@@ -146,7 +156,6 @@ textarea {
     padding: 18px 15px;
 }
 .header .menu .main a.active{
-    
     background-color: #e6e6e6;
 }
 .header .menu .language-change{
@@ -154,6 +163,28 @@ textarea {
     margin-left: 50px;
 }
 /* END HEADER */
+
+/* CASE MENU */
+.case-menu{
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.case-menu .item{
+    display: inline-block;
+    font-size: 26px;
+    padding-top: 34px;
+    padding-bottom: 45px;
+    color: #383c41;
+}
+.case-menu .item.middle{
+    margin: 0 180px;
+}
+.case-menu .item img{
+    display: block;
+    margin: 0 auto 15px auto;
+
+}
+/* END CASE MENU */
 
 
 
