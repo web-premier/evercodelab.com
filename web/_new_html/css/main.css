@@ -115,6 +115,11 @@ textarea {
     background-color: #2d9045;
     color: #fff;
 }
+.selection-title{
+    font-size: 36px;
+    color: #404041;
+    text-align: center;
+}
 
 /* HEADER */
 .header {
@@ -268,8 +273,48 @@ textarea {
 }
 /* END SLIDER */
 
-
-
+/* CLIENTS */
+.clients-block{}
+.clients-block .item{
+    width: 510px;
+    float: left;
+    margin-right: 40px;
+}
+.clients-block .item .text{
+    background-color: #fff;
+    padding: 30px 30px 40px 30px;
+    height: 155px;
+    overflow: scroll;
+    position: relative;
+    z-index: 1;
+}
+.clients-block .item .face{
+    margin-top: -25px;
+    margin-left: 15px;
+    float: left;
+    position: relative;
+    z-index: 2;
+}
+.clients-block .item .face img{
+    border-radius: 50%;
+}
+.clients-block .item .info{
+    float: left;
+    margin-top: 35px;
+    margin-left: 25px;
+}
+.clients-block .item .info .name{
+    color: #333;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.clients-block .item .info .title{
+    color: #2d9045;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+/* END CLIENTS */
 
 
 
