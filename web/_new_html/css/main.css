@@ -104,15 +104,16 @@ textarea {
     max-width: 1100px;
     margin: 0 auto;
 }
-.with-bevel{
-    padding: 10px 0;
-}
-.with-bevel:before{
-    content: " ";
-    height: 120%;
-}
 .gray-bg{
     background-color: #e6e6e6;
+}
+.btn{
+    padding: 15px;
+    text-decoration: none;
+}
+.btn-green{
+    background-color: #2d9045;
+    color: #fff;
 }
 
 /* HEADER */
@@ -185,6 +186,87 @@ textarea {
 
 }
 /* END CASE MENU */
+
+/* SLIDER */
+#slides {
+    display:none;
+}
+.slider-block{
+    position: relative;    
+}
+.slider-block .item{
+    text-align: center;
+    padding-top: 85px;
+}
+.slider-block .item ul{
+    list-style-image: url('../img/icon.list-item.png');
+    margin-left: 0;
+    padding-left: 23px;
+}
+.slider-block .item ul li{
+    padding-left: 13px;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.slider-block .item img, .slider-block .item .text{
+    display: inline-block;
+    vertical-align: top;
+}
+.slider-block .item .text{
+    text-align: left;
+    margin-left: 38px;
+}
+.slider-block .item .text h3{
+    margin-top: 0;
+}
+.slidesjs-pagination{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    width: 300px;
+}
+.slidesjs-pagination-item{
+    list-style: none;
+}
+.slidesjs-pagination-item a{
+    width: 13px;
+    display: block;
+    height: 0;
+    padding-top: 13px;
+    background-image: url('../img/icon.slider.item.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    float: left;
+    overflow: hidden;
+    margin-right: 25px;
+}
+.slidesjs-pagination-item a.active{
+    background-position: -13px 0;
+}
+.slidesjs-previous,
+.slidesjs-next{
+    width: 44px;
+    display: block;
+    height: 0;
+    padding-top: 71px;
+    background-image: url('../img/icon.slider-arrows.png');
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: absolute;
+    top: 190px;
+}
+.slidesjs-previous{
+    background-position: 0 0;
+    left: 90px;
+}
+.slidesjs-next{
+    background-position: -44px 0;
+    right: 90px;
+}
+/* END SLIDER */
 
 
 
