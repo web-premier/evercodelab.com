@@ -274,7 +274,9 @@ textarea {
 /* END SLIDER */
 
 /* CLIENTS */
-.clients-block{}
+.clients-block{
+    padding-bottom: 20px;
+}
 .clients-block .item{
     width: 510px;
     float: left;
@@ -283,10 +285,14 @@ textarea {
 .clients-block .item .text{
     background-color: #fff;
     padding: 30px 30px 40px 30px;
-    height: 155px;
-    overflow: scroll;
     position: relative;
     z-index: 1;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+.clients-block .item .text .wrap{
+    overflow: scroll;
+    height: 155px;
 }
 .clients-block .item .face{
     margin-top: -25px;
@@ -314,7 +320,42 @@ textarea {
     font-family: Arial, sans-serif;
     font-weight: bold;
 }
+.clients-block .want-to-be-link{
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+.clients-block .want-to-be-link .refresh{
+    height: 24px;
+    width: 23px;
+    display: inline-block;
+    background: url("../img/icon.refresh.png") no-repeat left top;
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
 /* END CLIENTS */
+
+/* FOOTER */
+.footer-block{
+    text-align: center;
+    height: 90px;
+    padding-top: 20px;
+}
+.footer-block .design{
+    float: right;
+    text-align: right;
+    margin-top: 12px;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #404041;
+}
+.footer-block .design a {
+    font-weight: bold;
+    color: #2d9045;
+    text-decoration: none;
+}
+/* END FOOTER */
 
 
 
