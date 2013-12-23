@@ -336,6 +336,50 @@ textarea {
 }
 /* END CLIENTS */
 
+/* ABOUT */
+.about-block{}
+.about-block h2, 
+.about-block h3,
+.about-block .team .gallery .item{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #383c41;
+}
+.about-block .team{
+    float: left;
+    width: 550px;
+}
+.about-block .team h2{
+    font-size: 36px;
+}
+.about-block .team p{
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #404041;
+}
+.about-block .team .gallery{
+    margin-top: 50px;
+}
+.about-block .team .gallery .item{
+    display: inline-block;
+    text-align: center;
+    margin-right: 35px;
+    margin-bottom: 35px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.about-block .team .gallery .item .name{
+    display: block;
+}
+.about-block .team .gallery img{
+    border-radius: 50%;
+    margin-bottom: 13px;
+}
+.about-block .mission{
+    float: left;
+    width: 400px;
+}
+/* END ABOUT */
+
 /* FOOTER */
 .footer-block{
     text-align: center;
