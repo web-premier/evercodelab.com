@@ -337,7 +337,14 @@ textarea {
 /* END CLIENTS */
 
 /* ABOUT */
-.about-block{}
+.about-block{
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+.about-block h2, 
+.about-block h3{
+    padding-top: 0;
+}
 .about-block h2, 
 .about-block h3,
 .about-block .team .gallery .item{
@@ -347,6 +354,7 @@ textarea {
 .about-block .team{
     float: left;
     width: 550px;
+    margin-left: 30px;
 }
 .about-block .team h2{
     font-size: 36px;
@@ -375,8 +383,33 @@ textarea {
     margin-bottom: 13px;
 }
 .about-block .mission{
-    float: left;
-    width: 400px;
+    float: right;
+    width: 340px;
+    padding: 30px;
+    border: 4px solid #e6e6e6;
+    position: relative;
+    margin-top: 30px;
+}
+.about-block .mission h2, 
+.about-block .mission h3{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+.about-block .mission .icon-lines{
+    position: relative;
+    left: 50%;
+    margin-left: -10px;
+    bottom: -20px;
+    z-index: 3;
+}
+.about-block .mission-canvas{
+    position: absolute;
+    bottom: -60px;
+    left: -4px;
+    background-color: #fff;
+    z-index: 2;
 }
 /* END ABOUT */
 

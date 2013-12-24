@@ -25,6 +25,26 @@ var sliderInit = function() {
     });
 };
 
+// Drawing shape for mission
+var drawMissionShape = function(){
+    var width = $('.mission').outerWidth();
+    var height = 85;
+
+    $('#canvas').width(width).height(height);
+
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext('2d');
+
+    context.moveTo(0, 0);
+    context.lineTo(canvas.width/2, canvas.height-4);
+    context.lineTo(canvas.width, 0);
+
+    context.strokeStyle = "#e6e6e6";
+    context.lineWidth = 4;
+    context.stroke();
+};
+
 $(document).ready(function(){
     sliderInit();
+    drawMissionShape();
 });
