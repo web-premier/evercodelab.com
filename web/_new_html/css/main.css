@@ -113,7 +113,8 @@ textarea {
 }
 .btn-green{
     background-color: #2d9045;
-    color: #fff;
+    color: #fff !important;
+    font-weight: normal !important;
 }
 .selection-title{
     font-size: 36px;
@@ -338,7 +339,7 @@ textarea {
 
 /* ABOUT */
 .about-block{
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     padding-bottom: 10px;
 }
 .about-block h2, 
@@ -412,6 +413,66 @@ textarea {
     z-index: 2;
 }
 /* END ABOUT */
+
+/* BLOG */
+.blog-block{
+    font-family: Arial, sans-serif;
+}
+.blog-block nav, .blog-block .content{
+    display: inline-block;
+    vertical-align: top;
+}
+.blog-block nav{
+    width: 260px;
+    font-size: 15px;
+    margin-left: 20px; 
+    margin-right: 60px;
+}
+.blog-block nav a{
+    display: block;
+    color: #333333;
+    text-decoration: none;
+    margin-bottom: 30px
+}
+.blog-block nav .active{
+    font-weight: bold;
+    background-color: #fff;
+    padding: 15px 20px;
+}
+.blog-block .content{
+    max-width: 750px;
+}
+.blog-block .content h3{
+    padding: 0;
+    margin: 0;
+    color: #2d9045;
+    font-size: 32px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.blog-block .content .date{
+    color: #b3b3b3;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.blog-block .content p{
+    color: #383c41;
+    font-size: 15px;
+    width: 600px;
+}
+.blog-block .content a{
+    color: #2d9045;
+    text-decoration: none;
+    font-weight: bold;
+}
+.blog-block .content img{
+    margin: 10px 0;
+}
+.blog-block .content .read-more-link{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+/* END BLOG */
 
 /* FOOTER */
 .footer-block{

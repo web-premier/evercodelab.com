@@ -28,7 +28,7 @@ var sliderInit = function() {
 // Drawing shape for mission
 var drawMissionShape = function(){
     var width = $('.mission').outerWidth();
-    var height = 85;
+    var height = 75;
 
     $('#canvas').width(width).height(height);
 
