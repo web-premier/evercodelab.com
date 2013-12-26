@@ -110,6 +110,7 @@ textarea {
 .btn{
     padding: 15px;
     text-decoration: none;
+    border: none;
 }
 .btn-green{
     background-color: #2d9045;
@@ -473,6 +474,56 @@ textarea {
     margin-bottom: 40px;
 }
 /* END BLOG */
+
+/* FEEDBACK */
+.feedback-block{
+    padding: 20px 0 30px 0;
+}
+.feedback-block h2{
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    color: #383c41;
+}
+.feedback-block .form, .feedback-block .what-more{
+    display: inline-block;
+    vertical-align: top;
+}
+.feedback-block .form{
+    width: 475px;
+    margin-right: 150px;
+}
+.feedback-block .form div{
+    margin-top: 18px;
+}
+.feedback-block .form label{
+    display: block;
+    margin-bottom: 2px;
+}
+.feedback-block .form input[type=text], 
+.feedback-block .form input[type=email],
+.feedback-block .form textarea{
+    width: 100%;
+    border: 2px solid #e6e6e6;
+    color: #333;
+    padding: 5px;
+}
+.feedback-block .what-more ul{
+    list-style-image: url('../img/icon.list-item.what-more.png');
+    margin-left: 0;
+    padding-left: 23px;
+}
+.feedback-block .what-more li{
+    margin-bottom: 20px;
+}
+.feedback-block .what-more a{
+    color: #2d9045;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+}
+/* END FEEDBACK */
 
 /* FOOTER */
 .footer-block{
