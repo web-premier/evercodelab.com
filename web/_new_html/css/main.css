@@ -121,6 +121,12 @@ textarea {
     font-size: 36px;
     color: #404041;
     text-align: center;
+    margin-top: 0;
+    position: relative;
+    z-index: 20;
+}
+.selection-title.move-top{
+    margin-top: -60px;
 }
 
 /* HEADER */
@@ -204,6 +210,7 @@ textarea {
 .slider-block .item{
     text-align: center;
     padding-top: 85px;
+    height: 100%;
 }
 .slider-block .item ul{
     list-style-image: url('../img/icon.list-item.png');
@@ -230,10 +237,11 @@ textarea {
 }
 .slidesjs-pagination{
     position: absolute;
-    bottom: 0;
+    bottom: 130px;
     left: 50%;
     display: block;
     width: 300px;
+    z-index: 10;
 }
 .slidesjs-pagination-item{
     list-style: none;
@@ -264,6 +272,7 @@ textarea {
     overflow: hidden;
     position: absolute;
     top: 190px;
+    z-index: 10;
 }
 .slidesjs-previous{
     background-position: 0 0;

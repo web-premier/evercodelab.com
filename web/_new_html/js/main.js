@@ -1,7 +1,7 @@
 // Initalize slider
 var sliderInit = function() {
     $("#slides").slidesjs({
-        height: 400,
+        height: 500,
         navigation: {
             effect: "fade"
         },
