@@ -1,26 +1,17 @@
 // Initalize slider
 var sliderInit = function() {
-    $("#slides").slidesjs({
-        height: 500,
-        navigation: {
-            effect: "fade"
-        },
-        pagination: {
-            effect: "fade"
-        },
-        play: {
-            active: false,
-            effect: "fade",
-            interval: 5000,
-            swap: false,
-            auto: true,
-            pauseOnHover: false,
-            restartDelay: 2500
-        },
-        effect: {
-            fade: {
-                speed: 800
-            }
+    var sliderContainer = $("#slides"),
+        sliderWrapper = $("#slides-wrapper");
+
+    sliderWrapper.css('backgroundImage', 'url("'+sliderContainer.find('.item').first().data('bg-image')+'")');
+
+    $("#slides").slides({
+        generateNextPrev: true,
+        pagination: true,
+        effect: 'fade',
+        play: 10000,
+        animationComplete: function(current) {
+            sliderWrapper.css('backgroundImage', 'url("'+sliderContainer.find('.item:nth-child('+current+')').data('bg-image')+'")');
         }
     });
 };

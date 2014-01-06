@@ -201,13 +201,24 @@ textarea {
 /* END CASE MENU */
 
 /* SLIDER */
-#slides {
-    display:none;
-}
 .slider-block{
-    position: relative;    
+    position: relative;
+    height: 610px;
 }
-.slider-block .item{
+.slides-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.slides_container {
+    width:1000px;
+    height:500px;
+    text-align: center;
+    margin: 0 auto;
+}
+.slides_container .item {
+    width:1000px;
+    height:500px;
+    display:block;
     text-align: center;
     padding-top: 85px;
     height: 100%;
@@ -235,18 +246,17 @@ textarea {
 .slider-block .item .text h3{
     margin-top: 0;
 }
-.slidesjs-pagination{
-    position: absolute;
-    bottom: 130px;
-    left: 50%;
+.slider-block .pagination{
     display: block;
+    text-align: center;
     width: 300px;
-    z-index: 10;
+    margin: -110px auto 0 auto;
 }
-.slidesjs-pagination-item{
+.slider-block .pagination li{
     list-style: none;
+    display: inline-block;
 }
-.slidesjs-pagination-item a{
+.slider-block .pagination li a{
     width: 13px;
     display: block;
     height: 0;
@@ -254,15 +264,14 @@ textarea {
     background-image: url('../img/icon.slider.item.png');
     background-repeat: no-repeat;
     background-position: 0 0;
-    float: left;
     overflow: hidden;
     margin-right: 25px;
 }
-.slidesjs-pagination-item a.active{
+.slider-block .pagination li.current a{
     background-position: -13px 0;
 }
-.slidesjs-previous,
-.slidesjs-next{
+.slider-block .prev,
+.slider-block .next{
     width: 44px;
     display: block;
     height: 0;
@@ -274,11 +283,11 @@ textarea {
     top: 190px;
     z-index: 10;
 }
-.slidesjs-previous{
+.slider-block .prev{
     background-position: 0 0;
     left: 90px;
 }
-.slidesjs-next{
+.slider-block .next{
     background-position: -44px 0;
     right: 90px;
 }
