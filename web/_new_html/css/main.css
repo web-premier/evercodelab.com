@@ -99,8 +99,13 @@ textarea {
 .container{
     width: 100%;
     background-color: #fff;
+    overflow: hidden;
 }
-.content-wrapper{
+.content-wrapper, 
+.before-right-block,
+.before-left-block,
+.after-right-block,
+.after-left-block{
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -127,6 +132,41 @@ textarea {
 }
 .selection-title.move-top{
     margin-top: -60px;
+}
+.before-left-block{
+    position: relative;
+    bottom: -10px;
+}
+.after-right-block{
+    position: relative;
+    top: -10px;
+}
+.before-right-block,
+.before-left-block,
+.after-right-block,
+.after-left-block{
+    height: 10px;
+    position: relative;
+}
+.before-right-block::before,
+.before-left-block::before,
+.after-right-block::after,
+.after-left-block::after{
+    content: '';
+    background-color: #e6e6e6;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+}
+.before-right-block::before,
+.after-right-block::after{
+    left: 100%;
+}
+.before-left-block::before,
+.after-left-block::after{
+    right: 100%;
 }
 
 /* HEADER */
@@ -204,6 +244,8 @@ textarea {
 .slider-block{
     position: relative;
     height: 610px;
+    z-index: 2;
+    margin-top: -20px;
 }
 .slides-wrapper{
     width: 100%;
@@ -296,6 +338,8 @@ textarea {
 /* CLIENTS */
 .clients-block{
     padding-bottom: 20px;
+    margin-top: -20px;
+    z-index: 2;
 }
 .clients-block .item{
     width: 510px;
