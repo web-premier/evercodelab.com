@@ -521,26 +521,35 @@ textarea {
     font-family: Arial, sans-serif;
     margin-top: 120px;
 }
-.blog-block nav, .blog-block .content{
+.blog-block nav, .previous-posts, .blog-block .content{
     display: inline-block;
     vertical-align: top;
 }
-.blog-block nav{
+/* Side menu with fixed width */
+.blog-block nav, 
+.previous-posts, 
+.rubrics,
+.mission.in-blog{
     width: 260px;
     font-size: 15px;
     margin-left: 20px; 
     margin-right: 60px;
 }
-.blog-block nav a{
+.blog-block nav a, .previous-posts a{
     display: block;
     color: #333333;
     text-decoration: none;
     margin-bottom: 30px
 }
-.blog-block nav .active{
+.blog-block nav .active, .previous-posts .active{
     font-weight: bold;
-    background-color: #fff;
     padding: 15px 20px;
+}
+.blog-block nav .active{
+    background-color: #fff;
+}
+.previous-posts .active{
+    background-color: #e6e6e6;
 }
 .blog-block .content{
     max-width: 750px;
@@ -661,8 +670,77 @@ textarea {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #383c41;
     font-size: 36px;
+    text-transform: uppercase;
+}
+.previous-posts{
+    margin-top: 80px;
+}
+.mission.in-blog{
+    border: 4px solid #e6e6e6;
+    position: relative;
+    margin-bottom: 80px;
+    margin-top: 70px;
+    padding: 15px 20px;
+    width: 230px !important;
+    font-size: 14px;
+    color: #383c41;
+}
+.mission.in-blog h2, 
+.mission.in-blog h3{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 26px;
+}
+.mission.in-blog h2{
+    text-transform: uppercase;
+}
+.mission.in-blog h3{
+    text-transform: lowercase !important;
+}
+.mission.in-blog .mission-canvas{
+    position: absolute;
+    bottom: -60px;
+    left: -4px;
+    background-color: #fff;
+    z-index: 2;
+}
+.rubrics ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Arial, sans-serif;
+}
+.rubrics ul li{
+    display: inline-block;
+    font-size: 16px;
+}
+.rubrics ul li a{
+    color: #2d9045;
+    text-decoration: none;
 }
 /* END BLOG PAGES */
+
+/* CONTENT PAGES */
+.content-block{}
+.content-block .side{
+    width: 270px;
+    float: left;
+}
+.content-block .side h3{
+    padding: 0;
+    margin: 0 0 15px 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #383c41;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+.content-block .text{
+    width: 750px;
+    float: left;
+    margin-left: 70px;
+}
+/* END CONTENT PAGES */
 
 
 
