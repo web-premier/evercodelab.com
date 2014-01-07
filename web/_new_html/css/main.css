@@ -776,6 +776,22 @@ textarea {
 .content-block h2{
     font-size: 18px;
 }
+.content-block .post-item h2{
+    font-size: 32px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 40px 0 0 0;
+}
+.content-block .post-item h2 a{
+    color: #2d9045;
+    text-decoration: none;
+}
+.content-block .separator{
+    padding: 10px 0 20px 0;
+}
+.content-block .separator img{
+    padding-right: 10px;
+}
 /* END CONTENT PAGES */
 
 
