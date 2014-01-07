@@ -130,9 +130,11 @@ textarea {
     position: relative;
     z-index: 20;
 }
-.selection-title.move-top{
-    margin-top: -60px;
+.selection-title.title-up{
+    margin-top: -65px;
 }
+
+/* CHAMFER */
 .before-left-block{
     position: relative;
     bottom: -10px;
@@ -168,6 +170,37 @@ textarea {
 .after-left-block::after{
     right: 100%;
 }
+.before-right-block i,
+.before-left-block i,
+.after-left-block i,
+.after-right-block i{
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-image: url('../img/icon.triangles-shape.png');
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 3;
+}
+.before-left-block i{
+    background-position: -10px 0;
+    float: right;
+}
+.after-right-block i{
+    background-position: 0 -10px;
+}
+.after-left-block i{
+    background-position: -10px -10px;
+    float: right;
+}
+/* Some specific */
+.blog-block .before-left-block{
+    top: -10px;
+}
+.blog-block .before-right-block{
+    top: -20px;
+}
+/* END CHAMFER */
 
 /* HEADER */
 .header {
@@ -480,6 +513,7 @@ textarea {
 /* BLOG */
 .blog-block{
     font-family: Arial, sans-serif;
+    margin-top: 120px;
 }
 .blog-block nav, .blog-block .content{
     display: inline-block;
