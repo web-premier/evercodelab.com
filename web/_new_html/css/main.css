@@ -722,7 +722,6 @@ textarea {
 /* END BLOG PAGES */
 
 /* CONTENT PAGES */
-.content-block{}
 .content-block .side{
     width: 270px;
     float: left;
@@ -739,6 +738,25 @@ textarea {
     width: 750px;
     float: left;
     margin-left: 70px;
+}
+.content-block .date{
+    color: #b3b3b3;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin-top: 15px;
+}
+.content-block a{
+    color: #2d9045;
+    text-decoration: none;
+    font-weight: bold;
+}
+.content-block p{
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #404040;
+}
+.content-block h2{
+    font-size: 18px;
 }
 /* END CONTENT PAGES */
 
