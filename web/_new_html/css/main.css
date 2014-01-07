@@ -719,6 +719,24 @@ textarea {
     color: #2d9045;
     text-decoration: none;
 }
+.additional-info{
+    margin-top: 40px;
+}
+.additional-info .separator{
+    margin-left: 20px;
+}
+.additional-info .author{
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+.additional-info .author a,
+.additional-info .rubrics a{
+    color: #2d9045;
+    text-decoration: none;
+}
+.additional-info .author a{
+    text-transform: uppercase;
+}
 /* END BLOG PAGES */
 
 /* CONTENT PAGES */
@@ -745,7 +763,7 @@ textarea {
     font-family: Arial, sans-serif;
     margin-top: 15px;
 }
-.content-block a{
+.content-block p a{
     color: #2d9045;
     text-decoration: none;
     font-weight: bold;
