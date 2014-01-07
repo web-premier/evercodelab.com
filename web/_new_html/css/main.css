@@ -200,6 +200,12 @@ textarea {
 .blog-block .before-right-block{
     top: -20px;
 }
+.blog-title .after-left-block{
+    top: 30px;
+}
+.blog-title .after-right-block{
+    top: 20px;
+}
 /* END CHAMFER */
 
 /* HEADER */
@@ -642,7 +648,21 @@ textarea {
 }
 /* END FOOTER */
 
-
+/* BLOG PAGES */
+.blog-title{
+    position: relative;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.blog-title h1{
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #383c41;
+    font-size: 36px;
+}
+/* END BLOG PAGES */
 
 
 
