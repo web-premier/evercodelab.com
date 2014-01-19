@@ -19,11 +19,13 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
+
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
             new Sonata\CacheBundle\SonataCacheBundle(),
             new Sonata\jQueryBundle\SonatajQueryBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new Sonata\CoreBundle\SonataCoreBundle(),
             new FOS\UserBundle\FOSUserBundle(),
 
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
