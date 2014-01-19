@@ -1,6 +1,6 @@
-set :application, "evercodelab"
-set :domain,      "5.9.96.170"
-set :deploy_to,   "/var/www/php/#{application}.com"
+set :application, "evercodelab.com"
+set :domain,      "95.85.55.135"
+set :deploy_to,   "/var/www/php/#{application}"
 set :app_path,    "app"
 
 set :repository,  "git@github.com:EvercodeLab/#{application}.git"
@@ -35,7 +35,7 @@ logger.level = Logger::MAX_LEVEL
 set :writable_dirs,     ["app/cache", "app/logs", "web/uploads"]
 set :webserver_user,    "www-data"
 set :permission_method, :acl
-set :use_set_permissions, true
+set :use_set_permissions, false
 
 require 'hipchat/capistrano'
 
