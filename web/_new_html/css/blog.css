@@ -1,0 +1,58 @@
+.pagination{
+    width: 100%;
+    margin: 50px 0 40px 0;
+}
+.pagination a{
+    color: #2d9045;
+    text-decoration: none;
+}
+.pagination .previous, 
+.pagination .next{
+    width: 18px;
+    height: 0;
+    padding-top: 28px;
+    background: url(../img/icon.pagination.png) 0 0 no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+.pagination .previous{
+    margin-right: 50px;
+}
+.pagination .next{
+    background-position: -18px 0;
+    margin-left: 50px;
+}
+.pagination .page_number{
+    padding: 10px 15px 8px;
+    margin: 0 6px;
+}
+.pagination span.page_number{
+    border: 4px solid #e6e6e6;
+}
+article img, article iframe{
+    display: block;
+}
+article img{
+    border-radius: 0.3em;
+    box-shadow: rgba(0,0,0,0.15) 0 1px 4px;
+    box-sizing: border-box;
+    border: #fff 0.5em solid;
+    margin-bottom: 6px;
+}
+article ul{
+    padding-left: 20px;
+}
+article a{
+    color: #2d9045;
+    text-decoration: none;
+    font-weight: bold;
+}
+blockquote{
+    padding-left: 1.5em;
+    font-style: italic;
+    position: relative;
+    font-size: 1.2em;
+    border-left: 4px solid rgba(170,170,170,0.5);
+    margin-left: 10px !important;
+}
