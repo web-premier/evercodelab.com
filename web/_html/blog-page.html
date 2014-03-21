@@ -3,160 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <title>EvercodeLab</title>
-    <!-- <link rel="stylesheet" href="css/reset.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <!--[if lt IE 9]> 
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
 </head>
-<body class="ruby-all blog-page">
-<div class="wrapper">
-    <!-- Верхняя навигация -->
-    <header class="container">
-        <div class="logo">
-            <a href="index.html"><img src="img/logo.png" alt="EvercodeLab"></a>
-            <a href="index.html" class="name"><h1>EvercodeLab</h1></a>
-        </div>
-        <div class="menu">
-            <nav>
-                <a href="index.html">Главная</a>
-                <a href="#">Клиенты</a>
-                <a href="ruby-all.html">Решения</a>
-                <a href="#">О нас</a>
-                <a href="blog.html" class="active">Блог</a>
-            </nav>
-            <div class="language">
-                <a href="#" class="active">ru</a>
-                <a href="#">en</a>
+<body>
+    <div class="wrapper">
+        <!-- Верхняя навигация -->
+        <header class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="EvercodeLab"></a>
+                <a href="index.html" class="name"><h1>EvercodeLab</h1></a>
             </div>
-        </div>
-    </header>
-	
-	<!-- Псевдоэлементы -->
-	<div class="before-left-block"><i></i></div>
-    <div class="before-right-block"><i></i></div>
-	
-	<!-- Кейс -->
-    <div class="case">
-    	<div class="container">
-            <h2>A Year With Symfony</h2>
-        </div>
-    </div>
-
-    <!-- Псевдоэлементы -->
-    <div class="after-left-block"><i></i></div>
-    <div class="after-right-block"><i></i></div>
-
-
-    <!-- Блог -->
-    <div class="blog">
-        <div class="tabs container">
-            <div class="aside">
-                <h2>Записи</h2>
-                <ul>
-                    <li data-content="tab1" class="active">Послепроектная работа</li>
-                    <li data-content="tab2">Аудит и поддержка проектов</li>
-                    <li data-content="tab3">Тестирование</li>
-                </ul>
-                
-                <div class="rubric">
-                    <h2>Рубрики</h2>
-                    <a href="#">42</a>, 
-                    <a href="#">Symphony</a>, 
-                    <a href="#">Evercodelab</a>, <br/>
-                    <a href="#">Events</a>, 
-                    <a href="#">Best-Quest</a>
-                </div>
-
-                <div class="mission">
-                    <h3>Evercodelab<br/><span> миссия</span></h3>
-                    <p>Мы работаем для того, чтобы воплощать идеи наших клиентов в качественные продукты и сервисы.</p>
-                    <p>Изучаем и используем современные технологии, чтобы наши продукты отвечали высоким требованиям качества. Стремимся узнавать новое и делиться этими знаниями.</p>
-                    <a href="#">Еще...</a>
+            <div class="menu">
+                <nav>
+                    <a href="#" class="active">Главная</a>
+                    <a href="#">Услуги</a>
+                    <a href="#">Клиенты</a>
+                    <a href="#">Портфолио</a>
+                    <a href="#">Контакты</a>
+                </nav>
+                <div class="language">
+                    <a href="#" class="active">ru</a>
+                    <a href="#">en</a>
                 </div>
             </div>
+        </header>
+    	
+    	<!-- Псевдоэлементы -->
+    	<div class="before-left-block"><i></i></div>
+        <div class="before-right-block"><i></i></div>
+    	
+    	<!-- Кейс -->
+        <div class="case blog-h2">
+        	<div class="container">
+                <a href="#"><h2>A Year With Symfony</h2></a>
+            </div>
+        </div>
 
-            <div class="all-tabs no-pt">
+        <!-- Псевдоэлементы -->
+        <div class="after-left-block"><i></i></div>
+        <div class="after-right-block"><i></i></div>
 
-                <div class="tab1" style="display: inherit;">
-                    <span class="date">OCT 17TH, 2013, Петр Сергеев</span>
-                    <p>
-                        Мы уже давно работаем с Symfony, но всегда стремимся узнать что-то новое и развиваться в интресующих нас направлениях. Но до сих пор приходилось искать отрывки информации в интернете, теперь у нас есть книга “A Year With Symfony”, где собраны полезные советы и решения на многие темы касающиеся разработки с использованием этого замечательного фреймворка.
-                    </p>
-                    <img src="img/book.jpg" alt="">
-                    <p class="head">Кратко по содержанию книги:</p>
-                    <p>The journey from request to response - раздел рассказывает о всем цикле выполнения приложения, начиная от запроса к серверу, заканчивая отправкой ответа. Рассмотрены все события возникающие при этом цикле, а также, что немаловажно - примеры использования этих событий.</p>
-                    <p>Patterns of dependency injection - описана вся работа с DI: создание сервисов вручную и динамически, настройка и типы зависимостей, теги, параметры.</p>
-                    <p>Project structure - советы по организации контроллеров, примеры рефакторинга.</p>
-                    <p>Configuration conventions - как уже понятно из названия - соглашения по настройке, выбору форматов для конфигурации разных частей приложения.</p>
-                    <p>Security - все, что необходимо знать о безопасности: аутентификация, проверка входящих данных, экранирование вывода, прочие советы по улучшению безопасности приложения.</p>
-                    <p>Being a Symfony developer - советы по организации кода и построению правильной архитектуры. В целом книга несет идею организации слабой связанности частей приложения, разделения ответственности, решение мелких задач мелкими классами. </p>
-                    <p>Простые и давно известные вещи, применять которые на практике иногда оказывается не так просто, и совершенствовать свои навыки в которых надо постоянно.</p>
-                    <p>Так что книга однозначно “Must Have” и лично я бы посоветовал ее каждому симфонисту.</p>
-                    <a href="https://leanpub.com/" target="_blank" class="buy">Купить книгу можно на Leanpub.</a>
-
-                    <p class="square">
-                        <img src="img/icon.separator.png" alt="">
-                    </p>
-
-                    <span class="desc">Автор</span>
-                    <a href="#" class="uppercase">Сергей Лунев</a>
-                    <span class="desc link"><i></i>Рубрики</span>
-                    <a href="#">42</a>, 
-                    <a href="#">development</a>, 
-                    <a href="#">events</a>
-                </div>
-
-                <div class="tab2">
-                    <h3>Процесс работы</h3>
-                    <h4>Аудит и поддержка проектов</h4>
+        <!-- Блог -->
+        <div class="blog blog-page clear">
+            <div class="tabs container clear">
+                <div class="aside">
+                    <h2>Записи</h2>
                     <ul>
-                        <li>Проверка на стандарты кодирования и рекомендации по правкам</li>
-                        <li>Статический анализ кода<br/> Рекомендации по обновлению</li>
-                        <li>Оптимизация</li>
-                        <li>Профилирование кода</li>
+                        <li class="active"><a href="#">Послепроектная работа</a></li>
+                        <li><a href="#">Аудит и поддержка проектов</a></li>
+                        <li><a href="#">Тестирование</a></li>
                     </ul>
+                    
+                    <div class="rubric">
+                        <h2>Рубрики</h2>
+                        <a href="#">42</a>, 
+                        <a href="#">Symphony</a>, 
+                        <a href="#">Evercodelab</a>, <br/>
+                        <a href="#">Events</a>, 
+                        <a href="#">Best-Quest</a>
+                    </div>
+
+                    <div class="mission">
+                        <h3>Evercodelab<br/><span> миссия</span></h3>
+                        <p>Мы работаем для того, чтобы воплощать идеи наших клиентов в качественные продукты и сервисы.</p>
+                        <p>Изучаем и используем современные технологии, чтобы наши продукты отвечали высоким требованиям качества. Стремимся узнавать новое и делиться этими знаниями.</p>
+                        <a href="#">Еще...</a>
+                    </div>
                 </div>
 
-                <div class="tab3">
-                    <h3>Процесс работы</h3>
-                    <h4>Послепроектная работа</h4>
-                    <p>
-                        Мы уже давно работаем с Symfony, но всегда стремимся узнать что-то новое и развиваться в интресующих нас направлениях. Но до сих пор приходилось искать отрывки информации в интернете, теперь у нас есть книга “A Year With Symfony”, где собраны полезные советы и решения на многие темы касающиеся разработки с использованием этого замечательного фреймворка.
-                    </p>
-                    <ul>
-                        <li>Обучение</li>
-                        <li>Evercode Talks</li>
-                        <li>Как мы работаем</li>
-                        <li>Выступления на конференциях</li>
-                    </ul>
+                <div class="all-tabs no-pt">
+                    <div>
+                        <span class="date">OCT 17TH, 2013, Петр Сергеев</span>
+                        <p>
+                            Мы уже давно работаем с Symfony, но всегда стремимся узнать что-то новое и развиваться в интресующих нас направлениях. Но до сих пор приходилось искать отрывки информации в интернете, теперь у нас есть книга “A Year With Symfony”, где собраны полезные советы и решения на многие темы касающиеся разработки с использованием этого замечательного фреймворка.
+                        </p>
+                        <img src="img/book.jpg" alt="">
+                        <p class="head">Кратко по содержанию книги:</p>
+                        <p>The journey from request to response - раздел рассказывает о всем цикле выполнения приложения, начиная от запроса к серверу, заканчивая отправкой ответа. Рассмотрены все события возникающие при этом цикле, а также, что немаловажно - примеры использования этих событий.</p>
+                        <p>Patterns of dependency injection - описана вся работа с DI: создание сервисов вручную и динамически, настройка и типы зависимостей, теги, параметры.</p>
+                        <p>Project structure - советы по организации контроллеров, примеры рефакторинга.</p>
+                        <p>Configuration conventions - как уже понятно из названия - соглашения по настройке, выбору форматов для конфигурации разных частей приложения.</p>
+                        <p>Security - все, что необходимо знать о безопасности: аутентификация, проверка входящих данных, экранирование вывода, прочие советы по улучшению безопасности приложения.</p>
+                        <p>Being a Symfony developer - советы по организации кода и построению правильной архитектуры. В целом книга несет идею организации слабой связанности частей приложения, разделения ответственности, решение мелких задач мелкими классами. </p>
+                        <p>Простые и давно известные вещи, применять которые на практике иногда оказывается не так просто, и совершенствовать свои навыки в которых надо постоянно.</p>
+                        <p>Так что книга однозначно “Must Have” и лично я бы посоветовал ее каждому симфонисту.</p>
+                        <a href="https://leanpub.com/" target="_blank" class="buy">Купить книгу можно на Leanpub.</a>
+                        <p class="square">
+                            <img src="img/icon.separator.png" alt="">
+                        </p>
+                        <span class="desc">Автор</span>
+                        <a href="#" class="uppercase">Сергей Лунев</a>
+                        <span class="desc link"><i></i>Рубрики</span>
+                        <a href="#">42</a>, 
+                        <a href="#">development</a>, 
+                        <a href="#">events</a>
+                    </div>
                 </div>
             </div>
-            <div class="clear"></div>
         </div>
+        
+        <!-- Псевдоэлемент -->
+        <div class="before-left-block"><i></i></div>
+        <div class="before-right-block"><i></i></div>
+        
+        <!-- Подвал -->
+        <footer class="clear">
+            <div class="container">
+                <div class="social">
+                    <a href="#" class="sprite fb"></a>
+                    <a href="#" class="sprite gh"></a>
+                    <a href="#" class="sprite tw"></a>
+                    <a href="#" class="sprite rss"></a>
+                </div>
+                <img src="img/logo.png" alt="">
+                <div class="design">
+                    дизайн сайта<br/>
+                    <a href="http://formazon.com">formazon.com</a>
+                </div>
+            </div>
+        </footer>
     </div>
-    
-    <!-- Псевдоэлемент -->
-    <div class="before-left-block"><i></i></div>
-    <div class="before-right-block"><i></i></div>
-    
-    <!-- Подвал -->
-    <footer>
-        <div class="container">
-            <div class="social">
-                <a href="#" class="fb"></a>
-                <a href="#" class="gh"></a>
-                <a href="#" class="tw"></a>
-                <a href="#" class="rss"></a>
-            </div>
-            <img src="img/logo.png" alt="">
-            <div class="design">
-                дизайн сайта<br/>
-                <a href="http://formazon.com">formazon.com</a>
-            </div>
-        </div>
-    </footer>
-</div>
 
     <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/jquery.slides.min.js"></script>

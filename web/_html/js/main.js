@@ -21,12 +21,12 @@ $(document).ready(function(){
     $(".scrollbar").scroller();
 
     /* tabs */
-    $('.tabs li').click(function(){
-        $('.tabs li').removeClass('active');
-        $(this).addClass('active');
-        $('.all-tabs div').fadeOut(1);
-        $('.' + $(this).attr('data-content') ).fadeIn(1);
-    })
+    // $('.tabs li').click(function(){
+    //     $('.tabs li').removeClass('active');
+    //     $(this).addClass('active');
+    //     $('.all-tabs div').fadeOut(1);
+    //     $('.' + $(this).attr('data-content') ).fadeIn(1);
+    // })
 
     /* плашка с контактами */
     $('#contact_right .contact-trigger').on('click', function() {
