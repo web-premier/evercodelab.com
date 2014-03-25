@@ -1,147 +1,50 @@
-(function($){
-		  
-	function scrollLine() {
-		var $scrollLine = $('#topLineMove'),
-			$w = $(window),
-			docHeight = $(document).height() - $w.height(),
-			$topMenu = $('header menu li a'),
-			topMenuHeight = $('.b-head').height(),
-			scrollBack = false;
-			
-		$topMenu.click(function() {
-			scrollBack = true;
-		});
-		
-		if (location.hash == "#aboutus") {
-			$w.scrollTop($w.scrollTop() - topMenuHeight);
-		}
-		$scrollLine.width(($w.scrollTop() / docHeight * 100) + '%');
-		$w.scroll(function(e) {
-			$scrollLine.width(($w.scrollTop() / docHeight * 100) + '%');
-			
-			if (scrollBack) {
-				$w.scrollTop($w.scrollTop() - topMenuHeight);
-			}
-			
-			scrollBack = false;
-		});
-	}
-	
-	function switcher() {
-		var $switcherBlock = $('.b-switcher-block');
-		
-		$switcherBlock.each(function(i, elem){
-			var $elem = $(elem);
-			
-			$elem.find('.b-switch.' + $elem.find('.b-switcher li.active').attr('rel')).show();
-			$elem.find('.b-switcher li').click(function() {
-				var $this = $(this);
-				
-				$elem.find('.b-switcher li.active').removeClass('active');
-				$this.addClass('active');
-				$elem.find('.b-switch').hide();
-				$elem.find('.b-switch.' + $this.attr('rel')).show();
-			});
-		});
-	}
+    // Initalize slider
+    var sliderInit = function() {
+    var sliderContainer = $("#slides"),
+        sliderWrapper = $("#slides-wrapper");
 
-    function paginate(options) {
-        var defaults = {
-            items_per_page : 3
+    sliderWrapper.css('backgroundImage', 'url("'+sliderContainer.find('.item').first().data('bg-image')+'")');
+
+    $("#slides").slides({
+        generateNextPrev: true,
+        pagination: true,
+        effect: 'fade',
+        play: 10000,
+        animationComplete: function(current) {
+            sliderWrapper.css('backgroundImage', 'url("'+sliderContainer.find('.item:nth-child('+current+')').data('bg-image')+'")');
         }
-        var options = $.extend(defaults,options);
-        var current_page = 0;
+    });
+};
 
-        var $items = $('.b-portfolio-text > ul > li');
-        var $control_container = $('.b-slider');
+$(document).ready(function(){
+    sliderInit();
+    $(".scrollbar").scroller();
 
-        // Get the total number of items
-        var total_items = $items.size();
+    /* tabs */
+    // $('.tabs li').click(function(){
+    //     $('.tabs li').removeClass('active');
+    //     $(this).addClass('active');
+    //     $('.all-tabs div').fadeOut(1);
+    //     $('.' + $(this).attr('data-content') ).fadeIn(1);
+    // })
 
-        // Calculate the number of pages needed
-        var number_of_pages = Math.ceil(total_items/options.items_per_page);
+    /* плашка с контактами */
+    $('#contact_right .contact-trigger').on('click', function() {
+        $(this).parent().toggleClass('contact_right_show')
+    });
 
-        // hide all pages
-        $items.hide();
-        // Show the first page
-        $items.slice(0, options.items_per_page).show();
+    $('.review').attr('data-start-height',$('.review', this).height()+parseInt($('.review', this).css('padding-top'), 10)*2);
 
-        // Event handler for 'Prev' link
-        $control_container.find('.prev').click(function(e){
-            e.preventDefault();
-            showPrevPage($(this));
-        });
-
-        // Event handler for 'Next' link
-        $control_container.find('.next').click(function(e){
-            e.preventDefault();
-            showNextPage($(this));
-        });
-
-        function showPrevPage(e){
-            new_page = current_page - 1;
-
-            // Check that we aren't on a boundary link
-            if($(e).hasClass('disabled')){
-                return;
-            }else{
-                gotopage(new_page);
-            }
-        };
-
-        function showNextPage(e){
-            new_page = current_page + 1;
-
-            // Check that we aren't on a boundary link
-            if($(e).hasClass('disabled')){
-                return;
-            }else{
-                gotopage(new_page);
-            }
-        };
-
-        function gotopage(page_num){
-            var ipp = options.items_per_page;
-
-            var isLastPage = false;
-
-            // Find the start of the next slice
-            start_from = page_num * ipp;
-
-            // Find the end of the next slice
-            end_on = start_from + ipp;
-            // Hide the current page
-            var items = $items.hide().slice(start_from, end_on);
-
-            items.show();
-
-            // Set the current page meta data
-            current_page = page_num;
-
-            // Add a class to the next or prev links if there are no more pages next or previous to the active page
-            if (page_num == 0) {
-                $control_container.find('.prev').addClass('disabled');
-                $control_container.find('.next').removeClass('disabled');
-            } else if (page_num == number_of_pages - 1) {
-                $control_container.find('.prev').removeClass('disabled');
-                $control_container.find('.next').addClass('disabled');
-            } else {
-                $control_container.find('.prev').removeClass('disabled');
-                $control_container.find('.next').removeClass('disabled');
-            }
-        };
-
-
-    }
-
-	function init(){
-//		switcher();
-		scrollLine();
-        paginate();
-	}
-	
-	$(function(){
-		init();
-	});
-	
-})(jQuery,undefined)
+    $('.review-open').on('click',function(){
+        if( $(this).parent().attr('data-height') == 'close' ){
+            var pos = $(this).parent().find('.review-text');
+            var newheight = pos.height() + parseInt($(this).parent().css('padding-top'), 10)*2 ;
+            $(this).parent().css('height', newheight).attr('data-height', 'open');
+            return false;
+        }
+        if( $(this).parent().attr('data-height') == 'open' ){
+            $(this).parent().css('height', $(this).parent().attr('data-start-height') ).attr('data-height', 'close');
+            return false;
+        }
+    })
+});
