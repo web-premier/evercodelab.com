@@ -1,46 +1,319 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name='yandex-verification' content='609f107a156157ec' />
-    <meta name="google-site-verification" content="IOomL4TBfTjjsuUqlcEkKH_YWCniNPOKNw0BpIW1WvI" />
-    <meta name="KEYWORDS" content="{{ 'site.keywords'|trans }}" />
-    <meta name="DESCRIPTION" content="{{ 'site.description'|trans }}" />
-    <title>{{ 'site.title'|trans }}</title>
-    {% stylesheets
-        'css/main.css'
-        'css/kw/makasaar.css'
-        output='compiled/compiled.css'
-        filter='cssrewrite'
-    %}
-    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
-    {% endstylesheets %}
+{% extends 'AppDefaultBundle::layout.html.twig' %}
 
-    <!--[if IE 8]>
-    <link rel='stylesheet' type='text/css' href="/css/ie8.css"/>
-    <![endif]-->
-    <!--[if IE 9]>
-    <link rel='stylesheet' type='text/css' href="/css/ie9.css"/>
-    <![endif]-->
+{% block content %}
+    <!-- Кейс -->
+    <div class="case">
+        <div class="container">
+            <a href="blog.html" class="item">
+                <img src="/img/icon-symfony.png" alt="">
+                Разработка на <br>Symfony2
+            </a>
+            <a href="blog.html" class="item">
+                <img src="/img/icon-ruby.png" alt="">
+                Разработка на <br>Ruby on Rails
+            </a>
+            <a href="blog.html" class="item">
+                <img src="/img/icon-ios.png" alt="">
+                Разработка <br>iOS приложений
+            </a>
+        </div>
+    </div>
 
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    {% javascripts
-        'js/jquery.js'
-        'js/main.js'
-        output='compiled/compiled.js'
-    %}
-    <script type="text/javascript" src="{{ asset_url }}"></script>
-    {% endjavascripts %}
+    <!-- Псевдоэлементы -->
+    <div class="after-left-block"><i></i></div>
+    <div class="after-right-block"><i></i></div>
 
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <!-- Slider -->
+    <div class="slider-block" id="slides">
+        <div class="slides-wrapper" id="slides-wrapper">
+            <div class="slides_container">
+                <div class="item" data-bg-image="img/bg-slider1.jpg">
+                    <img src="/img/stashify.jpg" alt="">
+                    <div class="text">
+                        <h3>Stashify</h3>
+                        <ul>
+                            <li>Свои бандлы, либы и наработки</li>
+                            <li>Сертифицированные спецы</li>
+                            <li>Тестирование</li>
+                            <li>Послепроектная работа</li>
+                            <li>Свои бандлы, либы и наработки</li>
+                            <li>Сертифицированные спецы</li>
+                            <li>Тестирование</li>
+                            <li>Послепроектная работа</li>
+                        </ul>
+                        <a class="btn" href="#">Перейти на сайт</a>
+                    </div>
+                </div>
+                <div class="item" data-bg-image="img/bg-slider2.jpg">
+                    <img src="/img/best4car.jpg" alt="">
+                    <div class="text">
+                        <h3>Best4car</h3>
+                        <ul>
+                            <li>Свои бандлы, либы и наработки</li>
+                            <li>Сертифицированные спецы</li>
+                            <li>Тестирование</li>
+                            <li>Послепроектная работа</li>
+                            <li>Свои бандлы, либы и наработки</li>
+                            <li>Сертифицированные спецы</li>
+                            <li>Тестирование</li>
+                            <li>Послепроектная работа</li>
+                        </ul>
+                        <a class="btn" href="#">Перейти на сайт</a>
+                    </div>
+                </div>
+                <div class="item" data-bg-image="img/bg-slider1.jpg">
+                    <img src="/img/stashify.jpg" alt="">
+                    <div class="text">
+                        <h3>Stashify</h3>
+                        <ul>
+                            <li>Свои бандлы, либы и наработки</li>
+                            <li>Сертифицированные спецы</li>
+                            <li>Тестирование</li>
+                            <li>Послепроектная работа</li>
+                            <li>Свои бандлы, либы и наработки</li>
+                            <li>Сертифицированные спецы</li>
+                            <li>Тестирование</li>
+                            <li>Послепроектная работа</li>
+                        </ul>
+                        <a class="btn" href="#">Перейти на сайт</a>
+                    </div>
+                </div>
+                <div class="item" data-bg-image="img/bg-slider2.jpg">
+                    <img src="/img/best4car.jpg" alt="">
+                    <div class="text">
+                        <h3>Best4car</h3>
+                        <ul>
+                            <li>Свои бандлы, либы и наработки</li>
+                            <li>Сертифицированные спецы</li>
+                            <li>Тестирование</li>
+                            <li>Послепроектная работа</li>
+                            <li>Свои бандлы, либы и наработки</li>
+                            <li>Сертифицированные спецы</li>
+                            <li>Тестирование</li>
+                            <li>Послепроектная работа</li>
+                        </ul>
+                        <a class="btn" href="#">Перейти на сайт</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Блок клиенты -->
+    <div class="clients clear">
+        <!-- Псевдоэлементы -->
+        <div class="before-left-block"><i></i></div>
+        <div class="before-right-block"><i></i></div>
+        <div class="container">
+            <h2>Клиенты <img src="/img/clients.png" alt="" /></h2>
+
+            <div class="review-client">
+                <div class="review scrollbar">
+                    <p>
+                        Команда программистов Evercode легко сработалась и сдружилась с нашей командой программистов мобильных приложений. Высокий уровень и качество коммуникаций между коллективами разработчиков упростил работу по контролю ведения крупного высоконагруженного сервиса, за что наш менеджмент выражает благодарность всей команде Evercode.
+                    </p>
+                </div>
+                <div class="client">
+                    <div class="face">
+                        <img src="/img/face1.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <p class="name">Юрий Лобынцев</p>
+                        <p class="prof">CEO & Founder at Oumobile</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-client">
+                <div class="review" data-height='close' data-start-height=''>
+                    <div class="review-text">
+                        <p>
+                          Не будет преувеличением сказать, что таких заботливых и отзывчивых разработчиков я еще не встречала. Готовность помочь, объяснить, что-то обновить /поправить / договориться — в разработке это, пожалуй, еще важнее, чем в любом другом рабочем процессе, ведь нам как клиентам не приходится вникать в то, что происходит за пределами наших знаний. Мы чувствуем себя очень комфортно, не испытывая страх неизвестности — очень хороший показатель качества: можно просто попросить что-то сделать и не беспокоиться об этом, потому что знаем, что все будет хорошо. Тот факт, что мне, девушке, легко и приятно работать с Evercode Lab тоже говорит о многом. Спасибо, ребята, что вы есть и что вы с нами
+                       </p>
+                    </div>
+                    <div class="review-open"><i></i></div>
+                </div>
+                <div class="client">
+                    <div class="face">
+                        <img src="/img/face2.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <p class="name">Ольга Нарижная</p>
+                        <p class="prof">Postcardwithlove.ru</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="link">
+                <a href="#" class="btn">Хочу стать клиентом</a>
+                <a href="#" class="refresh"> <img src="/img/refresh.png" alt=""></a>
+            </div>
+            <!-- Блок с партнерами -->
+            <div class="partners">
+                <a href="http://www.reksoft.com/ru/" target="_blank"><img src="/img/reksoft.png" alt=""></a>
+                <a href="http://www.kelnik.ru/" target="_blank"><img src="/img/kelnik.png" alt=""></a>
+                <a href="http://www.ifmo.ru/" target="_blank"><img src="/img/itmo.png" alt=""></a>
+                <a href="http://redfor.ru/" target="_blank"><img src="/img/redfor.png" alt=""></a>
+                <a href="#" target="_blank"><img src="/img/univer.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Псевдоэлементы -->
+    <div class="after-left-block"><i></i></div>
+    <div class="after-right-block"><i></i></div>
+
+    <!-- Блок о нас  -->
+    <div class="about">
+        <div class="container clear">
+            <div class="team">
+                <h2>О нас</h2>
+                <p>
+                    Основное направление нашей деятельности — это программирование, у нас в этом есть большой опыт. Мы этакая лаборатория кода.
+                </p>
+                <p>
+                    Мы не занимаемся дизайном макетов для сайтов. Но мы можем сделать вам красивый дизайн API вашего сервиса или приложения.
+                </p>
+                <p>
+                    Но если вам все-таки нужны дизайнеры, которые умеют рисовать, то мы знаем много замечательных квалифицированных людей, которые с радостью вам помогут.
+                </p>
+                <div class="gallery">
+                    <div class="item">
+                        <img src="/img/roma.jpeg" alt="Рома Лапин">
+                        <p>Рома Лапин</p>
+                        <div class="social">
+                            <a href="#" class="mail"></a>
+                            <a href="#" class="github"></a>
+                            <a href="#" class="twitter"></a>
+                        </div>
+                    </div>
+                    <div class="item mr">
+                        <img src="/img/petr.jpeg" alt="Петр Сергеев">
+                        <p>Петр Сергеев</p>
+                        <div class="social">
+                            <a href="#" class="mail"></a>
+                            <a href="#" class="github"></a>
+                            <a href="#" class="twitter"></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/img/igor.jpeg" alt="Игорь Адров">
+                        <p>Игорь Адров</p>
+                        <div class="social">
+                            <a href="#" class="mail"></a>
+                            <a href="#" class="github"></a>
+                            <a href="#" class="twitter"></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/img/sergey.jpeg" alt="Сергей Лунев">
+                        <p>Сергей Лунев</p>
+                        <div class="social">
+                            <a href="#" class="mail"></a>
+                            <a href="#" class="github"></a>
+                            <a href="#" class="twitter"></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/img/ilya.jpeg" alt="Илья Гордиенко">
+                        <p>Илья Гордиенко</p>
+                        <div class="social">
+                            <a href="#" target="_blank" class="mail"></a>
+                            <a href="#" target="_blank" class="github"></a>
+                            <a href="#" target="_blank" class="twitter"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mission">
+                <h3>Evercodelab<br/> <span>миссия</span></h3>
+                <p>Мы работаем для того, чтобы воплощать идеи наших клиентов в качественные продукты и сервисы.</p>
+                <p>
+                    Изучаем и используем современные технологии, чтобы наши продукты отвечали высоким требованиям качества. Стремимся узнавать новое и делиться этими знаниями. Совершенствуем процессы, чтобы делать нашу работу эффективнее.<br/> Мы вносим свой вклад в создание современной культуры разработки и формирование профессиональной среды. Нам действительно не все равно.
+                </p>
+                <p>
+                    Мы создаем свои инструменты, продукты и сервисы, которые решают реальные проблемы и делают жизнь людей проще, удобнее, понятнее, лучше и приятнее.
+                </p>
+                <p>Для нас это — творчество, выражение себя и в то же время образ жизни.</p>
+                <a href="#" class="icon"><img src="/img/icon-lines.png" alt=""></a>
+            </div>
+        </div>
+    </div>
 
 
-</head>
+    <!-- Псевдоэлементы -->
+    <div class="before-left-block"><i></i></div>
+    <div class="before-right-block"><i></i></div>
 
-<body>
+    <!-- Блог -->
+    <div class="blog blog-grey">
+        <h2 class="top-h2">Блог</h2>
+        <div class="tabs container clear">
+            <div class="aside">
+                <ul>
+                    <li data-content="tab1" class="active"><a href="#">Конференция «Как мы<br/> делаем такие сайты»</a></li>
+                    <li data-content="tab2"><a href="#">Последний оплот<br/> человечества или скрипты<br/> для Hipchat</a></li>
+                    <li data-content="tab3"><a href="#">Тесты с Rutester</a></li>
+                    <li data-content="tab4"><a href="#">Расскажем о Symfony2 на<br/> DrupalCamp СНГ</a></li>
+                    <li data-content="tab5"><a href="#">Отправляйте открытки<br/> с любовью</a></li>
+                </ul>
+            </div>
+            <div class="all-tabs">
+                <div class="tab1">
+                    <a href="#"><h3>Конференция «Как мы делаем такие сайты»</h3></a>
+                    <div class="date">OCT 17TH, 2013</div>
+                    <p>
+                        Мы в Evercode Lab любим участвовать в разного рода конференция по интересным нам направлениям и даже проводим свои мероприятия. При этом очень стараемся поддерживать хорошие начинания и сотрудничать с организаторами. Так вышло и с <a href="#">конференцией от CMSMagazine</a>.
+                    </p>
+                    <img src="http://blog.evercodelab.com/assets/images/such_sites_cmsmagazine.jpg" alt="">
+                    <p>
+                        Конференция «Как мы делаем такие сайты» – это четыре потока докладов об актуальных проблемах создания и развития серьёзных интернет-проектов и мобильных приложений. Хотите узнать про особенности создания больших интернет-магазинов, государственных и банковских сайтов? Приходите на конференцию или смотрите онлайн!
+                    </p>
+                    <a class="btn" href="#">Читать далее</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Псевдоэлементы -->
+    <div class="after-left-block"><i></i></div>
+    <div class="after-right-block"><i></i></div>
+
+    <!-- Форма для заполнения -->
+    <div class="feedback container">
+            <form action="">
+            <h2>Задайте вопрос</h2>
+                <div>
+                    <label for="name">Представьтесь</label>
+                    <input type="text" id="name">
+                </div>
+                <div>
+                    <label for="mail">Ваш email на который мы ответим</label>
+                    <input type="text" id="mail">
+                </div>
+                <div>
+                    <label for="quest">Вопрос</label>
+                    <textarea name="" id="quest" cols="30" rows="10"></textarea>
+                </div>
+                <button class="btn" type="submit">Отправить</button>
+            </form>
+        <div class="questions">
+            <h2>Что еще?</h2>
+            <ul>
+                <li><a href="#">Обучение</a></li>
+                <li><a href="#">Evercode Talks</a></li>
+                <li><a href="#">Как мы работаем</a></li>
+                <li><a href="#">Выступления на конференциях</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Псевдоэлемент -->
+    <div class="before-left-block"><i></i></div>
+    <div class="before-right-block"><i></i></div>
+
+
+<!-- <body>
 <div class="container">
 <div class="b-shattered"></div>
 <div class="b-head">
@@ -285,50 +558,5 @@
     </div>
 </div>
 {{ render_esi(controller("AppDefaultBundle:Default:blog", {'_locale': app.request.get('_locale')} )) }}
-</div>
-
-<script type="text/javascript">
-
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-25737310-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-</script>
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-(function (d, w, c) {
-    (w[c] = w[c] || []).push(function() {
-        try {
-            w.yaCounter9872860 = new Ya.Metrika({id:9872860,
-                    webvisor:true,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true,
-                    trackHash:true});
-        } catch(e) { }
-    });
-
-    var n = d.getElementsByTagName("script")[0],
-        s = d.createElement("script"),
-        f = function () { n.parentNode.insertBefore(s, n); };
-    s.type = "text/javascript";
-    s.async = true;
-    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-
-    if (w.opera == "[object Opera]") {
-        d.addEventListener("DOMContentLoaded", f, false);
-    } else { f(); }
-})(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript><div><img src="//mc.yandex.ru/watch/9872860" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-</body>
-</html>
+</div> -->
+{% endblock %}

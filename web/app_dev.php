@@ -20,8 +20,8 @@ Debug::enable();
 
 require_once __DIR__.'/../app/AppKernel.php';
 
-$loader = new ApcClassLoader('evercode', $loader);
-$loader->register(true);
+// $loader = new ApcClassLoader('evercode', $loader);
+// $loader->register(true);
 
 $kernel = new AppKernel('dev', true);
 $kernel->loadClassCache();
