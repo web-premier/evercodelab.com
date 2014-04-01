@@ -86,7 +86,7 @@ a {
   text-decoration: none;
 }
 a, p, li {  font-family: Arial, sans-serif; }
-h2, h3, h4 {
+h1, h2, h3, h4 {
   font-family: HelveticaNeueBold, Helvetica, Arial, sans-serif;
   color: #383c41;
 }
@@ -185,9 +185,10 @@ p {
 /*-------------Верхняя навигация------------*/
 header {
   overflow: hidden;
-  min-height: 160px;
-  padding: 40px 10px 0px 10px;
+  min-height: 120px; /*160px*/
+  padding: 30px 10px 0px 10px;
 }
+header h1{ font-size: 32px; }
 header .logo, header .logo a {  float: left;}
 header .logo .name {
   color: #383c41;

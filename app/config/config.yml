@@ -119,7 +119,7 @@ avalanche_imagine:
     filters:
         team_photo_thumb:
             type:    thumbnail
-            options: { size: [180, 180], mode: outbound }
+            options: { size: [115, 115], mode: outbound }
 
 vich_uploader:
     db_driver: orm
