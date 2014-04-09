@@ -49,4 +49,41 @@ class DefaultController extends Controller
         return $response;
     }
 
+    /**
+     * @Route("/symfony/{_locale}", name="symfony", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
+     * @Template()
+     */
+    public function symfonyAction(Request $request)
+    {
+        return;
+    }
+
+    /**
+     * @Route("/ruby-on-rails/{_locale}", name="ror", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
+     * @Template()
+     */
+    public function rorAction(Request $request)
+    {
+        return;
+    }
+
+
+    /**
+     * @Route("/ios/{_locale}", name="ios", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
+     * @Template()
+     */
+    public function iosAction(Request $request)
+    {
+        return;
+    }
+
+    /**
+     * @Route("/portfolio/{_locale}", name="portfolio", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
+     * @Template()
+     */
+    public function portfolioAction(Request $request)
+    {
+        return;
+    }
+
 }
