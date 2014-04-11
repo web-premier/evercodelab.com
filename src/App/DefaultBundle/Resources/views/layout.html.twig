@@ -31,15 +31,8 @@
             <a href="{{ path('index') }}" class="name"><h1>Evercode Lab</h1></a>
         </div>
         <div class="menu">
-            <nav>
-                <a href="{{ path('index') }}" class="active">Главная</a>
-                <a href="{{ path('portfolio') }}">Портфолио</a>
-                <a href="//blog.evercodelab.com">Блог</a>
-            </nav>
-            <div class="language">
-                <a href="#" class="active">ru</a>
-                <a href="#">en</a>
-            </div>
+            {{ knp_menu_render('AppDefaultBundle:Builder:mainMenu', {template: 'AppDefaultBundle::main_menu.html.twig', currentClass: 'active'}) }}
+            {{ knp_menu_render('AppDefaultBundle:Builder:languageMenu', {template: 'AppDefaultBundle::language_menu.html.twig', currentClass: 'active'}) }}
         </div>
     </header>
 
