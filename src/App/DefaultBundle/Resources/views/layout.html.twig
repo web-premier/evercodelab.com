@@ -9,6 +9,7 @@
     <title>{{ 'site.title'|trans }}</title>
     {% stylesheets
         'css/style.css'
+        'css/custom.css'
         output='compiled/compiled.css'
         filter='cssrewrite'
     %}
@@ -18,16 +19,16 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
 
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />
 </head>
 <body>
 <div class="wrapper">
     <!-- Верхняя навигация -->
     <header class="container">
         <div class="logo">
-            <a href="/"><img src="/img/logo.png" alt="EvercodeLab"></a>
-            <a href="/" class="name"><h1>Evercode Lab</h1></a>
+            <a href="{{ path('index') }}"><img src="/img/logo.png" alt="EvercodeLab"></a>
+            <a href="{{ path('index') }}" class="name"><h1>Evercode Lab</h1></a>
         </div>
         <div class="menu">
             <nav>

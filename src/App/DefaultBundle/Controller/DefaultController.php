@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
+use App\DefaultBundle\Form\Type\FeedbackType;
 
 class DefaultController extends Controller
 {
@@ -20,16 +21,24 @@ class DefaultController extends Controller
         $clients = $em->getRepository('AppDefaultBundle:Client')->findAll();
         $projects = $em->getRepository('AppDefaultBundle:Portfolio')->findAll();
         $team = $em->getRepository('AppDefaultBundle:Team')->findAll();
+        $feedbackForm = $this->createForm(new FeedbackType());
 
-        $response = $this->render('AppDefaultBundle:Default:index.html.twig', [
-                'clients' => $clients,
-                'projects' => $projects,
-                'team' => $team,
-            ]
-        );
-        $response->setSharedMaxAge(7*24*60*60);
+        $feedbackForm->bind($request);
+        if($feedbackForm->isValid()) {
+            $this->get('feedback.manager')->send($feedbackForm->getData());
+            $this->get('session')->getFlashBag()->add(
+                'notice',
+                'Ваше сообщение отправлено!'
+            );
+            return $this->redirect($this->generateUrl('index'));
+        }
 
-        return $response;
+        return [
+            'clients' => $clients,
+            'projects' => $projects,
+            'team' => $team,
+            'feedbackForm' => $feedbackForm->createView(),
+        ];
     }
 
     /**

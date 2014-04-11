@@ -9,6 +9,9 @@ services:
     evercode.blog:
         class: App\DefaultBundle\Service\BlogService
         arguments: [ @fkr_simple_pie.rss, %evercode_blog_feed% ]
+    feedback.manager:
+        class: App\DefaultBundle\Service\FeedbackManager
+        arguments: [ @mailer, %feedback_mail%, @templating ]
 
 ## Admin resources
     app.user.admin.user:

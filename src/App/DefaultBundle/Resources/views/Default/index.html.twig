@@ -169,20 +169,26 @@
 
     <!-- Форма для заполнения -->
     <div class="feedback container">
-            <form action="">
+            <form action="{{ path('index') }}" method="post">
             <h2>Задайте вопрос</h2>
+            {% for flashMessage in app.session.flashbag.get('notice') %}
+                <div class="flash-notice">
+                    {{ flashMessage }}
+                </div>
+            {% endfor %}
                 <div>
                     <label for="name">Представьтесь</label>
-                    <input type="text" id="name">
+                    {{ form_widget(feedbackForm.name) }}
                 </div>
                 <div>
                     <label for="mail">Ваш email на который мы ответим</label>
-                    <input type="text" id="mail">
+                    {{ form_widget(feedbackForm.contact) }}
                 </div>
                 <div>
                     <label for="quest">Вопрос</label>
-                    <textarea name="" id="quest" cols="30" rows="10"></textarea>
+                    {{ form_widget(feedbackForm.content) }}
                 </div>
+                {{ form_rest(feedbackForm) }}
                 <button class="btn" type="submit">Отправить</button>
             </form>
         <div class="questions">
