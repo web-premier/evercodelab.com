@@ -48,7 +48,8 @@
 
         "vich/uploader-bundle": "dev-master",
         "knplabs/gaufrette": "0.2.*@dev",
-        "knplabs/knp-gaufrette-bundle": "0.2.*@dev"
+        "knplabs/knp-gaufrette-bundle": "0.2.*@dev",
+        "ornicar/apc-bundle": "*"
     },
     "repositories": [
         {
