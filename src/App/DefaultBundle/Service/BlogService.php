@@ -24,7 +24,7 @@ class BlogService
         foreach ($posts as $post) {
             $latestPosts[] = [
                 'title' => $post->get_title(),
-                'link' => $post->get_permalink(),
+                'link' => $post->get_id(),
                 'text' => $post->get_description(),
                 'date' => $post->get_date('j F, Y'),
             ];
@@ -32,7 +32,7 @@ class BlogService
 
         // Here we take only 3 paragraphs to show on site
         if (! empty($latestPosts)) {
-            preg_match_all('/(<p>.*?<\/p>)/im', $latestPosts[0]['text'], $matches);
+            preg_match_all('/(<p>[\s\S]*?<\/p>)/im', $latestPosts[0]['text'], $matches);
             $latestPosts[0]['text'] = implode('', array_slice($matches[1], 0, 3));
         }
 

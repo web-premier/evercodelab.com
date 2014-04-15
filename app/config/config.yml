@@ -132,4 +132,4 @@ vich_uploader:
             upload_destination: %kernel.root_dir%/../web/uploads/images/team
 
 parameters:
-    evercode_blog_feed: http://blog.evercodelab.com/atom.xml
+    evercode_blog_feed: http://blog.evercodelab.com/feed.xml
