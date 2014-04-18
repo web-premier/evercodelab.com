@@ -43,6 +43,7 @@ class AppKernel extends Kernel
             new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
             new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
+            new Ornicar\ApcBundle\OrnicarApcBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

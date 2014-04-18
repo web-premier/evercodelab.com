@@ -44,3 +44,15 @@ set :hipchat_room_name, "Github"
 set :hipchat_announce, false # notify users
 set :hipchat_color, 'purple' #finished deployment message color
 set :hipchat_failed_color, 'red' #cancelled deployment message color
+
+namespace :symfony do
+  desc "Clear apc cache"
+  task :clear_apc do
+    capifony_pretty_print "--> Clear apc cache"
+    run "#{try_sudo} sh -c 'cd #{current_path} && #{php_bin} #{symfony_console} apc:clear --env=#{symfony_env_prod}'"
+    capifony_puts_ok
+  end
+end
+
+after "deploy", "symfony:clear_apc"
+after "deploy:rollback:cleanup", "symfony:clear_apc"
