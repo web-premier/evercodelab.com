@@ -133,3 +133,6 @@ vich_uploader:
 
 parameters:
     evercode_blog_feed: http://blog.evercodelab.com/feed.xml
+
+ornicar_apc:
+    web_dir: %kernel.root_dir%/../web
