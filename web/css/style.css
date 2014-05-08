@@ -810,8 +810,8 @@ footer .design a:hover {  color: #553770; }
 .square{ margin-top: 30px!important; } 
 
 /* ruby.html и ruby-all.html  */
-.ruby-case {  padding: 20px 0px 15px; }
-.ruby-case h2, .ruby-case span{
+.ruby-case, .symfony-case, .ios-case {  padding: 20px 0px 15px; }
+.ruby-case h2, .ruby-case span, .symfony-case h2, .symfony-case span, .ios-case h2, .ios-case span{
   display: -moz-inline-stack;
   display: inline-block;
   *display: inline;
@@ -822,6 +822,18 @@ footer .design a:hover {  color: #553770; }
   height: 72px;
   margin-right: 20px;
   background: url(../img/icon-ruby.png) no-repeat;
+}
+.symfony-case span{
+    width: 77px;
+    height: 77px;
+    margin-right: 20px;
+    background: url(../img/icon-symfony.png) no-repeat;
+}
+.ios-case span{
+    width: 77px;
+    height: 77px;
+    margin-right: 20px;
+    background: url(../img/icon-ios.png) no-repeat;
 }
 
 /*  Портфолио  */
