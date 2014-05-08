@@ -30,7 +30,7 @@ class DefaultController extends Controller
                 'notice',
                 'Ваше сообщение отправлено!'
             );
-            return $this->redirect($this->generateUrl('index'));
+            return $this->redirect($this->generateUrl('index') . '#feedback');
         }
 
         return [

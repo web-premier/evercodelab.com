@@ -182,7 +182,7 @@
     <div class="after-right-block"><i></i></div>
 
     <!-- Форма для заполнения -->
-    <div class="feedback container">
+    <div class="feedback container" id="feedback">
             <form action="{{ path('index') }}" method="post">
             <h2>Задайте вопрос</h2>
             {% for flashMessage in app.session.flashbag.get('notice') %}
