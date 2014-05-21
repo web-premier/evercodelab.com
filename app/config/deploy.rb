@@ -54,5 +54,4 @@ namespace :symfony do
   end
 end
 
-after "deploy", "symfony:clear_apc"
-after "deploy:rollback:cleanup", "symfony:clear_apc"
+after "deploy:create_symlink", "symfony:clear_apc"
