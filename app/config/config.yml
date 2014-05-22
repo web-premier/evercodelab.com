@@ -24,7 +24,7 @@ twig:
 
 # Assetic Configuration
 assetic:
-    bundles: 
+    bundles:
         - AppDefaultBundle
     debug:          %kernel.debug%
     use_controller: false
@@ -119,7 +119,7 @@ avalanche_imagine:
     filters:
         team_photo_thumb:
             type:    thumbnail
-            options: { size: [180, 180], mode: outbound }
+            options: { size: [115, 115], mode: outbound }
 
 vich_uploader:
     db_driver: orm
@@ -135,4 +135,5 @@ parameters:
     evercode_blog_feed: http://blog.evercodelab.com/feed.xml
 
 ornicar_apc:
+    host: http://v3.evercodelab.com
     web_dir: %kernel.root_dir%/../web

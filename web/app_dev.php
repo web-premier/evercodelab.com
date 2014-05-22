@@ -4,6 +4,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\ClassLoader\ApcClassLoader;
 use Symfony\Component\Debug\Debug;
 
+umask(0000);
+
 if (isset($_SERVER['HTTP_CLIENT_IP'])
     || isset($_SERVER['HTTP_X_FORWARDED_FOR'])
     || !in_array(@$_SERVER['REMOTE_ADDR'], array(
@@ -20,8 +22,8 @@ Debug::enable();
 
 require_once __DIR__.'/../app/AppKernel.php';
 
-$loader = new ApcClassLoader('evercode', $loader);
-$loader->register(true);
+// $loader = new ApcClassLoader('evercode', $loader);
+// $loader->register(true);
 
 $kernel = new AppKernel('dev', true);
 $kernel->loadClassCache();

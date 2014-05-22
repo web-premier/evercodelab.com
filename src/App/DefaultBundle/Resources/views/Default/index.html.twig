@@ -1,334 +1,275 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name='yandex-verification' content='609f107a156157ec' />
-    <meta name="google-site-verification" content="IOomL4TBfTjjsuUqlcEkKH_YWCniNPOKNw0BpIW1WvI" />
-    <meta name="KEYWORDS" content="{{ 'site.keywords'|trans }}" />
-    <meta name="DESCRIPTION" content="{{ 'site.description'|trans }}" />
-    <title>{{ 'site.title'|trans }}</title>
-    {% stylesheets
-        'css/main.css'
-        'css/kw/makasaar.css'
-        output='compiled/compiled.css'
-        filter='cssrewrite'
-    %}
-    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
-    {% endstylesheets %}
+{% extends 'AppDefaultBundle::layout.html.twig' %}
 
-    <!--[if IE 8]>
-    <link rel='stylesheet' type='text/css' href="/css/ie8.css"/>
-    <![endif]-->
-    <!--[if IE 9]>
-    <link rel='stylesheet' type='text/css' href="/css/ie9.css"/>
-    <![endif]-->
-
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    {% javascripts
-        'js/jquery.js'
-        'js/main.js'
-        output='compiled/compiled.js'
-    %}
-    <script type="text/javascript" src="{{ asset_url }}"></script>
-    {% endjavascripts %}
-
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-
-
-</head>
-
-<body>
-<div class="container">
-<div class="b-shattered"></div>
-<div class="b-head">
-    <header>
-        <div class="topLine"></div>
-        <div class="wrapper">
-            <div class="topLine topLineMove" id="topLineMove"></div>
-            <ul class="social">
-                <li><a href="https://github.com/EvercodeLab"><i class=""></i></a></li>
-                <li><a href="http://twitter.com/evercodelab"><i class="twitter"></i></a></li>
-                <li><a href="https://www.facebook.com/pages/Evercode-Lab/128121020625049"><i class="fb"></i></a></li>
-                <li><a href="http://feeds.feedburner.com/EvercodeBlog"><i class="rss"></i></a></li>
-            </ul>
-            <menu>
-                <li><a href="#">{{ 'menu.welcome'|trans }}</a></li>
-                <li><a href="#aboutus">{{ 'menu.aboutus'|trans }}</a></li>
-                <li><a href="#services">{{ 'menu.services'|trans }}</a></li>
-                <li><a href="#clients">{{ 'menu.clients'|trans }}</a></li>
-                <li><a href="#portfolio">{{ 'menu.portfolio'|trans }}</a></li>
-                <li><a href="#contacts">{{ 'menu.contacts'|trans }}</a></li>
-                <li><a href="#blog">{{ 'menu.blog'|trans }}</a></li>
-            </menu>
+{% block content %}
+    <!-- Кейс -->
+    <div class="case">
+        <div class="container">
+            <a href="{{ path('symfony') }}" class="item">
+                <img src="/img/icon-symfony.png" alt="">
+                Разработка на <br>Symfony2
+            </a>
+            <a href="{{ path('ror') }}" class="item">
+                <img src="/img/icon-ruby.png" alt="">
+                Разработка на <br>Ruby on Rails
+            </a>
+            <a href="#" class="item">
+                <img src="/img/icon-ios.png" alt="">
+                Разработка <br>iOS приложений
+            </a>
         </div>
-    </header>
-    <div class="wrapper">
-        {% if app.request.get('_locale') == 'en' %}
-        <a href="{{ path('index', {'_locale': 'ru'}) }}" class="eng">Русский</a>
-        {% else %}
-        <a href="{{ path('index', {'_locale': 'en'}) }}" class="eng">English</a>
-        {% endif %}
     </div>
-</div>
-<div class="b-about" id="aboutus">
-    <div class="wrapper">
-        <div class="cols">
-            <div class="l-col">
-                <img src="{{ asset("i/logo.png") }}" alt="Green Coding Godzilla Bird" />
-            </div>
-            <div class="r-col">
-                <h1>{{ 'aboutus.header'|trans|raw }}</h1>
-                <p>{{ 'aboutus.first'|trans|raw }}</p>
-                <p>{{ 'aboutus.second'|trans }}</p>
-                <p>{{ 'aboutus.third'|trans }}</p>
-            </div>
-        </div>
-        <div class="cols">
-            <div class="l-col">
-                <address class="phone">+7 (921) 426-34-22</address>
-            </div>
-            <div class="r-col">
-                <div class="b-switcher-block">
-                    <ul class="b-temi-list" id='temi-list'>
-                        <li class="item first" id="about-team-switch"><span>{{ 'team'|trans }}</span></li>
-                        <li class="item second" id="about-mission-switch"><span>{{ 'mission'|trans }}</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-                <div class="b-team-block hidden" id="team-block">
-            <ul class="b-team-list">
-                {% for member in team %}
-                <li class="person">
-                    <div class="photo-box">
-                        <img src="{{ vich_uploader_asset(member, 'file') | apply_filter('team_photo_thumb') }}" alt="{{ member.name }}"/>
-                    </div>
-                    <div class="name">{{ member.name }}</div>
-                    <div class="b-social">
-                        <ul class="social-list">
-                            <li class="item"><a href="mailto:{{ member.email }}"><img class="mail" src="{{ asset('i/empty.png') }}"/></a></li>
-                            <li class="item"><a href="https://twitter.com/{{ member.twitter }}"><img class="twitter" src="{{ asset('i/empty.png') }}"/></a></li>
-                            <li class="item"><a href="https://github.com/{{ member.github }}"><img class="github" src="{{ asset('i/empty.png') }}"/></a></li>
+
+    <!-- Псевдоэлементы -->
+    <div class="after-left-block"><i></i></div>
+    <div class="after-right-block"><i></i></div>
+
+    <!-- Slider -->
+    <div class="slider-block" id="slides">
+        <div class="slides-wrapper" id="slides-wrapper">
+            <div class="slides_container">
+                <div class="item" data-bg-image="img/bg-slider1.jpg">
+                    <img src="/img/best4car.jpg" alt="">
+                    <div class="text">
+                        <h3>Best4car.ru</h3>
+                        <ul>
+                            <li>Разработка на Symfony2</li>
+                            <li>Работа с унаследованным кодом</li>
+                            <li>Оптимизация</li>
+                            <li>Рефакторинг</li>
+                            <li>Консалтинг</li>
+                            <li>Поддержка</li>
                         </ul>
+                        <a class="btn" href="http://best4car.ru">Перейти на сайт</a>
                     </div>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="b-mission-block hidden" id="mission-block">
-            <div class="cols">
-                <div class="l-col"></div>
-                <div class="r-col">
-                    <p>Мы работаем для того, чтобы воплощать идеи наших клиентов в качественные продукты и сервисы.</p>
-
-                    <p>Изучаем и используем современные технологии, чтобы наши продукты отвечали высоким
-                       требованиям качества. Стремимся узнавать новое и делиться этими знаниями. Совершенствуем
-                       процессы, чтобы делать нашу работу эффективнее.</p>
-
-                    <p>Мы вносим свой вклад в создание современной культуры разработки и формирование
-                       профессиональной среды. Нам действительно не все равно.</p>
-
-                    <p>Мы создаем свои инструменты, продукты и сервисы, которые решают реальные проблемы
-                       и делают жизнь людей проще, удобнее, понятнее, лучше и приятнее.</p>
-
-                    <p>Для нас это — творчество, выражение себя и в то же время образ жизни.</p>
+                </div>
+                <div class="item" data-bg-image="/img/bg-slider1.jpg">
+                    <img src="/img/fight.jpg" alt="">
+                    <div class="text">
+                        <h3>Игра «Морской бой»</h3>
+                        <ul>
+                            <li>Разработка на Ruby on Rails</li>
+                            <li>Оптимизация под мобильные устройства</li>
+                            <li>Консалтинг</li>
+                            <li>Поддержка</li>
+                            <li>Сопровождение игр</li>
+                        </ul>
+                        <a class="btn" href="http://bqbs.ru">Перейти на сайт</a>
+                    </div>
+                </div>
+                <div class="item" data-bg-image="/img/bg-slider1.jpg">
+                    <img src="/img/cards.jpg" alt="">
+                    <div class="text">
+                        <h3>Postcard With Love</h3>
+                        <ul>
+                            <li>Разработка на Ruby on Rails</li>
+                            <li>Фильтры и подготовка изображений к печати</li>
+                            <li>Поддержка</li>
+                            <li>Ми-ми-ми</li>
+                        </ul>
+                        <a class="btn" href="http://postcardwithlove.ru/">Перейти на сайт</a>
+                    </div>
+                </div>
+                <div class="item" data-bg-image="/img/bg-slider1.jpg">
+                    <img src="/img/wakeawards.png" alt="">
+                    <div class="text">
+                        <h3>Russian Wake Awards 2013</h3>
+                        <ul>
+                            <li>Первая Всероссийская Вейк Премия 2013</li>
+                            <li>Разработка на Symfony2</li>
+                            <li>Простая CMS на базе SonataAdminBundle</li>
+                            <li>Система голосования</li>
+                            <li>Разработка в кратчайшие сроки</li>
+                        </ul>
+                        <a class="btn" href="http://wakeawards.ru/">Перейти на сайт</a>
+                    </div>
+                </div>
+                <div class="item" data-bg-image="/img/bg-slider1.jpg">
+                    <img src="/img/mf.jpg" alt="">
+                    <div class="text">
+                        <h3>Manaflask</h3>
+                        <ul>
+                            <li>Разработка на Ruby on Rails</li>
+                            <li>Международная команда (Германия, Финляндия)</li>
+                            <li>Поддержка</li>
+                        </ul>
+                        <a class="btn" href="http://manaflask.com/">Перейти на сайт</a>
+                    </div>
+                </div>
+                <div class="item" data-bg-image="/img/bg-slider1.jpg">
+                    <img src="/img/popt.jpg" alt="">
+                    <div class="text">
+                        <h3>Popt</h3>
+                        <ul>
+                            <li>Разработка на Symfony2</li>
+                            <li>Рефакторинг и применеие best practices</li>
+                            <li>Разработка API для мобильных приложений</li>
+                            <li>Разработка веб-части сервиса</li>
+                            <li>Международная команда (США, Украина)</li>
+                        </ul>
+                        <a class="btn" href="http://poptag.it/">Перейти на сайт</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="b-services" id="services">
-    <div class="wrapper">
-        <div class="cols">
-            <div class="l-col">
-                <img src="{{ asset("i/guys.png") }}" alt="Два непонятных тела" />
+
+    <!-- Блок клиенты -->
+    <div class="clients clear">
+        <!-- Псевдоэлементы -->
+        <div class="before-left-block"><i></i></div>
+        <div class="before-right-block"><i></i></div>
+        <div class="container">
+            <h2>Клиенты <img src="/img/clients.png" alt="" /></h2>
+
+            <div class="review-client">
+                <div class="review scrollbar">
+                    <p>
+                        Команда программистов Evercode легко сработалась и сдружилась с нашей командой программистов мобильных приложений. Высокий уровень и качество коммуникаций между коллективами разработчиков упростил работу по контролю ведения крупного высоконагруженного сервиса, за что наш менеджмент выражает благодарность всей команде Evercode.
+                    </p>
+                </div>
+                <div class="client">
+                    <div class="face">
+                        <img src="/img/face1.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <p class="name">Юрий Лобынцев</p>
+                        <p class="prof">CEO & Founder at Oumobile</p>
+                    </div>
+                </div>
             </div>
-            <div class="r-col">
-                <h2>{{ 'services.header'|trans }}</h2>
-                <div class="b-service-block cols">
-                    <div class="l-col">
-                        <div class="b-service-list b-development">
-                            <div class="b-service-head">
-                                {{ 'services.development.title'|trans }}
-                            </div>
-                            <ul class="b-service-list">
-                                <li>{{ 'services.development.services'|trans }}</li>
-                                <li>{{ 'services.development.apps'|trans }}</li>
-                                <li>{{ 'services.development.api'|trans }}</li>
-                                <li>{{ 'services.development.proto'|trans }}</li>
-                                <li>{{ 'services.development.support'|trans }}</li>
-                            </ul>
-                        </div>
-                        <div class="b-service-list b-consulting">
-                            <div class="b-service-head">
-                                {{ 'services.consulting.title'|trans }}
-                            </div>
-                            <ul class="b-service-list">
-                                <li>{{ 'services.consulting.designing'|trans }}</li>
-                                <li>{{ 'services.consulting.analysis'|trans }}</li>
-                                <li>{{ 'services.consulting.process'|trans }}</li>
-                                <li>{{ 'services.consulting.management'|trans }}</li>
-                                <li>{{ 'services.consulting.structuring'|trans }}</li>
-                            </ul>
-                        </div>
+
+            <div class="review-client">
+                <div class="review" data-height='close' data-start-height=''>
+                    <div class="review-text">
+                        <p>Не будет преувеличением сказать, что таких заботливых и отзывчивых разработчиков я еще не встречала :)</p>
+                        <p>Готовность помочь, объяснить, что-то обновить /поправить / договориться — в разработке это, пожалуй, еще важнее, чем в любом другом рабочем процессе, ведь нам как клиентам не приходится вникать в то, что происходит за пределами наших знаний. Мы чувствуем себя очень комфортно, не испытывая страх неизвестности — очень хороший показатель качества: можно просто попросить что-то сделать и не беспокоиться об этом, потому что знаем, что все будет хорошо.</p>
+                        <p>Тот факт, что мне, девушке, легко и приятно работать с Evercode Lab тоже говорит о многом. Спасибо, ребята, что вы есть и что вы с нами :)</p>
                     </div>
-                    <div class="l-col">
-                        <div class="b-service-list b-technologies">
-                            <div class="b-service-head">
-                                {{ 'services.technology.title'|trans }}
-                            </div>
-                            <ul class="b-service-list">
-                                <li><b>{{ 'services.technology.vcs'|trans }}:</b> Git, Mercurial</li>
-                                <li><b>{{ 'services.technology.langs'|trans }}:</b> PHP, Ruby, Python</li>
-                                <li><b>{{ 'services.technology.db'|trans }}:</b> MySQL/PostgreSQL, Mongo DB</li>
-                                <li>
-                                    <b>{{ 'services.technology.frameworks'|trans }}:</b>
-                                    PHP: Symfony2, Silex, Zend Framework, Yii<br />
-                                    Ruby: Ruby on Rails<br />
-                                    Python: Django, Google App Engine
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="review-open"><i></i></div>
+                </div>
+                <div class="client">
+                    <div class="face">
+                        <img src="/img/face2.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <p class="name">Ольга Нарижная</p>
+                        <p class="prof">Postcardwithlove.ru</p>
                     </div>
                 </div>
-                <ul class="b-switcher"></ul>
+            </div>
 
-                <div class="b-masterclass-title">
-                    <a class="title" href="{{ path('php_master_class') }}">{{ 'master_class'|trans }}</a>
-                </div>
-
+<!--             <div class="link">
+                <a href="#" class="btn">Хочу стать клиентом</a>
+                <a href="#" class="refresh"> <img src="/img/refresh.png" alt=""></a>
+            </div> -->
+            <!-- Блок с партнерами -->
+            <div class="partners">
+                <a href="http://www.reksoft.com/ru/" target="_blank"><img src="/img/reksoft.png" alt=""></a>
+                <a href="http://www.kelnik.ru/" target="_blank"><img src="/img/kelnik.png" alt=""></a>
+                <a href="http://www.ifmo.ru/" target="_blank"><img src="/img/itmo.png" alt=""></a>
+                <a href="http://redfor.ru/" target="_blank"><img src="/img/redfor.png" alt=""></a>
+                <a href="http://www.eu.spb.ru/" target="_blank"><img src="/img/univer.png" alt=""></a>
             </div>
         </div>
-
     </div>
-</div>
-<div class="b-clients" id="clients">
-    <div class="wrapper cols">
-        <div class="r-col">
-            <h2>{{ 'clients.header'|trans }}</h2>
+
+    <!-- Псевдоэлементы -->
+    <div class="after-left-block"><i></i></div>
+    <div class="after-right-block"><i></i></div>
+
+    <!-- Блок о нас  -->
+    <div class="about">
+        <div class="container clear">
+            <div class="team">
+                <h2>О нас</h2>
+                <p>
+                    Основное направление нашей деятельности — это программирование, у нас в этом есть большой опыт. Мы этакая лаборатория кода.
+                </p>
+                <p>
+                    Мы не занимаемся дизайном макетов для сайтов. Но мы можем сделать вам красивый дизайн API вашего сервиса или приложения.
+                </p>
+                <p>
+                    Но если вам все-таки нужны дизайнеры, которые умеют рисовать, то мы знаем много замечательных квалифицированных людей, которые с радостью вам помогут.
+                </p>
+                <div class="gallery">
+                    {% for member in team %}
+                    <div class="item">
+                        <img src="{{ vich_uploader_asset(member, 'file') | apply_filter('team_photo_thumb') }}" alt="{{ member.name }}">
+                        <p>{{ member.name }}</p>
+                        <div class="social">
+                            <a href="mailto:{{ member.email }}" class="mail"></a>
+                            <a href="https://github.com/{{ member.github }}" class="github"></a>
+                            {% if member.twitter %}
+                            <a href="https://twitter.com/{{ member.twitter }}" class="twitter"></a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="mission">
+                <h3>Evercodelab<br/> <span>миссия</span></h3>
+                <p>Мы работаем для того, чтобы воплощать идеи наших клиентов в качественные продукты и сервисы.</p>
+                <p>
+                    Изучаем и используем современные технологии, чтобы наши продукты отвечали высоким требованиям качества. Стремимся узнавать новое и делиться этими знаниями. Совершенствуем процессы, чтобы делать нашу работу эффективнее.<br/> Мы вносим свой вклад в создание современной культуры разработки и формирование профессиональной среды. Нам действительно не все равно.
+                </p>
+                <p>
+                    Мы создаем свои инструменты, продукты и сервисы, которые решают реальные проблемы и делают жизнь людей проще, удобнее, понятнее, лучше и приятнее.
+                </p>
+                <p>Для нас это — творчество, выражение себя и в то же время образ жизни.</p>
+                <a href="#" class="icon"><img src="/img/icon-lines.png" alt=""></a>
+            </div>
         </div>
-        {% if clients %}
-        <ul class="b-clients-list">
-            {% for client in clients %}
-            <li>
-                <a href="{{ client.link }}"><img src="{{ vich_uploader_asset(client, 'file') }}" alt="{{ client.name }}" /></a>
-            </li>
+    </div>
+
+
+    <!-- Псевдоэлементы -->
+    <div class="before-left-block"><i></i></div>
+    <div class="before-right-block"><i></i></div>
+
+    <!-- Блог -->
+    {{ render_esi(controller("AppDefaultBundle:Default:blog", {'_locale': app.request.get('_locale')} )) }}
+
+    <!-- Псевдоэлементы -->
+    <div class="after-left-block"><i></i></div>
+    <div class="after-right-block"><i></i></div>
+
+    <!-- Форма для заполнения -->
+    <div class="feedback container" id="feedback">
+            <form action="{{ path('index') }}" method="post">
+            <h2>Задайте вопрос</h2>
+            {% for flashMessage in app.session.flashbag.get('notice') %}
+                <div class="flash-notice">
+                    {{ flashMessage }}
+                </div>
             {% endfor %}
-        </ul>
-        {% endif %}
-    </div>
-</div>
-<div class="b-portfolio" id="portfolio">
-    <div class="wrapper cols">
-        <div class="r-col">
-            <h2>{{ 'portfolio.header'|trans }}</h2>
-        </div>
-    </div>
-    <div class="wrapper cols">
-        <div class="l-col"></div>
-        <div class="r-col">
-            <div class="b-switcher-block">
-                <ul class="b-switcher"></ul>
-                <div class="b-portfolio-text b-switch">
-                    <ul>
-                        {% for project in projects %}
-                        <li>
-                            <div class="b-portfolio-link">
-                                {% if project.link %}
-                                    <a href="{{ project.link }}">{{ project.name }}</a>
-                                {% else %}
-                                    {{ project.name }}
-                                {% endif %}
-                            </div>
-                            {{ project.description | raw }}
-                        </li>
-                        {% endfor %}
-                    </ul>
+                <div>
+                    <label for="name">Представьтесь</label>
+                    {{ form_widget(feedbackForm.name) }}
                 </div>
-            </div>
-            <ul class="b-slider">
-                <li class="prev disabled"></li>
-                <li class="next"></li>
+                <div>
+                    <label for="mail">Ваш email на который мы ответим</label>
+                    {{ form_widget(feedbackForm.contact) }}
+                </div>
+                <div>
+                    <label for="quest">Вопрос</label>
+                    {{ form_widget(feedbackForm.content) }}
+                </div>
+                {{ form_rest(feedbackForm) }}
+                <button class="btn" type="submit">Отправить</button>
+            </form>
+        <div class="questions">
+            <h2>Что еще?</h2>
+            <ul>
+                <li><a href="#">Пока ничего!</a></li>
+                <li><a href="#">Но скоро будет :)</a></li>
+<!--                 <li><a href="#">Как мы работаем</a></li>
+                <li><a href="#">Выступления на конференциях</a></li> -->
             </ul>
         </div>
     </div>
-</div>
-<div class="b-contacts" id="contacts">
-    <div class="wrapper cols">
-        <div class="l-col">
-            <br><br>
-            <p>{{ 'while'|trans }}</p>
-        </div>
-        <div class="r-col">
-            <h2>{{ 'contacts.header'|trans }}</h2>
-            <div class="cols">
-                <div class="l-col">
-                    <ul class="b-contacts-list">
-                        <li><a href="mailto:hello@evercodelab.com" class="item">hello@evercodelab.com</a></li>
-                        <li>
-                            <div class="b-contacts-blog">
-                                <a href="http://twitter.com/evercodelab" class="item">@evercodelab</a>
-                                {{ render_esi(controller("KnpLastTweetsBundle:Twitter:lastTweets", {'username': 'evercodelab', 'limit': 4, 'age': 12*60*60})) }}
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="r-col">
-                    <br><br><br>
-                    <img src="{{ asset("i/veider.png") }}" alt="I've been wating for you" />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{{ render(controller("AppDefaultBundle:Default:blog", {'_locale': app.request.get('_locale')} )) }}
-</div>
 
-<script type="text/javascript">
-
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-25737310-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-</script>
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-(function (d, w, c) {
-    (w[c] = w[c] || []).push(function() {
-        try {
-            w.yaCounter9872860 = new Ya.Metrika({id:9872860,
-                    webvisor:true,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true,
-                    trackHash:true});
-        } catch(e) { }
-    });
-
-    var n = d.getElementsByTagName("script")[0],
-        s = d.createElement("script"),
-        f = function () { n.parentNode.insertBefore(s, n); };
-    s.type = "text/javascript";
-    s.async = true;
-    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-
-    if (w.opera == "[object Opera]") {
-        d.addEventListener("DOMContentLoaded", f, false);
-    } else { f(); }
-})(document, window, "yandex_metrika_callbacks");
-</script>
-<noscript><div><img src="//mc.yandex.ru/watch/9872860" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-</body>
-</html>
+    <!-- Псевдоэлемент -->
+    <div class="before-left-block"><i></i></div>
+    <div class="before-right-block"><i></i></div>
+{% endblock %}

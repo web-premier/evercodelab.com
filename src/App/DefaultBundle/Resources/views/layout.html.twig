@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name='yandex-verification' content='609f107a156157ec' />
+    <meta name="google-site-verification" content="IOomL4TBfTjjsuUqlcEkKH_YWCniNPOKNw0BpIW1WvI" />
+    <meta name="KEYWORDS" content="{{ 'site.keywords'|trans }}" />
+    <meta name="DESCRIPTION" content="{{ 'site.description'|trans }}" />
+    <title>{{ 'site.title'|trans }}</title>
+    {% stylesheets
+        'css/style.css'
+        'css/custom.css'
+        output='compiled/compiled.css'
+        filter='cssrewrite'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    {% endstylesheets %}
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />
+</head>
+<body>
+<div class="wrapper">
+    <!-- Верхняя навигация -->
+    <header class="container">
+        <div class="logo">
+            <a href="{{ path('index') }}"><img src="/img/logo.png" alt="EvercodeLab"></a>
+            <a href="{{ path('index') }}" class="name"><h1>Evercode Lab</h1></a>
+        </div>
+        <div class="menu">
+            {{ knp_menu_render('AppDefaultBundle:Builder:mainMenu', {template: 'AppDefaultBundle::main_menu.html.twig', currentClass: 'active'}) }}
+<!--             {{ knp_menu_render('AppDefaultBundle:Builder:languageMenu', {template: 'AppDefaultBundle::language_menu.html.twig', currentClass: 'active'}) }}
+ -->        </div>
+    </header>
+
+    <!-- Псевдоэлементы -->
+    <div class="before-left-block"><i></i></div>
+    <div class="before-right-block"><i></i></div>
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Подвал -->
+    <footer class="clear">
+        <div class="container">
+            <div class="social">
+                <a href="https://www.facebook.com/pages/Evercode-Lab/128121020625049" class="sprite fb"></a>
+                <a href="https://github.com/EvercodeLab" class="sprite gh"></a>
+                <a href="http://twitter.com/evercodelab" class="sprite tw"></a>
+                <a href="http://feeds.feedburner.com/EvercodeBlog" class="sprite rss"></a>
+            </div>
+            <img src="/img/logo.png" alt="">
+            <div class="design">
+                дизайн сайта<br/>
+                <a href="http://formazon.com">formazon.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="contacts" id="contact_right">
+        <p class="contact-trigger">контакты</p>
+        <div class="number">
+            <p>8 921 426 34 22</p>
+            <p>hello@evercodelab.com</p>
+            <p>Ответим обязательно!</p>
+        </div>
+    </div>
+</div>
+
+
+{% javascripts
+    'js/jquery-1.10.2.min.js'
+    'js/jquery.slides.min.js'
+    'js/jquery.fs.scroller.min.js'
+    'js/main.js'
+    output='compiled/compiled.js'
+%}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-25737310-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter9872860 = new Ya.Metrika({id:9872860,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    trackHash:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/9872860" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+</html>
