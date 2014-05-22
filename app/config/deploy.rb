@@ -1,11 +1,11 @@
 set :application, "evercodelab.com"
 set :domain,      "95.85.55.135"
-set :deploy_to,   "/var/www/php/v3.#{application}"
+set :deploy_to,   "/var/www/php/#{application}"
 set :app_path,    "app"
 
 set :repository,  "git@github.com:EvercodeLab/#{application}.git"
 set :scm,         :git
-set :branch, "v3"
+set :branch, "master"
 
 default_run_options[:pty] = true
 set :ssh_options, {:forward_agent => true, :port => 22}
