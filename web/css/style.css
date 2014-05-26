@@ -962,14 +962,13 @@ footer .design a:hover {  color: #553770; }
   background-size: cover;
 }
 .slider-block .slides_container {
-  width: 1000px;
+  width: 900px;
   height: 500px;
   text-align: center;
   margin: 0 auto;
 }
 .slider-block .slides_container .item {
-  width: 1000px;
-  height: 500px;
+  width: 900px;
   display: block;
   text-align: center;
   padding-top: 85px;
@@ -985,14 +984,17 @@ footer .design a:hover {  color: #553770; }
   padding-left: 15px;
   margin-bottom: 8px;
 }
-.slider-block .slides_container .item img,
-.slider-block .slides_container .item .text {
-  display: inline-block;
-  vertical-align: top;
+.slider-block .slides_container .item img {
+    width: 470px;
+    display: block;
+    float: left;
 }
+
 .slider-block .slides_container .item .text {
-  text-align: left;
-  margin-left: 38px;
+    float: left;
+    width: 430px;
+    text-align: left;
+    padding-left: 38px;
 }
 .slider-block .slides_container .item .text h3 {
   font-size: 32px;
