@@ -3,7 +3,8 @@
     var sliderContainer = $("#slides"),
         sliderWrapper = $("#slides-wrapper");
 
-    sliderWrapper.css('backgroundImage', 'url("'+sliderContainer.find('.item').first().data('bg-image')+'")');
+    sliderWrapper.css('backgroundImage', 'url("'+sliderContainer.find('.item:first').data('bg-image')+'")');
+    sliderWrapper.attr('data-bg-image', sliderContainer.find('.item:first').data('bg-image'));
 
     $("#slides").slides({
         generateNextPrev: true,
@@ -11,7 +12,10 @@
         effect: 'fade',
         play: 10000,
         animationComplete: function(current) {
-            sliderWrapper.css('backgroundImage', 'url("'+sliderContainer.find('.item:nth-child('+current+')').data('bg-image')+'")');
+            var bgImage = sliderContainer.find('.item:nth-child(' + current + ')').data('bg-image');
+            if (sliderWrapper.data('bg-image') != bgImage) {
+                sliderWrapper.css('backgroundImage', 'url("' + bgImage + '")');
+            }
         }
     });
 };
