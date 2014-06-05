@@ -19,7 +19,6 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $clients = $em->getRepository('AppDefaultBundle:Client')->findAll();
-        $projects = $em->getRepository('AppDefaultBundle:Portfolio')->findAll();
         $team = $em->getRepository('AppDefaultBundle:Team')->findAll();
         $feedbackForm = $this->createForm(new FeedbackType());
 
@@ -35,7 +34,6 @@ class DefaultController extends Controller
 
         return [
             'clients' => $clients,
-            'projects' => $projects,
             'team' => $team,
             'feedbackForm' => $feedbackForm->createView(),
         ];
@@ -92,7 +90,11 @@ class DefaultController extends Controller
      */
     public function portfolioAction(Request $request)
     {
-        return;
+        $em = $this->getDoctrine()->getManager();
+        $projects = $em->getRepository('AppDefaultBundle:Portfolio')->findAll();
+        return [
+            'projects' => $projects,
+        ];
     }
 
 }

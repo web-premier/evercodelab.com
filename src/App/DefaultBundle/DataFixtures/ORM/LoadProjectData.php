@@ -14,6 +14,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Russian Wake Awards',
             'link' => 'http://wakeawards.ru/',
+            'image' => 'wakeawards.png',
             'description' => '
                     Наши экстремальные друзья в этом году провели Первую Всероссийскую Вейк Премию.
                     Специально для этого события совместно с дизайнером Денисом Foster\'ом мы сделали им в кратчайшие сроки сайт события с голосованием и информацией по событию, райдерам, местам и фотографам.
@@ -31,6 +32,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Best4car',
             'link' => 'http://best4car.ru/',
+            'image' => 'best4car.jpg',
             'description' => '
                     Проект достался нам в незаконченном виде летом 2013-го года. 
                     Мы помогли основателям сервиса довести его до запуска и продолжаем работать вместе, развивая и улучшая функционал.
@@ -46,8 +48,9 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             ),
         ),
         array(
-            'name' => 'PostcardWithLove.ru',
+            'name' => 'PostcardWithLove',
             'link' => 'http://postcardwithlove.ru/',
+            'image' => 'cards.jpg',
             'description' => '
                     На этом небольшом замечательном сайте можно отправить настоящую почтовую открытку в несколько кликов.
                     Со своими фотографиями или готовыми картинками — как вам хочется.
@@ -67,6 +70,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Manaflask',
             'link' => 'http://manaflask.com/en/',
+            'image' => 'mf.jpg',
             'description' => '
                     Manaflask – популярный игровой портал, предоставляющий материалы от топовых мировых игроков на английском и немецком языках.
                     Мы поддерживали старую версию сайта, написанную на PHP.
@@ -86,6 +90,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Stashify.me',
             'link' => 'http://stashify.me/',
+            'image' => 'stashify.jpg',
             'description' => '
                     Наш скромный, но подающий большие надежды собственный проект.
                     Говорят, это самый простой способ сделать бэкап вашей онлайн активности и синхронизировать данные с вашим аккаунтом в Dropbox.
@@ -105,6 +110,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'ITOP',
             'link' => 'http://itop-portal.net/',
+            'image' => 'itop.png',
             'description' => '
                     Российский портал информационных технологий, оптики и фотоники разработан по заказу ИТМО.
                     Наш первый проект на Symfony2 + Doctrine2.
@@ -124,6 +130,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Noob-Club',
             'link' => 'http://www.noob-club.ru/',
+            'image' => 'noob-club.jpg',
             'description' => '
                     Noob-club.ru - фансайт, посвященный многопользовательским онлайн играм World of Warcraft, Diablo и Star Wars: The Old Republic.
                     Сайт написан на PHP c использованием Zend Framework. Оптимизирован под большие нагрузки.
@@ -139,6 +146,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Игра «Морской Бой»',
             'link' => 'http://bqbs.ru/',
+            'image' => 'bqbs.jpg',
             'description' => '
                     Движок для уникального и увлекательного квеста в городских условиях от <a href="http://best-quest.ru/">Best Quest</a> на основе всем знакомой с детства игры.
                     Проект реализован на Ruby on Rails.
@@ -158,6 +166,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Saraswati.Pro',
             'link' => 'http://saraswati.pro/',
+            'image' => '',
             'description' => '
                     Издательство Сарасвати (Saraswati) нашло свое второе рождение в Таиланде, городе Чиангмай 20 января 2010 года и выпускает книги не только в традиционном формате, но также в виде цифровых публикаций и интерактивных приложения для iOS и Android.
                     Наш первый проект на Ruby on Rails.
@@ -175,6 +184,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Mahamandala',
             'link' => 'http://mahamandala.com/',
+            'image' => '',
             'description' => '
                     Медиа хранилище с широким списком социальных функций.
                     Первая версия проекта разработана на Zend Framework 1 + Doctrine 1.
@@ -192,6 +202,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'DropNotify',
             'link' => 'http://dropnotify.evercodelab.com/',
+            'image' => '',
             'description' => '
                     Мини-сервис, составляющий красивый дайджест из изменений в ваших файлах и папках Dropbox за день и присылающий его на email.
                     Разработан за пару дней для внутренних нужд. Работает на Google App Engine (Python).
@@ -211,6 +222,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Издательство Европейского Университета',
             'link' => 'http://eupress.ru/',
+            'image' => '',
             'description' => '
                     В интернет-магазине Издательства Европейского Университета можно найти редкие, уникальные и интересные книги.
                     По просьбе ЕУСПб мы уже не первый год занимаемся поддержкой и развитием сайта.
@@ -228,6 +240,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'EverpartyBird',
             'link' => 'http://everpartybird.herokuapp.com/countdown/10',
+            'image' => '',
             'description' => '
                     Небольшое, но очень бесполезное, при этом уникальное по своей психоделичности приложение-эксперимент.
                     Сделано с использованием микрофреймворка Cuba и SVG графики.
@@ -247,6 +260,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'The Book of Knowledge',
             'link' => 'http://thebookofknowledge.evercodelab.com/',
+            'image' => '',
             'description' => '
                     Наша постоянно пополняемая база знаний.
                     Спектр тем ограничен рамками нашего любопытства.
@@ -268,6 +282,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'EvercodeFaqBundle',
             'link' => 'https://github.com/EvercodeLab/FaqBundle',
+            'image' => '',
             'description' => '
                     Простой бандл для фреймворка Symfony2 для быстрой интеграции FAQ в проекты.
                     Находится в открытом доступе.
@@ -287,6 +302,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'EvercodeBannerBundle',
             'link' => 'https://github.com/EvercodeLab/BannerBundle',
+            'image' => '',
             'description' => '
                     Бандл для фреймворка Symfony2 для работы с баннерами.
                     Находится в открытом доступе.
@@ -306,6 +322,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'EvercodePageBundle',
             'link' => 'https://github.com/EvercodeLab/EvercodePageBundle',
+            'image' => '',
             'description' => '
                     Очень простой экспериментальный бандл для фреймворка Symfony2, добавляющий в проекты функционал работы с информационными страницами.
                     Находится в открытом доступе.
@@ -325,6 +342,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Система принятия и обработки объявлений',
             'link' => null,
+            'image' => '',
             'description' => '
                     Программа предназначена для принятия и обработки объявлений для публикации в газете и на сайте.
                     Возможности: гибкое управления объявлениями, поиск, генерация отчетов, подсчет стоимости,
@@ -345,6 +363,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Система афилиатного маркетинга Qprofit',
             'link' => null,
+            'image' => '',
             'description' => '
                     Qprofit задумывался как сервис, объединяющий продавцов товаров и владельцев торговых площадок.
                     Нами был разработан прототип проекта на Symfony2.
@@ -362,6 +381,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Система генерации отчетов по продвижению сайтов',
             'link' => null,
+            'image' => '',
             'description' => '
                     Для крупной питерской веб-студии мы разработали внутренний инструмент автоматизации для отдела продвижения.
                     Система собирает данные из LiveInternet, Google Analytics, Google.Webmaster, Yandex.Webmaster.
@@ -380,6 +400,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'PHP Study Guide',
             'link' => 'http://php-guide.evercodelab.com/',
+            'image' => '',
             'description' => '
                     Изначально — краткое руководство для подготовки к <a href="http://www.zend.com/en/services/certification/php-5-certification/">сертификации ZCE PHP5.3</a>.
                     Немного переработано в более общее руководство для изучающих PHP.
@@ -402,11 +423,20 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
     {
         $repository = $manager->getRepository('\\Gedmo\\Translatable\\Entity\\Translation');
 
+        $imagesDestinationDir = getcwd().'/web/uploads/images/portfolio';
+        if (! file_exists($imagesDestinationDir)) {
+            mkdir($imagesDestinationDir, 0777, true);
+        }
+
         foreach ($this->projects as $data) {
             $project = new Portfolio();
             $project->setName($data['name']);
             $project->setLink($data['link']);
             $project->setDescription(trim($data['description']));
+            if (! empty($data['image'])) {
+                copy(getcwd().'/web/img/projects/' . $data['image'], $imagesDestinationDir . DIRECTORY_SEPARATOR . $data['image']);
+                $project->setLogo($data['image']);
+            }
 
             $repository
                 ->translate($project, 'name', 'en', $data['en']['name'])
