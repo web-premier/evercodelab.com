@@ -120,6 +120,9 @@ avalanche_imagine:
         team_photo_thumb:
             type:    thumbnail
             options: { size: [115, 115], mode: outbound }
+        portfolio_list_thumb:
+            type:    thumbnail
+            options: { size: [224, 163], mode: outbound }
 
 vich_uploader:
     db_driver: orm

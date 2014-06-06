@@ -14,6 +14,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Russian Wake Awards',
             'link' => 'http://wakeawards.ru/',
+            'image' => 'wakeawards.png',
             'description' => '
                     Наши экстремальные друзья в этом году провели Первую Всероссийскую Вейк Премию.
                     Специально для этого события совместно с дизайнером Денисом Foster\'ом мы сделали им в кратчайшие сроки сайт события с голосованием и информацией по событию, райдерам, местам и фотографам.
@@ -31,6 +32,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Best4car',
             'link' => 'http://best4car.ru/',
+            'image' => 'best4car.jpg',
             'description' => '
                     Проект достался нам в незаконченном виде летом 2013-го года. 
                     Мы помогли основателям сервиса довести его до запуска и продолжаем работать вместе, развивая и улучшая функционал.
@@ -46,8 +48,9 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             ),
         ),
         array(
-            'name' => 'PostcardWithLove.ru',
+            'name' => 'PostcardWithLove',
             'link' => 'http://postcardwithlove.ru/',
+            'image' => 'cards.jpg',
             'description' => '
                     На этом небольшом замечательном сайте можно отправить настоящую почтовую открытку в несколько кликов.
                     Со своими фотографиями или готовыми картинками — как вам хочется.
@@ -67,6 +70,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Manaflask',
             'link' => 'http://manaflask.com/en/',
+            'image' => 'mf.jpg',
             'description' => '
                     Manaflask – популярный игровой портал, предоставляющий материалы от топовых мировых игроков на английском и немецком языках.
                     Мы поддерживали старую версию сайта, написанную на PHP.
@@ -86,6 +90,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Stashify.me',
             'link' => 'http://stashify.me/',
+            'image' => 'stashify.jpg',
             'description' => '
                     Наш скромный, но подающий большие надежды собственный проект.
                     Говорят, это самый простой способ сделать бэкап вашей онлайн активности и синхронизировать данные с вашим аккаунтом в Dropbox.
@@ -105,6 +110,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'ITOP',
             'link' => 'http://itop-portal.net/',
+            'image' => 'itop.png',
             'description' => '
                     Российский портал информационных технологий, оптики и фотоники разработан по заказу ИТМО.
                     Наш первый проект на Symfony2 + Doctrine2.
@@ -124,6 +130,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Noob-Club',
             'link' => 'http://www.noob-club.ru/',
+            'image' => 'noob-club.jpg',
             'description' => '
                     Noob-club.ru - фансайт, посвященный многопользовательским онлайн играм World of Warcraft, Diablo и Star Wars: The Old Republic.
                     Сайт написан на PHP c использованием Zend Framework. Оптимизирован под большие нагрузки.
@@ -139,6 +146,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Игра «Морской Бой»',
             'link' => 'http://bqbs.ru/',
+            'image' => 'bqbs.jpg',
             'description' => '
                     Движок для уникального и увлекательного квеста в городских условиях от <a href="http://best-quest.ru/">Best Quest</a> на основе всем знакомой с детства игры.
                     Проект реализован на Ruby on Rails.
@@ -158,6 +166,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Saraswati.Pro',
             'link' => 'http://saraswati.pro/',
+            'image' => 'saraswati.jpg',
             'description' => '
                     Издательство Сарасвати (Saraswati) нашло свое второе рождение в Таиланде, городе Чиангмай 20 января 2010 года и выпускает книги не только в традиционном формате, но также в виде цифровых публикаций и интерактивных приложения для iOS и Android.
                     Наш первый проект на Ruby on Rails.
@@ -175,6 +184,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Mahamandala',
             'link' => 'http://mahamandala.com/',
+            'image' => 'mahamandala.jpg',
             'description' => '
                     Медиа хранилище с широким списком социальных функций.
                     Первая версия проекта разработана на Zend Framework 1 + Doctrine 1.
@@ -190,27 +200,9 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             ),
         ),
         array(
-            'name' => 'DropNotify',
-            'link' => 'http://dropnotify.evercodelab.com/',
-            'description' => '
-                    Мини-сервис, составляющий красивый дайджест из изменений в ваших файлах и папках Dropbox за день и присылающий его на email.
-                    Разработан за пару дней для внутренних нужд. Работает на Google App Engine (Python).
-                    Подробности <a href="http://blog.evercodelab.com/dropnotify/">в блоге</a>.
-                    Код находится в открытом доступе.
-                    ',
-            'en' => array(
-                'name' => 'DropNotify',
-                'description' => '
-                        Mini-service which takes the feed of changes in your Dropbox files and folders, composes beutiful digest and sends it to your email everyday.
-                        Was developed in couple of days for inner needs. Works on Google App Engine (Python).
-                        For more information see <a href="http://blog.evercodelab.com/dropnotify/">detailed blog entry</a>.
-                        The source code is open.
-                        ',
-            ),
-        ),
-        array(
             'name' => 'Издательство Европейского Университета',
             'link' => 'http://eupress.ru/',
+            'image' => 'eupress.jpg',
             'description' => '
                     В интернет-магазине Издательства Европейского Университета можно найти редкие, уникальные и интересные книги.
                     По просьбе ЕУСПб мы уже не первый год занимаемся поддержкой и развитием сайта.
@@ -228,6 +220,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'EverpartyBird',
             'link' => 'http://everpartybird.herokuapp.com/countdown/10',
+            'image' => 'everpartybird.jpg',
             'description' => '
                     Небольшое, но очень бесполезное, при этом уникальное по своей психоделичности приложение-эксперимент.
                     Сделано с использованием микрофреймворка Cuba и SVG графики.
@@ -247,6 +240,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'The Book of Knowledge',
             'link' => 'http://thebookofknowledge.evercodelab.com/',
+            'image' => 'tbok.jpg',
             'description' => '
                     Наша постоянно пополняемая база знаний.
                     Спектр тем ограничен рамками нашего любопытства.
@@ -265,86 +259,10 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
                         ',
             ),
         ),
-        array(
-            'name' => 'EvercodeFaqBundle',
-            'link' => 'https://github.com/EvercodeLab/FaqBundle',
-            'description' => '
-                    Простой бандл для фреймворка Symfony2 для быстрой интеграции FAQ в проекты.
-                    Находится в открытом доступе.
-                    Вопросов не задает, но потенциально на них отвечает.
-                    Снижает нагрузку на support в разы.
-                    ',
-            'en' => array(
-                'name' => 'EvercodeFaqBundle',
-                'description' => '
-                        Simple Symfony2 Bundle for easy integrating FAQ functionality.
-                        Available for everyone to see, share, comment and even contribute.
-                        Doesn\'t ask question but potentially answers on them.
-                        Reduces working load on your support team.
-                        ',
-            ),
-        ),
-        array(
-            'name' => 'EvercodeBannerBundle',
-            'link' => 'https://github.com/EvercodeLab/BannerBundle',
-            'description' => '
-                    Бандл для фреймворка Symfony2 для работы с баннерами.
-                    Находится в открытом доступе.
-                    Некоторые говорят, повышает конверсию на проектах, где используется.
-                    Умеет не только показывать баннеры, но и считать (яичницу не готовит).
-                    ',
-            'en' => array(
-                'name' => 'EvercodeBannerBundle',
-                'description' => '
-                        Symfony2 bundle for working with banner on your site.
-                        Available for everyone to see, share, comment and even contribute.
-                        Some say it increases conversion of your advertisement.
-                        Not only shows banners but also can count... from one to ten.
-                        ',
-            ),
-        ),
-        array(
-            'name' => 'EvercodePageBundle',
-            'link' => 'https://github.com/EvercodeLab/EvercodePageBundle',
-            'description' => '
-                    Очень простой экспериментальный бандл для фреймворка Symfony2, добавляющий в проекты функционал работы с информационными страницами.
-                    Находится в открытом доступе.
-                    Повышает уровень образованности посетителей сайтов на 146%.
-                    Улучшает навыки письменной речи.
-                    ',
-            'en' => array(
-                'name' => 'EvercodePageBundle',
-                'description' => '
-                        Dead simple experimental Symfony2 Bundle for easy management of your projects\' information pages.
-                        Available for everyone to see, share, comment and even contribute.
-                        Increases your visitors intellectual faculties by 146%.
-                        Significantly improves writing skills.
-                        ',
-            ),
-        ),
-        array(
-            'name' => 'Система принятия и обработки объявлений',
-            'link' => null,
-            'description' => '
-                    Программа предназначена для принятия и обработки объявлений для публикации в газете и на сайте.
-                    Возможности: гибкое управления объявлениями, поиск, генерация отчетов, подсчет стоимости,
-                    внутренняя система счетов, импорт объявлений с сайта,
-                    предпросмотр, рассылка SMS сообщений на телефоны подателей.
-                    Подробности не разглашаются по соглашению с заказчиком.
-                    ',
-            'en' => array(
-                'name' => 'System for receiving and processing of advertisement',
-                'description' => '
-                        The system is designed to accept and process ads for newspaper and site.
-                        Features: ads management, search, reports generation, price calculation,
-                        internal accounts system, import from site, preview, SMS notifications.
-                        More details are private dew to client\'s request.
-                        ',
-            ),
-        ),
-        array(
+                array(
             'name' => 'Система афилиатного маркетинга Qprofit',
             'link' => null,
+            'image' => 'qprofit.jpg',
             'description' => '
                     Qprofit задумывался как сервис, объединяющий продавцов товаров и владельцев торговых площадок.
                     Нами был разработан прототип проекта на Symfony2.
@@ -362,6 +280,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'Система генерации отчетов по продвижению сайтов',
             'link' => null,
+            'image' => 'redreport.jpg',
             'description' => '
                     Для крупной питерской веб-студии мы разработали внутренний инструмент автоматизации для отдела продвижения.
                     Система собирает данные из LiveInternet, Google Analytics, Google.Webmaster, Yandex.Webmaster.
@@ -380,6 +299,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         array(
             'name' => 'PHP Study Guide',
             'link' => 'http://php-guide.evercodelab.com/',
+            'image' => 'php-guide.jpg',
             'description' => '
                     Изначально — краткое руководство для подготовки к <a href="http://www.zend.com/en/services/certification/php-5-certification/">сертификации ZCE PHP5.3</a>.
                     Немного переработано в более общее руководство для изучающих PHP.
@@ -396,17 +316,127 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
                         ',
             ),
         ),
+        // array(
+        //     'name' => 'DropNotify',
+        //     'link' => 'http://dropnotify.evercodelab.com/',
+        //     'image' => '',
+        //     'description' => '
+        //             Мини-сервис, составляющий красивый дайджест из изменений в ваших файлах и папках Dropbox за день и присылающий его на email.
+        //             Разработан за пару дней для внутренних нужд. Работает на Google App Engine (Python).
+        //             Подробности <a href="http://blog.evercodelab.com/dropnotify/">в блоге</a>.
+        //             Код находится в открытом доступе.
+        //             ',
+        //     'en' => array(
+        //         'name' => 'DropNotify',
+        //         'description' => '
+        //                 Mini-service which takes the feed of changes in your Dropbox files and folders, composes beutiful digest and sends it to your email everyday.
+        //                 Was developed in couple of days for inner needs. Works on Google App Engine (Python).
+        //                 For more information see <a href="http://blog.evercodelab.com/dropnotify/">detailed blog entry</a>.
+        //                 The source code is open.
+        //                 ',
+        //     ),
+        // ),
+        // array(
+        //     'name' => 'EvercodeFaqBundle',
+        //     'link' => 'https://github.com/EvercodeLab/FaqBundle',
+        //     'image' => '',
+        //     'description' => '
+        //             Простой бандл для фреймворка Symfony2 для быстрой интеграции FAQ в проекты.
+        //             Находится в открытом доступе.
+        //             Вопросов не задает, но потенциально на них отвечает.
+        //             Снижает нагрузку на support в разы.
+        //             ',
+        //     'en' => array(
+        //         'name' => 'EvercodeFaqBundle',
+        //         'description' => '
+        //                 Simple Symfony2 Bundle for easy integrating FAQ functionality.
+        //                 Available for everyone to see, share, comment and even contribute.
+        //                 Doesn\'t ask question but potentially answers on them.
+        //                 Reduces working load on your support team.
+        //                 ',
+        //     ),
+        // ),
+        // array(
+        //     'name' => 'EvercodeBannerBundle',
+        //     'link' => 'https://github.com/EvercodeLab/BannerBundle',
+        //     'image' => '',
+        //     'description' => '
+        //             Бандл для фреймворка Symfony2 для работы с баннерами.
+        //             Находится в открытом доступе.
+        //             Некоторые говорят, повышает конверсию на проектах, где используется.
+        //             Умеет не только показывать баннеры, но и считать (яичницу не готовит).
+        //             ',
+        //     'en' => array(
+        //         'name' => 'EvercodeBannerBundle',
+        //         'description' => '
+        //                 Symfony2 bundle for working with banner on your site.
+        //                 Available for everyone to see, share, comment and even contribute.
+        //                 Some say it increases conversion of your advertisement.
+        //                 Not only shows banners but also can count... from one to ten.
+        //                 ',
+        //     ),
+        // ),
+        // array(
+        //     'name' => 'EvercodePageBundle',
+        //     'link' => 'https://github.com/EvercodeLab/EvercodePageBundle',
+        //     'image' => '',
+        //     'description' => '
+        //             Очень простой экспериментальный бандл для фреймворка Symfony2, добавляющий в проекты функционал работы с информационными страницами.
+        //             Находится в открытом доступе.
+        //             Повышает уровень образованности посетителей сайтов на 146%.
+        //             Улучшает навыки письменной речи.
+        //             ',
+        //     'en' => array(
+        //         'name' => 'EvercodePageBundle',
+        //         'description' => '
+        //                 Dead simple experimental Symfony2 Bundle for easy management of your projects\' information pages.
+        //                 Available for everyone to see, share, comment and even contribute.
+        //                 Increases your visitors intellectual faculties by 146%.
+        //                 Significantly improves writing skills.
+        //                 ',
+        //     ),
+        // ),
+        // array(
+        //     'name' => 'Система принятия и обработки объявлений',
+        //     'link' => null,
+        //     'image' => '',
+        //     'description' => '
+        //             Программа предназначена для принятия и обработки объявлений для публикации в газете и на сайте.
+        //             Возможности: гибкое управления объявлениями, поиск, генерация отчетов, подсчет стоимости,
+        //             внутренняя система счетов, импорт объявлений с сайта,
+        //             предпросмотр, рассылка SMS сообщений на телефоны подателей.
+        //             Подробности не разглашаются по соглашению с заказчиком.
+        //             ',
+        //     'en' => array(
+        //         'name' => 'System for receiving and processing of advertisement',
+        //         'description' => '
+        //                 The system is designed to accept and process ads for newspaper and site.
+        //                 Features: ads management, search, reports generation, price calculation,
+        //                 internal accounts system, import from site, preview, SMS notifications.
+        //                 More details are private dew to client\'s request.
+        //                 ',
+        //     ),
+        // ),
     );
 
     public function load(ObjectManager $manager)
     {
         $repository = $manager->getRepository('\\Gedmo\\Translatable\\Entity\\Translation');
 
+        $imagesDestinationDir = getcwd().'/web/uploads/images/portfolio';
+        if (! file_exists($imagesDestinationDir)) {
+            mkdir($imagesDestinationDir, 0777, true);
+        }
+
         foreach ($this->projects as $data) {
             $project = new Portfolio();
             $project->setName($data['name']);
             $project->setLink($data['link']);
             $project->setDescription(trim($data['description']));
+            if (! empty($data['image'])) {
+                copy(getcwd().'/web/img/projects/' . $data['image'], $imagesDestinationDir . DIRECTORY_SEPARATOR . $data['image']);
+                $project->setLogo($data['image']);
+            }
 
             $repository
                 ->translate($project, 'name', 'en', $data['en']['name'])

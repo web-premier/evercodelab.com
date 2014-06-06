@@ -11,7 +11,7 @@ class Builder extends ContainerAware
         $menu = $factory->createItem('root');
 
         $menu->addChild('Главная', array('route' => 'index'));
-        // $menu->addChild('Портфолио', array('route' => 'portfolio'));
+        $menu->addChild('Портфолио', array('route' => 'portfolio'));
         $menu->addChild('Блог', array('uri' => '//blog.evercodelab.com'));
 
         $menu->setCurrentUri($this->container->get('request')->getRequestUri());
