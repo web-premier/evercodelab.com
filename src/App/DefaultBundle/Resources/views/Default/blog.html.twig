@@ -10,7 +10,7 @@
         </div>
         <div class="all-tabs">
             <div class="tab1">
-                <a href="#"><h3>{{ latestPosts.0.title | raw }}</h3></a>
+                <a href="{{ latestPosts.0.link }}"><h3>{{ latestPosts.0.title | raw }}</h3></a>
                 <div class="date">{{ latestPosts.0.date }}</div>
                 <p>
                     {{ latestPosts.0.text | raw }}
