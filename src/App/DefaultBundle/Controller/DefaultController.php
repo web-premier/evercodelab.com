@@ -23,12 +23,13 @@ class DefaultController extends Controller
         $feedbackForm = $this->createForm(new FeedbackType());
 
         $feedbackForm->bind($request);
-        if($feedbackForm->isValid()) {
+        if ($feedbackForm->isValid()) {
             $this->get('feedback.manager')->send($feedbackForm->getData());
             $this->get('session')->getFlashBag()->add(
                 'notice',
                 'Ваше сообщение отправлено!'
             );
+
             return $this->redirect($this->generateUrl('index') . '#feedback');
         }
 
@@ -74,7 +75,6 @@ class DefaultController extends Controller
         return;
     }
 
-
     /**
      * @Route("/ios/{_locale}", name="ios", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
      * @Template()
@@ -92,6 +92,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $projects = $em->getRepository('AppDefaultBundle:Portfolio')->findAll();
+
         return [
             'projects' => $projects,
         ];

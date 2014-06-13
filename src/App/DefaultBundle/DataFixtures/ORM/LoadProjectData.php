@@ -34,7 +34,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             'link' => 'http://best4car.ru/',
             'image' => 'best4car.jpg',
             'description' => '
-                    Проект достался нам в незаконченном виде летом 2013-го года. 
+                    Проект достался нам в незаконченном виде летом 2013-го года.
                     Мы помогли основателям сервиса довести его до запуска и продолжаем работать вместе, развивая и улучшая функционал.
                     Сайт разработан на Symfony2.
                     ',
