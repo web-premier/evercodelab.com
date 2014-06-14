@@ -1,5 +1,5 @@
 <div class="blog blog-grey">
-    <h2 class="top-h2">Блог</h2>
+    <h2 class="top-h2">{{ 'blog.title'|trans }}</h2>
     <div class="tabs container clear">
         <div class="aside">
             <ul>
@@ -15,7 +15,7 @@
                 <p>
                     {{ latestPosts.0.text | raw }}
                 </p>
-                <a class="btn" href="{{ latestPosts.0.link }}">Читать далее</a>
+                <a class="btn" href="{{ latestPosts.0.link }}">{{ 'blog.readmore'|trans }}</a>
             </div>
         </div>
     </div>

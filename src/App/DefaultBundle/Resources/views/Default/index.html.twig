@@ -9,16 +9,16 @@
     <div class="case">
         <div class="container">
             <a href="{{ path('symfony') }}" class="item">
-                <img src="/img/icon-symfony.png" alt="">
-                Разработка на <br>Symfony2
+                <img src="/img/icon-symfony.png" alt="{{ 'main.symfony'|trans|raw }}">
+                {{ 'main.symfony'|trans|raw }}
             </a>
             <a href="{{ path('ror') }}" class="item">
-                <img src="/img/icon-ruby.png" alt="">
-                Разработка на <br>Ruby on Rails
+                <img src="/img/icon-ruby.png" alt="{{ 'main.ror'|trans|raw }}">
+                {{ 'main.ror'|trans|raw }}
             </a>
             <a href="#" class="item">
-                <img src="/img/icon-ios.png" alt="">
-                Разработка <br>iOS приложений
+                <img src="/img/icon-ios.png" alt="{{ 'main.ios'|trans|raw }}">
+                {{ 'main.ios'|trans|raw }}
             </a>
         </div>
     </div>
@@ -36,7 +36,7 @@
         <div class="before-left-block"><i></i></div>
         <div class="before-right-block"><i></i></div>
         <div class="container">
-            <h2>Клиенты <img src="/img/clients.png" alt="" /></h2>
+            <h2>{{ 'main.clients.title'|trans }} <img src="/img/clients.png" alt="{{ 'main.clients.title'|trans }}" /></h2>
 
             <div class="review-client">
                 <div class="review scrollbar">
@@ -98,15 +98,15 @@
     <div class="about">
         <div class="container clear">
             <div class="team">
-                <h2>О нас</h2>
+                <h2>{{ 'aboutus.title'|trans }}</h2>
                 <p>
-                    Основное направление нашей деятельности — это программирование, у нас в этом есть большой опыт. Мы этакая лаборатория кода.
+                    {{ 'aboutus.first'|trans }}
                 </p>
                 <p>
-                    Мы не занимаемся дизайном макетов для сайтов. Но мы можем сделать вам красивый дизайн API вашего сервиса или приложения.
+                    {{ 'aboutus.second'|trans }}
                 </p>
                 <p>
-                    Но если вам все-таки нужны дизайнеры, которые умеют рисовать, то мы знаем много замечательных квалифицированных людей, которые с радостью вам помогут.
+                    {{ 'aboutus.third'|trans }}
                 </p>
                 <div class="gallery">
                     {% for member in team %}
@@ -125,7 +125,7 @@
                 </div>
             </div>
             <div class="mission">
-                <h3>Evercodelab<br/> <span>миссия</span></h3>
+                <h3>Evercodelab<br/> <span>{{ 'main.mission.title'|trans }}</span></h3>
                 <p>Мы работаем для того, чтобы воплощать идеи наших клиентов в качественные продукты и сервисы.</p>
                 <p>
                     Изучаем и используем современные технологии, чтобы наши продукты отвечали высоким требованиям качества. Стремимся узнавать новое и делиться этими знаниями. Совершенствуем процессы, чтобы делать нашу работу эффективнее.<br/> Мы вносим свой вклад в создание современной культуры разработки и формирование профессиональной среды. Нам действительно не все равно.
@@ -134,7 +134,7 @@
                     Мы создаем свои инструменты, продукты и сервисы, которые решают реальные проблемы и делают жизнь людей проще, удобнее, понятнее, лучше и приятнее.
                 </p>
                 <p>Для нас это — творчество, выражение себя и в то же время образ жизни.</p>
-                <a href="#" class="icon"><img src="/img/icon-lines.png" alt=""></a>
+                <img src="/img/icon-lines.png" class="icon" alt="">
             </div>
         </div>
     </div>
@@ -154,31 +154,31 @@
     <!-- Форма для заполнения -->
     <div class="feedback container" id="feedback">
             <form action="{{ path('index') }}" method="post">
-            <h2>Задайте вопрос</h2>
+            <h2>{{ 'main.ask.title'|trans }}</h2>
             {% for flashMessage in app.session.flashbag.get('notice') %}
                 <div class="flash-notice">
                     {{ flashMessage }}
                 </div>
             {% endfor %}
                 <div>
-                    <label for="name">Представьтесь</label>
+                    <label for="name">{{ 'main.ask.introduce'|trans }}</label>
                     {{ form_widget(feedbackForm.name) }}
                 </div>
                 <div>
-                    <label for="mail">Ваш email на который мы ответим</label>
+                    <label for="mail">{{ 'main.ask.youremail'|trans }}</label>
                     {{ form_widget(feedbackForm.contact) }}
                 </div>
                 <div>
-                    <label for="quest">Вопрос</label>
+                    <label for="quest">{{ 'main.ask.question'|trans }}</label>
                     {{ form_widget(feedbackForm.content) }}
                 </div>
                 {{ form_rest(feedbackForm) }}
-                <button class="btn" type="submit">Отправить</button>
+                <button class="btn" type="submit">{{ 'main.ask.send'|trans }}</button>
             </form>
         <div class="questions">
-            <h2>Что еще?</h2>
+            <h2>{{ 'main.whatelse.title'|trans }}</h2>
             <ul>
-                <li><a href="http://thebookofknowledge.evercodelab.com/">The Book of Knowledge</a></li>
+                <li><a href="http://thebookofknowledge.evercodelab.com/">{{ 'main.whatelse.tbok'|trans }}</a></li>
                 <li><a href="http://php-guide.evercodelab.com/">PHP Guide</a></li>
 <!--                 <li><a href="#">Как мы работаем</a></li>
                 <li><a href="#">Выступления на конференциях</a></li> -->

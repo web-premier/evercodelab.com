@@ -17,61 +17,38 @@ site:
         address: "Ligovsky Ave 50/13, of. 30"
     design: "site design"
 
+main:
+    symfony: "Development on<br />Symfony2"
+    ror: "Development on<br />Ruby on Rails"
+    ios: "Development <br />for iOS"
+    clients:
+        title: "Clients"
+    mission:
+        title: "mission"
+    ask:
+        title: "Ask question"
+        introduce: "Introduce yourself"
+        youremail: "Your email, please"
+        question: "Question"
+        send: "Send"
+    whatelse:
+        title: "What else?"
+        tbok: "The Book of Knowledge"
+
 menu:
     main: Home
     portfolio: Portfolio
     blog: Blog
 
-
 aboutus:
-    header: Hello client,<br /> we are developers!
-    first: What we do mainly is programming, which we have extensive experience in. They call us the code laboratory.
-    second: We don't do visual design or draw templates, but we can design a beautiful API for your service or application.
-    third: In case you do need some designers (you know, to draw something), we know a multitude of cool and qualified specialists who will help you with great pleasure.
+    title: "About us"
+    first: "What we do mainly is programming, which we have extensive experience in. They call us the code laboratory."
+    second: "We don't do visual design or draw templates, but we can design a beautiful API for your service or application."
+    third: "In case you do need some designers (you know, to draw something), we know a multitude of cool and qualified specialists who will help you with great pleasure."
 
-services:
-    header: What we can do
-    development:
-        title: Development
-        services: Services
-        apps: Applications
-        api: API
-        proto: Prototypes
-        support: Maintenance and support
-    consulting:
-        title: Consulting
-        designing: Code design
-        analysis: Code analysis
-        process: Organizing development process
-        management: Managing developers' teams
-        structuring: Structuring project information
-    technology:
-        title: Technologies
-        vcs: Version controll systems
-        langs: Languages
-        db: Databases
-        frameworks: Frameworks
-
-clients:
-    header: Selected clients
+blog:
+    title: "Blog"
+    readmore: "Read more"
 
 portfolio:
     header: Our portfolio
-
-contacts:
-    header: How to contact us
-    form:
-        name: Your name, please
-        contact: Email or phone
-        content: Write us something
-        submit: Send message
-
-blog:
-    header: Almost forgot, we also have a blog!
-    more: Read more...
-
-while: And while you are reading all this we are already on our way to develop something new and great!
-
-team: Team
-mission: Mission
-master_class: Master class «Programming in PHP»
