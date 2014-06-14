@@ -51,4 +51,8 @@ blog:
     readmore: "Read more"
 
 portfolio:
-    header: Our portfolio
+    title: Portfolio
+
+development:
+    symfony: "Symfony2 development"
+    ror: "Ruby on Rails development"

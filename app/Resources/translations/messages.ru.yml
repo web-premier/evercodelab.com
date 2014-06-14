@@ -51,6 +51,9 @@ blog:
     title: "Блог"
     readmore: "Читать далее"
 
-
 portfolio:
-    header: Наше портфолио
+    title: Портфолио
+
+development:
+    symfony: "Разработка на Symfony2"
+    ror: "Разработка на Ruby on Rails"
