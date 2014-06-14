@@ -10,9 +10,9 @@ class Builder extends ContainerAware
     {
         $menu = $factory->createItem('root');
 
-        $menu->addChild('Главная', array('route' => 'index'));
-        $menu->addChild('Портфолио', array('route' => 'portfolio'));
-        $menu->addChild('Блог', array('uri' => '//blog.evercodelab.com'));
+        $menu->addChild('menu.main', ['route' => 'index']);
+        $menu->addChild('menu.portfolio', ['route' => 'portfolio']);
+        $menu->addChild('menu.blog', ['uri' => '//blog.evercodelab.com']);
 
         $menu->setCurrentUri($this->container->get('request')->getRequestUri());
 
@@ -24,9 +24,12 @@ class Builder extends ContainerAware
         $menu = $factory->createItem('root');
         $menu->setChildrenAttribute('class', 'language');
 
-        $ru = $menu->addChild('ru', array('uri' => '#'));
-        $ru->setCurrent(true);
-        $menu->addChild('en', array('uri' => '#'));
+        $route = $this->container->get('request')->get('_route');
+
+        $ru = $menu->addChild('ru', ['route' => $route, 'routeParameters' => ['_locale' => 'ru']]);
+        $menu->addChild('en', ['route' => $route, 'routeParameters' => ['_locale' => 'en']]);
+
+        $menu->setCurrentUri($this->container->get('request')->getRequestUri());
 
         return $menu;
     }

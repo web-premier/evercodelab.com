@@ -1,5 +1,9 @@
 {% extends 'AppDefaultBundle::layout.html.twig' %}
 
+{% block title %}{{ 'site.title.main'|trans }}{% endblock %}
+
+{% block description %}{{ 'site.description.main'|trans }}{% endblock %}
+
 {% block content %}
     <!-- Кейс -->
     <div class="case">
@@ -174,8 +178,8 @@
         <div class="questions">
             <h2>Что еще?</h2>
             <ul>
-                <li><a href="#">Пока ничего!</a></li>
-                <li><a href="#">Но скоро будет :)</a></li>
+                <li><a href="http://thebookofknowledge.evercodelab.com/">The Book of Knowledge</a></li>
+                <li><a href="http://php-guide.evercodelab.com/">PHP Guide</a></li>
 <!--                 <li><a href="#">Как мы работаем</a></li>
                 <li><a href="#">Выступления на конференциях</a></li> -->
             </ul>

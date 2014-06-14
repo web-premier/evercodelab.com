@@ -58,7 +58,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/symfony/{_locale}", name="symfony", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
+     * @Route("/{_locale}/symfony", name="symfony", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
      * @Template()
      */
     public function symfonyAction(Request $request)
@@ -67,7 +67,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/ruby-on-rails/{_locale}", name="ror", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
+     * @Route("/{_locale}/ruby-on-rails", name="ror", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
      * @Template()
      */
     public function rorAction(Request $request)
@@ -76,7 +76,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/ios/{_locale}", name="ios", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
+     * @Route("/{_locale}/ios", name="ios", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
      * @Template()
      */
     public function iosAction(Request $request)
@@ -85,7 +85,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/portfolio/{_locale}", name="portfolio", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
+     * @Route("/{_locale}/portfolio", name="portfolio", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
      * @Template()
      */
     public function portfolioAction(Request $request)

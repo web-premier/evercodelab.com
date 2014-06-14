@@ -1,16 +1,26 @@
 site:
-    keywords: symfony2, ruby on rails, ios, api, разработка сайтов, консалтинг, анализ кода, парсеры, проектирование, Zend Framework, Python, Django
-    description: Evercode Lab — команда квалифицированных разработчиков, которые помогут вам в воплощении ваших проектов и идей.
-    title: Evercode Lab - разработка на Symfony2 и Ruby on Rails
+    keywords: "symfony2, ruby on rails, ios, api, iphone, ipad, разработка сайтов, консалтинг, автоматизация анализ кода, парсеры, проектирование"
+    description: 
+        main: "Evercode Lab — команда квалифицированных разработчиков на Symfony2, Ruby on Rails и под iOS. Мы поможем вам в техническом воплощении ваших проектов и идей."
+        portfolio: "Портфолио проектов Evercode Lab."
+        symfony: "Информация по разработке на Symfony2. Что, почему, зачем, как."
+        ror: "Информация по разработке на Ruby on Rails. Что, почему, зачем, как."
+        ios: "Информация по разработке приложений для iPhone и iPad. Что, почему, зачем, как."
+    title: 
+        main: "Evercode Lab | разработка на Symfony2, Ruby on Rails, разработка  приложений для iPhone и iPad"
+        portfolio: "Портфолио | Evercode Lab"
+        symfony: "Разработка на Symfony2 | Evercode Lab"
+        ror: "Разработка на Ruby on Rails | Evercode Lab"
+        ios: "Разработка приложений для iPhone и iPad | Evercode Lab"
+    contacts:
+        title: "Контакты"
+        address: "Лиговский пр. 50/13, оф. 30"
+    design: "дизайн сайта"
 
 menu:
-    welcome: Добро пожаловать
-    aboutus: О нас
-    services: Услуги
-    clients: Клиенты
+    main: Главная
     portfolio: Портфолио
-    contacts: Контакты
-    blog: А, и еще блог
+    blog: Блог
 
 aboutus:
     header: Привет, клиент,<br /> мы разработчики!
