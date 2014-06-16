@@ -865,6 +865,8 @@ footer .design a:hover {  color: #553770; }
   display: none;
 }
 .works .work-name {
+  background: #383c41;
+  opacity: 0.5;
   color: #fff;
   font-family: HelveticaNeueBold, Helvetica, Arial, sans-serif;
   padding: 10px;
