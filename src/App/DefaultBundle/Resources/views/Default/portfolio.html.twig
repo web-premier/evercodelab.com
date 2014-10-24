@@ -28,7 +28,7 @@
             {% for project in projects %}
             <div class="work">
                 {% if project.logo %}
-                    <img src="{{ vich_uploader_asset(project, 'file') | apply_filter('portfolio_list_thumb') }}" alt="{{ project.name }}" />
+                    <img src="{{ vich_uploader_asset(project, 'portfolio_logo') | apply_filter('portfolio_list_thumb') }}" alt="{{ project.name }}" />
                 {% endif %}
                 <div class="work-name-wrap">
                     <div class="work-name">
