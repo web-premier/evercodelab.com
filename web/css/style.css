@@ -433,69 +433,78 @@ header .menu .language a{ padding: 16px 5px 13px; }
 
 /*-------------Форма для заполнения--------------*/
 .feedback {
-  padding: 40px 10px;
-  overflow: hidden;
+    padding: 40px 10px;
+    overflow: hidden;
 }
 .feedback h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 .feedback form {
-  float: left;
-  width: 480px;
-  margin-right: 150px;
+    float: left;
+    width: 480px;
+    margin-right: 150px;
 }
 .feedback form label {
-  color: #333;
-  display: block;
-  font-size: 16px;
-  line-height: 21px;
-  margin-bottom: 5px;
-  font-family: Arial, sans-serif;
+    color: #333;
+    display: block;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
 }
 .feedback form input,
 .feedback form textarea {
-  border: none;
-  outline: none;
-  padding: 5px;
-  margin-bottom: 20px;
-  border: 2px solid #E6E6E6;
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 2px solid #E6E6E6;
 }
 .feedback form input:focus,
 .feedback form textarea:focus {
-  border: 2px solid #ccc;
+    border: 2px solid #ccc;
 }
 .feedback form input {
-  width: 365px;
-  height: 36px;
+    width: 365px;
+    height: 36px;
 }
 .feedback form textarea {
-  width: 100%;
-  resize: none;
+    width: 100%;
+    resize: none;
 }
 .feedback form .btn {  width: 150px; }
 .feedback .questions {
-  float: left;
-  width: 400px;
+    float: left;
+    width: 400px;
 }
 .feedback .questions ul {  margin-left: 20px; }
 .feedback .questions li {
-  padding-left: 10px;
-  list-style-image: url('../img/list-item-green.png');
+    padding-left: 10px;
+    list-style-image: url('../img/list-item-green.png');
 }
 .feedback .questions li a {
-  display: block;
-  color: #2d9045;
-  font-size: 15px;
-  line-height: 21px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  transition: 0.3s all ease;
-  -webkit-transition: 0.3s all ease;
-  -moz-transition: 0.3s all ease;
+    display: block;
+    color: #2d9045;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: 0.3s all ease;
+    -webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
 }
 .feedback .questions li a:hover {  color: #553770; }
 
+/*-------------Контакты--------------*/
+.contacts-block {
+    width: 100%;
+    min-width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin-top: -21px;
+    padding-top:1px;
+}
 /*----------Футер----------*/
 footer {
   padding: 20px 0px;
@@ -551,16 +560,35 @@ footer .design {
   margin-top: 15px;
 }
 footer .design a {
-  color: #2d9045;
-  font-size: 15px;
-  line-height: 25px;
-  font-weight: bold;
-  transition: 0.3s all ease;
-  -webkit-transition: 0.3s all ease;
-  -moz-transition: 0.3s all ease;
+    color: #2d9045;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: bold;
+    transition: 0.3s all ease;
+    -webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
 }
 footer .design a:hover {  color: #553770; }
 
+footer .copyright a {
+    font-family: HelveticaNeueBold, Helvetica, Arial, sans-serif;
+    color: #2d9045;
+    transition: 0.3s all ease;
+    -webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+    margin-left: 58px;
+    font-size: 16px;
+}
+footer .copyright a:hover {  color: #553770; }
+
+
+footer .copyright {
+    font-family: HelveticaNeueBold, Helvetica, Arial, sans-serif;
+    display: inline-block;
+    line-height: 20px;
+    padding-left: 20px;
+    width: 370px;
+}
 /*----------Общие стили для блога------------*/
 .blog {
   background: #fff;
