@@ -51,7 +51,7 @@ class PortfolioAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('id')
-            ->add('logo', null, array('template' => 'AppDefaultBundle:Admin:list_image.html.twig'))
+            ->add('logo', null, array('template' => 'AppDefaultBundle:Admin:list_portfolio.html.twig'))
             ->addIdentifier('name')
             ->addIdentifier('link')
         ;

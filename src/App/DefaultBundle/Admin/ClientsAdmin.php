@@ -33,7 +33,7 @@ class ClientsAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('id')
-            ->add('logo', null, array('template' => 'AppDefaultBundle:Admin:list_image.html.twig'))
+            ->add('logo', null, array('template' => 'AppDefaultBundle:Admin:list_clients.html.twig'))
             ->addIdentifier('name')
             ->addIdentifier('created_at')
         ;
