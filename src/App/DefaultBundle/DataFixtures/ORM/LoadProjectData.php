@@ -12,6 +12,104 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
 
     protected $projects = array(
         array(
+            'name' => 'Escar-web',
+            'link' => '',
+            'image' => 'escar.png',
+            'description' => '
+                    
+                    ',
+            'en' => array(
+                'name' => 'Escar-web',
+                'description' => '
+                        
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'Love2shop',
+            'link' => '',
+            'image' => 'love2shop.png',
+            'description' => '
+                    
+                    ',
+            'en' => array(
+                'name' => 'Love2shop',
+                'description' => '
+                        
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'Система тестирования «Балл.орг»',
+            'link' => '',
+            'image' => 'ball-org.png',
+            'description' => '
+                    
+                    ',
+            'en' => array(
+                'name' => 'Testing system «Балл.орг»',
+                'description' => '
+                        
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'OnDoc',
+            'link' => 'https://ondoc.me/',
+            'image' => 'ondoc.png',
+            'description' => '
+                    
+                    ',
+            'en' => array(
+                'name' => 'OnDoc',
+                'description' => '
+                        
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'TDCloud',
+            'link' => 'http://tdcloud.ru/',
+            'image' => 'tdcloud.png',
+            'description' => '
+                    
+                    ',
+            'en' => array(
+                'name' => 'TDCloud',
+                'description' => '
+                        
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'Picademy',
+            'link' => 'http://picademy.ru/',
+            'image' => 'picademy.png',
+            'description' => '
+                    
+                    ',
+            'en' => array(
+                'name' => 'Picademy',
+                'description' => '
+                        
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'Shamrock Pub',
+            'link' => 'http://shamrock-bar.ru/',
+            'image' => 'shamrock.png',
+            'description' => '
+                    
+                    ',
+            'en' => array(
+                'name' => 'Shamrock Pub',
+                'description' => '
+                        
+                        ',
+            ),
+        ),
+        array(
             'name' => 'Russian Wake Awards',
             'link' => 'http://wakeawards.ru/',
             'image' => 'wakeawards.png',
