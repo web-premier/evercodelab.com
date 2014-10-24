@@ -16,6 +16,8 @@ site:
         title: "Contacts"
         address: "Ligovsky Ave 50/13, of. 30"
     design: "site design"
+    company: "OOO Evercode Lab"
+    address: "Saint-Petersburg, Ligovsky Ave, 50/13, office 30"
 
 main:
     symfony: "Development on<br />Symfony2"
