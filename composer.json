@@ -7,49 +7,48 @@
     },
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.3.*",
+        "symfony/symfony": "~2.5",
         "doctrine/orm": ">=2.2.3,<2.4-dev",
-        "doctrine/doctrine-bundle": "1.2.*",
-        "twig/extensions": "1.0.*",
-        "symfony/assetic-bundle": "2.3.*",
-        "symfony/swiftmailer-bundle": "2.3.*",
-        "symfony/monolog-bundle": "2.3.*",
-        "sensio/distribution-bundle": "2.3.*",
-        "sensio/framework-extra-bundle": "2.3.*",
-        "sensio/generator-bundle": "2.3.*",
+        "doctrine/doctrine-bundle": "~1.2",
+        "twig/extensions": "~1.0",
+        "symfony/assetic-bundle": "~2.3",
+        "symfony/swiftmailer-bundle": "~2.3",
+        "symfony/monolog-bundle": "~2.3",
+        "sensio/distribution-bundle": "~3.0",
+        "sensio/framework-extra-bundle": "~3.0",
+        "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
 
-        "jms/security-extra-bundle": "dev-master",
+        "jms/security-extra-bundle": "~1.5",
 
-        "friendsofsymfony/user-bundle": "dev-master",
+        "friendsofsymfony/user-bundle": "~1.3",
 
-        "sonata-project/admin-bundle": "dev-master",
-        "sonata-project/doctrine-orm-admin-bundle": "dev-master",
-        "sonata-project/intl-bundle": "dev-master",
-        "sonata-project/cache-bundle": "dev-master",
-        "sonata-project/block-bundle": "dev-master",
-        "sonata-project/core-bundle": "dev-master",
+        "sonata-project/admin-bundle": "~2.3",
+        "sonata-project/doctrine-orm-admin-bundle": "~2.3",
+        "sonata-project/intl-bundle": "~2.2",
+        "sonata-project/cache-bundle": "~2.2",
+        "sonata-project/block-bundle": "~2.2",
+        "sonata-project/core-bundle": "~2.2",
 
-        "knplabs/knp-menu-bundle": "1.1.x-dev",
-        "knplabs/knp-last-tweets-bundle": "*",
+        "knplabs/knp-menu-bundle": "~1.1",
         "inori/twitter-app-bundle": "dev-master",
         "abraham/twitteroauth": "dev-master",
 
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "doctrine/data-fixtures": "dev-master",
 
-        "doctrine/doctrine-migrations-bundle": "dev-master",
-        "doctrine/migrations": "dev-master",
+        "doctrine/doctrine-migrations-bundle": "dev-master#62e20bb35da280baed221cc0a8076d46bd70db38",
+        "doctrine/migrations": "1.0.*@dev",
 
-        "stof/doctrine-extensions-bundle": "dev-master",
+        "stof/doctrine-extensions-bundle": "1.2.*@dev",
 
-        "fkr/simplepie-bundle": "dev-master",
-        "avalanche123/imagine-bundle": "dev-master",
+        "fkr/simplepie-bundle": "~1.0",
+        "avalanche123/imagine-bundle": "~2.1",
 
-        "vich/uploader-bundle": "dev-master",
+        "vich/uploader-bundle": "~0.11",
         "knplabs/gaufrette": "0.2.*@dev",
         "knplabs/knp-gaufrette-bundle": "0.2.*@dev",
-        "ornicar/apc-bundle": "*"
+        "ornicar/apc-bundle": "~1.0"
     },
     "repositories": [
         {
