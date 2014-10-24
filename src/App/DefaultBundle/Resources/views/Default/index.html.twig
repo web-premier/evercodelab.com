@@ -111,7 +111,7 @@
                 <div class="gallery">
                     {% for member in team %}
                     <div class="item">
-                        <img src="{{ vich_uploader_asset(member, 'file') | apply_filter('team_photo_thumb') }}" alt="{{ member.name }}">
+                        <img src="{{ vich_uploader_asset(member, 'team_photo') | apply_filter('team_photo_thumb') }}" alt="{{ member.name }}">
                         <p>{{ member.name }}</p>
                         <div class="social">
                             <a href="mailto:{{ member.email }}" class="mail"></a>

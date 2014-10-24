@@ -107,10 +107,6 @@ inori_twitter_app:
     oauth_token: %twitter_oauth_token%
     oauth_token_secret: %twitter_oauth_token_secret%
 
-knp_last_tweets:
-    fetcher:
-        driver: oauth
-
 avalanche_imagine:
     source_root: %kernel.root_dir%/../web
     web_root: %kernel.root_dir%/../web

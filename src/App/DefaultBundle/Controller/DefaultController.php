@@ -22,8 +22,9 @@ class DefaultController extends Controller
         $team = $em->getRepository('AppDefaultBundle:Team')->findAll();
         $feedbackForm = $this->createForm(new FeedbackType());
 
-        $feedbackForm->bind($request);
-        if ($feedbackForm->isValid()) {
+        $feedbackForm->handleRequest($request);
+
+        if ($feedbackForm->isSubmitted() && $feedbackForm->isValid()) {
             $this->get('feedback.manager')->send($feedbackForm->getData());
             $this->get('session')->getFlashBag()->add(
                 'notice',
