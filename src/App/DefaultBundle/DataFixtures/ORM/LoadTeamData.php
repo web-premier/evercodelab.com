@@ -12,39 +12,11 @@ class LoadTeamData extends AbstractFixture implements OrderedFixtureInterface
 
     protected $teamMembers = [
         [
-            'name' =>'Игорь Адров',
-            'photo' => 'igor.jpeg',
-            'email' => 'igor@evercodelab.com',
-            'twitter' => 'nuclear0',
-            'github' => 'nucleartux',
-        ],
-        [
             'name' =>'Сергей Лунев',
             'photo' => 'sergey.jpeg',
             'email' => 'sergey@evercodelab.com',
             'twitter' => 'lunev_sergey',
             'github' => 'sergeylunev',
-        ],
-        [
-            'name' =>'Петр Сергеев',
-            'photo' => 'petr.jpeg',
-            'email' => 'petr@evercodelab.com',
-            'twitter' => 'i_feya',
-            'github' => 'toothfairy',
-        ],
-        [
-            'name' =>'Рома Лапин',
-            'photo' => 'roma.jpeg',
-            'email' => 'roma@evercodelab.com',
-            'twitter' => 'memphys',
-            'github' => 'memphys',
-        ],
-        [
-            'name' =>'Илья Гордиенко',
-            'photo' => 'ilya.jpeg',
-            'email' => 'ilya@evercodelab.com',
-            'twitter' => 'ilya_troy',
-            'github' => 'Troytft',
         ],
         [
             'name' =>'Николай Малинин',
@@ -54,11 +26,32 @@ class LoadTeamData extends AbstractFixture implements OrderedFixtureInterface
             'github' => 'Neyaz',
         ],
         [
+            'name' =>'Михаил Голодяев',
+            'photo' => 'misha.jpeg',
+            'email' => 'misha@evercodelab.com',
+            'twitter' => '',
+            'github' => 'golodyaevm',
+        ],
+        [
+            'name' =>'Дмитрий Константинов',
+            'photo' => 'dima.jpeg',
+            'email' => 'dima@evercodelab.com',
+            'twitter' => '',
+            'github' => 'KoD2012',
+        ],
+        [
             'name' =>'Никита Мовшин',
             'photo' => 'nikita.jpeg',
             'email' => 'nikita@evercodelab.com',
             'twitter' => 'MovshinNikita',
             'github' => 'movshin',
+        ],
+        [
+            'name' =>'Рома Лапин',
+            'photo' => 'roma.jpeg',
+            'email' => 'roma@evercodelab.com',
+            'twitter' => 'memphys',
+            'github' => 'memphys',
         ],
     ];
 
