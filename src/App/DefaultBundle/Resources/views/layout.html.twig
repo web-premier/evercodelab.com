@@ -80,7 +80,8 @@
                         controls: ["zoomControl"]
                     });
                     map.behaviors
-                            .disable(['rightMouseButtonMagnifier']);
+                            .disable(['rightMouseButtonMagnifier'])
+                            .disable('scrollZoom');
                     var weAreHere = new ymaps.Placemark([59.923452,30.362226], {}, {
                         iconLayout: 'default#image',
                         iconImageHref: '/img/logo.png',
