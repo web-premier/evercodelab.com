@@ -22,8 +22,7 @@ class ClientSliderAdmin extends Admin
             ->add('picture')
             ->add('background')
             ->add('createdAt')
-            ->add('updatedAt')
-        ;
+            ->add('updatedAt');
     }
 
     /**
@@ -35,14 +34,13 @@ class ClientSliderAdmin extends Admin
             ->add('id')
             ->add('name')
             ->add('description')
-            ->add('_action', 'actions', array(
-                'actions' => array(
-                    'show' => array(),
-                    'edit' => array(),
-                    'delete' => array(),
-                )
-            ))
-        ;
+            ->add('_action', 'actions', [
+                'actions' => [
+                    'show'   => [],
+                    'edit'   => [],
+                    'delete' => [],
+                ]
+            ]);
     }
 
     /**
@@ -56,8 +54,7 @@ class ClientSliderAdmin extends Admin
             ->add('link')
             ->add('textColor')
             ->add('pictureFile', 'file')
-            ->add('backgroundFile', 'file')
-        ;
+            ->add('backgroundFile', 'file');
     }
 
     /**
@@ -72,7 +69,6 @@ class ClientSliderAdmin extends Admin
             ->add('picture')
             ->add('background')
             ->add('createdAt')
-            ->add('updatedAt')
-        ;
+            ->add('updatedAt');
     }
 }
