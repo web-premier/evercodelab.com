@@ -311,6 +311,7 @@ class ClientSlider
      */
     public function setPictureFile($pictureFile)
     {
+        $this->setUpdatedAt(new \DateTime('now'));
         $this->pictureFile = $pictureFile;
     }
 
@@ -327,6 +328,7 @@ class ClientSlider
      */
     public function setBackgroundFile($backgroundFile)
     {
+        $this->setUpdatedAt(new \DateTime('now'));
         $this->backgroundFile = $backgroundFile;
     }
 }
