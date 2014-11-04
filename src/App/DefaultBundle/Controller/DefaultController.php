@@ -71,7 +71,7 @@ class DefaultController extends Controller
      */
     public function symfonyAction()
     {
-        return;
+        return [];
     }
 
     /**
@@ -80,7 +80,7 @@ class DefaultController extends Controller
      */
     public function rorAction()
     {
-        return;
+        return [];
     }
 
     /**
@@ -89,7 +89,7 @@ class DefaultController extends Controller
      */
     public function iosAction()
     {
-        return;
+        return [];
     }
 
     /**

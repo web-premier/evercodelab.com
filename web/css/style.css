@@ -510,6 +510,8 @@ footer {
   padding: 20px 0px;
   background: #e6e6e6;
   overflow: hidden;
+    position: relative;
+    z-index: 2;
 }
 footer .social {
   width: 34%;
@@ -1174,4 +1176,9 @@ footer .copyright {
   right: auto;
   top: auto;
   width: 20px;
+}
+
+.map{
+    position: relative;
+    z-index: 1;
 }
