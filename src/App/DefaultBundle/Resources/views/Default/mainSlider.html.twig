@@ -1,88 +1,18 @@
-    <div class="slider-block" id="slides">
-        <div class="slides-wrapper" id="slides-wrapper">
-            <div class="slides_container">
-                <div class="item" data-bg-image="/img/bg-slider1.jpg">
-                    <img src="/img/projects/slider/best4car.jpg" alt="">
-                    <div class="text">
-                        <h3>Best4car.ru</h3>
-                        <ul>
-                            <li>Разработка на Symfony2</li>
-                            <li>Работа с унаследованным кодом</li>
-                            <li>Оптимизация</li>
-                            <li>Рефакторинг</li>
-                            <li>Консалтинг</li>
-                            <li>Поддержка</li>
-                        </ul>
-                        <a class="btn" href="http://best4car.ru">Перейти на сайт</a>
+<div class="slider-block" id="slides">
+    <div class="slides-wrapper" id="slides-wrapper">
+        <div class="slides_container">
+        {% for slide in slides %}
+            <div class="item" data-bg-image="{{ vich_uploader_asset(slide, 'slider_bg') }}">
+                <img src="{{ vich_uploader_asset(slide, 'slider') | apply_filter('slider_images') }}" alt="{{ slide.name }}">
+                <div class="text">
+                    <h3 style="color: {{ slide.textColor }} !important;">{{ slide.name }}</h3>
+                    <div class="s-content" style="color: {{ slide.textColor }} !important;">
+                        {{ slide.description|raw }}
                     </div>
-                </div>
-                <div class="item" data-bg-image="/img/bg-slider1.jpg">
-                    <img src="/img/projects/slider/fight.jpg" alt="">
-                    <div class="text">
-                        <h3>Игра «Морской бой»</h3>
-                        <ul>
-                            <li>Разработка на Ruby on Rails</li>
-                            <li>Оптимизация под мобильные устройства</li>
-                            <li>Консалтинг</li>
-                            <li>Поддержка</li>
-                            <li>Сопровождение игр</li>
-                        </ul>
-                        <a class="btn" href="http://bqbs.ru">Перейти на сайт</a>
-                    </div>
-                </div>
-                <div class="item" data-bg-image="/img/bg-slider1.jpg">
-                    <img src="/img/projects/slider/cards.jpg" alt="">
-                    <div class="text">
-                        <h3>Postcard With Love</h3>
-                        <ul>
-                            <li>Разработка на Ruby on Rails</li>
-                            <li>Фильтры и подготовка изображений к печати</li>
-                            <li>Поддержка</li>
-                            <li>Ми-ми-ми</li>
-                        </ul>
-                        <a class="btn" href="http://postcardwithlove.ru/">Перейти на сайт</a>
-                    </div>
-                </div>
-                <div class="item" data-bg-image="/img/bg-slider1.jpg">
-                    <img src="/img/projects/slider/wakeawards.png" alt="">
-                    <div class="text">
-                        <h3>Russian Wake Awards 2013</h3>
-                        <ul>
-                            <li>Первая Всероссийская Вейк Премия 2013</li>
-                            <li>Разработка на Symfony2</li>
-                            <li>Простая CMS на базе SonataAdminBundle</li>
-                            <li>Система голосования</li>
-                            <li>Разработка в кратчайшие сроки</li>
-                        </ul>
-                        <a class="btn" href="http://wakeawards.ru/">Перейти на сайт</a>
-                    </div>
-                </div>
-                <div class="item" data-bg-image="/img/bg-slider1.jpg">
-                    <img src="/img/projects/slider/mf.jpg" alt="">
-                    <div class="text">
-                        <h3>Manaflask</h3>
-                        <ul>
-                            <li>Разработка на Ruby on Rails</li>
-                            <li>Международная команда (Германия, Финляндия)</li>
-                            <li>Поддержка</li>
-                        </ul>
-                        <a class="btn" href="http://manaflask.com/">Перейти на сайт</a>
-                    </div>
-                </div>
-                <div class="item" data-bg-image="/img/bg-slider1.jpg">
-                    <img src="/img/projects/slider/popt.jpg" alt="">
-                    <div class="text">
-                        <h3>Popt</h3>
-                        <ul>
-                            <li>Разработка на Symfony2</li>
-                            <li>Рефакторинг и применеие best practices</li>
-                            <li>Разработка API для мобильных приложений</li>
-                            <li>Разработка веб-части сервиса</li>
-                            <li>Международная команда (США, Украина)</li>
-                        </ul>
-                        <a class="btn" href="https://itunes.apple.com/in/app/popt/id759205934?mt=8">Перейти на сайт</a>
-                    </div>
+                    <a class="btn" href="{{ slide.link }}">Перейти на сайт</a>
                 </div>
             </div>
+        {% endfor %}
         </div>
     </div>
+</div>

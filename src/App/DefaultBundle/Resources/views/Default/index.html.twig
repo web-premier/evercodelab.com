@@ -28,7 +28,7 @@
     <div class="after-right-block"><i></i></div>
 
     <!-- Slider -->
-    {% include 'AppDefaultBundle:Default:mainSlider.html.twig' %}
+    {% include 'AppDefaultBundle:Default:mainSlider.html.twig' with {slides: slides} %}
 
     <!-- Блок клиенты -->
     <div class="clients clear">
@@ -75,10 +75,6 @@
                 </div>
             </div>
 
-<!--             <div class="link">
-                <a href="#" class="btn">Хочу стать клиентом</a>
-                <a href="#" class="refresh"> <img src="/img/refresh.png" alt=""></a>
-            </div> -->
             <!-- Блок с партнерами -->
             <div class="partners">
                 <a href="http://www.reksoft.com/ru/" target="_blank"><img src="/img/clients/logo/reksoft.png" alt=""></a>
