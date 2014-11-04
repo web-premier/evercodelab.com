@@ -2,6 +2,7 @@
 
 namespace App\DefaultBundle\Controller;
 
+use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -13,13 +14,18 @@ class DefaultController extends Controller
     /**
      * @Route("/{_locale}", name="index", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
      * @Template()
+     * @param Request $request
+     *
+     * @return array|\Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function indexAction(Request $request)
     {
+        /** @var ObjectManager $em */
         $em = $this->getDoctrine()->getManager();
 
         $clients = $em->getRepository('AppDefaultBundle:Client')->findAll();
         $team = $em->getRepository('AppDefaultBundle:Team')->findAll();
+        $slides = $em->getRepository('AppDefaultBundle:ClientSlider')->findAll();
         $feedbackForm = $this->createForm(new FeedbackType());
 
         $feedbackForm->handleRequest($request);
@@ -38,6 +44,7 @@ class DefaultController extends Controller
             'clients' => $clients,
             'team' => $team,
             'feedbackForm' => $feedbackForm->createView(),
+            'slides' => $slides
         ];
     }
 
@@ -62,7 +69,7 @@ class DefaultController extends Controller
      * @Route("/{_locale}/symfony", name="symfony", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
      * @Template()
      */
-    public function symfonyAction(Request $request)
+    public function symfonyAction()
     {
         return;
     }
@@ -71,7 +78,7 @@ class DefaultController extends Controller
      * @Route("/{_locale}/ruby-on-rails", name="ror", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
      * @Template()
      */
-    public function rorAction(Request $request)
+    public function rorAction()
     {
         return;
     }
@@ -80,7 +87,7 @@ class DefaultController extends Controller
      * @Route("/{_locale}/ios", name="ios", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
      * @Template()
      */
-    public function iosAction(Request $request)
+    public function iosAction()
     {
         return;
     }
@@ -89,7 +96,7 @@ class DefaultController extends Controller
      * @Route("/{_locale}/portfolio", name="portfolio", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
      * @Template()
      */
-    public function portfolioAction(Request $request)
+    public function portfolioAction()
     {
         $em = $this->getDoctrine()->getManager();
         $projects = $em->getRepository('AppDefaultBundle:Portfolio')->findAll();
