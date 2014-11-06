@@ -20,7 +20,7 @@ role :app,        domain, :primary => true       # This may be the same as your 
 role :db,         domain                         # This is where Symfony2 migrations will run
 
 set :shared_files,      ["app/config/parameters.yml"]
-set :shared_children,     [app_path + "/logs", web_path + "/uploads", "vendor"]
+set :shared_children,     [app_path + "/logs", app_path + "/sessions", web_path + "/uploads", "vendor"]
 set :dump_assetic_assets, true
 set :use_composer, true
 set :update_vendors, false
@@ -32,7 +32,7 @@ after "deploy", "deploy:cleanup"
 # Be more verbose by uncommenting the following line
 logger.level = Logger::MAX_LEVEL
 
-set :writable_dirs,     ["app/cache", "app/logs", "web/uploads"]
+set :writable_dirs,     ["app/cache", "app/logs", "web/uploads", "app/sessions"]
 set :webserver_user,    "www-data"
 set :permission_method, :acl
 set :use_set_permissions, false

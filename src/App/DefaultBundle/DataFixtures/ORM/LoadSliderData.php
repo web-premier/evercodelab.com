@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\DefaultBundle\DataFixtures\ORM;
 
 use App\DefaultBundle\Entity\ClientSlider;

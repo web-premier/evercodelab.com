@@ -26,7 +26,7 @@ class Builder extends ContainerAware
 
         $route = $this->container->get('request')->get('_route');
 
-        $ru = $menu->addChild('ru', ['route' => $route, 'routeParameters' => ['_locale' => 'ru']]);
+        $menu->addChild('ru', ['route' => $route, 'routeParameters' => ['_locale' => 'ru']]);
         $menu->addChild('en', ['route' => $route, 'routeParameters' => ['_locale' => 'en']]);
 
         $menu->setCurrentUri($this->container->get('request')->getRequestUri());
