@@ -102,13 +102,6 @@ stof_doctrine_extensions:
             timestampable: true
             translatable: true
 
-inori_twitter_app:
-    file: %kernel.root_dir%/../vendor/abraham/twitteroauth/twitteroauth/twitteroauth.php
-    consumer_key: %twitter_consumer_key%
-    consumer_secret: %twitter_consumer_secret%
-    oauth_token: %twitter_oauth_token%
-    oauth_token_secret: %twitter_oauth_token_secret%
-
 avalanche_imagine:
     source_root: %kernel.root_dir%/../web
     web_root: %kernel.root_dir%/../web

@@ -37,7 +37,6 @@ class AppKernel extends Kernel
             new App\DefaultBundle\AppDefaultBundle(),
 
             new Fkr\SimplePieBundle\FkrSimplePieBundle(),
-            new Inori\TwitterAppBundle\InoriTwitterAppBundle(),
             new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
             new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),

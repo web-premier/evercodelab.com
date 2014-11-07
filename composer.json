@@ -31,43 +31,23 @@
         "sonata-project/core-bundle": "~2.2",
 
         "knplabs/knp-menu-bundle": "~1.1",
-        "inori/twitter-app-bundle": "dev-master",
-        "abraham/twitteroauth": "dev-master",
 
-        "doctrine/doctrine-fixtures-bundle": "dev-master",
-        "doctrine/data-fixtures": "dev-master",
+        "doctrine/doctrine-fixtures-bundle": "2.2.*",
 
-        "doctrine/doctrine-migrations-bundle": "dev-master#62e20bb35da280baed221cc0a8076d46bd70db38",
-        "doctrine/migrations": "1.0.*@dev",
+        "doctrine/migrations": "1.0.x-dev",
+        "doctrine/doctrine-migrations-bundle": "2.1.*@dev",
 
         "stof/doctrine-extensions-bundle": "1.2.*@dev",
 
         "fkr/simplepie-bundle": "~1.0",
         "avalanche123/imagine-bundle": "~2.1",
 
-        "vich/uploader-bundle": "~0.11",
+        "vich/uploader-bundle": "0.11.0",
         "knplabs/gaufrette": "0.2.*@dev",
         "knplabs/knp-gaufrette-bundle": "0.2.*@dev",
         "ornicar/apc-bundle": "~1.0"
     },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "abraham/twitteroauth",
-                "version": "dev-master",
-                "dist": {
-                    "url": "https://github.com/abraham/twitteroauth/zipball/master",
-                    "type": "zip"
-                },
-                "source": {
-                    "url": "git://github.com/abraham/twitteroauth.git",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
-        }
-    ],
+    "repositories": [],
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
