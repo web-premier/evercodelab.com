@@ -4,13 +4,13 @@
         <div class="aside">
             <ul>
                 {% for post in latestPosts %}
-                <li><a href="{{ post.link }}">{{ post.title | raw }}</a></li>
+                <li><a href="{{ post.link }}">{{ post.title }}</a></li>
                 {% endfor %}
             </ul>
         </div>
         <div class="all-tabs">
             <div class="tab1">
-                <a href="{{ latestPosts.0.link }}"><h3>{{ latestPosts.0.title | raw }}</h3></a>
+                <a href="{{ latestPosts.0.link }}"><h3>{{ latestPosts.0.title }}</h3></a>
                 <div class="date">{{ latestPosts.0.date }}</div>
                 <p>
                     {{ latestPosts.0.text | raw }}
