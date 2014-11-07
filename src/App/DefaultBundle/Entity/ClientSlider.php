@@ -107,7 +107,7 @@ class ClientSlider
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -117,20 +117,20 @@ class ClientSlider
     /**
      * Set name
      *
-     * @param string $name
+     * @param  string       $name
      * @return ClientSlider
      */
     public function setName($name)
     {
         $this->name = $name;
-    
+
         return $this;
     }
 
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -140,20 +140,20 @@ class ClientSlider
     /**
      * Set description
      *
-     * @param string $description
+     * @param  string       $description
      * @return ClientSlider
      */
     public function setDescription($description)
     {
         $this->description = $description;
-    
+
         return $this;
     }
 
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -163,20 +163,20 @@ class ClientSlider
     /**
      * Set picture
      *
-     * @param string $picture
+     * @param  string       $picture
      * @return ClientSlider
      */
     public function setPicture($picture)
     {
         $this->picture = $picture;
-    
+
         return $this;
     }
 
     /**
      * Get picture
      *
-     * @return string 
+     * @return string
      */
     public function getPicture()
     {
@@ -186,20 +186,20 @@ class ClientSlider
     /**
      * Set background
      *
-     * @param string $background
+     * @param  string       $background
      * @return ClientSlider
      */
     public function setBackground($background)
     {
         $this->background = $background;
-    
+
         return $this;
     }
 
     /**
      * Get background
      *
-     * @return string 
+     * @return string
      */
     public function getBackground()
     {
@@ -209,20 +209,20 @@ class ClientSlider
     /**
      * Set link
      *
-     * @param string $link
+     * @param  string       $link
      * @return ClientSlider
      */
     public function setLink($link)
     {
         $this->link = $link;
-    
+
         return $this;
     }
 
     /**
      * Get link
      *
-     * @return string 
+     * @return string
      */
     public function getLink()
     {
@@ -232,20 +232,20 @@ class ClientSlider
     /**
      * Set textColor
      *
-     * @param string $textColor
+     * @param  string       $textColor
      * @return ClientSlider
      */
     public function setTextColor($textColor)
     {
         $this->textColor = $textColor;
-    
+
         return $this;
     }
 
     /**
      * Get textColor
      *
-     * @return string 
+     * @return string
      */
     public function getTextColor()
     {
@@ -255,20 +255,20 @@ class ClientSlider
     /**
      * Set createdAt
      *
-     * @param \DateTime $createdAt
+     * @param  \DateTime    $createdAt
      * @return ClientSlider
      */
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
-    
+
         return $this;
     }
 
     /**
      * Get createdAt
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getCreatedAt()
     {
@@ -278,20 +278,20 @@ class ClientSlider
     /**
      * Set updatedAt
      *
-     * @param \DateTime $updatedAt
+     * @param  \DateTime    $updatedAt
      * @return ClientSlider
      */
     public function setUpdatedAt($updatedAt)
     {
         $this->updatedAt = $updatedAt;
-    
+
         return $this;
     }
 
     /**
      * Get updatedAt
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getUpdatedAt()
     {

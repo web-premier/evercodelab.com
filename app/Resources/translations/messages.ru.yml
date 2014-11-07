@@ -1,12 +1,12 @@
 site:
     keywords: "symfony2, ruby on rails, ios, api, iphone, ipad, разработка сайтов, консалтинг, автоматизация анализ кода, парсеры, проектирование"
-    description: 
+    description:
         main: "Evercode Lab — команда квалифицированных разработчиков на Symfony2, Ruby on Rails и под iOS. Мы поможем вам в техническом воплощении ваших проектов и идей."
         portfolio: "Портфолио проектов Evercode Lab."
         symfony: "Информация по разработке на Symfony2. Что, почему, зачем, как."
         ror: "Информация по разработке на Ruby on Rails. Что, почему, зачем, как."
         ios: "Информация по разработке приложений для iPhone и iPad. Что, почему, зачем, как."
-    title: 
+    title:
         main: "Evercode Lab | разработка на Symfony2, Ruby on Rails, разработка  приложений для iPhone и iPad"
         portfolio: "Портфолио | Evercode Lab"
         symfony: "Разработка на Symfony2 | Evercode Lab"

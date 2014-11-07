@@ -5,6 +5,7 @@ namespace App\DefaultBundle\Controller;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use App\DefaultBundle\Form\Type\FeedbackType;
@@ -13,6 +14,7 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/{_locale}", name="index", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
+     * @Method({"GET", "POST"})
      * @Template()
      * @param Request $request
      *
@@ -50,6 +52,7 @@ class DefaultController extends Controller
 
     /**
      * @Route(name="blog")
+     * @Method("GET")
      * @Template()
      */
     public function blogAction()
@@ -67,6 +70,7 @@ class DefaultController extends Controller
 
     /**
      * @Route("/{_locale}/symfony", name="symfony", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
+     * @Method("GET")
      * @Template()
      */
     public function symfonyAction()
@@ -76,6 +80,7 @@ class DefaultController extends Controller
 
     /**
      * @Route("/{_locale}/ruby-on-rails", name="ror", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
+     * @Method("GET")
      * @Template()
      */
     public function rorAction()
@@ -85,6 +90,7 @@ class DefaultController extends Controller
 
     /**
      * @Route("/{_locale}/ios", name="ios", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
+     * @Method("GET")
      * @Template()
      */
     public function iosAction()
@@ -94,6 +100,7 @@ class DefaultController extends Controller
 
     /**
      * @Route("/{_locale}/portfolio", name="portfolio", requirements={"_locale" = "ru|en"}, defaults={"_locale"="ru"})
+     * @Method("GET")
      * @Template()
      */
     public function portfolioAction()

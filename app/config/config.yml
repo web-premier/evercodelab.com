@@ -13,7 +13,9 @@ framework:
     csrf_protection: true
     validation:      { enable_annotations: true }
     templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
-    session: ~
+    session:
+        name: NOTPHPSESSID
+        save_path: "%kernel.root_dir%/sessions/"
     default_locale: %locale%
     fragments: { path: /_proxy }
 
