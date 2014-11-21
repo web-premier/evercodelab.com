@@ -60,12 +60,6 @@ var portfolioItems = {
             if(i == 0) {
                 row.push(item);
                 last_offset = offset;
-            } else if (i == that.items.length - 1) {
-                prev_item = item;
-                row.push(item);
-                $.each(row, function(j, row_item) {
-                    row_item.target = prev_item;
-                });
             } else if (last_offset == offset) {
                 row.push(item);
             } else {
@@ -78,6 +72,10 @@ var portfolioItems = {
                 last_offset = offset;
             }
             prev_item = item;
+        });
+
+        $.each(row, function(j, row_item) {
+            row_item.target = prev_item;
         });
     },
     bind_togglers: function() {
