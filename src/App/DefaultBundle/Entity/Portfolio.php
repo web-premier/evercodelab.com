@@ -66,6 +66,13 @@ class Portfolio
     private $link;
 
     /**
+     * @var string $link
+     *
+     * @ORM\Column(name="case_link", type="string", length=255, nullable=true)
+     */
+    private $caseLink;
+
+    /**
      * @ORM\ManyToOne(targetEntity="App\UserBundle\Entity\User")
      * @ORM\JoinColumn(name="user", referencedColumnName="id")
      */
@@ -196,6 +203,22 @@ class Portfolio
     public function getLink()
     {
         return $this->link;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCaseLink()
+    {
+        return $this->caseLink;
+    }
+
+    /**
+     * @param string $caseLink
+     */
+    public function setCaseLink($caseLink)
+    {
+        $this->caseLink = $caseLink;
     }
 
     /**
