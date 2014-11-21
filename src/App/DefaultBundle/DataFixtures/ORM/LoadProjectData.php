@@ -12,11 +12,134 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
 
     protected $projects = array(
         array(
+            'name' => 'Escar-web',
+            'link' => '',
+            'image' => 'escar.png',
+            'description' => '
+                    Веб-версия программы Эскар — системы накопления, хранения, мониторинга и предоставления информации о радиационных параметрах помещений и оборудования АЭС.
+                    Во многом уникальный для нас проект. Реализован как single-page app с помощью backbone.js, require.js и svg.js. На бэкенде Silex для API.
+                    <a href="http://blog.evercodelab.com/escar-web/">Подробнее о Escar-web и процессе работы над ним можно почитать в нашем блоге.</a>
+
+                    ',
+            'en' => array(
+                'name' => 'Escar-web',
+                'description' => '
+                        Web version of Escar – system for storing, monitoring and demonstrating data about radioactive parameters of objects and equipment on Nuclear power-station.
+                        Developed as a single-page app with backbone.js, require.js and svg.js. Silex is used for backend API.
+                        <a href="http://blog.evercodelab.com/escar-web/">For more details about Escar-web and the process of development check out our blog.</a>
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'Love2shop',
+            'link' => '',
+            'image' => 'love2shop.png',
+            'description' => '
+                    Для проекта love2shop мы разработали API для мобильного приложения, административную панель для управления огромным количеством товаров, автоматизировали парсинг и обработку.
+                    Указанные части проекта реализованы на Symfony2. Парсер переписан на Ruby с использованием очередей.
+                    ',
+            'en' => array(
+                'name' => 'Love2shop',
+                'description' => '
+                        For love2shop we developed backend API for their mobile app, admin panel for managing products, automated parsing and processing.
+                        These parts were developed on Symfony2. Parser was rewritten with Ruby and queues.
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'Система тестирования «Балл.орг»',
+            'link' => '',
+            'image' => 'ball-org.png',
+            'description' => '
+                    Система предоставляет возможность российским школам проводить тестирования для своих учеников с целью предварительной подготовки к ЕГЭ.
+                    Проект реализован на Symfony2 и имеет уникальные интерфейсы для управления данными и проверки результатов.
+                    ',
+            'en' => array(
+                'name' => 'Testing system «Балл.орг»',
+                'description' => '
+                        System provides opportunity for Russian schools to set tests for their students in order to prepare for Centralized Testing.
+                        Project is developed using Symfony2 with custom interfaces for managing data and checking the results.
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'OnDoc',
+            'link' => 'https://ondoc.me/',
+            'image' => 'ondoc.png',
+            'description' => '
+                    OnDoc — система персонального здравоохранения. 
+                    Предоставляет возможность регулярного мониторинга показателей собственного организма, а также хранения данных по обследованиям и прочей медицинской информации.
+                    Проект реализован на Symfony2. Помимо пользовательской части и админ панели имеет закрытый API для мобильных приложений.
+                    ',
+            'en' => array(
+                'name' => 'OnDoc',
+                'description' => '
+                        OnDoc is the system of personal healthcare.
+                        Project allows to regularly store and check information about your body and also data from medical surveys.
+                        Built with Symfony2. Besides client and admin interfaces has closed API for mobile applications.
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'TDCloud',
+            'link' => 'http://tdcloud.ru/',
+            'image' => 'tdcloud.png',
+            'description' => '
+                    Сервис облачной теледиспетчеризации TDCloud позволяет получать и обрабатывать данные с измерительных устройств через web-интерфейс без вложений в инфраструктуру.
+                    Веб-часть сервиса работает на Ruby on Rails и PostgreSQL, но внутри скрыто еще много всего интересного
+                    <a href="http://blog.evercodelab.com/tdcloud/">Подробнее о TDCloud и процессе работы над ним можно почитать в нашем блоге.</a>
+                    ',
+            'en' => array(
+                'name' => 'TDCloud',
+                'description' => '
+                        TDCloud gives clients an opportunity to get, check and process data from different measuring devices through the web with no extra spendings on infrastructure.
+                        Web-part works on Ruby on Rails and PostgreSQL. But there is a lot more inside.
+                        <a href="http://blog.evercodelab.com/tdcloud/">For more details about TDCloud and the process of development check out our blog.</a>
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'Picademy',
+            'link' => 'http://picademy.ru/',
+            'image' => 'picademy.png',
+            'description' => '
+                    Онлайн-фотошкола Picademy предоставляет целый набор разнообразных курсов для фотографов разного уровня. 
+                    Пользователи могут изучать видео-уроки, проходить тестирования и получать обратную связь от преподавателей на свои домашние задания.
+                    Проект реализован на Ruby on Rails.
+                    <a href="http://blog.evercodelab.com/picademy-ru/">Подробнее о Picademy и процессе работы над ним можно почитать в нашем блоге.</a>
+                    ',
+            'en' => array(
+                'name' => 'Picademy',
+                'description' => '
+                        Online photoschool Picademy provide various courses for photographers of all levels.
+                        Users can watch videos, check their knowledge with tests and communicate with on-site experts.
+                        Project is developed on Ruby on Rails.
+                        <a href="http://blog.evercodelab.com/picademy-ru/">For more details about Picademy and the process of development check out our blog.</a>
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'Shamrock Pub',
+            'link' => 'http://shamrock-bar.ru/',
+            'image' => 'shamrock.png',
+            'description' => '
+                    Для уютного московского паба Shamrock мы разработали простой, но функциональный сайт.
+                    Дизайн от Дениса Foster\'а. За кулисами движок на Symfony2, админка на SonataAdminBundle для управления всем контентом.
+                    ',
+            'en' => array(
+                'name' => 'Shamrock Pub',
+                'description' => '
+                        For a comfortable Moscow pub Shamrock we developed simple yet functional site.
+                        Design is done by Denis Foster. Engine is built on Symfony2 and SonataAdminBundle for managing all the content.
+                        ',
+            ),
+        ),
+        array(
             'name' => 'Russian Wake Awards',
             'link' => 'http://wakeawards.ru/',
             'image' => 'wakeawards.png',
             'description' => '
-                    Наши экстремальные друзья в этом году провели Первую Всероссийскую Вейк Премию.
+                    Наши экстремальные друзья в 2013 году провели Первую Всероссийскую Вейк Премию.
                     Специально для этого события совместно с дизайнером Денисом Foster\'ом мы сделали им в кратчайшие сроки сайт события с голосованием и информацией по событию, райдерам, местам и фотографам.
                     Проект разработан на Symfony2 и SonataAdminBundle в качестве админки.
                     ',
@@ -316,107 +439,47 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
                         ',
             ),
         ),
-        // array(
-        //     'name' => 'DropNotify',
-        //     'link' => 'http://dropnotify.evercodelab.com/',
-        //     'image' => '',
-        //     'description' => '
-        //             Мини-сервис, составляющий красивый дайджест из изменений в ваших файлах и папках Dropbox за день и присылающий его на email.
-        //             Разработан за пару дней для внутренних нужд. Работает на Google App Engine (Python).
-        //             Подробности <a href="http://blog.evercodelab.com/dropnotify/">в блоге</a>.
-        //             Код находится в открытом доступе.
-        //             ',
-        //     'en' => array(
-        //         'name' => 'DropNotify',
-        //         'description' => '
-        //                 Mini-service which takes the feed of changes in your Dropbox files and folders, composes beutiful digest and sends it to your email everyday.
-        //                 Was developed in couple of days for inner needs. Works on Google App Engine (Python).
-        //                 For more information see <a href="http://blog.evercodelab.com/dropnotify/">detailed blog entry</a>.
-        //                 The source code is open.
-        //                 ',
-        //     ),
-        // ),
-        // array(
-        //     'name' => 'EvercodeFaqBundle',
-        //     'link' => 'https://github.com/EvercodeLab/FaqBundle',
-        //     'image' => '',
-        //     'description' => '
-        //             Простой бандл для фреймворка Symfony2 для быстрой интеграции FAQ в проекты.
-        //             Находится в открытом доступе.
-        //             Вопросов не задает, но потенциально на них отвечает.
-        //             Снижает нагрузку на support в разы.
-        //             ',
-        //     'en' => array(
-        //         'name' => 'EvercodeFaqBundle',
-        //         'description' => '
-        //                 Simple Symfony2 Bundle for easy integrating FAQ functionality.
-        //                 Available for everyone to see, share, comment and even contribute.
-        //                 Doesn\'t ask question but potentially answers on them.
-        //                 Reduces working load on your support team.
-        //                 ',
-        //     ),
-        // ),
-        // array(
-        //     'name' => 'EvercodeBannerBundle',
-        //     'link' => 'https://github.com/EvercodeLab/BannerBundle',
-        //     'image' => '',
-        //     'description' => '
-        //             Бандл для фреймворка Symfony2 для работы с баннерами.
-        //             Находится в открытом доступе.
-        //             Некоторые говорят, повышает конверсию на проектах, где используется.
-        //             Умеет не только показывать баннеры, но и считать (яичницу не готовит).
-        //             ',
-        //     'en' => array(
-        //         'name' => 'EvercodeBannerBundle',
-        //         'description' => '
-        //                 Symfony2 bundle for working with banner on your site.
-        //                 Available for everyone to see, share, comment and even contribute.
-        //                 Some say it increases conversion of your advertisement.
-        //                 Not only shows banners but also can count... from one to ten.
-        //                 ',
-        //     ),
-        // ),
-        // array(
-        //     'name' => 'EvercodePageBundle',
-        //     'link' => 'https://github.com/EvercodeLab/EvercodePageBundle',
-        //     'image' => '',
-        //     'description' => '
-        //             Очень простой экспериментальный бандл для фреймворка Symfony2, добавляющий в проекты функционал работы с информационными страницами.
-        //             Находится в открытом доступе.
-        //             Повышает уровень образованности посетителей сайтов на 146%.
-        //             Улучшает навыки письменной речи.
-        //             ',
-        //     'en' => array(
-        //         'name' => 'EvercodePageBundle',
-        //         'description' => '
-        //                 Dead simple experimental Symfony2 Bundle for easy management of your projects\' information pages.
-        //                 Available for everyone to see, share, comment and even contribute.
-        //                 Increases your visitors intellectual faculties by 146%.
-        //                 Significantly improves writing skills.
-        //                 ',
-        //     ),
-        // ),
-        // array(
-        //     'name' => 'Система принятия и обработки объявлений',
-        //     'link' => null,
-        //     'image' => '',
-        //     'description' => '
-        //             Программа предназначена для принятия и обработки объявлений для публикации в газете и на сайте.
-        //             Возможности: гибкое управления объявлениями, поиск, генерация отчетов, подсчет стоимости,
-        //             внутренняя система счетов, импорт объявлений с сайта,
-        //             предпросмотр, рассылка SMS сообщений на телефоны подателей.
-        //             Подробности не разглашаются по соглашению с заказчиком.
-        //             ',
-        //     'en' => array(
-        //         'name' => 'System for receiving and processing of advertisement',
-        //         'description' => '
-        //                 The system is designed to accept and process ads for newspaper and site.
-        //                 Features: ads management, search, reports generation, price calculation,
-        //                 internal accounts system, import from site, preview, SMS notifications.
-        //                 More details are private dew to client\'s request.
-        //                 ',
-        //     ),
-        // ),
+        array(
+            'name' => 'DropNotify',
+            'link' => 'http://dropnotify.evercodelab.com/',
+            'image' => 'dropnotify.png',
+            'description' => '
+                    Мини-сервис, составляющий красивый дайджест из изменений в ваших файлах и папках Dropbox за день и присылающий его на email.
+                    Разработан за пару дней для внутренних нужд. Работает на Google App Engine (Python).
+                    Подробности <a href="http://blog.evercodelab.com/dropnotify/">в блоге</a>.
+                    Код находится в открытом доступе.
+                    ',
+            'en' => array(
+                'name' => 'DropNotify',
+                'description' => '
+                        Mini-service which takes the feed of changes in your Dropbox files and folders, composes beutiful digest and sends it to your email everyday.
+                        Was developed in couple of days for inner needs. Works on Google App Engine (Python).
+                        For more information see <a href="http://blog.evercodelab.com/dropnotify/">detailed blog entry</a>.
+                        The source code is open.
+                        ',
+            ),
+        ),
+        array(
+            'name' => 'Система принятия и обработки объявлений',
+            'link' => null,
+            'image' => 'webcity.png',
+            'description' => '
+                    Программа предназначена для принятия и обработки объявлений для публикации в газете и на сайте.
+                    Возможности: гибкое управления объявлениями, поиск, генерация отчетов, подсчет стоимости,
+                    внутренняя система счетов, импорт объявлений с сайта,
+                    предпросмотр, рассылка SMS сообщений на телефоны подателей.
+                    Подробности не разглашаются по соглашению с заказчиком.
+                    ',
+            'en' => array(
+                'name' => 'System for receiving and processing of advertisement',
+                'description' => '
+                        The system is designed to accept and process ads for newspaper and site.
+                        Features: ads management, search, reports generation, price calculation,
+                        internal accounts system, import from site, preview, SMS notifications.
+                        More details are private dew to client\'s request.
+                        ',
+            ),
+        ),
     );
 
     public function load(ObjectManager $manager)
@@ -424,6 +487,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         $repository = $manager->getRepository('\\Gedmo\\Translatable\\Entity\\Translation');
 
         $imagesDestinationDir = getcwd().'/web/uploads/images/portfolio';
+        $imagesSourceDir = getcwd().'/web/img/projects';
         if (! file_exists($imagesDestinationDir)) {
             mkdir($imagesDestinationDir, 0777, true);
         }
@@ -433,8 +497,11 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
             $project->setName($data['name']);
             $project->setLink($data['link']);
             $project->setDescription(trim($data['description']));
-            if (! empty($data['image'])) {
-                copy(getcwd().'/web/img/projects/' . $data['image'], $imagesDestinationDir . DIRECTORY_SEPARATOR . $data['image']);
+
+            $imageSource = $imagesSourceDir . DIRECTORY_SEPARATOR . $data['image'];
+
+            if (! empty($data['image']) && file_exists($imageSource)) {
+                copy($imageSource, $imagesDestinationDir . DIRECTORY_SEPARATOR . $data['image']);
                 $project->setLogo($data['image']);
             }
 
