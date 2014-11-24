@@ -21,7 +21,7 @@
         <div class="before-right-block right-white"><i></i></div>
 
         <!-- portfolio -->
-        <div class="works container">
+        <div class="works container portfolio-items">
             {% for project in projects %}
             <div class="work">
                 {% if project.logo %}
@@ -32,6 +32,28 @@
                         {{ project.name }}
                     </div>
                 </div>
+                {% spaceless %}
+                <div class="work-hidden">
+                    <div class="work-image">
+                        {% if project.logo %}
+                            <img src="{{ vich_uploader_asset(project, 'portfolio_logo') | apply_filter('portfolio_view_thumb') }}" alt="{{ project.name }}" />
+                        {% endif %}
+                    </div>
+                    <div class="work-about">
+                        {% if project.link %}
+                        <div class="work-link">
+                            <a href="{{ project.link }}">{{ project.link }}</a>
+                        </div>
+                        {% endif %}
+                        <div class="work-about-text">{{ project.description|raw }}</div>
+                        {% if project.caseLink %}
+                        <div class="work-case-link">
+                            Прочитать <a href="{{ project.caseLink }}">кейс проекта {{ project.name }}</a>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endspaceless %}
             </div>
             {% endfor %}
         </div>

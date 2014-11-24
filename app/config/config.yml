@@ -114,6 +114,9 @@ avalanche_imagine:
         portfolio_list_thumb:
             type:    thumbnail
             options: { size: [224, 163], mode: outbound }
+        portfolio_view_thumb:
+            type:    thumbnail
+            options: { size: [336, 245], mode: outbound }
         slider_images:
             type:    thumbnail
             options: { size: [500, 364], mode: outbound }
