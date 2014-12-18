@@ -28,7 +28,7 @@ class TeamAdmin extends Admin
     {
         $formMapper
             ->add('name')
-            ->add('file', 'file', ['required' => true, 'label' => 'Photo'])
+            ->add('file', 'file', ['required' => false, 'label' => 'Photo'])
             ->add('twitter')
             ->add('email')
             ->add('github')

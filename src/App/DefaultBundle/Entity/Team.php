@@ -295,6 +295,10 @@ class Team
     public function setFile($file)
     {
         $this->file = $file;
+
+        if ($file) {
+            $this->updated_at = new \DateTime();
+        }
     }
 
     public function getFile()
