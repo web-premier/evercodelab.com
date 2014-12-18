@@ -107,6 +107,9 @@
                 <div class="gallery">
                     {% for member in team %}
                     <div class="item">
+                        {% if member.zend %}
+                            <a href="{{ member.zend }}" class="zend"><img src="{{ asset("img/zend-logo.png") }}" alt="{{ member.name }} is ZCE!"/></a>
+                        {% endif %}
                         <img src="{{ vich_uploader_asset(member, 'team_photo') | apply_filter('team_photo_thumb') }}" alt="{{ member.name }}">
                         <p>{{ member.name }}</p>
                         <div class="social">

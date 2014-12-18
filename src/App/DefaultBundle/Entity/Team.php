@@ -73,6 +73,11 @@ class Team
     private $file;
 
     /**
+     * @ORM\Column(name="zend", type="string", nullable=true)
+     */
+    private $zend;
+
+    /**
      * @var datetime $created_at
      *
      * @Gedmo\Timestampable(on="create")
@@ -295,5 +300,28 @@ class Team
     public function getFile()
     {
         return $this->file;
+    }
+
+    /**
+     * Set zend
+     *
+     * @param string $zend
+     * @return Team
+     */
+    public function setZend($zend)
+    {
+        $this->zend = $zend;
+    
+        return $this;
+    }
+
+    /**
+     * Get zend
+     *
+     * @return string 
+     */
+    public function getZend()
+    {
+        return $this->zend;
     }
 }

@@ -374,8 +374,15 @@ header .menu .language a{ padding: 16px 5px 13px; }
   width: 140px;
   float: left;
   text-align: center;
+    position: relative;
 }
 .about .team .gallery .item img {  border-radius: 100%; }
+.about .team .gallery .item .zend {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.about .team .gallery .item .zend img {  border-radius: 0; }
 .about .team .gallery .item p {  font-family: HelveticaBold, Helvetica, Arial, sans-serif; }
 .about .team .gallery .item .social a {
   margin: 7%;

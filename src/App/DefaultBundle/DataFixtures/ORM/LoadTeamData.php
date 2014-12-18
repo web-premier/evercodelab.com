@@ -17,6 +17,7 @@ class LoadTeamData extends AbstractFixture implements OrderedFixtureInterface
             'email' => 'sergey@evercodelab.com',
             'twitter' => 'lunev_sergey',
             'github' => 'sergeylunev',
+            'zend' => 'http://www.zend.com/en/yellow-pages/ZEND026206'
         ],
         [
             'name' =>'Николай Малинин',
@@ -24,6 +25,7 @@ class LoadTeamData extends AbstractFixture implements OrderedFixtureInterface
             'email' => 'nikolay@evercodelab.com',
             'twitter' => '',
             'github' => 'Neyaz',
+            'zend' => ''
         ],
         [
             'name' =>'Михаил Голодяев',
@@ -31,6 +33,7 @@ class LoadTeamData extends AbstractFixture implements OrderedFixtureInterface
             'email' => 'misha@evercodelab.com',
             'twitter' => '',
             'github' => 'golodyaevm',
+            'zend' => ''
         ],
         [
             'name' =>'Дмитрий Константинов',
@@ -38,6 +41,7 @@ class LoadTeamData extends AbstractFixture implements OrderedFixtureInterface
             'email' => 'dima@evercodelab.com',
             'twitter' => '',
             'github' => 'KoD2012',
+            'zend' => ''
         ],
         [
             'name' =>'Никита Мовшин',
@@ -45,6 +49,7 @@ class LoadTeamData extends AbstractFixture implements OrderedFixtureInterface
             'email' => 'nikita@evercodelab.com',
             'twitter' => 'MovshinNikita',
             'github' => 'movshin',
+            'zend' => ''
         ],
         [
             'name' =>'Рома Лапин',
@@ -52,6 +57,7 @@ class LoadTeamData extends AbstractFixture implements OrderedFixtureInterface
             'email' => 'roma@evercodelab.com',
             'twitter' => 'memphys',
             'github' => 'memphys',
+            'zend' => 'http://www.zend.com/en/yellow-pages/ZEND014246'
         ],
     ];
 
@@ -67,6 +73,7 @@ class LoadTeamData extends AbstractFixture implements OrderedFixtureInterface
             $awesomeGuy->setEmail($memberData['email']);
             $awesomeGuy->setTwitter($memberData['twitter']);
             $awesomeGuy->setGithub($memberData['github']);
+            $awesomeGuy->setZend($memberData['zend']);
             copy(getcwd().'/web/i/team/' . $memberData['photo'], $imagesDestinationDir . DIRECTORY_SEPARATOR . $memberData['photo']);
             $awesomeGuy->setPhoto($memberData['photo']);
 

@@ -32,6 +32,7 @@ class TeamAdmin extends Admin
             ->add('twitter')
             ->add('email')
             ->add('github')
+            ->add('zend')
         ;
     }
 
