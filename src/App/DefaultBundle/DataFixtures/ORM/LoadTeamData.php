@@ -25,7 +25,7 @@ class LoadTeamData extends AbstractFixture implements OrderedFixtureInterface
             'email' => 'nikolay@evercodelab.com',
             'twitter' => '',
             'github' => 'Neyaz',
-            'zend' => ''
+            'zend' => 'http://www.zend.com/en/yellow-pages/ZEND025233'
         ],
         [
             'name' =>'Михаил Голодяев',
