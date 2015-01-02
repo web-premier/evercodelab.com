@@ -121,7 +121,6 @@ avalanche_imagine:
             type:    thumbnail
             options: { size: [500, 364], mode: outbound }
 
-
 vich_uploader:
     db_driver: orm
     mappings:

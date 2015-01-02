@@ -17,6 +17,10 @@ class LoadSliderData extends AbstractFixture implements OrderedFixtureInterface
             'link' => 'http://best4car.ru',
             'picture' => 'best4car.jpg',
             'background' => 'best4car_bg.jpg',
+            'en' => [
+                'name' => 'Best4Car',
+                'description' => '<ul><li>Разработка на Symfony2</li><li>Работа с унаследованным кодом</li><li>Оптимизация</li><li>Рефакторинг</li><li>Консалтинг</li><li>Поддержка</li></ul>'
+            ]
         ],
         [
             'name' => 'Игра «Морской бой»',
@@ -24,6 +28,10 @@ class LoadSliderData extends AbstractFixture implements OrderedFixtureInterface
             'link' => 'http://bqbs.ru',
             'picture' => 'fight.jpg',
             'background' => 'fight_bg.jpg',
+            'en' => [
+                'name' => 'Game „Sea battle“',
+                'description' => '<ul> <li>Разработка на Ruby on Rails</li> <li>Оптимизация под мобильные устройства</li> <li>Консалтинг</li> <li>Поддержка</li> <li>Сопровождение игр</li> </ul>'
+            ]
         ],
         [
             'name' => 'Postcard With Love',
@@ -31,6 +39,10 @@ class LoadSliderData extends AbstractFixture implements OrderedFixtureInterface
             'link' => 'http://postcardwithlove.ru/',
             'picture' => 'cards.jpg',
             'background' => 'cards_bg.jpg',
+            'en' => [
+                'name' => 'Postcard With Love',
+                'description' => '<ul> <li>Разработка на Ruby on Rails</li> <li>Фильтры и подготовка изображений к печати</li> <li>Поддержка</li> <li>Ми-ми-ми</li> </ul>'
+            ]
         ],
         [
             'name' => 'Russian Wake Awards 2013',
@@ -38,6 +50,11 @@ class LoadSliderData extends AbstractFixture implements OrderedFixtureInterface
             'link' => 'http://wakeawards.ru/',
             'picture' => 'wakeawards.jpg',
             'background' => 'wakeawards_bg.jpg',
+            'en' => [
+                'name' => 'Russian Wake Awards 2013',
+                'description' => '<ul> <li>Первая Всероссийская Вейк Премия 2013</li> <li>Разработка на Symfony2</li> <li>Простая CMS на базе SonataAdminBundle</li> <li>Система голосования</li> <li>Разработка в кратчайшие сроки</li> </ul>'
+            ]
+
         ],
         [
             'name' => 'Manaflask',
@@ -46,14 +63,23 @@ class LoadSliderData extends AbstractFixture implements OrderedFixtureInterface
             'link' => "http://manaflask.com/",
             'picture' => 'mf.jpg',
             'background' => 'mf_bg.jpg',
+            'en' => [
+                'name' => 'Manaflask',
+                'description' => '<ul> <li>Разработка на Ruby on Rails</li> <li>Международная команда (Германия,
+            Финляндия)</li> <li>Поддержка</li> </ul>'
+            ]
         ],
         [
             'name' => 'Popt',
-            'description' => '<ul> <li>Разработка на Symfony2</li> <li>Рефакторинг и применеие best practices</li>
-            <li>Разработка API для мобильных приложений</li> <li>Разработка веб-части сервиса</li> <li>Международная команда (США, Украина)</li> </ul>',
+            'description' => '<ul> <li>Разработка на Symfony2</li> <li>Рефакторинг и применеие best practices</li> <li>Разработка API для мобильных приложений</li> <li>Разработка веб-части сервиса</li> <li>Международная команда (США, Украина)</li> </ul>',
             'link' => "https://itunes.apple.com/in/app/popt/id759205934?mt=8",
             'picture' => 'popt.jpg',
             'background' => 'popt_bg.jpg',
+            'en' => [
+                'name' => 'Popt',
+                'description' => '<ul> <li>Разработка на Symfony2</li> <li>Рефакторинг и применеие best practices</li> <li>Разработка API для мобильных приложений</li> <li>Разработка веб-части сервиса</li> <li>Международная команда (США, Украина)</li> </ul>'
+            ]
+
         ]
     ];
 
@@ -64,6 +90,8 @@ class LoadSliderData extends AbstractFixture implements OrderedFixtureInterface
      */
     public function load(ObjectManager $manager)
     {
+        $translator = $manager->getRepository('GedmoTranslatable:Translation');
+
         foreach ($this->data as $element) {
             $clientSlide = new ClientSlider();
 
@@ -77,6 +105,8 @@ class LoadSliderData extends AbstractFixture implements OrderedFixtureInterface
                 $clientSlide->setBackground($element['background']);
             }
 
+            $translator->translate($clientSlide, 'name', 'en', $element['en']['name']);
+            $translator->translate($clientSlide, 'description', 'en', trim($element['en']['description']));
 
             $manager->persist($clientSlide);
         }

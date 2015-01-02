@@ -4,9 +4,9 @@ namespace App\DefaultBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Validator\Constraints as Assert;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
-use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * Team
@@ -30,6 +30,7 @@ class Team
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
+     * @Gedmo\Translatable()
      */
     private $name;
 
@@ -78,20 +79,20 @@ class Team
     private $zend;
 
     /**
-     * @var datetime $created_at
+     * @var \DateTime $created_at
      *
      * @Gedmo\Timestampable(on="create")
      * @ORM\Column(name="created_at", type="datetime")
      */
-    private $created_at;
+    private $createdAt;
 
     /**
-     * @var datetime $updated_at
+     * @var \DateTime $updated_at
      *
      * @Gedmo\Timestampable(on="update")
      * @ORM\Column(name="updated_at", type="datetime")
      */
-    private $updated_at;
+    private $updatedAt;
 
     /**
      * Get id
@@ -107,6 +108,7 @@ class Team
      * Set name
      *
      * @param  string $name
+     *
      * @return Team
      */
     public function setName($name)
@@ -127,32 +129,10 @@ class Team
     }
 
     /**
-     * Set surename
-     *
-     * @param  string $surename
-     * @return Team
-     */
-    public function setSurename($surename)
-    {
-        $this->surename = $surename;
-
-        return $this;
-    }
-
-    /**
-     * Get surename
-     *
-     * @return string
-     */
-    public function getSurename()
-    {
-        return $this->surename;
-    }
-
-    /**
      * Set photo
      *
      * @param  string $photo
+     *
      * @return Team
      */
     public function setPhoto($photo)
@@ -176,6 +156,7 @@ class Team
      * Set twitter
      *
      * @param  string $twitter
+     *
      * @return Team
      */
     public function setTwitter($twitter)
@@ -199,6 +180,7 @@ class Team
      * Set email
      *
      * @param  string $email
+     *
      * @return Team
      */
     public function setEmail($email)
@@ -222,6 +204,7 @@ class Team
      * Set github
      *
      * @param  string $github
+     *
      * @return Team
      */
     public function setGithub($github)
@@ -246,58 +229,12 @@ class Team
         return $this->getName();
     }
 
-    /**
-     * Set created_at
-     *
-     * @param  \DateTime $createdAt
-     * @return Team
-     */
-    public function setCreatedAt($createdAt)
-    {
-        $this->created_at = $createdAt;
-
-        return $this;
-    }
-
-    /**
-     * Get created_at
-     *
-     * @return \DateTime
-     */
-    public function getCreatedAt()
-    {
-        return $this->created_at;
-    }
-
-    /**
-     * Set updated_at
-     *
-     * @param  \DateTime $updatedAt
-     * @return Team
-     */
-    public function setUpdatedAt($updatedAt)
-    {
-        $this->updated_at = $updatedAt;
-
-        return $this;
-    }
-
-    /**
-     * Get updated_at
-     *
-     * @return \DateTime
-     */
-    public function getUpdatedAt()
-    {
-        return $this->updated_at;
-    }
-
     public function setFile($file)
     {
         $this->file = $file;
 
         if ($file) {
-            $this->updated_at = new \DateTime();
+            $this->setUpdatedAt(new \DateTime());
         }
     }
 
@@ -310,22 +247,71 @@ class Team
      * Set zend
      *
      * @param string $zend
+     *
      * @return Team
      */
     public function setZend($zend)
     {
         $this->zend = $zend;
-    
+
         return $this;
     }
 
     /**
      * Get zend
      *
-     * @return string 
+     * @return string
      */
     public function getZend()
     {
         return $this->zend;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     *
+     * @return Team
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     *
+     * @return Team
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
     }
 }

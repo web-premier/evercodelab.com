@@ -494,7 +494,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
 
     public function load(ObjectManager $manager)
     {
-        $repository = $manager->getRepository('\\Gedmo\\Translatable\\Entity\\Translation');
+        $repository = $manager->getRepository('\Gedmo\Translatable\Entity\Translation');
 
         $imagesDestinationDir = getcwd().'/web/uploads/images/portfolio';
         $imagesSourceDir = getcwd().'/web/img/projects';

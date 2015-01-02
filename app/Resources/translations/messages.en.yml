@@ -25,6 +25,8 @@ main:
     ios: "Development <br />for iOS"
     clients:
         title: "Clients"
+        slider:
+            to_site: "Go to site"
     mission:
         title: "mission"
     ask:

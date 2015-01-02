@@ -2,11 +2,12 @@
 
 namespace App\DefaultBundle\Entity;
 
-use Symfony\Component\Validator\Constraints as Assert;
-use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Gedmo\Translatable\Translatable;
 use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Validator\Constraints as Assert;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * App\DefaultsBundle\Entity\Client
@@ -15,7 +16,7 @@ use Symfony\Component\HttpFoundation\File\File;
  * @ORM\Entity
  * @Vich\Uploadable
  */
-class Client
+class Client implements Translatable
 {
     /**
      * @var integer $id
@@ -30,6 +31,7 @@ class Client
      * @var string $name
      *
      * @ORM\Column(name="name", type="string", length=255)
+     * @Gedmo\Translatable()
      */
     private $name;
 
@@ -59,27 +61,32 @@ class Client
     private $link;
 
     /**
-     * @var text $description
+     * @var string $description
      *
      * @ORM\Column(name="description", type="text", nullable=true)
      */
     private $description;
 
     /**
-     * @var datetime $created_at
+     * @var \DateTime $created_at
      *
      * @Gedmo\Timestampable(on="create")
      * @ORM\Column(name="created_at", type="datetime")
      */
-    private $created_at;
+    private $createdAt;
 
     /**
-     * @var datetime $updated_at
+     * @var \DateTime $updated_at
      *
      * @Gedmo\Timestampable(on="update")
      * @ORM\Column(name="updated_at", type="datetime")
      */
-    private $updated_at;
+    private $updatedAt;
+
+    /**
+     * @Gedmo\Locale
+     */
+    private $locale;
 
     /**
      * Get id
@@ -147,7 +154,7 @@ class Client
     /**
      * Set description
      *
-     * @param text $description
+     * @param string $description
      */
     public function setDescription($description)
     {
@@ -157,51 +164,11 @@ class Client
     /**
      * Get description
      *
-     * @return text
+     * @return string
      */
     public function getDescription()
     {
         return $this->description;
-    }
-
-    /**
-     * Set created_at
-     *
-     * @param datetime $created_at
-     */
-    public function setCreatedAt($created_at)
-    {
-        $this->created_at = $created_at;
-    }
-
-    /**
-     * Get created_at
-     *
-     * @return datetime
-     */
-    public function getCreatedAt()
-    {
-        return $this->created_at;
-    }
-
-    /**
-     * Set updated_at
-     *
-     * @param datetime $updated_at
-     */
-    public function setUpdateAt($updated_at)
-    {
-        $this->updated_at = $updated_at;
-    }
-
-    /**
-     * Get updated_at
-     *
-     * @return datetime
-     */
-    public function getUpdateAt()
-    {
-        return $this->updated_at;
     }
 
     public function __toString()
@@ -213,6 +180,7 @@ class Client
      * Set link
      *
      * @param  string $link
+     *
      * @return Client
      */
     public function setLink($link)
@@ -232,26 +200,56 @@ class Client
         return $this->link;
     }
 
+    public function setTranslatableLocale($locale)
+    {
+        $this->locale = $locale;
+    }
+
     /**
-     * Set updated_at
+     * Set createdAt
      *
-     * @param  \DateTime $updatedAt
+     * @param \DateTime $createdAt
+     *
      * @return Client
      */
-    public function setUpdatedAt($updatedAt)
+    public function setCreatedAt($createdAt)
     {
-        $this->updated_at = $updatedAt;
+        $this->createdAt = $createdAt;
 
         return $this;
     }
 
     /**
-     * Get updated_at
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTime $updatedAt
+     *
+     * @return Client
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
      *
      * @return \DateTime
      */
     public function getUpdatedAt()
     {
-        return $this->updated_at;
+        return $this->updatedAt;
     }
 }
