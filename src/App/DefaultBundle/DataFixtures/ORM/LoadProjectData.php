@@ -214,7 +214,7 @@ class LoadProjectData extends AbstractFixture implements OrderedFixtureInterface
         ),
         array(
             'name' => 'Stashify.me',
-            'link' => 'http://stashify.me/',
+            'link' => '',
             'image' => 'stashify.jpg',
             'case_link' => '',
             'description' => '
